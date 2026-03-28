@@ -42,11 +42,9 @@ class CardMasterListAPIView(generics.ListAPIView):
     """
     serializer_class = CardMasterListSerializer
     permission_classes = [permissions.AllowAny]
-    filter_backends = [SearchFilter, DjangoFilterBackend, OrderingFilter]
+    filter_backends = [SearchFilter, DjangoFilterBackend]
     search_fields = ['card_name', 'secondary_id']
     filterset_class = CardMasterFilter
-    ordering_fields = ['card_name', 'card_number', 'card_rarity', 'hp']
-    ordering = ['set__release_date', 'card_number']
 
     def get_queryset(self):
         from django.db.models.functions import Cast
@@ -60,12 +58,18 @@ class CardMasterListAPIView(generics.ListAPIView):
         if lang and lang != 'en':
             queryset = queryset.filter(translations__language=lang)
 
-        # Default ordering: by set release date, then numeric card number
         ordering = self.request.query_params.get('ordering', '')
-        if not ordering or ordering in ('card_number', '-card_number'):
+
+        if ordering in ('', 'card_number', '-card_number'):
             direction = '-' if ordering.startswith('-') else ''
             queryset = queryset.order_by(
                 'set__release_date', f'{direction}card_number_int', f'{direction}card_number'
+            )
+        elif ordering.lstrip('-') in ('card_name', 'card_rarity', 'hp'):
+            queryset = queryset.order_by(ordering)
+        else:
+            queryset = queryset.order_by(
+                'set__release_date', 'card_number_int', 'card_number'
             )
 
         return queryset

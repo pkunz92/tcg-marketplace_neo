@@ -46,7 +46,9 @@ export default function CatalogPage() {
         if (v) next.set(k, v)
         else next.delete(k)
       })
-      next.set('page', '1')
+      if (!('page' in updates)) {
+        next.set('page', '1')
+      }
       return next
     })
   }
