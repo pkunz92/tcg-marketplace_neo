@@ -1,0 +1,268 @@
+from django.db import transaction
+from dj_rest_auth.registration.serializers import RegisterSerializer
+from rest_framework import serializers
+from .models import (
+    Card_Master, Card_Listing, Order, OrderStatusChoices,
+    Set_Master, UserProfile, CardTranslation, SetTranslation, CardPrice,
+)
+
+
+# --- Set Master Serializer ---
+class SetMasterSerializer(serializers.ModelSerializer):
+    translations = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Set_Master
+        fields = [
+            'id', 'set_code', 'set_name', 'ptcgo_code', 'series',
+            'total_cards', 'printed_total', 'release_date',
+            'symbol_url', 'logo_url', 'legalities', 'translations',
+        ]
+
+    def get_translations(self, obj):
+        lang = self.context.get('request', {})
+        if hasattr(lang, 'query_params'):
+            lang = lang.query_params.get('lang')
+        else:
+            lang = None
+
+        if lang:
+            translations = obj.translations.filter(language=lang)
+        else:
+            translations = obj.translations.all()
+
+        return SetTranslationSerializer(translations, many=True).data
+
+
+class SetTranslationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = SetTranslation
+        fields = ['language', 'name']
+
+
+# --- Card Price Serializer ---
+class CardPriceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CardPrice
+        fields = [
+            'source', 'variant', 'currency',
+            'low', 'mid', 'high', 'market', 'direct_low', 'updated_at',
+        ]
+
+
+# --- Card Translation Serializer ---
+class CardTranslationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CardTranslation
+        fields = ['language', 'name', 'image_url']
+
+
+# --- Card Master Serializer ---
+class CardMasterSerializer(serializers.ModelSerializer):
+    set = SetMasterSerializer(read_only=True, allow_null=True)
+    translations = serializers.SerializerMethodField()
+    prices = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Card_Master
+        fields = '__all__'
+
+    def get_translations(self, obj):
+        request = self.context.get('request')
+        lang = None
+        if request and hasattr(request, 'query_params'):
+            lang = request.query_params.get('lang')
+
+        if lang:
+            translations = obj.translations.filter(language=lang)
+        else:
+            translations = obj.translations.all()
+
+        return CardTranslationSerializer(translations, many=True).data
+
+    def get_prices(self, obj):
+        include_prices = True
+        request = self.context.get('request')
+        if request and hasattr(request, 'query_params'):
+            include_prices = request.query_params.get('include_prices', 'false').lower() == 'true'
+
+        if not include_prices:
+            return []
+
+        return CardPriceSerializer(obj.prices.all(), many=True).data
+
+
+# --- Card Master List Serializer (lightweight, no nested prices/translations) ---
+class CardMasterListSerializer(serializers.ModelSerializer):
+    set = SetMasterSerializer(read_only=True, allow_null=True)
+
+    class Meta:
+        model = Card_Master
+        fields = [
+            'api_id', 'card_name', 'card_number', 'secondary_id',
+            'card_rarity', 'image_url', 'supertype', 'hp', 'types',
+            'artist', 'set',
+        ]
+
+
+# --- Card Listing Serializer ---
+class CardListingSerializer(serializers.ModelSerializer):
+    card_name = serializers.CharField(source='card_master.card_name', read_only=True)
+    card_number = serializers.CharField(source='card_master.card_number', read_only=True)
+    secondary_id = serializers.CharField(source='card_master.secondary_id', read_only=True)
+    card_rarity = serializers.CharField(source='card_master.card_rarity', read_only=True)
+    card_image_url = serializers.URLField(source='card_master.image_url', read_only=True)
+    set_name = serializers.CharField(source='card_master.set.set_name', read_only=True, allow_null=True)
+    set_code = serializers.CharField(source='card_master.set.set_code', read_only=True, allow_null=True)
+    ptcgo_code = serializers.CharField(source='card_master.set.ptcgo_code', read_only=True, allow_null=True)
+    seller_username = serializers.CharField(source='seller.username', read_only=True)
+    seller_photo_url = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Card_Listing
+        fields = [
+            'id', 'card_master', 'card_name', 'card_number', 'secondary_id',
+            'card_rarity', 'card_image_url', 'set_name', 'set_code', 'ptcgo_code',
+            'seller', 'seller_username', 'price_chf', 'quantity', 'condition',
+            'is_graded', 'seller_photo', 'seller_photo_url', 'is_available',
+        ]
+        read_only_fields = ['seller']
+
+    def validate_card_master(self, value):
+        if not value:
+            raise serializers.ValidationError("Card master is required.")
+        return value
+
+    def get_seller_photo_url(self, obj):
+        if obj.seller_photo:
+            request = self.context.get('request')
+            if request:
+                return request.build_absolute_uri(obj.seller_photo.url)
+            return obj.seller_photo.url
+        return None
+
+
+class OrderSerializer(serializers.ModelSerializer):
+    listing_id = serializers.IntegerField(source='listing.id', read_only=True)
+    card_name = serializers.CharField(source='listing.card_master.card_name', read_only=True)
+    card_image_url = serializers.URLField(source='listing.card_master.image_url', read_only=True)
+    seller_username = serializers.CharField(source='listing.seller.username', read_only=True)
+    buyer_username = serializers.CharField(source='buyer.username', read_only=True)
+
+    class Meta:
+        model = Order
+        fields = [
+            'id', 'listing', 'listing_id', 'card_name', 'card_image_url',
+            'seller_username', 'buyer_username', 'buyer', 'quantity', 'price_chf',
+            'shipping_name', 'shipping_address_line1', 'shipping_address_line2',
+            'shipping_city', 'shipping_postal_code', 'shipping_country',
+            'status', 'created_at',
+        ]
+        read_only_fields = ['buyer', 'price_chf', 'created_at']
+
+    def validate(self, attrs):
+        listing = attrs.get('listing')
+        quantity = attrs.get('quantity', 1)
+        required_fields = [
+            'shipping_name', 'shipping_address_line1',
+            'shipping_city', 'shipping_postal_code', 'shipping_country',
+        ]
+
+        if not listing:
+            raise serializers.ValidationError({'listing': 'Listing is required.'})
+        if not listing.is_available:
+            raise serializers.ValidationError({'listing': 'Listing is not available.'})
+        if quantity < 1:
+            raise serializers.ValidationError({'quantity': 'Quantity must be at least 1.'})
+        if quantity > listing.quantity:
+            raise serializers.ValidationError({'quantity': 'Quantity exceeds available stock.'})
+        for field in required_fields:
+            if not attrs.get(field):
+                raise serializers.ValidationError({field: 'This field is required.'})
+
+        return attrs
+
+    def validate_status(self, value):
+        request = self.context.get('request')
+        if request and request.method in ['PUT', 'PATCH']:
+            if value not in [OrderStatusChoices.COMPLETED, OrderStatusChoices.CANCELLED]:
+                raise serializers.ValidationError('Invalid status transition.')
+        return value
+
+    def create(self, validated_data):
+        buyer = validated_data.get('buyer')
+        quantity = validated_data.get('quantity', 1)
+
+        with transaction.atomic():
+            listing = (
+                Card_Listing.objects
+                .select_for_update()
+                .get(pk=validated_data['listing'].pk)
+            )
+
+            if not listing.is_available:
+                raise serializers.ValidationError({'listing': 'Listing is not available.'})
+            if quantity > listing.quantity:
+                raise serializers.ValidationError({'quantity': 'Quantity exceeds available stock.'})
+
+            listing.quantity -= quantity
+            if listing.quantity <= 0:
+                listing.quantity = 0
+                listing.is_available = False
+            listing.save(update_fields=['quantity', 'is_available'])
+
+            order = Order.objects.create(
+                listing=listing,
+                buyer=buyer,
+                quantity=quantity,
+                price_chf=listing.price_chf,
+                shipping_name=validated_data['shipping_name'],
+                shipping_address_line1=validated_data['shipping_address_line1'],
+                shipping_address_line2=validated_data.get('shipping_address_line2'),
+                shipping_city=validated_data['shipping_city'],
+                shipping_postal_code=validated_data['shipping_postal_code'],
+                shipping_country=validated_data['shipping_country'],
+                status=OrderStatusChoices.PENDING,
+            )
+
+        return order
+
+
+class UserProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserProfile
+        fields = [
+            'shipping_name', 'shipping_address_line1', 'shipping_address_line2',
+            'shipping_city', 'shipping_postal_code', 'shipping_country',
+        ]
+
+
+class CustomRegisterSerializer(RegisterSerializer):
+    shipping_name = serializers.CharField(required=True, max_length=100)
+    shipping_address_line1 = serializers.CharField(required=True, max_length=200)
+    shipping_address_line2 = serializers.CharField(required=False, allow_blank=True, allow_null=True, max_length=200)
+    shipping_city = serializers.CharField(required=True, max_length=100)
+    shipping_postal_code = serializers.CharField(required=True, max_length=20)
+    shipping_country = serializers.CharField(required=True, max_length=100)
+
+    def get_cleaned_data(self):
+        data = super().get_cleaned_data()
+        data['shipping_name'] = self.validated_data.get('shipping_name', '')
+        data['shipping_address_line1'] = self.validated_data.get('shipping_address_line1', '')
+        data['shipping_address_line2'] = self.validated_data.get('shipping_address_line2', '')
+        data['shipping_city'] = self.validated_data.get('shipping_city', '')
+        data['shipping_postal_code'] = self.validated_data.get('shipping_postal_code', '')
+        data['shipping_country'] = self.validated_data.get('shipping_country', '')
+        return data
+
+    def save(self, request):
+        user = super().save(request)
+        profile, _ = UserProfile.objects.get_or_create(user=user)
+        profile.shipping_name = self.cleaned_data.get('shipping_name', '')
+        profile.shipping_address_line1 = self.cleaned_data.get('shipping_address_line1', '')
+        profile.shipping_address_line2 = self.cleaned_data.get('shipping_address_line2', '')
+        profile.shipping_city = self.cleaned_data.get('shipping_city', '')
+        profile.shipping_postal_code = self.cleaned_data.get('shipping_postal_code', '')
+        profile.shipping_country = self.cleaned_data.get('shipping_country', '')
+        profile.save()
+        return user

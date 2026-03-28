@@ -1,0 +1,24 @@
+# Django Backend Core
+Django==4.2.7
+djangorestframework==3.14.0
+
+# Database Drivers
+psycopg2-binary
+
+# API and Security
+requests==2.31.0
+Pillow
+django-cors-headers==4.3.1
+django-filter==23.5
+
+# Authentication
+dj-rest-auth[with_social]
+djangorestframework-simplejwt
+django-allauth
+
+# Environment Management
+python-decouple==3.8
+python-dotenv
+
+# Pokemon TCG SDK (for price fetching)
+pokemontcgsdk
