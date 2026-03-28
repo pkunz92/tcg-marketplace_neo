@@ -1,8 +1,9 @@
 export default function SortSelector({ value, onChange }) {
   const options = [
+    { value: '', label: 'Card Number ↑' },
+    { value: '-card_number', label: 'Card Number ↓' },
     { value: 'card_name', label: 'Name A→Z' },
     { value: '-card_name', label: 'Name Z→A' },
-    { value: '-id', label: 'Newest' },
     { value: 'card_rarity', label: 'Rarity' },
   ]
   return (

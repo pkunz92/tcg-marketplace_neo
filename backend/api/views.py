@@ -37,6 +37,7 @@ class CardMasterViewSet(viewsets.ReadOnlyModelViewSet):
 class CardMasterListAPIView(generics.ListAPIView):
     """
     List cards with search, filtering by supertype/rarity/types/set/artist.
+    Default ordering: by set release date then numeric card number.
     Supports ?lang= for filtering by translation availability.
     """
     serializer_class = CardMasterListSerializer
@@ -45,15 +46,27 @@ class CardMasterListAPIView(generics.ListAPIView):
     search_fields = ['card_name', 'secondary_id']
     filterset_class = CardMasterFilter
     ordering_fields = ['card_name', 'card_number', 'card_rarity', 'hp']
-    ordering = ['set__set_name', 'card_number']
+    ordering = ['set__release_date', 'card_number']
 
     def get_queryset(self):
-        queryset = Card_Master.objects.select_related('set').all()
+        from django.db.models.functions import Cast
+        from django.db.models import IntegerField
 
-        # Filter by language availability
+        queryset = Card_Master.objects.select_related('set').annotate(
+            card_number_int=Cast('card_number', IntegerField())
+        )
+
         lang = self.request.query_params.get('lang')
         if lang and lang != 'en':
             queryset = queryset.filter(translations__language=lang)
+
+        # Default ordering: by set release date, then numeric card number
+        ordering = self.request.query_params.get('ordering', '')
+        if not ordering or ordering in ('card_number', '-card_number'):
+            direction = '-' if ordering.startswith('-') else ''
+            queryset = queryset.order_by(
+                'set__release_date', f'{direction}card_number_int', f'{direction}card_number'
+            )
 
         return queryset
 
@@ -124,12 +137,10 @@ class CardDetailWithStatsAPIView(generics.RetrieveAPIView):
             'translations': translations,
             'market_prices': market_prices,
             'statistics': {
-                'price_stats': {
-                    'min': float(price_stats['min_price']) if price_stats['min_price'] else None,
-                    'max': float(price_stats['max_price']) if price_stats['max_price'] else None,
-                    'avg': float(price_stats['avg_price']) if price_stats['avg_price'] else None,
-                    'total_listings': price_stats['total_listings'],
-                },
+                'min_price': float(price_stats['min_price']) if price_stats['min_price'] else None,
+                'max_price': float(price_stats['max_price']) if price_stats['max_price'] else None,
+                'avg_price': float(price_stats['avg_price']) if price_stats['avg_price'] else None,
+                'total_listings': price_stats['total_listings'],
             },
         })
 
@@ -139,8 +150,8 @@ class SetListAPIView(generics.ListAPIView):
     permission_classes = [permissions.AllowAny]
     filter_backends = [SearchFilter, OrderingFilter]
     search_fields = ['set_name', 'set_code', 'series']
-    ordering_fields = ['set_name', 'release_date', 'set_code']
-    ordering = ['set_name']
+    ordering_fields = ['set_name', 'release_date', 'set_code', 'series']
+    ordering = ['-release_date']
 
     def get_queryset(self):
         queryset = Set_Master.objects.prefetch_related('translations').all()
@@ -304,3 +315,47 @@ class UserProfileView(generics.RetrieveUpdateAPIView):
 
     def get_object(self):
         return self.request.user.profile
+
+
+class RarityListAPIView(generics.GenericAPIView):
+    """Returns distinct rarities, optionally filtered by set_code or series."""
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request):
+        queryset = Card_Master.objects.exclude(card_rarity__in=['Unknown', '', None])
+
+        set_code = request.query_params.get('set_code')
+        if set_code:
+            queryset = queryset.filter(set__set_code=set_code)
+
+        series = request.query_params.get('series')
+        if series:
+            queryset = queryset.filter(set__series=series)
+
+        rarities = (
+            queryset
+            .values_list('card_rarity', flat=True)
+            .distinct()
+            .order_by('card_rarity')
+        )
+        return Response(sorted(set(rarities)))
+
+
+class SeriesListAPIView(generics.GenericAPIView):
+    """Returns distinct series names with set counts, ordered by release date."""
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request):
+        from django.db.models import Count, Min
+
+        series = (
+            Set_Master.objects
+            .exclude(series__in=['', None])
+            .values('series')
+            .annotate(set_count=Count('set_code'), earliest=Min('release_date'))
+            .order_by('earliest')
+        )
+        return Response([
+            {'series': s['series'], 'set_count': s['set_count']}
+            for s in series
+        ])

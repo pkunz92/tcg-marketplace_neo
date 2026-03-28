@@ -23,7 +23,7 @@ export default function CatalogPage() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const search = searchParams.get('search') || ''
   const page = Number(searchParams.get('page') || 1)
-  const ordering = searchParams.get('ordering') || 'card_name'
+  const ordering = searchParams.get('ordering') || ''
   const debouncedSearch = useDebounce(search, 300)
 
   const params = {
@@ -56,6 +56,7 @@ export default function CatalogPage() {
   }
 
   const filterValues = {
+    series: searchParams.get('series') || '',
     supertype: searchParams.get('supertype') || '',
     rarity: searchParams.get('rarity') || '',
     types: searchParams.get('types') || '',
