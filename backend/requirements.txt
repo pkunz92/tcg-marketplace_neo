@@ -20,5 +20,6 @@ django-allauth
 python-decouple==3.8
 python-dotenv
 
-# Pokemon TCG SDK (for price fetching)
+# Pokemon TCG SDKs
 pokemontcgsdk
+tcgdex-sdk
