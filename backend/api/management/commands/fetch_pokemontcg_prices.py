@@ -93,13 +93,35 @@ class Command(BaseCommand):
 
             self.stdout.write(f'Fetching page {page} (pageSize={page_size})...')
 
-            try:
-                query = f'set.id:{set_filter}' if set_filter else ''
-                cards = Card.where(q=query, page=page, pageSize=page_size) if query else Card.where(page=page, pageSize=page_size)
+            retries = 0
+            max_retries = 3
+            success = False
 
-                if not cards:
-                    self.stdout.write('No more cards. Done.')
+            while retries < max_retries:
+                try:
+                    query = f'set.id:{set_filter}' if set_filter else ''
+                    cards = Card.where(q=query, page=page, pageSize=page_size) if query else Card.where(page=page, pageSize=page_size)
+                    success = True
                     break
+                except Exception as e:
+                    err_msg = e.args[0].decode('utf-8', errors='replace') if e.args and isinstance(e.args[0], bytes) else str(e)
+                    retries += 1
+                    if retries >= max_retries:
+                        self.stdout.write(self.style.WARNING(
+                            f'  Page {page} failed after {max_retries} attempts ({err_msg}). Skipping.'
+                        ))
+                    else:
+                        wait = 2.1 * (2 ** retries)
+                        self.stdout.write(f'  Retry {retries}/{max_retries}: {err_msg}. Waiting {wait:.1f}s...')
+                        time.sleep(wait)
+
+            if not success:
+                page += 1
+                continue
+
+            if not cards:
+                self.stdout.write('No more cards. Done.')
+                break
 
                 prices_in_page = 0
 
@@ -189,15 +211,6 @@ class Command(BaseCommand):
 
                 page += 1
                 time.sleep(REQUEST_DELAY)
-
-            except Exception as e:
-                # SDK exception __str__ can return bytes — handle safely
-                err_msg = e.args[0].decode('utf-8', errors='replace') if e.args and isinstance(e.args[0], bytes) else str(e)
-                self.stdout.write(self.style.ERROR(f'Error on page {page}: {err_msg}'))
-                wait = min(30.0, REQUEST_DELAY * (2 ** min(page % 5, 4)))
-                self.stdout.write(f'Waiting {wait:.1f}s before retry...')
-                time.sleep(wait)
-                continue
 
         self.stdout.write(self.style.SUCCESS(
             f'\n--- Price Fetch Complete ---\n'
