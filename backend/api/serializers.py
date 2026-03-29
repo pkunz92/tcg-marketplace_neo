@@ -3,7 +3,7 @@ from dj_rest_auth.registration.serializers import RegisterSerializer
 from rest_framework import serializers
 from .models import (
     Card_Master, Card_Listing, Order, OrderStatusChoices,
-    Set_Master, UserProfile, CardTranslation, SetTranslation, CardPrice,
+    Set_Master, UserProfile, CardTranslation, SetTranslation, CardPrice, CardPriceHistory,
 )
 
 
@@ -48,6 +48,12 @@ class CardPriceSerializer(serializers.ModelSerializer):
             'source', 'variant', 'currency',
             'low', 'mid', 'high', 'market', 'direct_low', 'updated_at',
         ]
+
+
+class CardPriceHistorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CardPriceHistory
+        fields = ['source', 'variant', 'currency', 'low', 'mid', 'high', 'market', 'fetched_at']
 
 
 # --- Card Translation Serializer ---

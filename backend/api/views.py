@@ -6,11 +6,11 @@ from rest_framework.exceptions import PermissionDenied, ValidationError
 from django.db import transaction
 from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
-from .models import Card_Master, Card_Listing, Order, Set_Master, CardPrice
+from .models import Card_Master, Card_Listing, Order, Set_Master, CardPrice, CardPriceHistory
 from .serializers import (
     CardMasterSerializer, CardMasterListSerializer, CardListingSerializer,
     OrderSerializer, SetMasterSerializer, UserProfileSerializer,
-    CardPriceSerializer,
+    CardPriceSerializer, CardPriceHistorySerializer,
 )
 from .permissions import IsSellerOrReadOnly
 from .filters import CardListingFilter, CardMasterFilter
@@ -147,6 +147,58 @@ class CardDetailWithStatsAPIView(generics.RetrieveAPIView):
                 'total_listings': price_stats['total_listings'],
             },
         })
+
+
+class CardPriceHistoryAPIView(generics.GenericAPIView):
+    """
+    Returns price history for a card grouped by source+variant.
+    Query params:
+      ?source=tcgplayer|cardmarket
+      ?variant=holofoil|normal|...
+      ?days=30|90|365 (default 90)
+    """
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request, api_id):
+        from django.utils import timezone
+        from datetime import timedelta
+
+        days    = int(request.query_params.get('days', 90))
+        source  = request.query_params.get('source', '')
+        variant = request.query_params.get('variant', '')
+        since   = timezone.now() - timedelta(days=days)
+
+        qs = CardPriceHistory.objects.filter(
+            card_master_id=api_id,
+            fetched_at__gte=since,
+        ).order_by('fetched_at')
+
+        if source:
+            qs = qs.filter(source=source)
+        if variant:
+            qs = qs.filter(variant=variant)
+
+        data = CardPriceHistorySerializer(qs, many=True).data
+
+        # Group by source+variant for the frontend chart
+        groups = {}
+        for row in data:
+            key = f"{row['source']}/{row['variant']}"
+            if key not in groups:
+                groups[key] = {
+                    'source': row['source'],
+                    'variant': row['variant'],
+                    'currency': row['currency'],
+                    'points': [],
+                }
+            groups[key]['points'].append({
+                'date': row['fetched_at'][:10],
+                'market': row['market'],
+                'low': row['low'],
+                'mid': row['mid'],
+            })
+
+        return Response(list(groups.values()))
 
 
 class SetListAPIView(generics.ListAPIView):

@@ -5,6 +5,7 @@ import CardImage from '../components/cards/CardImage'
 import { RarityBadge, TypeBadge, SupertypeBadge } from '../components/cards/CardBadge'
 import { formatCHF, formatDate, CONDITION_LABELS, GRADING_LABELS } from '../lib/utils'
 import PriceTag from '../components/cards/PriceTag'
+import PriceHistoryChart from '../components/cards/PriceHistoryChart'
 import PageContainer from '../components/layout/PageContainer'
 import Spinner from '../components/ui/Spinner'
 import Button from '../components/ui/Button'
@@ -192,10 +193,11 @@ export default function CardDetailPage() {
             </Section>
           )}
 
-          {/* Market prices */}
+          {/* Market prices + history */}
           {market_prices.length > 0 && (
             <Section title="Price Data">
-              <div className="overflow-x-auto">
+              {/* Current prices table */}
+              <div className="overflow-x-auto mb-6">
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="text-xs text-slate-500 text-left border-b border-border">
@@ -209,7 +211,7 @@ export default function CardDetailPage() {
                   <tbody>
                     {market_prices.map((p, i) => (
                       <tr key={i} className="border-b border-border/50 last:border-0">
-                        <td className="py-2 text-slate-300">{p.source}</td>
+                        <td className="py-2 text-slate-300 capitalize">{p.source}</td>
                         <td className="py-2 text-slate-400 capitalize">{p.variant || '—'}</td>
                         <td className="py-2 text-right font-mono text-slate-300">{p.low ? formatCHF(p.low) : '—'}</td>
                         <td className="py-2 text-right font-mono text-accent-400">{p.market ? formatCHF(p.market) : '—'}</td>
@@ -219,6 +221,9 @@ export default function CardDetailPage() {
                   </tbody>
                 </table>
               </div>
+              {/* Price history chart */}
+              <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3">Price History</p>
+              <PriceHistoryChart apiId={card.api_id} />
             </Section>
           )}
 

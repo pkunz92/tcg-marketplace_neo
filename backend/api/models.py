@@ -149,6 +149,33 @@ class CardPrice(models.Model):
         verbose_name_plural = "Card Prices"
 
 
+class CardPriceHistory(models.Model):
+    """Timestamped price snapshots — one row written every time prices are fetched."""
+    card_master = models.ForeignKey(
+        Card_Master,
+        on_delete=models.CASCADE,
+        related_name='price_history',
+    )
+    source = models.CharField(max_length=50)
+    variant = models.CharField(max_length=50)
+    currency = models.CharField(max_length=3)
+    low    = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    mid    = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    high   = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    market = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    fetched_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['card_master', 'source', 'variant', 'fetched_at']),
+        ]
+        ordering = ['fetched_at']
+        verbose_name_plural = "Card Price History"
+
+    def __str__(self):
+        return f"{self.card_master_id} {self.source}/{self.variant} @ {self.fetched_at:%Y-%m-%d}"
+
+
 class Card_Listing(models.Model):
     card_master = models.ForeignKey(
         Card_Master,

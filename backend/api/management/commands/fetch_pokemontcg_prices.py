@@ -16,7 +16,7 @@ import requests
 from django.core.management.base import BaseCommand
 from django.conf import settings
 from django.db import transaction
-from api.models import Card_Master, CardPrice
+from api.models import Card_Master, CardPrice, CardPriceHistory
 
 logger = logging.getLogger(__name__)
 
@@ -68,6 +68,11 @@ def _upsert_tcgplayer(card_id, tcgplayer):
             defaults={"currency": "USD", "low": low, "mid": mid,
                       "high": high, "market": market, "direct_low": direct},
         )
+        CardPriceHistory.objects.create(
+            card_master_id=card_id,
+            source="tcgplayer", variant=variant, currency="USD",
+            low=low, mid=mid, high=high, market=market,
+        )
         count += 1
     return count
 
@@ -85,6 +90,11 @@ def _upsert_cardmarket(card_id, cardmarket):
         variant="normal",
         defaults={"currency": "EUR", "low": low, "mid": avg_sell,
                   "high": None, "market": trend, "direct_low": None},
+    )
+    CardPriceHistory.objects.create(
+        card_master_id=card_id,
+        source="cardmarket", variant="normal", currency="EUR",
+        low=low, mid=avg_sell, high=None, market=trend,
     )
     return 1
 

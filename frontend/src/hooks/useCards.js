@@ -28,6 +28,15 @@ export function useCardDetail(apiId) {
   })
 }
 
+export function useCardPriceHistory(apiId, params = {}) {
+  return useQuery({
+    queryKey: ['cards', 'price-history', apiId, params],
+    queryFn: () => api.get(`/cards/${apiId}/price-history/`, { params }).then((r) => r.data),
+    enabled: !!apiId,
+    staleTime: 1000 * 60 * 60,
+  })
+}
+
 export function useCardStats(apiId) {
   return useQuery({
     queryKey: ['cards', 'stats', apiId],
