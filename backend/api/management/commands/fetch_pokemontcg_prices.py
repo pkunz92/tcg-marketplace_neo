@@ -44,6 +44,12 @@ class Command(BaseCommand):
             default=250,
             help='Number of cards per API page (max 250).',
         )
+        parser.add_argument(
+            '--start-page',
+            type=int,
+            default=1,
+            help='Resume from this page number (useful after a crash).',
+        )
 
     def handle(self, *args, **options):
         try:
@@ -67,12 +73,15 @@ class Command(BaseCommand):
         set_filter = options['set']
         page_limit = options['limit']
         page_size = min(options['page_size'], 250)
+        start_page = options['start_page']
 
         self.stdout.write(self.style.NOTICE('--- Fetching prices from pokemontcg.io API ---'))
         if set_filter:
             self.stdout.write(f'Filtering by set: {set_filter}')
+        if start_page > 1:
+            self.stdout.write(f'Resuming from page {start_page}.')
 
-        page = 1
+        page = start_page
         total_cards_processed = 0
         total_prices_upserted = 0
         total_pages = 0
@@ -182,9 +191,10 @@ class Command(BaseCommand):
                 time.sleep(REQUEST_DELAY)
 
             except Exception as e:
-                self.stdout.write(self.style.ERROR(f'Error on page {page}: {e}'))
-                # Exponential backoff on errors
-                wait = min(REQUEST_DELAY * (2 ** (page % 5)), 30)
+                # SDK exception __str__ can return bytes — handle safely
+                err_msg = e.args[0].decode('utf-8', errors='replace') if e.args and isinstance(e.args[0], bytes) else str(e)
+                self.stdout.write(self.style.ERROR(f'Error on page {page}: {err_msg}'))
+                wait = min(30.0, REQUEST_DELAY * (2 ** min(page % 5, 4)))
                 self.stdout.write(f'Waiting {wait:.1f}s before retry...')
                 time.sleep(wait)
                 continue
