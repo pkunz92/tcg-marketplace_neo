@@ -27,7 +27,7 @@ function ImageHover({ src, alt }) {
       onMouseMove={handleMouseMove}
     >
       <div className="w-8 h-11 rounded overflow-hidden bg-elevated border border-border shrink-0">
-        {src ? (
+        {src && src.startsWith('http') ? (
           <img src={src} alt={alt} className="w-full h-full object-cover" />
         ) : (
           <div className="w-full h-full bg-elevated" />
