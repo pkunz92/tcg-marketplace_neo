@@ -1,19 +1,20 @@
 import { useSearchParams } from 'react-router-dom'
-import { LayoutGrid, SlidersHorizontal, X } from 'lucide-react'
-import { useState } from 'react'
-import { useCardsList } from '../hooks/useCards'
+import { LayoutGrid, List, SlidersHorizontal, X } from 'lucide-react'
+import { useState, useEffect, useRef, useCallback } from 'react'
+import { useCardsInfinite } from '../hooks/useCards'
 import { useDebounce } from '../hooks/useDebounce'
 import CardGrid from '../components/cards/CardGrid'
+import CardListView from '../components/cards/CardListView'
 import FilterSidebar from '../components/catalog/FilterSidebar'
 import SearchInput from '../components/catalog/SearchInput'
 import SortSelector from '../components/catalog/SortSelector'
-import PaginationControls from '../components/catalog/PaginationControls'
+import Spinner from '../components/ui/Spinner'
 import PageContainer from '../components/layout/PageContainer'
 
 function buildParams(searchParams) {
   const p = {}
   for (const [k, v] of searchParams.entries()) {
-    if (v) p[k] = v
+    if (v && k !== 'view') p[k] = v
   }
   return p
 }
@@ -21,23 +22,46 @@ function buildParams(searchParams) {
 export default function CatalogPage() {
   const [searchParams, setSearchParams] = useSearchParams()
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const search = searchParams.get('search') || ''
-  const page = Number(searchParams.get('page') || 1)
+  const loaderRef = useRef(null)
+
+  const search   = searchParams.get('search') || ''
   const ordering = searchParams.get('ordering') || ''
+  const view     = searchParams.get('view') || 'grid'
   const debouncedSearch = useDebounce(search, 300)
 
   const params = {
     ...buildParams(searchParams),
     search: debouncedSearch,
-    page,
     ordering,
   }
-  // Remove empty
   Object.keys(params).forEach((k) => { if (!params[k] && params[k] !== 0) delete params[k] })
 
-  const { data, isLoading } = useCardsList(params)
-  const cards = data?.results || []
-  const totalCount = data?.count || 0
+  const {
+    data,
+    isLoading,
+    isFetchingNextPage,
+    fetchNextPage,
+    hasNextPage,
+  } = useCardsInfinite(params)
+
+  const cards      = data?.pages.flatMap((p) => p.results) || []
+  const totalCount = data?.pages[0]?.count || 0
+
+  // Infinite scroll — observe the sentinel div
+  useEffect(() => {
+    const el = loaderRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && hasNextPage && !isFetchingNextPage) {
+          fetchNextPage()
+        }
+      },
+      { rootMargin: '200px' }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [hasNextPage, isFetchingNextPage, fetchNextPage])
 
   function updateParam(updates) {
     setSearchParams((prev) => {
@@ -46,37 +70,39 @@ export default function CatalogPage() {
         if (v) next.set(k, v)
         else next.delete(k)
       })
-      if (!('page' in updates)) {
-        next.set('page', '1')
-      }
       return next
     })
   }
 
   function resetFilters() {
-    setSearchParams({ search: search || '' })
+    setSearchParams(view !== 'grid' ? { view } : {})
   }
 
   const filterValues = {
-    series: searchParams.get('series') || '',
+    series:   searchParams.get('series') || '',
     supertype: searchParams.get('supertype') || '',
-    rarity: searchParams.get('rarity') || '',
-    types: searchParams.get('types') || '',
+    rarity:   searchParams.get('rarity') || '',
+    types:    searchParams.get('types') || '',
     set_code: searchParams.get('set_code') || '',
-    hp_min: searchParams.get('hp_min') || '',
-    hp_max: searchParams.get('hp_max') || '',
+    hp_min:   searchParams.get('hp_min') || '',
+    hp_max:   searchParams.get('hp_max') || '',
     has_price: searchParams.get('has_price') || '',
   }
 
   const activeFilters = Object.entries(filterValues).filter(([, v]) => !!v)
 
+  const FILTER_LABELS = {
+    series: 'Era', supertype: 'Type', rarity: 'Rarity', types: 'Energy',
+    set_code: 'Set', hp_min: 'Min HP', hp_max: 'Max HP', has_price: 'Has Price',
+  }
+
   return (
     <PageContainer>
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h1 className="text-2xl font-bold text-slate-100">Card Catalog</h1>
+          <h1 className="text-3xl font-bold text-slate-100">Card Catalog</h1>
           <p className="text-sm text-slate-400 mt-0.5">
-            {totalCount > 0 ? `${totalCount.toLocaleString()} cards` : 'Browse all Pokemon TCG cards'}
+            {totalCount > 0 ? `${totalCount.toLocaleString()} cards` : 'Browse all Pokémon TCG cards'}
           </p>
         </div>
         <button
@@ -100,15 +126,22 @@ export default function CatalogPage() {
               key={k}
               className="inline-flex items-center gap-1.5 text-xs bg-elevated border border-border rounded-full px-3 py-1 text-slate-300"
             >
-              {v}
+              <span className="text-slate-500">{FILTER_LABELS[k] || k}:</span> {v}
               <button onClick={() => updateParam({ [k]: '' })} className="text-slate-500 hover:text-slate-200">
                 <X size={11} />
               </button>
             </span>
           ))}
+          <button
+            onClick={resetFilters}
+            className="text-xs text-accent-500 hover:text-accent-400 px-2"
+          >
+            Clear all
+          </button>
         </div>
       )}
 
+      {/* Toolbar */}
       <div className="flex items-center gap-3 mb-6">
         <SearchInput
           value={search}
@@ -116,11 +149,28 @@ export default function CatalogPage() {
           className="flex-1"
         />
         <SortSelector value={ordering} onChange={(v) => updateParam({ ordering: v })} />
+        {/* View toggle */}
+        <div className="flex items-center border border-border rounded-lg overflow-hidden shrink-0">
+          <button
+            onClick={() => updateParam({ view: 'grid' })}
+            className={`p-2 transition-colors ${view === 'grid' ? 'bg-elevated text-slate-100' : 'text-slate-500 hover:text-slate-300'}`}
+            title="Grid view"
+          >
+            <LayoutGrid size={17} />
+          </button>
+          <button
+            onClick={() => updateParam({ view: 'list' })}
+            className={`p-2 transition-colors ${view === 'list' ? 'bg-elevated text-slate-100' : 'text-slate-500 hover:text-slate-300'}`}
+            title="List view"
+          >
+            <List size={17} />
+          </button>
+        </div>
       </div>
 
       <div className="flex gap-6">
-        {/* Sidebar — desktop always visible, mobile overlay */}
-        <div className={`${sidebarOpen ? 'block' : 'hidden'} md:block w-56 shrink-0`}>
+        {/* Sidebar */}
+        <div className={`${sidebarOpen ? 'block' : 'hidden'} md:block w-64 shrink-0`}>
           <FilterSidebar
             filters={filterValues}
             onChange={updateParam}
@@ -128,13 +178,21 @@ export default function CatalogPage() {
           />
         </div>
 
+        {/* Card display */}
         <div className="flex-1 min-w-0">
-          <CardGrid cards={cards} loading={isLoading} />
-          <PaginationControls
-            page={page}
-            totalCount={totalCount}
-            onPage={(p) => updateParam({ page: String(p) })}
-          />
+          {view === 'list' ? (
+            <CardListView cards={cards} loading={isLoading} />
+          ) : (
+            <CardGrid cards={cards} loading={isLoading} />
+          )}
+
+          {/* Infinite scroll sentinel */}
+          <div ref={loaderRef} className="h-10 flex items-center justify-center mt-4">
+            {isFetchingNextPage && <Spinner size="sm" />}
+            {!hasNextPage && cards.length > 0 && (
+              <p className="text-xs text-slate-600">All {totalCount.toLocaleString()} cards loaded</p>
+            )}
+          </div>
         </div>
       </div>
     </PageContainer>

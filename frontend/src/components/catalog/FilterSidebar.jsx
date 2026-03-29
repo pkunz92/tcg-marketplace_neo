@@ -9,7 +9,7 @@ const TYPES = [
 function Section({ title, children }) {
   return (
     <div className="border-b border-border pb-4 mb-4 last:border-0 last:mb-0 last:pb-0">
-      <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3">{title}</p>
+      <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3 text-[11px]">{title}</p>
       {children}
     </div>
   )
@@ -24,7 +24,7 @@ function CheckItem({ label, checked, onChange }) {
         onChange={(e) => onChange(e.target.checked)}
         className="w-3.5 h-3.5 rounded accent-yellow-400 shrink-0"
       />
-      <span className="text-sm text-slate-400 group-hover:text-slate-200 transition-colors truncate">{label}</span>
+      <span className="text-sm text-slate-300 group-hover:text-slate-100 transition-colors truncate">{label}</span>
     </label>
   )
 }

@@ -1,4 +1,4 @@
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { ArrowLeft, Zap } from 'lucide-react'
 import { useCardStats } from '../hooks/useCards'
 import CardImage from '../components/cards/CardImage'
@@ -66,6 +66,7 @@ function ListingRow({ listing, onBuy }) {
 
 export default function CardDetailPage() {
   const { apiId } = useParams()
+  const navigate = useNavigate()
   const { data, isLoading } = useCardStats(apiId)
   const { isAuthenticated } = useAuth()
   const [buyListing, setBuyListing] = useState(null)
@@ -85,9 +86,9 @@ export default function CardDetailPage() {
 
   return (
     <PageContainer>
-      <Link to="/cards" className="inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-slate-200 mb-6 transition-colors">
+      <button onClick={() => navigate(-1)} className="inline-flex items-center gap-1.5 text-sm text-slate-400 hover:text-slate-200 mb-6 transition-colors">
         <ArrowLeft size={15} /> Back to catalog
-      </Link>
+      </button>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* Card image */}
