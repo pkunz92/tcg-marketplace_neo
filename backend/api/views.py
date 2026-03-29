@@ -210,12 +210,17 @@ class SetListAPIView(generics.ListAPIView):
     ordering = ['-release_date']
 
     def get_queryset(self):
-        queryset = Set_Master.objects.prefetch_related('translations').all()
+        from django.db.models import OuterRef, Subquery
+        language = self.request.query_params.get('language', 'en')
+        queryset = Set_Master.objects.prefetch_related('translations').filter(language=language)
         series = self.request.query_params.get('series')
         if series:
             queryset = queryset.filter(series__icontains=series)
-        language = self.request.query_params.get('language', 'en')
-        queryset = queryset.filter(language=language)
+        if language != 'en':
+            english_name_sq = Set_Master.objects.filter(
+                set_code=OuterRef('set_code'), language='en'
+            ).values('set_name')[:1]
+            queryset = queryset.annotate(english_name=Subquery(english_name_sq))
         return queryset
 
 
@@ -401,15 +406,33 @@ class SeriesListAPIView(generics.GenericAPIView):
         from django.db.models import Count, Min
 
         language = request.query_params.get('language', 'en')
-        series = (
+        series_qs = list(
             Set_Master.objects
             .filter(language=language)
             .exclude(series__in=['', None])
             .values('series')
-            .annotate(set_count=Count('set_code'), earliest=Min('release_date'))
+            .annotate(set_count=Count('set_code'), earliest=Min('release_date'), representative=Min('set_code'))
             .order_by('earliest')
         )
+
+        if language != 'en':
+            rep_codes = [s['representative'] for s in series_qs]
+            en_map = {
+                row['set_code']: row['series']
+                for row in Set_Master.objects.filter(
+                    set_code__in=rep_codes, language='en'
+                ).values('set_code', 'series')
+            }
+            return Response([
+                {
+                    'series': s['series'],
+                    'set_count': s['set_count'],
+                    'english_series': en_map.get(s['representative']),
+                }
+                for s in series_qs
+            ])
+
         return Response([
             {'series': s['series'], 'set_count': s['set_count']}
-            for s in series
+            for s in series_qs
         ])

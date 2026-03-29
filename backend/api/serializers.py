@@ -10,11 +10,12 @@ from .models import (
 # --- Set Master Serializer ---
 class SetMasterSerializer(serializers.ModelSerializer):
     translations = serializers.SerializerMethodField()
+    english_name = serializers.CharField(read_only=True, allow_null=True, default=None)
 
     class Meta:
         model = Set_Master
         fields = [
-            'id', 'set_code', 'set_name', 'ptcgo_code', 'series',
+            'id', 'set_code', 'language', 'set_name', 'english_name', 'ptcgo_code', 'series',
             'total_cards', 'printed_total', 'release_date',
             'symbol_url', 'logo_url', 'legalities', 'translations',
         ]

@@ -77,7 +77,9 @@ export default function FilterSidebar({ filters, language = 'en', onChange, onRe
           {seriesList.map((s) => (
             <CheckItem
               key={s.series}
-              label={`${s.series} (${s.set_count})`}
+              label={s.english_series
+                ? `${s.english_series} · ${s.series} (${s.set_count})`
+                : `${s.series} (${s.set_count})`}
               checked={filters.series === s.series}
               onChange={() => handleSeriesChange(filters.series === s.series ? '' : s.series)}
             />
@@ -94,7 +96,9 @@ export default function FilterSidebar({ filters, language = 'en', onChange, onRe
         >
           <option value="">All sets{filters.series ? ` in ${filters.series}` : ''}</option>
           {sets.map?.((s) => (
-            <option key={s.set_code} value={s.set_code}>{s.set_name}</option>
+            <option key={s.set_code} value={s.set_code}>
+              {s.english_name ? `${s.english_name} · ${s.set_name}` : s.set_name}
+            </option>
           ))}
         </select>
       </Section>

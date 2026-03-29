@@ -118,7 +118,13 @@ export default function CardDetailPage() {
             <h1 className="text-3xl font-bold text-slate-100">{card.card_name}</h1>
             <div className="flex items-center gap-3 mt-1 text-sm text-slate-400">
               <span>#{card.card_number}</span>
-              {card.set && <Link to={`/cards?set_code=${card.set.set_code}`} className="hover:text-accent-400 transition-colors">{card.set.set_name}</Link>}
+              {card.set && (
+                <Link to={`/cards?set_code=${card.set.set_code}&language=${card.language || 'en'}`} className="hover:text-accent-400 transition-colors">
+                  {card.set.english_name
+                    ? <>{card.set.english_name} <span className="text-slate-600">· {card.set.set_name}</span></>
+                    : card.set.set_name}
+                </Link>
+              )}
               {card.hp && <span className="text-slate-300">HP <strong>{card.hp}</strong></span>}
             </div>
             {card.flavor_text && (
