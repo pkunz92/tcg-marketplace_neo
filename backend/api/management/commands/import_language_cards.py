@@ -164,9 +164,13 @@ class Command(BaseCommand):
 
                         image_raw = card.get('images', {})
                         image_url = image_raw.get('large') or image_raw.get('small') or ''
-                        # TCGdex returns bare image path — append quality suffix if needed
-                        if image_url and not image_url.startswith('http'):
-                            image_url = f'https://assets.tcgdex.net/{image_url}/high.webp'
+                        # TCGdex returns a bare base URL (e.g. https://assets.tcgdex.net/ja/base1/base1-4)
+                        # with no file extension — always append /high.webp
+                        if image_url:
+                            if image_url.startswith('http') and not image_url.endswith(('.webp', '.png', '.jpg')):
+                                image_url = f'{image_url}/high.webp'
+                            elif not image_url.startswith('http'):
+                                image_url = f'https://assets.tcgdex.net/{image_url}/high.webp'
 
                         existing = Card_Master.objects.filter(api_id=api_id).first()
                         if existing and not overwrite:

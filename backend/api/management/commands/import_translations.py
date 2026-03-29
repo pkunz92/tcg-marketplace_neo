@@ -98,7 +98,8 @@ class Command(BaseCommand):
                 continue
 
             try:
-                set_obj = Set_Master.objects.get(set_code=set_code)
+                # Pin to language='en' — multiple Set_Master rows exist per set_code (one per language)
+                set_obj = Set_Master.objects.get(set_code=set_code, language='en')
             except Set_Master.DoesNotExist:
                 skipped += 1
                 continue
@@ -156,6 +157,12 @@ class Command(BaseCommand):
                         api_id = card.get('id')
                         name = card.get('name', '')
                         image_url = card.get('images', {}).get('large', '') or ''
+                        # TCGdex returns bare base URL without extension — append /high.webp
+                        if image_url:
+                            if image_url.startswith('http') and not image_url.endswith(('.webp', '.png', '.jpg')):
+                                image_url = f'{image_url}/high.webp'
+                            elif not image_url.startswith('http'):
+                                image_url = f'https://assets.tcgdex.net/{image_url}/high.webp'
 
                         if not api_id or not name:
                             total_skipped += 1
@@ -191,6 +198,7 @@ class Command(BaseCommand):
                             try:
                                 Card_Master.objects.create(
                                     api_id=api_id,
+                                    language=lang_code,
                                     set=set_obj,
                                     card_name=name,
                                     card_number=card_number,
