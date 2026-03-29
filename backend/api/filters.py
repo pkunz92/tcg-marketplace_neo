@@ -15,6 +15,7 @@ class CardMasterFilter(django_filters.FilterSet):
     set_code = django_filters.CharFilter(field_name='set__set_code', lookup_expr='exact')
     set_name = django_filters.CharFilter(field_name='set__set_name', lookup_expr='icontains')
     series = django_filters.CharFilter(field_name='set__series', lookup_expr='icontains')
+    language = django_filters.CharFilter(field_name='language', lookup_expr='iexact')
     hp_min = django_filters.NumberFilter(method='filter_hp_min')
     hp_max = django_filters.NumberFilter(method='filter_hp_max')
     has_price = django_filters.BooleanFilter(method='filter_has_price')

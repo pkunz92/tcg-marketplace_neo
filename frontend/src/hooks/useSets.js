@@ -8,10 +8,10 @@ export function useSets(params = {}) {
   })
 }
 
-export function useSeries() {
+export function useSeries(language = 'en') {
   return useQuery({
-    queryKey: ['series', 'list'],
-    queryFn: () => api.get('/series/').then((r) => r.data),
+    queryKey: ['series', 'list', language],
+    queryFn: () => api.get('/series/', { params: { language } }).then((r) => r.data),
     staleTime: 1000 * 60 * 60,
   })
 }

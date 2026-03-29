@@ -105,7 +105,7 @@ class CardMasterListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Card_Master
         fields = [
-            'api_id', 'card_name', 'card_number', 'secondary_id',
+            'api_id', 'language', 'card_name', 'card_number', 'secondary_id',
             'card_rarity', 'image_url', 'supertype', 'hp', 'types',
             'artist', 'set',
         ]

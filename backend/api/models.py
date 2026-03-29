@@ -23,7 +23,8 @@ class GradingChoices(models.TextChoices):
 
 
 class Set_Master(models.Model):
-    set_code = models.CharField(max_length=20, unique=True)
+    set_code = models.CharField(max_length=20)
+    language = models.CharField(max_length=10, default='en', db_index=True)
     set_name = models.CharField(max_length=100)
     total_cards = models.IntegerField(default=0)
     printed_total = models.IntegerField(default=0)
@@ -36,10 +37,11 @@ class Set_Master(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.set_name
+        return f"{self.set_name} ({self.language})"
 
     class Meta:
         verbose_name_plural = "Set Masters"
+        unique_together = ('set_code', 'language')
 
 
 class Card_Master(models.Model):
@@ -49,7 +51,8 @@ class Card_Master(models.Model):
         related_name='cards',
         null=True,
     )
-    api_id = models.CharField(max_length=50, unique=True, primary_key=True)
+    api_id = models.CharField(max_length=60, unique=True, primary_key=True)
+    language = models.CharField(max_length=10, default='en', db_index=True)
     card_name = models.CharField(max_length=255)
     card_number = models.CharField(max_length=10)
     secondary_id = models.CharField(max_length=50, blank=True, null=True, unique=True)

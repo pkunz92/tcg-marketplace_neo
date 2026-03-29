@@ -211,11 +211,11 @@ class SetListAPIView(generics.ListAPIView):
 
     def get_queryset(self):
         queryset = Set_Master.objects.prefetch_related('translations').all()
-
         series = self.request.query_params.get('series')
         if series:
             queryset = queryset.filter(series__icontains=series)
-
+        language = self.request.query_params.get('language', 'en')
+        queryset = queryset.filter(language=language)
         return queryset
 
 
@@ -378,7 +378,8 @@ class RarityListAPIView(generics.GenericAPIView):
     permission_classes = [permissions.AllowAny]
 
     def get(self, request):
-        queryset = Card_Master.objects.exclude(card_rarity__in=['Unknown', '', None])
+        language = request.query_params.get('language', 'en')
+        queryset = Card_Master.objects.filter(language=language).exclude(card_rarity__in=['Unknown', '', None])
 
         set_code = request.query_params.get('set_code')
         if set_code:
@@ -388,12 +389,7 @@ class RarityListAPIView(generics.GenericAPIView):
         if series:
             queryset = queryset.filter(set__series=series)
 
-        rarities = (
-            queryset
-            .values_list('card_rarity', flat=True)
-            .distinct()
-            .order_by('card_rarity')
-        )
+        rarities = queryset.values_list('card_rarity', flat=True).distinct().order_by('card_rarity')
         return Response(sorted(set(rarities)))
 
 
@@ -404,8 +400,10 @@ class SeriesListAPIView(generics.GenericAPIView):
     def get(self, request):
         from django.db.models import Count, Min
 
+        language = request.query_params.get('language', 'en')
         series = (
             Set_Master.objects
+            .filter(language=language)
             .exclude(series__in=['', None])
             .values('series')
             .annotate(set_count=Count('set_code'), earliest=Min('release_date'))

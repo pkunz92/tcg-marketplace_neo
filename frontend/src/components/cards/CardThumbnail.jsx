@@ -5,14 +5,20 @@ import CardImage from './CardImage'
 import { RarityBadge, TypeBadge } from './CardBadge'
 import PriceTag from './PriceTag'
 
+const LANG_FLAGS = { ja: '🇯🇵', de: '🇩🇪', fr: '🇫🇷', it: '🇮🇹', 'zh-cn': '🇨🇳', ko: '🇰🇷', es: '🇪🇸', pt: '🇧🇷' }
+
 function CardFront({ card }) {
   return (
     <div className="relative w-full h-full rounded-xl overflow-hidden bg-surface border border-border group-hover:border-accent-500/50 transition-colors">
       <CardImage src={card.image_url} alt={card.card_name} className="w-full h-full" />
-      {/* Set logo overlay */}
       {card.set?.logo_url && (
         <div className="absolute bottom-2 right-2 w-10 h-5 opacity-60">
           <img src={card.set.logo_url} alt={card.set?.set_name} className="w-full h-full object-contain" />
+        </div>
+      )}
+      {card.language && card.language !== 'en' && (
+        <div className="absolute top-1.5 left-1.5 text-sm leading-none">
+          {LANG_FLAGS[card.language] || card.language.toUpperCase()}
         </div>
       )}
     </div>

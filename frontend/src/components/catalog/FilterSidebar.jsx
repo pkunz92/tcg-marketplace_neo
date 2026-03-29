@@ -29,15 +29,14 @@ function CheckItem({ label, checked, onChange }) {
   )
 }
 
-export default function FilterSidebar({ filters, onChange, onReset }) {
-  const { data: seriesList = [] } = useSeries()
-  const { data: setsData } = useSets(
-    filters.series ? { series: filters.series, ordering: '-release_date' } : { ordering: '-release_date' },
-    { enabled: true }
-  )
+export default function FilterSidebar({ filters, language = 'en', onChange, onReset }) {
+  const { data: seriesList = [] } = useSeries(language)
+  const setParams = { ordering: '-release_date', language }
+  if (filters.series) setParams.series = filters.series
+  const { data: setsData } = useSets(setParams)
   const sets = setsData?.results || setsData || []
 
-  const rarityParams = {}
+  const rarityParams = { language }
   if (filters.set_code) rarityParams.set_code = filters.set_code
   else if (filters.series) rarityParams.series = filters.series
   const { data: rarities = [] } = useRarities(rarityParams)

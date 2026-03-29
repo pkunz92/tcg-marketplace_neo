@@ -27,12 +27,14 @@ export default function CatalogPage() {
   const search   = searchParams.get('search') || ''
   const ordering = searchParams.get('ordering') || ''
   const view     = searchParams.get('view') || 'grid'
+  const language = searchParams.get('language') || 'en'
   const debouncedSearch = useDebounce(search, 300)
 
   const params = {
     ...buildParams(searchParams),
     search: debouncedSearch,
     ordering,
+    language,
   }
   Object.keys(params).forEach((k) => { if (!params[k] && params[k] !== 0) delete params[k] })
 
@@ -79,7 +81,7 @@ export default function CatalogPage() {
   }
 
   const filterValues = {
-    series:   searchParams.get('series') || '',
+    series:    searchParams.get('series') || '',
     supertype: searchParams.get('supertype') || '',
     rarity:   searchParams.get('rarity') || '',
     types:    searchParams.get('types') || '',
@@ -149,6 +151,20 @@ export default function CatalogPage() {
           className="flex-1"
         />
         <SortSelector value={ordering} onChange={(v) => updateParam({ ordering: v })} />
+        {/* Language selector */}
+        <select
+          value={language}
+          onChange={(e) => updateParam({ language: e.target.value, series: '', set_code: '', rarity: '' })}
+          className="bg-surface border border-border rounded-lg px-3 py-2 text-sm text-slate-300 focus:outline-none focus:border-accent-500 shrink-0"
+          title="Card language"
+        >
+          <option value="en">🇬🇧 EN</option>
+          <option value="ja">🇯🇵 JA</option>
+          <option value="de">🇩🇪 DE</option>
+          <option value="fr">🇫🇷 FR</option>
+          <option value="it">🇮🇹 IT</option>
+          <option value="zh-cn">🇨🇳 ZH</option>
+        </select>
         {/* View toggle */}
         <div className="flex items-center border border-border rounded-lg overflow-hidden shrink-0">
           <button
@@ -173,6 +189,7 @@ export default function CatalogPage() {
         <div className={`${sidebarOpen ? 'block' : 'hidden'} md:block w-64 shrink-0`}>
           <FilterSidebar
             filters={filterValues}
+            language={language}
             onChange={updateParam}
             onReset={resetFilters}
           />
