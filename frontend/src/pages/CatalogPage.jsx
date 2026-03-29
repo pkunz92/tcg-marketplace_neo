@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router-dom'
 import { LayoutGrid, List, SlidersHorizontal, X } from 'lucide-react'
-import { useState, useEffect, useRef, useCallback } from 'react'
+import { useState } from 'react'
 import { useCardsInfinite } from '../hooks/useCards'
 import { useDebounce } from '../hooks/useDebounce'
 import CardGrid from '../components/cards/CardGrid'
@@ -22,7 +22,6 @@ function buildParams(searchParams) {
 export default function CatalogPage() {
   const [searchParams, setSearchParams] = useSearchParams()
   const [sidebarOpen, setSidebarOpen] = useState(false)
-  const loaderRef = useRef(null)
 
   const search   = searchParams.get('search') || ''
   const ordering = searchParams.get('ordering') || ''
@@ -48,22 +47,6 @@ export default function CatalogPage() {
 
   const cards      = data?.pages.flatMap((p) => p.results) || []
   const totalCount = data?.pages[0]?.count || 0
-
-  // Infinite scroll — observe the sentinel div
-  useEffect(() => {
-    const el = loaderRef.current
-    if (!el) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && hasNextPage && !isFetchingNextPage) {
-          fetchNextPage()
-        }
-      },
-      { rootMargin: '200px' }
-    )
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [hasNextPage, isFetchingNextPage, fetchNextPage])
 
   function updateParam(updates) {
     setSearchParams((prev) => {
@@ -203,11 +186,19 @@ export default function CatalogPage() {
             <CardGrid cards={cards} loading={isLoading} />
           )}
 
-          {/* Infinite scroll sentinel */}
-          <div ref={loaderRef} className="h-10 flex items-center justify-center mt-4">
+          {/* Load more */}
+          <div className="flex items-center justify-center mt-6">
             {isFetchingNextPage && <Spinner size="sm" />}
+            {!isFetchingNextPage && hasNextPage && (
+              <button
+                onClick={() => fetchNextPage()}
+                className="px-6 py-2.5 rounded-lg border border-border text-sm text-slate-300 hover:bg-elevated hover:border-accent-500 transition-colors"
+              >
+                Load more
+              </button>
+            )}
             {!hasNextPage && cards.length > 0 && (
-              <p className="text-xs text-slate-600">All {totalCount.toLocaleString()} cards loaded</p>
+              <p className="text-sm text-slate-600">All {totalCount.toLocaleString()} cards loaded</p>
             )}
           </div>
         </div>

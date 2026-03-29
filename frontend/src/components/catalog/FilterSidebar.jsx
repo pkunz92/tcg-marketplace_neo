@@ -9,7 +9,7 @@ const TYPES = [
 function Section({ title, children }) {
   return (
     <div className="border-b border-border pb-4 mb-4 last:border-0 last:mb-0 last:pb-0">
-      <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3 text-[11px]">{title}</p>
+      <p className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-3">{title}</p>
       {children}
     </div>
   )

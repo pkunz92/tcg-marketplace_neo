@@ -66,8 +66,8 @@ export default function CardThumbnail({ card }) {
         />
       </Link>
       <div className="mt-1.5 px-0.5">
-        <p className="text-xs text-slate-300 truncate font-medium">{card.card_name}</p>
-        <p className="text-xs text-slate-500 truncate">{card.set?.set_name}</p>
+        <p className="text-sm text-slate-300 truncate font-medium">{card.card_name}</p>
+        <p className="text-xs text-slate-400 truncate">{card.set?.set_name}</p>
       </div>
     </motion.div>
   )
