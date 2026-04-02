@@ -23,7 +23,8 @@ class GradingChoices(models.TextChoices):
 
 
 class Set_Master(models.Model):
-    set_code = models.CharField(max_length=20, unique=True)
+    set_code = models.CharField(max_length=20)
+    language = models.CharField(max_length=10, default='en', db_index=True)
     set_name = models.CharField(max_length=100)
     total_cards = models.IntegerField(default=0)
     printed_total = models.IntegerField(default=0)
@@ -36,10 +37,11 @@ class Set_Master(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.set_name
+        return f"{self.set_name} ({self.language})"
 
     class Meta:
         verbose_name_plural = "Set Masters"
+        unique_together = ('set_code', 'language')
 
 
 class Card_Master(models.Model):
@@ -49,7 +51,8 @@ class Card_Master(models.Model):
         related_name='cards',
         null=True,
     )
-    api_id = models.CharField(max_length=50, unique=True, primary_key=True)
+    api_id = models.CharField(max_length=60, unique=True, primary_key=True)
+    language = models.CharField(max_length=10, default='en', db_index=True)
     card_name = models.CharField(max_length=255)
     card_number = models.CharField(max_length=10)
     secondary_id = models.CharField(max_length=50, blank=True, null=True, unique=True)
@@ -147,6 +150,33 @@ class CardPrice(models.Model):
     class Meta:
         unique_together = ('card_master', 'source', 'variant')
         verbose_name_plural = "Card Prices"
+
+
+class CardPriceHistory(models.Model):
+    """Timestamped price snapshots — one row written every time prices are fetched."""
+    card_master = models.ForeignKey(
+        Card_Master,
+        on_delete=models.CASCADE,
+        related_name='price_history',
+    )
+    source = models.CharField(max_length=50)
+    variant = models.CharField(max_length=50)
+    currency = models.CharField(max_length=3)
+    low    = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    mid    = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    high   = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    market = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    fetched_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['card_master', 'source', 'variant', 'fetched_at']),
+        ]
+        ordering = ['fetched_at']
+        verbose_name_plural = "Card Price History"
+
+    def __str__(self):
+        return f"{self.card_master_id} {self.source}/{self.variant} @ {self.fetched_at:%Y-%m-%d}"
 
 
 class Card_Listing(models.Model):

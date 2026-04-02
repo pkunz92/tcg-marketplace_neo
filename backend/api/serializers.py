@@ -3,18 +3,19 @@ from dj_rest_auth.registration.serializers import RegisterSerializer
 from rest_framework import serializers
 from .models import (
     Card_Master, Card_Listing, Order, OrderStatusChoices,
-    Set_Master, UserProfile, CardTranslation, SetTranslation, CardPrice,
+    Set_Master, UserProfile, CardTranslation, SetTranslation, CardPrice, CardPriceHistory,
 )
 
 
 # --- Set Master Serializer ---
 class SetMasterSerializer(serializers.ModelSerializer):
     translations = serializers.SerializerMethodField()
+    english_name = serializers.CharField(read_only=True, allow_null=True, default=None)
 
     class Meta:
         model = Set_Master
         fields = [
-            'id', 'set_code', 'set_name', 'ptcgo_code', 'series',
+            'id', 'set_code', 'language', 'set_name', 'english_name', 'ptcgo_code', 'series',
             'total_cards', 'printed_total', 'release_date',
             'symbol_url', 'logo_url', 'legalities', 'translations',
         ]
@@ -48,6 +49,12 @@ class CardPriceSerializer(serializers.ModelSerializer):
             'source', 'variant', 'currency',
             'low', 'mid', 'high', 'market', 'direct_low', 'updated_at',
         ]
+
+
+class CardPriceHistorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CardPriceHistory
+        fields = ['source', 'variant', 'currency', 'low', 'mid', 'high', 'market', 'fetched_at']
 
 
 # --- Card Translation Serializer ---
@@ -99,7 +106,7 @@ class CardMasterListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Card_Master
         fields = [
-            'api_id', 'card_name', 'card_number', 'secondary_id',
+            'api_id', 'language', 'card_name', 'card_number', 'secondary_id',
             'card_rarity', 'image_url', 'supertype', 'hp', 'types',
             'artist', 'set',
         ]

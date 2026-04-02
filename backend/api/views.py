@@ -6,11 +6,11 @@ from rest_framework.exceptions import PermissionDenied, ValidationError
 from django.db import transaction
 from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
-from .models import Card_Master, Card_Listing, Order, Set_Master, CardPrice
+from .models import Card_Master, Card_Listing, Order, Set_Master, CardPrice, CardPriceHistory
 from .serializers import (
     CardMasterSerializer, CardMasterListSerializer, CardListingSerializer,
     OrderSerializer, SetMasterSerializer, UserProfileSerializer,
-    CardPriceSerializer,
+    CardPriceSerializer, CardPriceHistorySerializer,
 )
 from .permissions import IsSellerOrReadOnly
 from .filters import CardListingFilter, CardMasterFilter
@@ -37,23 +37,40 @@ class CardMasterViewSet(viewsets.ReadOnlyModelViewSet):
 class CardMasterListAPIView(generics.ListAPIView):
     """
     List cards with search, filtering by supertype/rarity/types/set/artist.
+    Default ordering: by set release date then numeric card number.
     Supports ?lang= for filtering by translation availability.
     """
     serializer_class = CardMasterListSerializer
     permission_classes = [permissions.AllowAny]
-    filter_backends = [SearchFilter, DjangoFilterBackend, OrderingFilter]
+    filter_backends = [SearchFilter, DjangoFilterBackend]
     search_fields = ['card_name', 'secondary_id']
     filterset_class = CardMasterFilter
-    ordering_fields = ['card_name', 'card_number', 'card_rarity', 'hp']
-    ordering = ['set__set_name', 'card_number']
 
     def get_queryset(self):
-        queryset = Card_Master.objects.select_related('set').all()
+        from django.db.models.functions import Cast
+        from django.db.models import IntegerField
 
-        # Filter by language availability
+        queryset = Card_Master.objects.select_related('set').annotate(
+            card_number_int=Cast('card_number', IntegerField())
+        )
+
         lang = self.request.query_params.get('lang')
         if lang and lang != 'en':
             queryset = queryset.filter(translations__language=lang)
+
+        ordering = self.request.query_params.get('ordering', '')
+
+        if ordering in ('', 'card_number', '-card_number'):
+            direction = '-' if ordering.startswith('-') else ''
+            queryset = queryset.order_by(
+                'set__release_date', f'{direction}card_number_int', f'{direction}card_number'
+            )
+        elif ordering.lstrip('-') in ('card_name', 'card_rarity', 'hp'):
+            queryset = queryset.order_by(ordering)
+        else:
+            queryset = queryset.order_by(
+                'set__release_date', 'card_number_int', 'card_number'
+            )
 
         return queryset
 
@@ -124,14 +141,64 @@ class CardDetailWithStatsAPIView(generics.RetrieveAPIView):
             'translations': translations,
             'market_prices': market_prices,
             'statistics': {
-                'price_stats': {
-                    'min': float(price_stats['min_price']) if price_stats['min_price'] else None,
-                    'max': float(price_stats['max_price']) if price_stats['max_price'] else None,
-                    'avg': float(price_stats['avg_price']) if price_stats['avg_price'] else None,
-                    'total_listings': price_stats['total_listings'],
-                },
+                'min_price': float(price_stats['min_price']) if price_stats['min_price'] else None,
+                'max_price': float(price_stats['max_price']) if price_stats['max_price'] else None,
+                'avg_price': float(price_stats['avg_price']) if price_stats['avg_price'] else None,
+                'total_listings': price_stats['total_listings'],
             },
         })
+
+
+class CardPriceHistoryAPIView(generics.GenericAPIView):
+    """
+    Returns price history for a card grouped by source+variant.
+    Query params:
+      ?source=tcgplayer|cardmarket
+      ?variant=holofoil|normal|...
+      ?days=30|90|365 (default 90)
+    """
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request, api_id):
+        from django.utils import timezone
+        from datetime import timedelta
+
+        days    = int(request.query_params.get('days', 90))
+        source  = request.query_params.get('source', '')
+        variant = request.query_params.get('variant', '')
+        since   = timezone.now() - timedelta(days=days)
+
+        qs = CardPriceHistory.objects.filter(
+            card_master_id=api_id,
+            fetched_at__gte=since,
+        ).order_by('fetched_at')
+
+        if source:
+            qs = qs.filter(source=source)
+        if variant:
+            qs = qs.filter(variant=variant)
+
+        data = CardPriceHistorySerializer(qs, many=True).data
+
+        # Group by source+variant for the frontend chart
+        groups = {}
+        for row in data:
+            key = f"{row['source']}/{row['variant']}"
+            if key not in groups:
+                groups[key] = {
+                    'source': row['source'],
+                    'variant': row['variant'],
+                    'currency': row['currency'],
+                    'points': [],
+                }
+            groups[key]['points'].append({
+                'date': row['fetched_at'][:10],
+                'market': row['market'],
+                'low': row['low'],
+                'mid': row['mid'],
+            })
+
+        return Response(list(groups.values()))
 
 
 class SetListAPIView(generics.ListAPIView):
@@ -139,16 +206,21 @@ class SetListAPIView(generics.ListAPIView):
     permission_classes = [permissions.AllowAny]
     filter_backends = [SearchFilter, OrderingFilter]
     search_fields = ['set_name', 'set_code', 'series']
-    ordering_fields = ['set_name', 'release_date', 'set_code']
-    ordering = ['set_name']
+    ordering_fields = ['set_name', 'release_date', 'set_code', 'series']
+    ordering = ['-release_date']
 
     def get_queryset(self):
-        queryset = Set_Master.objects.prefetch_related('translations').all()
-
+        from django.db.models import OuterRef, Subquery
+        language = self.request.query_params.get('language', 'en')
+        queryset = Set_Master.objects.prefetch_related('translations').filter(language=language)
         series = self.request.query_params.get('series')
         if series:
             queryset = queryset.filter(series__icontains=series)
-
+        if language != 'en':
+            english_name_sq = Set_Master.objects.filter(
+                set_code=OuterRef('set_code'), language='en'
+            ).values('set_name')[:1]
+            queryset = queryset.annotate(english_name=Subquery(english_name_sq))
         return queryset
 
 
@@ -304,3 +376,63 @@ class UserProfileView(generics.RetrieveUpdateAPIView):
 
     def get_object(self):
         return self.request.user.profile
+
+
+class RarityListAPIView(generics.GenericAPIView):
+    """Returns distinct rarities, optionally filtered by set_code or series."""
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request):
+        language = request.query_params.get('language', 'en')
+        queryset = Card_Master.objects.filter(language=language).exclude(card_rarity__in=['Unknown', '', None])
+
+        set_code = request.query_params.get('set_code')
+        if set_code:
+            queryset = queryset.filter(set__set_code=set_code)
+
+        series = request.query_params.get('series')
+        if series:
+            queryset = queryset.filter(set__series=series)
+
+        rarities = queryset.values_list('card_rarity', flat=True).distinct().order_by('card_rarity')
+        return Response(sorted(set(rarities)))
+
+
+class SeriesListAPIView(generics.GenericAPIView):
+    """Returns distinct series names with set counts, ordered by release date."""
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request):
+        from django.db.models import Count, Min
+
+        language = request.query_params.get('language', 'en')
+        series_qs = list(
+            Set_Master.objects
+            .filter(language=language)
+            .exclude(series__in=['', None])
+            .values('series')
+            .annotate(set_count=Count('set_code'), earliest=Min('release_date'), representative=Min('set_code'))
+            .order_by('earliest')
+        )
+
+        if language != 'en':
+            rep_codes = [s['representative'] for s in series_qs]
+            en_map = {
+                row['set_code']: row['series']
+                for row in Set_Master.objects.filter(
+                    set_code__in=rep_codes, language='en'
+                ).values('set_code', 'series')
+            }
+            return Response([
+                {
+                    'series': s['series'],
+                    'set_count': s['set_count'],
+                    'english_series': en_map.get(s['representative']),
+                }
+                for s in series_qs
+            ])
+
+        return Response([
+            {'series': s['series'], 'set_count': s['set_count']}
+            for s in series_qs
+        ])

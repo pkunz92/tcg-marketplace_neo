@@ -16,7 +16,10 @@ urlpatterns = [
     path('cards/list/', views.CardMasterListAPIView.as_view(), name='card-list'),
     path('cards/<str:api_id>/', views.CardMasterDetailAPIView.as_view(), name='card-detail'),
     path('cards/<str:api_id>/stats/', views.CardDetailWithStatsAPIView.as_view(), name='card-stats'),
+    path('cards/<str:api_id>/price-history/', views.CardPriceHistoryAPIView.as_view(), name='card-price-history'),
     path('sets/', views.SetListAPIView.as_view(), name='set-list'),
+    path('rarities/', views.RarityListAPIView.as_view(), name='rarity-list'),
+    path('series/', views.SeriesListAPIView.as_view(), name='series-list'),
     path('stats/', views.DatabaseStatsAPIView.as_view(), name='db-stats'),
     path('', views.api_root, name='api-root'),
 ]
