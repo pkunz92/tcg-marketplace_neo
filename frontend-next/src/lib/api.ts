@@ -38,11 +38,38 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
   return res.json() as Promise<T>
 }
 
+async function requestForm<T>(path: string, formData: FormData, method = 'POST'): Promise<T> {
+  const res = await fetch(`/api${path}`, {
+    method,
+    credentials: 'include',
+    body: formData,
+    // No Content-Type header — browser sets multipart boundary automatically
+  })
+
+  if (!res.ok) {
+    let detail = `HTTP ${res.status}`
+    try {
+      const body = await res.json()
+      detail = body.detail ?? body.error ?? JSON.stringify(body)
+    } catch {
+      /* ignore */
+    }
+    throw new ApiError(res.status, detail)
+  }
+
+  if (res.status === 204) return undefined as T
+  return res.json() as Promise<T>
+}
+
 export const api = {
   get: <T>(path: string) => request<T>(path),
 
   post: <T>(path: string, body: unknown) =>
     request<T>(path, { method: 'POST', body: JSON.stringify(body) }),
+
+  postForm: <T>(path: string, formData: FormData) => requestForm<T>(path, formData),
+
+  patchForm: <T>(path: string, formData: FormData) => requestForm<T>(path, formData, 'PATCH'),
 
   patch: <T>(path: string, body: unknown) =>
     request<T>(path, { method: 'PATCH', body: JSON.stringify(body) }),
@@ -58,17 +85,60 @@ export interface User {
   email: string
 }
 
+export type ConditionCode = 'MT' | 'NM' | 'LP' | 'MP' | 'HP' | 'DMG'
+export type GradingCode = 'RAW' | 'PSA' | 'BGS' | 'CGC' | 'TAG' | 'ACE'
+export type GradingStatus = 'none' | 'queued' | 'processing' | 'complete' | 'failed'
+
+export interface AutoGrade {
+  grade: string
+  confidence: number
+  detectedCard?: string
+}
+
 export interface Listing {
   id: string
+  card_master: string
   card_name: string
+  card_number?: string
+  card_rarity?: string
   card_image_url: string
   set_name: string
-  condition: string
+  set_code?: string
+  condition: ConditionCode
+  is_graded: GradingCode
   price_chf: number
   quantity: number
+  seller: number
   seller_username: string
+  seller_photo: string | null
+  seller_photo_url: string | null
   is_available: boolean
+  requires_photo: boolean
+  grading_status: GradingStatus
+  auto_grade: AutoGrade | null
   created_at: string
+}
+
+export interface CardSuggestion {
+  name: string
+  set: string
+  confidence: number
+}
+
+export interface AnalyzePhotoResponse {
+  card_suggestions: CardSuggestion[]
+  grading: {
+    suggested_condition: ConditionCode
+    suggested_psa_grade: number | null
+    confidence: number
+    confidence_breakdown: Record<ConditionCode, number>
+    issues_detected: string[]
+    method: string
+  }
+  photo_quality: {
+    ok: boolean
+    warnings: string[]
+  }
 }
 
 export interface Order {
