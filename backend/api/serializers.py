@@ -169,6 +169,10 @@ class OrderSerializer(serializers.ModelSerializer):
         read_only_fields = ['buyer', 'price_chf', 'created_at']
 
     def validate(self, attrs):
+        # Skip creation-only checks on partial updates (PATCH) — only status is writable.
+        if self.partial:
+            return attrs
+
         listing = attrs.get('listing')
         quantity = attrs.get('quantity', 1)
         required_fields = [
