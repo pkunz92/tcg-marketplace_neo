@@ -27,5 +27,12 @@ urlpatterns = [
     path('series/', views.SeriesListAPIView.as_view(), name='series-list'),
     path('stats/', views.DatabaseStatsAPIView.as_view(), name='db-stats'),
     path('listings/analyze-photo/', views.AnalyzePhotoView.as_view(), name='listing-analyze-photo'),
+    # Phase 3: photo storage pipeline
+    path('photos/presign', views.PresignPhotoView.as_view(), name='photo-presign'),
+    path('photos/<int:pk>/', views.PhotoDeleteView.as_view(), name='photo-delete'),
+    path('listings/<int:listing_id>/photos/', views.ListingPhotosView.as_view(), name='listing-photos'),
+    path('listings/bulk/', views.BulkListingUploadView.as_view(), name='listing-bulk-upload'),
+    # Phase 3: auto-grading webhook (internal)
+    path('internal/grade-photo', views.GradePhotoWebhookView.as_view(), name='grade-photo-webhook'),
     path('', views.api_root, name='api-root'),
 ]

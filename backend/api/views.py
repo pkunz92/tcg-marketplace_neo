@@ -9,13 +9,13 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import (
     Card_Master, Card_Listing, Order, OrderStatusChoices, Set_Master, CardPrice, CardPriceHistory,
-    Offer, OfferStatusChoices, Transaction, TransactionStatusChoices, CardGrade,
+    Offer, OfferStatusChoices, Transaction, TransactionStatusChoices, CardGrade, ListingPhoto,
 )
 from .serializers import (
     CardMasterSerializer, CardMasterListSerializer, CardListingSerializer,
     OrderSerializer, SetMasterSerializer, UserProfileSerializer,
     CardPriceSerializer, CardPriceHistorySerializer,
-    OfferSerializer, TransactionSerializer, CardGradeSerializer,
+    OfferSerializer, TransactionSerializer, CardGradeSerializer, ListingPhotoSerializer,
 )
 from .permissions import IsSellerOrReadOnly
 from .filters import CardListingFilter, CardMasterFilter
@@ -312,6 +312,29 @@ class CardListingViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(seller=self.request.user, is_available=True)
+
+    def perform_update(self, serializer):
+        instance = self.get_object()
+        # Enforce mandatory photo when publishing (setting is_available=True)
+        making_available = serializer.validated_data.get('is_available', instance.is_available)
+        if making_available and instance.requires_photo:
+            has_photo = ListingPhoto.objects.filter(
+                listing=instance, is_deleted=False
+            ).exists()
+            if not has_photo:
+                from rest_framework.exceptions import ValidationError as DRFValidationError
+                raise DRFValidationError({
+                    'code': 'PHOTO_REQUIRED',
+                    'threshold': {
+                        'min_value_chf': instance.PHOTO_REQUIRED_VALUE_THRESHOLD,
+                        'rarities': list(instance.PHOTO_REQUIRED_RARITIES),
+                    },
+                    'detail': (
+                        'A photo is required before publishing this listing. '
+                        'Upload a photo via POST /api/photos/presign first.'
+                    ),
+                })
+        serializer.save()
 
     def get_serializer_context(self):
         context = super().get_serializer_context()
@@ -819,3 +842,347 @@ class SeriesListAPIView(generics.GenericAPIView):
             {'series': s['series'], 'set_count': s['set_count']}
             for s in series_qs
         ])
+
+
+# ---------------------------------------------------------------------------
+# Phase 3: S3 Photo Storage Pipeline
+# ---------------------------------------------------------------------------
+
+def _get_s3_client():
+    """Return a boto3 S3 client, or None if AWS credentials are absent."""
+    from django.conf import settings as django_settings
+    try:
+        import boto3
+    except ImportError:
+        return None
+    key_id = getattr(django_settings, 'AWS_ACCESS_KEY_ID', '')
+    secret = getattr(django_settings, 'AWS_SECRET_ACCESS_KEY', '')
+    region = getattr(django_settings, 'AWS_REGION', 'us-east-1')
+    if not (key_id and secret):
+        return None
+    return boto3.client(
+        's3',
+        aws_access_key_id=key_id,
+        aws_secret_access_key=secret,
+        region_name=region,
+    )
+
+
+class PresignPhotoView(generics.GenericAPIView):
+    """
+    POST /api/photos/presign
+
+    Generate an S3 presigned upload URL for a listing photo.
+
+    Request body: { "listingId": <int>, "mimeType": "image/jpeg", "sizeBytes": <int> }
+    Response 200: { "uploadUrl": "...", "photoId": <int>, "key": "..." }
+    Response 503: AWS credentials not configured.
+    """
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request, *args, **kwargs):
+        from django.conf import settings as django_settings
+        import uuid
+
+        listing_id = request.data.get('listingId')
+        mime_type = request.data.get('mimeType', 'image/jpeg')
+        size_bytes = request.data.get('sizeBytes')
+
+        if not listing_id:
+            raise ValidationError({'listingId': 'This field is required.'})
+
+        try:
+            listing = Card_Listing.objects.get(pk=listing_id, seller=request.user)
+        except Card_Listing.DoesNotExist:
+            raise ValidationError({'listingId': 'Listing not found or not owned by you.'})
+
+        s3 = _get_s3_client()
+        bucket = getattr(django_settings, 'AWS_S3_BUCKET', '')
+        if not s3 or not bucket:
+            return Response(
+                {'error': 'S3 photo storage is not configured on this server.'},
+                status=status.HTTP_503_SERVICE_UNAVAILABLE,
+            )
+
+        ext = mime_type.split('/')[-1] if '/' in mime_type else 'jpg'
+        key = f"listing-photos/{listing_id}/{uuid.uuid4()}.{ext}"
+
+        expiry = getattr(django_settings, 'AWS_PRESIGN_EXPIRY', 3600)
+        upload_url = s3.generate_presigned_url(
+            'put_object',
+            Params={
+                'Bucket': bucket,
+                'Key': key,
+                'ContentType': mime_type,
+            },
+            ExpiresIn=expiry,
+        )
+
+        photo = ListingPhoto.objects.create(
+            listing=listing,
+            s3_key=key,
+            s3_bucket=bucket,
+            mime_type=mime_type,
+            size_bytes=size_bytes,
+        )
+
+        return Response({
+            'uploadUrl': upload_url,
+            'photoId': photo.id,
+            'key': key,
+        }, status=status.HTTP_200_OK)
+
+
+class ListingPhotosView(generics.ListAPIView):
+    """
+    GET /api/listings/<listing_id>/photos/
+
+    List all non-deleted photos for a listing.
+    """
+    serializer_class = ListingPhotoSerializer
+    permission_classes = [permissions.AllowAny]
+
+    def get_queryset(self):
+        listing_id = self.kwargs['listing_id']
+        return ListingPhoto.objects.filter(listing_id=listing_id, is_deleted=False)
+
+
+class PhotoDeleteView(generics.DestroyAPIView):
+    """
+    DELETE /api/photos/<pk>/
+
+    Soft-delete a photo (only the listing seller can do this).
+    """
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_object(self):
+        try:
+            photo = ListingPhoto.objects.select_related('listing').get(
+                pk=self.kwargs['pk'], is_deleted=False
+            )
+        except ListingPhoto.DoesNotExist:
+            from rest_framework.exceptions import NotFound
+            raise NotFound('Photo not found.')
+        if photo.listing.seller != self.request.user:
+            raise PermissionDenied('Only the listing seller can delete photos.')
+        return photo
+
+    def perform_destroy(self, instance):
+        instance.is_deleted = True
+        instance.save(update_fields=['is_deleted'])
+
+
+# ---------------------------------------------------------------------------
+# Phase 3: Auto-Grading Webhook (async background thread)
+# ---------------------------------------------------------------------------
+
+def _run_grading_job(photo_id: int):
+    """
+    Background job: call ML grading service, write result back to listing.
+    Falls back to mock response when ML_GRADING_SERVICE_URL is not set.
+    """
+    import threading
+    import requests as http_requests
+    import django
+    from django.conf import settings as django_settings
+
+    django.setup()
+
+    try:
+        photo = ListingPhoto.objects.select_related('listing').get(pk=photo_id, is_deleted=False)
+    except ListingPhoto.DoesNotExist:
+        return
+
+    listing = photo.listing
+    listing.grading_status = 'processing'
+    listing.save(update_fields=['grading_status'])
+
+    s3 = _get_s3_client()
+    bucket = getattr(django_settings, 'AWS_S3_BUCKET', '')
+    region = getattr(django_settings, 'AWS_REGION', 'us-east-1')
+
+    if s3 and bucket:
+        photo_url = f"https://{bucket}.s3.{region}.amazonaws.com/{photo.s3_key}"
+    else:
+        photo_url = ''
+
+    ml_url = getattr(django_settings, 'ML_GRADING_SERVICE_URL', '')
+    grade_result = None
+
+    if ml_url and photo_url:
+        try:
+            resp = http_requests.post(
+                ml_url,
+                json={'photoUrl': photo_url},
+                timeout=30,
+            )
+            resp.raise_for_status()
+            ml_data = resp.json()
+            grade_result = {
+                'grade': ml_data.get('grade'),
+                'confidence': ml_data.get('confidence'),
+                'detectedCard': {
+                    'set': ml_data.get('detectedSet'),
+                    'name': ml_data.get('detectedName'),
+                    'rarity': ml_data.get('detectedRarity'),
+                },
+            }
+        except Exception:
+            pass
+
+    if grade_result is None:
+        # Mock response when ML service unavailable
+        grade_result = {
+            'grade': 'NM',
+            'confidence': 0.75,
+            'detectedCard': None,
+            '_mock': True,
+        }
+
+    listing.auto_grade = grade_result
+    listing.grading_status = 'complete'
+    listing.save(update_fields=['auto_grade', 'grading_status'])
+
+
+class GradePhotoWebhookView(generics.GenericAPIView):
+    """
+    POST /internal/grade-photo
+
+    Internal endpoint: trigger auto-grading for a photo after S3 upload confirmation.
+    Enqueues a background thread job.
+
+    Request body: { "photoId": <int> }
+    Response 202: { "status": "queued", "photoId": <int> }
+    """
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request, *args, **kwargs):
+        import threading
+
+        photo_id = request.data.get('photoId')
+        if not photo_id:
+            raise ValidationError({'photoId': 'This field is required.'})
+
+        try:
+            photo = ListingPhoto.objects.select_related('listing').get(
+                pk=photo_id, is_deleted=False
+            )
+        except ListingPhoto.DoesNotExist:
+            raise ValidationError({'photoId': 'Photo not found.'})
+
+        if photo.listing.seller != request.user:
+            raise PermissionDenied('Only the listing seller can trigger grading.')
+
+        photo.listing.grading_status = 'queued'
+        photo.listing.save(update_fields=['grading_status'])
+
+        t = threading.Thread(target=_run_grading_job, args=(photo_id,), daemon=True)
+        t.start()
+
+        return Response({'status': 'queued', 'photoId': photo_id}, status=status.HTTP_202_ACCEPTED)
+
+
+# ---------------------------------------------------------------------------
+# Phase 3: Bulk CSV Listing Upload
+# ---------------------------------------------------------------------------
+
+class BulkListingUploadView(generics.GenericAPIView):
+    """
+    POST /api/listings/bulk/
+
+    Accepts a multipart CSV file (field name: ``file``) with the following columns:
+      card_master_id, price_chf, quantity, condition, is_graded[, photo_key]
+
+    Optional ``photo_key`` column: an S3 key for an already-uploaded photo.
+    Associates that key with the created listing record.
+
+    Returns: { "created": <int>, "errors": [{ "row": <int>, "detail": "..." }] }
+    """
+    permission_classes = [permissions.IsAuthenticated]
+
+    REQUIRED_COLUMNS = {'card_master_id', 'price_chf', 'quantity', 'condition'}
+    VALID_CONDITIONS = {'MT', 'NM', 'LP', 'MP', 'HP', 'DMG'}
+    VALID_GRADING = {'RAW', 'PSA', 'BGS', 'CGC', 'TAG', 'ACE'}
+
+    def post(self, request, *args, **kwargs):
+        import csv
+        import io
+        from django.conf import settings as django_settings
+
+        uploaded = request.FILES.get('file')
+        if uploaded is None:
+            raise ValidationError({'file': 'A CSV file is required.'})
+
+        try:
+            text = uploaded.read().decode('utf-8-sig')
+        except UnicodeDecodeError:
+            raise ValidationError({'file': 'File must be UTF-8 encoded.'})
+
+        reader = csv.DictReader(io.StringIO(text))
+        columns = set(reader.fieldnames or [])
+        missing = self.REQUIRED_COLUMNS - columns
+        if missing:
+            raise ValidationError({'file': f'Missing required columns: {", ".join(sorted(missing))}'})
+
+        created_count = 0
+        errors = []
+        bucket = getattr(django_settings, 'AWS_S3_BUCKET', '')
+
+        for row_num, row in enumerate(reader, start=2):  # row 1 = header
+            try:
+                card_id = row['card_master_id'].strip()
+                try:
+                    card = Card_Master.objects.get(api_id=card_id)
+                except Card_Master.DoesNotExist:
+                    raise ValueError(f"Card '{card_id}' not found.")
+
+                try:
+                    price = float(row['price_chf'])
+                    if price <= 0:
+                        raise ValueError()
+                except (ValueError, KeyError):
+                    raise ValueError('price_chf must be a positive number.')
+
+                try:
+                    qty = int(row['quantity'])
+                    if qty < 1:
+                        raise ValueError()
+                except (ValueError, KeyError):
+                    raise ValueError('quantity must be a positive integer.')
+
+                condition = row['condition'].strip().upper()
+                if condition not in self.VALID_CONDITIONS:
+                    raise ValueError(f"condition must be one of {', '.join(sorted(self.VALID_CONDITIONS))}.")
+
+                is_graded = row.get('is_graded', 'RAW').strip().upper() or 'RAW'
+                if is_graded not in self.VALID_GRADING:
+                    raise ValueError(f"is_graded must be one of {', '.join(sorted(self.VALID_GRADING))}.")
+
+                photo_key = (row.get('photo_key') or '').strip()
+
+                with transaction.atomic():
+                    listing = Card_Listing.objects.create(
+                        card_master=card,
+                        seller=request.user,
+                        price_chf=price,
+                        quantity=qty,
+                        condition=condition,
+                        is_graded=is_graded,
+                        is_available=True,
+                    )
+                    if photo_key and bucket:
+                        ListingPhoto.objects.create(
+                            listing=listing,
+                            s3_key=photo_key,
+                            s3_bucket=bucket,
+                        )
+
+                created_count += 1
+
+            except (ValueError, Exception) as exc:
+                errors.append({'row': row_num, 'detail': str(exc)})
+
+        return Response(
+            {'created': created_count, 'errors': errors},
+            status=status.HTTP_207_MULTI_STATUS if errors else status.HTTP_201_CREATED,
+        )

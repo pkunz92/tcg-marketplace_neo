@@ -125,6 +125,10 @@ class CardListingSerializer(serializers.ModelSerializer):
     ptcgo_code = serializers.CharField(source='card_master.set.ptcgo_code', read_only=True, allow_null=True)
     seller_username = serializers.CharField(source='seller.username', read_only=True)
     seller_photo_url = serializers.SerializerMethodField()
+    requires_photo = serializers.BooleanField(read_only=True)
+    grading_status = serializers.CharField(read_only=True)
+    auto_grade = serializers.JSONField(read_only=True)
+    created_at = serializers.DateTimeField(read_only=True)
 
     class Meta:
         model = Card_Listing
@@ -133,6 +137,7 @@ class CardListingSerializer(serializers.ModelSerializer):
             'card_rarity', 'card_image_url', 'set_name', 'set_code', 'ptcgo_code',
             'seller', 'seller_username', 'price_chf', 'quantity', 'condition',
             'is_graded', 'seller_photo', 'seller_photo_url', 'is_available',
+            'requires_photo', 'grading_status', 'auto_grade', 'created_at',
         ]
         read_only_fields = ['seller']
 
