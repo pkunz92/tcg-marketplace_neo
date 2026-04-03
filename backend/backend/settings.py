@@ -258,3 +258,14 @@ DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'noreply@tcgmarketplace.loc
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 STRIPE_WEBHOOK_SECRET = os.getenv('STRIPE_WEBHOOK_SECRET', '')
 STRIPE_CONNECT_CLIENT_ID = os.getenv('STRIPE_CONNECT_CLIENT_ID', '')
+
+# --- AWS S3 SETTINGS (Phase 3: photo storage) ---
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID', '')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY', '')
+AWS_S3_BUCKET = os.getenv('AWS_S3_BUCKET', '')
+AWS_REGION = os.getenv('AWS_REGION', 'us-east-1')
+# Pre-signed URL expiry in seconds (default 1 hour)
+AWS_PRESIGN_EXPIRY = int(os.getenv('AWS_PRESIGN_EXPIRY', '3600'))
+
+# --- ML GRADING SERVICE (Phase 3) ---
+ML_GRADING_SERVICE_URL = os.getenv('ML_GRADING_SERVICE_URL', '')

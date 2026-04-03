@@ -209,8 +209,59 @@ class Card_Listing(models.Model):
     )
     is_available = models.BooleanField(default=True)
 
+    # --- Phase 3: auto-grading result ---
+    grading_status = models.CharField(
+        max_length=12,
+        choices=[
+            ('none', 'None'),
+            ('queued', 'Queued'),
+            ('processing', 'Processing'),
+            ('complete', 'Complete'),
+            ('failed', 'Failed'),
+        ],
+        default='none',
+    )
+    auto_grade = models.JSONField(
+        null=True,
+        blank=True,
+        help_text="ML grading result: {grade, confidence, detectedCard}",
+    )
+
+    # Rarities that require a photo before publishing
+    PHOTO_REQUIRED_RARITIES = {'Rare Holo', 'Ultra Rare', 'Secret Rare'}
+    PHOTO_REQUIRED_VALUE_THRESHOLD = 20  # CHF
+
+    @property
+    def requires_photo(self):
+        rarity = getattr(self.card_master, 'card_rarity', '') or ''
+        return (
+            rarity in self.PHOTO_REQUIRED_RARITIES
+            or float(self.price_chf or 0) >= self.PHOTO_REQUIRED_VALUE_THRESHOLD
+        )
+
     def __str__(self):
         return f"{self.card_master.card_name} - {self.get_condition_display()} by {self.seller.username}"
+
+
+class ListingPhoto(models.Model):
+    """S3-backed photo attached to a listing (Phase 3)."""
+    listing = models.ForeignKey(
+        Card_Listing,
+        on_delete=models.CASCADE,
+        related_name='photos',
+    )
+    s3_key = models.CharField(max_length=500)
+    s3_bucket = models.CharField(max_length=200, default='')
+    mime_type = models.CharField(max_length=80, default='image/jpeg')
+    size_bytes = models.PositiveIntegerField(null=True, blank=True)
+    is_deleted = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['created_at']
+
+    def __str__(self):
+        return f"Photo {self.id} for listing {self.listing_id}"
 
 
 class OrderStatusChoices(models.TextChoices):

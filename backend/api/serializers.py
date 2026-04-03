@@ -4,7 +4,7 @@ from rest_framework import serializers
 from .models import (
     Card_Master, Card_Listing, Order, OrderStatusChoices,
     Set_Master, UserProfile, CardTranslation, SetTranslation, CardPrice, CardPriceHistory,
-    Offer, OfferStatusChoices, Transaction, TransactionStatusChoices, CardGrade,
+    Offer, OfferStatusChoices, Transaction, TransactionStatusChoices, CardGrade, ListingPhoto,
 )
 
 
@@ -349,3 +349,10 @@ class CustomRegisterSerializer(RegisterSerializer):
         profile.shipping_country = self.cleaned_data.get('shipping_country', '')
         profile.save()
         return user
+
+
+class ListingPhotoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ListingPhoto
+        fields = ['id', 'listing', 's3_key', 's3_bucket', 'mime_type', 'size_bytes', 'created_at']
+        read_only_fields = ['id', 'created_at']

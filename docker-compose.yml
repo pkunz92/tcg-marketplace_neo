@@ -38,6 +38,21 @@ services:
       db:
         condition: service_healthy
 
+  grading-service:
+    build:
+      context: .
+      dockerfile: grading-service/Dockerfile
+    ports:
+      - "8001:8001"
+    environment:
+      GRADING_SECRET: ${GRADING_SECRET:-changeme}
+      LOG_LEVEL: INFO
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8001/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
   frontend:
     build:
       context: ./frontend
