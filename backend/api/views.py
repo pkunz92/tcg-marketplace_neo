@@ -648,6 +648,111 @@ class CardGradeViewSet(viewsets.ModelViewSet):
         instance.delete()
 
 
+_CONDITION_TO_PSA = {"MT": 10, "NM": 9, "LP": 7, "MP": 5, "HP": 3, "DMG": 1}
+
+
+class AnalyzePhotoView(generics.GenericAPIView):
+    """
+    POST /api/listings/analyze-photo/
+
+    Accepts a card photo (multipart field ``photo``) and runs it through the
+    ML pre-grading pipeline:
+      1. Photo quality validation — rejects blurry / low-res / no-card images.
+      2. Card recognition — returns up to 3 card name candidates with confidence scores.
+      3. Condition grading — returns suggested condition on both the internal
+         MT/NM/LP/MP/HP/DMG scale and an approximate PSA 1-10 grade.
+
+    Response 200 (success):
+    {
+      "card_suggestions": [
+        {"card_name": "Charizard", "set_name": "Base Set", "card_id": "base1-4",
+         "confidence": 0.91, "method": "hash_index"},
+        ...
+      ],
+      "grading": {
+        "suggested_condition": "NM",
+        "suggested_psa_grade": 9,
+        "confidence": 0.74,
+        "confidence_breakdown": {"MT": 0.09, "NM": 0.74, ...},
+        "issues_detected": [],
+        "method": "heuristic"
+      },
+      "photo_quality": {"ok": true, "warnings": []}
+    }
+
+    Response 400 (photo rejected):
+    {"error": "photo_quality_failure", "details": [...], "warnings": [...]}
+    """
+
+    permission_classes = [permissions.IsAuthenticated]
+    parser_classes_override = None  # resolved at request time via DRF
+
+    def post(self, request, *args, **kwargs):
+        import numpy as np
+        import cv2
+        from .ml import card_normalizer, card_recognizer, grader, photo_validator
+
+        photo = request.FILES.get("photo")
+        if photo is None:
+            raise ValidationError({"photo": "This field is required."})
+
+        file_bytes = photo.read()
+        arr = np.frombuffer(file_bytes, dtype=np.uint8)
+        img_bgr = cv2.imdecode(arr, cv2.IMREAD_COLOR)
+        if img_bgr is None:
+            raise ValidationError({"photo": "Cannot decode image. Provide a valid JPEG, PNG, or WebP file."})
+
+        # 1. Photo quality validation
+        validation = photo_validator.validate(img_bgr)
+        if not validation.ok:
+            return Response(
+                {
+                    "error": "photo_quality_failure",
+                    "details": validation.errors,
+                    "warnings": validation.warnings,
+                },
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        # 2. Normalise
+        normalised, _warped = card_normalizer.normalize(img_bgr)
+
+        # 3. Card recognition — top 3 candidates
+        top_matches = card_recognizer.recognize_top_k(normalised, k=3)
+        card_suggestions = [
+            {
+                "card_name": r.card_name,
+                "set_name": r.set_name,
+                "card_id": r.card_id,
+                "confidence": r.confidence,
+                "method": r.method,
+            }
+            for r in top_matches
+        ]
+
+        # 4. Condition grading
+        grade_result = grader.grade(normalised)
+
+        return Response(
+            {
+                "card_suggestions": card_suggestions,
+                "grading": {
+                    "suggested_condition": grade_result.suggested_condition,
+                    "suggested_psa_grade": _CONDITION_TO_PSA.get(grade_result.suggested_condition),
+                    "confidence": grade_result.confidence,
+                    "confidence_breakdown": grade_result.confidence_breakdown,
+                    "issues_detected": grade_result.issues_detected,
+                    "method": grade_result.method,
+                },
+                "photo_quality": {
+                    "ok": True,
+                    "warnings": validation.warnings,
+                },
+            },
+            status=status.HTTP_200_OK,
+        )
+
+
 class UserProfileView(generics.RetrieveUpdateAPIView):
     serializer_class = UserProfileSerializer
     permission_classes = [permissions.IsAuthenticated]

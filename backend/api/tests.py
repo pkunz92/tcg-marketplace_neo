@@ -528,3 +528,187 @@ class ExpireOffersCommandTest(TestCase):
         call_command('expire_offers', verbosity=0)
         offer.refresh_from_db()
         self.assertEqual(offer.status, OfferStatusChoices.ACCEPTED)
+
+
+# ---------------------------------------------------------------------------
+# Phase 3 — AnalyzePhotoView tests (POST /api/listings/analyze-photo/)
+# ---------------------------------------------------------------------------
+
+from unittest.mock import MagicMock, patch  # noqa: E402
+
+
+class AnalyzePhotoViewTest(TestCase):
+    """
+    Unit tests for POST /api/listings/analyze-photo/.
+
+    All ML dependencies (cv2, numpy, photo_validator, card_normalizer,
+    card_recognizer, grader) are mocked so no GPU/OpenCV installation is
+    required to run the test suite.
+    """
+
+    URL = '/api/listings/analyze-photo/'
+
+    def setUp(self):
+        self.client = APIClient()
+        self.user = make_user('photouser')
+
+    def _upload(self, content=b'fake-image-bytes'):
+        from django.core.files.uploadedfile import SimpleUploadedFile
+        return SimpleUploadedFile('card.jpg', content, content_type='image/jpeg')
+
+    # -- Auth & input validation ------------------------------------------------
+
+    def test_requires_authentication(self):
+        resp = self.client.post(self.URL, {'photo': self._upload()}, format='multipart')
+        self.assertEqual(resp.status_code, 401)
+
+    def test_missing_photo_field_returns_400(self):
+        self.client.force_authenticate(user=self.user)
+        resp = self.client.post(self.URL, {}, format='multipart')
+        self.assertEqual(resp.status_code, 400)
+        self.assertIn('photo', resp.data)
+
+    @patch('cv2.imdecode', return_value=None)
+    @patch('numpy.frombuffer', return_value=MagicMock())
+    def test_undecoded_image_returns_400(self, _frombuffer, _imdecode):
+        self.client.force_authenticate(user=self.user)
+        resp = self.client.post(self.URL, {'photo': self._upload()}, format='multipart')
+        self.assertEqual(resp.status_code, 400)
+        self.assertIn('photo', resp.data)
+
+    # -- Photo quality failure --------------------------------------------------
+
+    @patch('api.ml.photo_validator.validate')
+    @patch('cv2.imdecode')
+    @patch('numpy.frombuffer')
+    def test_photo_quality_failure_returns_400(self, _frombuffer, _imdecode, mock_validate):
+        _imdecode.return_value = MagicMock()
+        mock_validate.return_value = MagicMock(
+            ok=False, errors=['image_too_blurry'], warnings=[]
+        )
+        self.client.force_authenticate(user=self.user)
+        resp = self.client.post(self.URL, {'photo': self._upload()}, format='multipart')
+        self.assertEqual(resp.status_code, 400)
+        self.assertEqual(resp.data['error'], 'photo_quality_failure')
+        self.assertIn('image_too_blurry', resp.data['details'])
+
+    @patch('api.ml.photo_validator.validate')
+    @patch('cv2.imdecode')
+    @patch('numpy.frombuffer')
+    def test_low_res_failure_returns_400(self, _frombuffer, _imdecode, mock_validate):
+        _imdecode.return_value = MagicMock()
+        mock_validate.return_value = MagicMock(
+            ok=False, errors=['resolution_too_low'], warnings=[]
+        )
+        self.client.force_authenticate(user=self.user)
+        resp = self.client.post(self.URL, {'photo': self._upload()}, format='multipart')
+        self.assertEqual(resp.status_code, 400)
+        self.assertIn('resolution_too_low', resp.data['details'])
+
+    # -- Successful analysis ---------------------------------------------------
+
+    def _patch_happy_path(self):
+        """Return a context manager that mocks the full ML pipeline for a NM Charizard."""
+        fake_img = MagicMock()
+        patches = [
+            patch('numpy.frombuffer', return_value=MagicMock()),
+            patch('cv2.imdecode', return_value=fake_img),
+            patch('api.ml.photo_validator.validate',
+                  return_value=MagicMock(ok=True, errors=[], warnings=[])),
+            patch('api.ml.card_normalizer.normalize',
+                  return_value=(fake_img, True)),
+            patch('api.ml.card_recognizer.recognize_top_k',
+                  return_value=[
+                      MagicMock(card_name='Charizard', set_name='Base Set',
+                                card_id='base1-4', confidence=0.91, method='hash_index'),
+                      MagicMock(card_name='Charizard', set_name='Fossil',
+                                card_id='fossil-5', confidence=0.65, method='hash_index'),
+                  ]),
+            patch('api.ml.grader.grade',
+                  return_value=MagicMock(
+                      suggested_condition='NM',
+                      confidence=0.74,
+                      confidence_breakdown={
+                          'MT': 0.09, 'NM': 0.74, 'LP': 0.13,
+                          'MP': 0.03, 'HP': 0.01, 'DMG': 0.0,
+                      },
+                      issues_detected=[],
+                      method='heuristic',
+                  )),
+        ]
+        from contextlib import ExitStack
+        stack = ExitStack()
+        for p in patches:
+            stack.enter_context(p)
+        return stack
+
+    def test_successful_analysis_returns_200(self):
+        self.client.force_authenticate(user=self.user)
+        with self._patch_happy_path():
+            resp = self.client.post(self.URL, {'photo': self._upload()}, format='multipart')
+        self.assertEqual(resp.status_code, 200)
+        self.assertIn('card_suggestions', resp.data)
+        self.assertIn('grading', resp.data)
+        self.assertIn('photo_quality', resp.data)
+
+    def test_card_suggestions_contain_top_matches(self):
+        self.client.force_authenticate(user=self.user)
+        with self._patch_happy_path():
+            resp = self.client.post(self.URL, {'photo': self._upload()}, format='multipart')
+        suggestions = resp.data['card_suggestions']
+        self.assertEqual(len(suggestions), 2)
+        self.assertEqual(suggestions[0]['card_name'], 'Charizard')
+        self.assertEqual(suggestions[0]['card_id'], 'base1-4')
+        self.assertAlmostEqual(float(suggestions[0]['confidence']), 0.91)
+
+    def test_grading_includes_psa_grade(self):
+        self.client.force_authenticate(user=self.user)
+        with self._patch_happy_path():
+            resp = self.client.post(self.URL, {'photo': self._upload()}, format='multipart')
+        grading = resp.data['grading']
+        self.assertEqual(grading['suggested_condition'], 'NM')
+        self.assertEqual(grading['suggested_psa_grade'], 9)
+        self.assertIn('confidence_breakdown', grading)
+        self.assertIn('issues_detected', grading)
+
+    def test_photo_quality_ok_flag_true_on_success(self):
+        self.client.force_authenticate(user=self.user)
+        with self._patch_happy_path():
+            resp = self.client.post(self.URL, {'photo': self._upload()}, format='multipart')
+        self.assertTrue(resp.data['photo_quality']['ok'])
+
+    # -- Condition → PSA mapping -----------------------------------------------
+
+    @patch('api.ml.grader.grade')
+    @patch('api.ml.card_recognizer.recognize_top_k', return_value=[])
+    @patch('api.ml.card_normalizer.normalize')
+    @patch('api.ml.photo_validator.validate')
+    @patch('cv2.imdecode')
+    @patch('numpy.frombuffer')
+    def test_condition_to_psa_mapping(
+        self, _frombuffer, _imdecode, mock_validate, mock_normalize,
+        _recognize, mock_grade,
+    ):
+        _imdecode.return_value = MagicMock()
+        mock_validate.return_value = MagicMock(ok=True, errors=[], warnings=[])
+        mock_normalize.return_value = (MagicMock(), False)
+
+        expected = {'MT': 10, 'NM': 9, 'LP': 7, 'MP': 5, 'HP': 3, 'DMG': 1}
+        for condition, psa in expected.items():
+            with self.subTest(condition=condition):
+                mock_grade.return_value = MagicMock(
+                    suggested_condition=condition,
+                    confidence=0.8,
+                    confidence_breakdown={},
+                    issues_detected=[],
+                    method='heuristic',
+                )
+                self.client.force_authenticate(user=self.user)
+                resp = self.client.post(
+                    self.URL, {'photo': self._upload()}, format='multipart'
+                )
+                self.assertEqual(resp.status_code, 200)
+                self.assertEqual(
+                    resp.data['grading']['suggested_psa_grade'], psa,
+                    f'PSA mapping failed for condition {condition}',
+                )

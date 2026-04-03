@@ -26,5 +26,6 @@ urlpatterns = [
     path('rarities/', views.RarityListAPIView.as_view(), name='rarity-list'),
     path('series/', views.SeriesListAPIView.as_view(), name='series-list'),
     path('stats/', views.DatabaseStatsAPIView.as_view(), name='db-stats'),
+    path('listings/analyze-photo/', views.AnalyzePhotoView.as_view(), name='listing-analyze-photo'),
     path('', views.api_root, name='api-root'),
 ]

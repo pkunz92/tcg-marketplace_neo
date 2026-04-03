@@ -42,6 +42,24 @@ class RecognitionResult:
     method: str                  # "hash_index" | "api_fallback" | "unknown"
 
 
+def recognize_top_k(image_bgr: np.ndarray, k: int = 3) -> List[RecognitionResult]:
+    """
+    Return up to k recognition results sorted by confidence (descending).
+
+    Falls back to a single-element list with the result of ``recognize()``
+    when the hash index is unavailable or yields no matches within the
+    Hamming-distance threshold.
+    """
+    phash = _compute_phash(image_bgr)
+
+    if HASH_INDEX_PATH.exists():
+        results = _lookup_hash_index_top_k(phash, k)
+        if results:
+            return results
+
+    return [recognize(image_bgr)]
+
+
 def recognize(image_bgr: np.ndarray) -> RecognitionResult:
     """
     Identify the card in *image_bgr*.  Returns a RecognitionResult.
@@ -105,6 +123,32 @@ def _lookup_hash_index(phash: np.ndarray) -> Optional[RecognitionResult]:
         confidence=round(confidence, 3),
         method="hash_index",
     )
+
+
+def _lookup_hash_index_top_k(phash: np.ndarray, k: int) -> List[RecognitionResult]:
+    """Return up to k results from the hash index within MATCH_THRESHOLD."""
+    data = np.load(HASH_INDEX_PATH, allow_pickle=True)
+    hashes: np.ndarray = data["hashes"]
+    metadata: np.ndarray = data["metadata"]
+
+    distances = np.array([_hamming_distance(phash, h) for h in hashes])
+    top_k_indices = np.argsort(distances)[:k]
+
+    results: List[RecognitionResult] = []
+    for idx in top_k_indices:
+        dist = int(distances[idx])
+        if dist > MATCH_THRESHOLD:
+            break
+        meta: dict = metadata[idx]
+        confidence = max(0.0, 1.0 - dist / MATCH_THRESHOLD)
+        results.append(RecognitionResult(
+            card_name=meta.get("name"),
+            set_name=meta.get("set_name"),
+            card_id=meta.get("id"),
+            confidence=round(confidence, 3),
+            method="hash_index",
+        ))
+    return results
 
 
 def build_hash_index(limit: Optional[int] = None) -> None:
