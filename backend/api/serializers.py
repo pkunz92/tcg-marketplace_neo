@@ -266,6 +266,7 @@ class OfferSerializer(serializers.ModelSerializer):
     listing_card_name = serializers.CharField(
         source='listing.card_master.card_name', read_only=True
     )
+    expires_at = serializers.DateTimeField(required=False, read_only=False)
 
     class Meta:
         model = Offer

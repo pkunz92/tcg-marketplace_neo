@@ -1,5 +1,5 @@
 """
-Phase 2 unit tests — Offer, Transaction, CardGrade models and serializers.
+Phase 2 unit tests — Offer, Transaction, CardGrade models, serializers, and API endpoints.
 All tests use SQLite (Django's default test DB) and require no external services.
 
 Run with:
@@ -11,7 +11,9 @@ from decimal import Decimal
 
 from django.contrib.auth import get_user_model
 from django.test import TestCase
+from django.urls import reverse
 from django.utils import timezone
+from rest_framework.test import APIClient
 
 from .models import (
     Card_Master, Card_Listing, CardGrade, ConditionChoices, GradingChoices,
@@ -379,3 +381,150 @@ class TransactionSerializerTest(TestCase):
         instance = s.save()
         # Read-only fields must not be overwritten
         self.assertEqual(instance.stripe_payment_intent_id, 'pi_serial_test')
+
+
+# ---------------------------------------------------------------------------
+# Offer API endpoint tests
+# ---------------------------------------------------------------------------
+
+class OfferViewSetTest(TestCase):
+    def setUp(self):
+        self.client = APIClient()
+        self.seller = make_user('seller_api')
+        self.buyer = make_user('buyer_api')
+        card_set = make_set()
+        card = make_card(card_set)
+        self.listing = make_listing(card, self.seller, price='50.00', quantity=3)
+
+    def _make_offer(self, price='40.00'):
+        return Offer.objects.create(
+            listing=self.listing,
+            buyer=self.buyer,
+            offer_price_chf=Decimal(price),
+            expires_at=timezone.now() + timezone.timedelta(hours=48),
+            status=OfferStatusChoices.PENDING,
+        )
+
+    def test_buyer_can_create_offer(self):
+        self.client.force_authenticate(user=self.buyer)
+        resp = self.client.post('/api/offers/', {
+            'listing': self.listing.id,
+            'offer_price_chf': '38.00',
+            'message': 'Best offer!',
+        }, format='json')
+        self.assertEqual(resp.status_code, 201)
+        self.assertEqual(Offer.objects.filter(buyer=self.buyer).count(), 1)
+
+    def test_seller_can_decline_offer(self):
+        offer = self._make_offer()
+        self.client.force_authenticate(user=self.seller)
+        resp = self.client.post(f'/api/offers/{offer.id}/decline/')
+        self.assertEqual(resp.status_code, 200)
+        offer.refresh_from_db()
+        self.assertEqual(offer.status, OfferStatusChoices.DECLINED)
+
+    def test_seller_can_counter_offer(self):
+        offer = self._make_offer()
+        self.client.force_authenticate(user=self.seller)
+        resp = self.client.post(f'/api/offers/{offer.id}/counter/', {
+            'counter_price_chf': '45.00',
+        }, format='json')
+        self.assertEqual(resp.status_code, 200)
+        offer.refresh_from_db()
+        self.assertEqual(offer.status, OfferStatusChoices.COUNTERED)
+        self.assertEqual(offer.counter_price_chf, Decimal('45.00'))
+
+    def test_seller_accept_creates_order(self):
+        offer = self._make_offer()
+        self.client.force_authenticate(user=self.seller)
+        resp = self.client.post(f'/api/offers/{offer.id}/accept/')
+        self.assertEqual(resp.status_code, 201)
+        offer.refresh_from_db()
+        self.assertEqual(offer.status, OfferStatusChoices.ACCEPTED)
+        # An order should have been created at the offer price
+        order = Order.objects.filter(listing=self.listing, buyer=self.buyer).first()
+        self.assertIsNotNone(order)
+        self.assertEqual(order.price_chf, Decimal('40.00'))
+
+    def test_accept_decrements_listing_stock(self):
+        offer = self._make_offer()
+        self.client.force_authenticate(user=self.seller)
+        resp = self.client.post(f'/api/offers/{offer.id}/accept/')
+        self.assertEqual(resp.status_code, 201)
+        self.listing.refresh_from_db()
+        self.assertEqual(self.listing.quantity, 2)
+
+    def test_buyer_cannot_accept_own_offer(self):
+        offer = self._make_offer()
+        self.client.force_authenticate(user=self.buyer)
+        resp = self.client.post(f'/api/offers/{offer.id}/accept/')
+        self.assertEqual(resp.status_code, 403)
+
+    def test_cannot_counter_without_price(self):
+        offer = self._make_offer()
+        self.client.force_authenticate(user=self.seller)
+        resp = self.client.post(f'/api/offers/{offer.id}/counter/', {}, format='json')
+        self.assertEqual(resp.status_code, 400)
+
+    def test_buyer_can_withdraw_pending_offer(self):
+        offer = self._make_offer()
+        self.client.force_authenticate(user=self.buyer)
+        resp = self.client.delete(f'/api/offers/{offer.id}/')
+        self.assertEqual(resp.status_code, 204)
+        self.assertFalse(Offer.objects.filter(id=offer.id).exists())
+
+    def test_cannot_decline_already_declined_offer(self):
+        offer = self._make_offer()
+        offer.status = OfferStatusChoices.DECLINED
+        offer.save()
+        self.client.force_authenticate(user=self.seller)
+        resp = self.client.post(f'/api/offers/{offer.id}/decline/')
+        self.assertEqual(resp.status_code, 400)
+
+
+# ---------------------------------------------------------------------------
+# Offer expiry management command tests
+# ---------------------------------------------------------------------------
+
+class ExpireOffersCommandTest(TestCase):
+    def setUp(self):
+        self.seller = make_user('seller_exp')
+        self.buyer = make_user('buyer_exp')
+        card_set = make_set()
+        card = make_card(card_set)
+        self.listing = make_listing(card, self.seller)
+
+    def _make_offer(self, expires_delta_hours=48, status=OfferStatusChoices.PENDING):
+        return Offer.objects.create(
+            listing=self.listing,
+            buyer=self.buyer,
+            offer_price_chf=Decimal('20.00'),
+            expires_at=timezone.now() + timezone.timedelta(hours=expires_delta_hours),
+            status=status,
+        )
+
+    def test_expires_overdue_pending_offers(self):
+        expired = self._make_offer(expires_delta_hours=-1)
+        active = self._make_offer(expires_delta_hours=48)
+
+        from django.core.management import call_command
+        call_command('expire_offers', verbosity=0)
+
+        expired.refresh_from_db()
+        active.refresh_from_db()
+        self.assertEqual(expired.status, OfferStatusChoices.EXPIRED)
+        self.assertEqual(active.status, OfferStatusChoices.PENDING)
+
+    def test_dry_run_does_not_expire(self):
+        offer = self._make_offer(expires_delta_hours=-1)
+        from django.core.management import call_command
+        call_command('expire_offers', dry_run=True, verbosity=0)
+        offer.refresh_from_db()
+        self.assertEqual(offer.status, OfferStatusChoices.PENDING)
+
+    def test_does_not_expire_non_pending_offers(self):
+        offer = self._make_offer(expires_delta_hours=-1, status=OfferStatusChoices.ACCEPTED)
+        from django.core.management import call_command
+        call_command('expire_offers', verbosity=0)
+        offer.refresh_from_db()
+        self.assertEqual(offer.status, OfferStatusChoices.ACCEPTED)

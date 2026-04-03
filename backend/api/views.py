@@ -1,14 +1,15 @@
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, action
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
-from rest_framework import viewsets, permissions, generics, filters
+from rest_framework import viewsets, permissions, generics, filters, status
 from rest_framework.exceptions import PermissionDenied, ValidationError
+from django.conf import settings
 from django.db import transaction
 from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import (
-    Card_Master, Card_Listing, Order, Set_Master, CardPrice, CardPriceHistory,
-    Offer, OfferStatusChoices, Transaction, CardGrade,
+    Card_Master, Card_Listing, Order, OrderStatusChoices, Set_Master, CardPrice, CardPriceHistory,
+    Offer, OfferStatusChoices, Transaction, TransactionStatusChoices, CardGrade,
 )
 from .serializers import (
     CardMasterSerializer, CardMasterListSerializer, CardListingSerializer,
@@ -18,6 +19,9 @@ from .serializers import (
 )
 from .permissions import IsSellerOrReadOnly
 from .filters import CardListingFilter, CardMasterFilter
+from .emails import (
+    send_order_confirmation, send_offer_received, send_offer_response,
+)
 
 
 @api_view(['GET'])
@@ -330,7 +334,8 @@ class OrderViewSet(viewsets.ModelViewSet):
         return queryset.filter(buyer=self.request.user)
 
     def perform_create(self, serializer):
-        serializer.save(buyer=self.request.user)
+        order = serializer.save(buyer=self.request.user)
+        send_order_confirmation(order)
 
     def perform_update(self, serializer):
         allowed_fields = {'status'}
@@ -374,36 +379,115 @@ class OrderViewSet(viewsets.ModelViewSet):
             serializer.instance = order
 
 
+    @action(detail=True, methods=['post'], url_path='create-payment-intent')
+    def create_payment_intent(self, request, pk=None):
+        """
+        Create a Stripe PaymentIntent for a PENDING order and record a Transaction.
+        Returns {client_secret, payment_intent_id}.
+        """
+        order = self.get_object()
+
+        if order.buyer != request.user:
+            raise PermissionDenied("You can only pay for your own orders.")
+        if order.status != OrderStatusChoices.PENDING:
+            raise ValidationError("Only pending orders can be paid.")
+
+        # Idempotent: return existing PaymentIntent if one already exists
+        if hasattr(order, 'transaction'):
+            txn = order.transaction
+            try:
+                import stripe
+                stripe.api_key = getattr(settings, 'STRIPE_SECRET_KEY', '')
+                pi = stripe.PaymentIntent.retrieve(txn.stripe_payment_intent_id)
+                return Response({
+                    'client_secret': pi['client_secret'],
+                    'payment_intent_id': pi['id'],
+                })
+            except Exception:
+                pass
+
+        try:
+            import stripe
+        except ImportError:
+            return Response(
+                {'detail': 'Stripe not installed on server.'},
+                status=status.HTTP_503_SERVICE_UNAVAILABLE,
+            )
+
+        stripe.api_key = getattr(settings, 'STRIPE_SECRET_KEY', '')
+        if not stripe.api_key:
+            return Response(
+                {'detail': 'Stripe is not configured.'},
+                status=status.HTTP_503_SERVICE_UNAVAILABLE,
+            )
+
+        amount_cents = int(order.price_chf * order.quantity * 100)
+
+        try:
+            pi = stripe.PaymentIntent.create(
+                amount=amount_cents,
+                currency='chf',
+                metadata={
+                    'order_id': str(order.id),
+                    'buyer_id': str(request.user.id),
+                },
+            )
+        except stripe.error.StripeError as exc:
+            return Response({'detail': str(exc)}, status=status.HTTP_502_BAD_GATEWAY)
+
+        Transaction.objects.create(
+            order=order,
+            stripe_payment_intent_id=pi['id'],
+            amount_chf=order.price_chf * order.quantity,
+            status=TransactionStatusChoices.PENDING,
+        )
+
+        return Response({
+            'client_secret': pi['client_secret'],
+            'payment_intent_id': pi['id'],
+        })
+
+
 # ---------------------------------------------------------------------------
-# Phase 2 viewsets (scaffolding — full business logic pending TCG-21 schema)
+# Phase 2 viewsets
 # ---------------------------------------------------------------------------
 
 class OfferViewSet(viewsets.ModelViewSet):
     """
     Buyers create offers; sellers accept/decline/counter.
-    - POST   /api/offers/          — buyer creates offer
-    - GET    /api/offers/          — list own offers (buyer or seller)
-    - PATCH  /api/offers/{id}/     — seller responds (ACCEPTED/DECLINED/COUNTERED)
-    - DELETE /api/offers/{id}/     — buyer withdraws a PENDING offer
+    - POST   /api/offers/                  — buyer creates offer
+    - GET    /api/offers/                  — list own offers (buyer or seller via ?as_seller=true)
+    - PATCH  /api/offers/{id}/             — seller responds (ACCEPTED/DECLINED/COUNTERED)
+    - POST   /api/offers/{id}/accept/      — seller accepts, auto-creates order
+    - POST   /api/offers/{id}/decline/     — seller declines
+    - POST   /api/offers/{id}/counter/     — seller counters with new price
+    - DELETE /api/offers/{id}/             — buyer withdraws a PENDING offer
     """
     serializer_class = OfferSerializer
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
         user = self.request.user
-        if self.request.query_params.get('as_seller') == 'true':
-            return Offer.objects.filter(listing__seller=user).select_related(
+        # For list action, apply buyer/seller filter; for detail/custom actions, allow both.
+        if self.action == 'list':
+            if self.request.query_params.get('as_seller') == 'true':
+                return Offer.objects.filter(listing__seller=user).select_related(
+                    'listing', 'listing__card_master', 'buyer'
+                )
+            return Offer.objects.filter(buyer=user).select_related(
                 'listing', 'listing__card_master', 'buyer'
             )
-        return Offer.objects.filter(buyer=user).select_related(
-            'listing', 'listing__card_master', 'buyer'
-        )
+        from django.db.models import Q
+        return Offer.objects.filter(
+            Q(buyer=user) | Q(listing__seller=user)
+        ).select_related('listing', 'listing__card_master', 'buyer')
 
     def perform_create(self, serializer):
         from django.utils import timezone
         from datetime import timedelta
         expires_at = timezone.now() + timedelta(hours=48)
-        serializer.save(buyer=self.request.user, expires_at=expires_at)
+        offer = serializer.save(buyer=self.request.user, expires_at=expires_at)
+        send_offer_received(offer)
 
     def perform_update(self, serializer):
         offer = self.get_object()
@@ -411,7 +495,9 @@ class OfferViewSet(viewsets.ModelViewSet):
             raise PermissionDenied("Only the listing seller can respond to offers.")
         if offer.status != OfferStatusChoices.PENDING:
             raise ValidationError("Only pending offers can be updated.")
-        serializer.save()
+        updated = serializer.save()
+        if updated.status in (OfferStatusChoices.ACCEPTED, OfferStatusChoices.DECLINED, OfferStatusChoices.COUNTERED):
+            send_offer_response(updated)
 
     def destroy(self, request, *args, **kwargs):
         offer = self.get_object()
@@ -420,6 +506,98 @@ class OfferViewSet(viewsets.ModelViewSet):
         if offer.status != OfferStatusChoices.PENDING:
             raise ValidationError("Only pending offers can be withdrawn.")
         return super().destroy(request, *args, **kwargs)
+
+    @action(detail=True, methods=['post'])
+    def accept(self, request, pk=None):
+        """
+        Seller accepts the offer. Creates an Order at the offer price and marks the offer ACCEPTED.
+        Returns the created order.
+        """
+        offer = self.get_object()
+        if offer.listing.seller != request.user:
+            raise PermissionDenied("Only the listing seller can accept offers.")
+        if offer.status != OfferStatusChoices.PENDING:
+            raise ValidationError("Only pending offers can be accepted.")
+
+        profile = getattr(request.user, 'profile', None)
+
+        with transaction.atomic():
+            listing = (
+                Card_Listing.objects
+                .select_for_update()
+                .get(pk=offer.listing_id)
+            )
+            if not listing.is_available:
+                raise ValidationError("The listing is no longer available.")
+            if listing.quantity < 1:
+                raise ValidationError("Insufficient stock.")
+
+            listing.quantity -= 1
+            if listing.quantity <= 0:
+                listing.quantity = 0
+                listing.is_available = False
+            listing.save(update_fields=['quantity', 'is_available'])
+
+            order = Order.objects.create(
+                listing=listing,
+                buyer=offer.buyer,
+                quantity=1,
+                price_chf=offer.offer_price_chf,
+                shipping_name=profile.shipping_name if profile else '',
+                shipping_address_line1=profile.shipping_address_line1 if profile else '',
+                shipping_address_line2=getattr(profile, 'shipping_address_line2', None) if profile else None,
+                shipping_city=profile.shipping_city if profile else '',
+                shipping_postal_code=profile.shipping_postal_code if profile else '',
+                shipping_country=profile.shipping_country if profile else '',
+                status=OrderStatusChoices.PENDING,
+            )
+
+            offer.status = OfferStatusChoices.ACCEPTED
+            offer.save(update_fields=['status', 'updated_at'])
+
+        send_offer_response(offer)
+        send_order_confirmation(order)
+        return Response(OrderSerializer(order, context={'request': request}).data, status=status.HTTP_201_CREATED)
+
+    @action(detail=True, methods=['post'])
+    def decline(self, request, pk=None):
+        """Seller declines the offer."""
+        offer = self.get_object()
+        if offer.listing.seller != request.user:
+            raise PermissionDenied("Only the listing seller can decline offers.")
+        if offer.status != OfferStatusChoices.PENDING:
+            raise ValidationError("Only pending offers can be declined.")
+
+        offer.status = OfferStatusChoices.DECLINED
+        offer.save(update_fields=['status', 'updated_at'])
+        send_offer_response(offer)
+        return Response(OfferSerializer(offer, context={'request': request}).data)
+
+    @action(detail=True, methods=['post'])
+    def counter(self, request, pk=None):
+        """Seller counters with a new price."""
+        offer = self.get_object()
+        if offer.listing.seller != request.user:
+            raise PermissionDenied("Only the listing seller can counter offers.")
+        if offer.status != OfferStatusChoices.PENDING:
+            raise ValidationError("Only pending offers can be countered.")
+
+        counter_price = request.data.get('counter_price_chf')
+        if not counter_price:
+            raise ValidationError({'counter_price_chf': 'This field is required.'})
+        try:
+            from decimal import Decimal, InvalidOperation
+            counter_price = Decimal(str(counter_price))
+            if counter_price <= 0:
+                raise ValidationError({'counter_price_chf': 'Counter price must be positive.'})
+        except InvalidOperation:
+            raise ValidationError({'counter_price_chf': 'Invalid price value.'})
+
+        offer.counter_price_chf = counter_price
+        offer.status = OfferStatusChoices.COUNTERED
+        offer.save(update_fields=['counter_price_chf', 'status', 'updated_at'])
+        send_offer_response(offer)
+        return Response(OfferSerializer(offer, context={'request': request}).data)
 
 
 class TransactionViewSet(viewsets.ReadOnlyModelViewSet):
