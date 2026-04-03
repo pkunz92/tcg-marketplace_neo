@@ -4,6 +4,7 @@ from rest_framework import serializers
 from .models import (
     Card_Master, Card_Listing, Order, OrderStatusChoices,
     Set_Master, UserProfile, CardTranslation, SetTranslation, CardPrice, CardPriceHistory,
+    Offer, OfferStatusChoices, Transaction, TransactionStatusChoices, CardGrade,
 )
 
 
@@ -241,6 +242,76 @@ class UserProfileSerializer(serializers.ModelSerializer):
         fields = [
             'shipping_name', 'shipping_address_line1', 'shipping_address_line2',
             'shipping_city', 'shipping_postal_code', 'shipping_country',
+        ]
+
+
+# ---------------------------------------------------------------------------
+# Phase 2 serializers
+# ---------------------------------------------------------------------------
+
+class CardGradeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CardGrade
+        fields = ['id', 'listing', 'company', 'grade', 'cert_number', 'graded_at', 'notes']
+        read_only_fields = ['id']
+
+    def validate_grade(self, value):
+        if value < 1 or value > 10:
+            raise serializers.ValidationError("Grade must be between 1.0 and 10.0.")
+        return value
+
+
+class OfferSerializer(serializers.ModelSerializer):
+    buyer_username = serializers.CharField(source='buyer.username', read_only=True)
+    listing_card_name = serializers.CharField(
+        source='listing.card_master.card_name', read_only=True
+    )
+
+    class Meta:
+        model = Offer
+        fields = [
+            'id', 'listing', 'listing_card_name', 'buyer', 'buyer_username',
+            'offer_price_chf', 'counter_price_chf', 'message',
+            'status', 'expires_at', 'created_at', 'updated_at',
+        ]
+        read_only_fields = ['id', 'buyer', 'created_at', 'updated_at']
+
+    def validate(self, attrs):
+        listing = attrs.get('listing')
+        if listing and not listing.is_available:
+            raise serializers.ValidationError({'listing': 'Listing is not available.'})
+        offer_price = attrs.get('offer_price_chf')
+        if offer_price is not None and offer_price <= 0:
+            raise serializers.ValidationError({'offer_price_chf': 'Offer price must be positive.'})
+        return attrs
+
+    def validate_status(self, value):
+        request = self.context.get('request')
+        if request and request.method in ['PUT', 'PATCH']:
+            allowed = [
+                OfferStatusChoices.ACCEPTED,
+                OfferStatusChoices.DECLINED,
+                OfferStatusChoices.COUNTERED,
+            ]
+            if value not in allowed:
+                raise serializers.ValidationError(
+                    f"Status must be one of: {', '.join(allowed)}"
+                )
+        return value
+
+
+class TransactionSerializer(serializers.ModelSerializer):
+    order_id = serializers.IntegerField(source='order.id', read_only=True)
+
+    class Meta:
+        model = Transaction
+        fields = [
+            'id', 'order', 'order_id', 'stripe_payment_intent_id', 'stripe_charge_id',
+            'amount_chf', 'status', 'stripe_metadata', 'created_at', 'updated_at',
+        ]
+        read_only_fields = [
+            'id', 'stripe_payment_intent_id', 'stripe_charge_id',
+            'stripe_metadata', 'created_at', 'updated_at',
         ]
 
 

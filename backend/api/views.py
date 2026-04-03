@@ -6,11 +6,15 @@ from rest_framework.exceptions import PermissionDenied, ValidationError
 from django.db import transaction
 from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
-from .models import Card_Master, Card_Listing, Order, Set_Master, CardPrice, CardPriceHistory
+from .models import (
+    Card_Master, Card_Listing, Order, Set_Master, CardPrice, CardPriceHistory,
+    Offer, OfferStatusChoices, Transaction, CardGrade,
+)
 from .serializers import (
     CardMasterSerializer, CardMasterListSerializer, CardListingSerializer,
     OrderSerializer, SetMasterSerializer, UserProfileSerializer,
     CardPriceSerializer, CardPriceHistorySerializer,
+    OfferSerializer, TransactionSerializer, CardGradeSerializer,
 )
 from .permissions import IsSellerOrReadOnly
 from .filters import CardListingFilter, CardMasterFilter
@@ -368,6 +372,102 @@ class OrderViewSet(viewsets.ModelViewSet):
             order.status = new_status
             order.save(update_fields=['status'])
             serializer.instance = order
+
+
+# ---------------------------------------------------------------------------
+# Phase 2 viewsets (scaffolding — full business logic pending TCG-21 schema)
+# ---------------------------------------------------------------------------
+
+class OfferViewSet(viewsets.ModelViewSet):
+    """
+    Buyers create offers; sellers accept/decline/counter.
+    - POST   /api/offers/          — buyer creates offer
+    - GET    /api/offers/          — list own offers (buyer or seller)
+    - PATCH  /api/offers/{id}/     — seller responds (ACCEPTED/DECLINED/COUNTERED)
+    - DELETE /api/offers/{id}/     — buyer withdraws a PENDING offer
+    """
+    serializer_class = OfferSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        user = self.request.user
+        if self.request.query_params.get('as_seller') == 'true':
+            return Offer.objects.filter(listing__seller=user).select_related(
+                'listing', 'listing__card_master', 'buyer'
+            )
+        return Offer.objects.filter(buyer=user).select_related(
+            'listing', 'listing__card_master', 'buyer'
+        )
+
+    def perform_create(self, serializer):
+        from django.utils import timezone
+        from datetime import timedelta
+        expires_at = timezone.now() + timedelta(hours=48)
+        serializer.save(buyer=self.request.user, expires_at=expires_at)
+
+    def perform_update(self, serializer):
+        offer = self.get_object()
+        if offer.listing.seller != self.request.user:
+            raise PermissionDenied("Only the listing seller can respond to offers.")
+        if offer.status != OfferStatusChoices.PENDING:
+            raise ValidationError("Only pending offers can be updated.")
+        serializer.save()
+
+    def destroy(self, request, *args, **kwargs):
+        offer = self.get_object()
+        if offer.buyer != request.user:
+            raise PermissionDenied("Only the buyer can withdraw their offer.")
+        if offer.status != OfferStatusChoices.PENDING:
+            raise ValidationError("Only pending offers can be withdrawn.")
+        return super().destroy(request, *args, **kwargs)
+
+
+class TransactionViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    Read-only view of Stripe transactions.
+    Buyers see transactions for their orders; sellers see transactions for their listings' orders.
+    Full create/update is handled by the Stripe webhook handler (see stripe_webhooks.py).
+    """
+    serializer_class = TransactionSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        user = self.request.user
+        if self.request.query_params.get('as_seller') == 'true':
+            return Transaction.objects.filter(
+                order__listing__seller=user
+            ).select_related('order', 'order__listing')
+        return Transaction.objects.filter(
+            order__buyer=user
+        ).select_related('order', 'order__listing')
+
+
+class CardGradeViewSet(viewsets.ModelViewSet):
+    """
+    CRUD for professional grading certificates tied to a listing.
+    Only the listing seller can create/update/delete a grade record.
+    """
+    serializer_class = CardGradeSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get_queryset(self):
+        return CardGrade.objects.select_related('listing', 'listing__card_master').all()
+
+    def perform_create(self, serializer):
+        listing = serializer.validated_data['listing']
+        if listing.seller != self.request.user:
+            raise PermissionDenied("Only the listing seller can add grading details.")
+        serializer.save()
+
+    def perform_update(self, serializer):
+        if serializer.instance.listing.seller != self.request.user:
+            raise PermissionDenied("Only the listing seller can update grading details.")
+        serializer.save()
+
+    def perform_destroy(self, instance):
+        if instance.listing.seller != self.request.user:
+            raise PermissionDenied("Only the listing seller can delete grading details.")
+        instance.delete()
 
 
 class UserProfileView(generics.RetrieveUpdateAPIView):

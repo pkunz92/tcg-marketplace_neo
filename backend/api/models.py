@@ -249,6 +249,123 @@ class Order(models.Model):
         return f"Order #{self.id} - {self.listing.card_master.card_name} x{self.quantity}"
 
 
+# ---------------------------------------------------------------------------
+# Phase 2 models — Offer, Transaction, CardGrade
+# ---------------------------------------------------------------------------
+
+class OfferStatusChoices(models.TextChoices):
+    PENDING = 'PENDING', 'Pending'
+    ACCEPTED = 'ACCEPTED', 'Accepted'
+    DECLINED = 'DECLINED', 'Declined'
+    EXPIRED = 'EXPIRED', 'Expired'
+    COUNTERED = 'COUNTERED', 'Countered'
+
+
+class Offer(models.Model):
+    """A buyer makes a price offer on an available Card_Listing."""
+    listing = models.ForeignKey(
+        Card_Listing,
+        on_delete=models.CASCADE,
+        related_name='offers',
+    )
+    buyer = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='offers',
+    )
+    offer_price_chf = models.DecimalField(max_digits=8, decimal_places=2)
+    counter_price_chf = models.DecimalField(
+        max_digits=8, decimal_places=2, null=True, blank=True,
+        help_text="Seller's counter-offer price, set when status=COUNTERED.",
+    )
+    message = models.TextField(blank=True, default='')
+    status = models.CharField(
+        max_length=10,
+        choices=OfferStatusChoices.choices,
+        default=OfferStatusChoices.PENDING,
+    )
+    expires_at = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Offer #{self.id} CHF {self.offer_price_chf} on listing {self.listing_id}"
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['listing', 'status']),
+            models.Index(fields=['buyer', 'status']),
+        ]
+        ordering = ['-created_at']
+
+
+class TransactionStatusChoices(models.TextChoices):
+    PENDING = 'PENDING', 'Pending'
+    SUCCEEDED = 'SUCCEEDED', 'Succeeded'
+    FAILED = 'FAILED', 'Failed'
+    REFUNDED = 'REFUNDED', 'Refunded'
+
+
+class Transaction(models.Model):
+    """Stripe payment record linked 1:1 to an Order."""
+    order = models.OneToOneField(
+        Order,
+        on_delete=models.PROTECT,
+        related_name='transaction',
+    )
+    stripe_payment_intent_id = models.CharField(max_length=100, unique=True)
+    stripe_charge_id = models.CharField(max_length=100, blank=True, default='')
+    amount_chf = models.DecimalField(max_digits=8, decimal_places=2)
+    status = models.CharField(
+        max_length=10,
+        choices=TransactionStatusChoices.choices,
+        default=TransactionStatusChoices.PENDING,
+    )
+    stripe_metadata = models.JSONField(default=dict, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Transaction {self.stripe_payment_intent_id} ({self.status})"
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['status']),
+        ]
+        ordering = ['-created_at']
+
+
+class CardGrade(models.Model):
+    """Professional grading certificate details for a graded listing."""
+    listing = models.OneToOneField(
+        Card_Listing,
+        on_delete=models.CASCADE,
+        related_name='grade_detail',
+    )
+    company = models.CharField(
+        max_length=4,
+        choices=GradingChoices.choices,
+        help_text="Grading company (PSA, BGS, CGC, etc.)",
+    )
+    grade = models.DecimalField(
+        max_digits=4, decimal_places=1,
+        help_text="Numeric grade, e.g. 9.5 or 10.0",
+    )
+    cert_number = models.CharField(
+        max_length=50, unique=True,
+        help_text="Grading certificate/population report ID.",
+    )
+    graded_at = models.DateField(null=True, blank=True)
+    notes = models.TextField(blank=True, default='')
+
+    def __str__(self):
+        return f"{self.company} {self.grade} — cert {self.cert_number}"
+
+    class Meta:
+        verbose_name = "Card Grade"
+        verbose_name_plural = "Card Grades"
+
+
 class UserProfile(models.Model):
     user = models.OneToOneField(
         settings.AUTH_USER_MODEL,
