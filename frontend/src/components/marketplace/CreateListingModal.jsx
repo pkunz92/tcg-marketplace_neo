@@ -5,9 +5,9 @@ import Input from '../ui/Input'
 import Select from '../ui/Select'
 import SearchInput from '../catalog/SearchInput'
 import { useCardsList } from '../../hooks/useCards'
-import { useCreateListing } from '../../hooks/useListings'
+import { useCreateListing, useAnalyzePhoto } from '../../hooks/useListings'
 import { useDebounce } from '../../hooks/useDebounce'
-import { Camera, X } from 'lucide-react'
+import { Camera, X, Sparkles } from 'lucide-react'
 import toast from 'react-hot-toast'
 
 export default function CreateListingModal({ open, onClose }) {
@@ -17,22 +17,42 @@ export default function CreateListingModal({ open, onClose }) {
   const [isGraded, setIsGraded] = useState(false)
   const [photo, setPhoto] = useState(null)
   const [photoPreview, setPhotoPreview] = useState(null)
+  const [suggestion, setSuggestion] = useState(null)
   const photoInputRef = useRef(null)
   const debSearch = useDebounce(search, 300)
   const { data } = useCardsList({ search: debSearch, page: 1 }, { enabled: debSearch.length > 1 })
   const createListing = useCreateListing()
+  const analyzePhoto = useAnalyzePhoto()
 
-  function handlePhotoChange(e) {
+  async function handlePhotoChange(e) {
     const file = e.target.files?.[0]
     if (!file) return
     setPhoto(file)
     setPhotoPreview(URL.createObjectURL(file))
+    setSuggestion(null)
+    try {
+      const result = await analyzePhoto.mutateAsync(file)
+      setSuggestion(result)
+      if (result.condition && !form.price_chf) {
+        setForm((f) => ({ ...f, condition: result.condition || f.condition }))
+      }
+    } catch {
+      // analyze-photo is best-effort; don't block on failure
+    }
   }
 
   function clearPhoto() {
     setPhoto(null)
     setPhotoPreview(null)
+    setSuggestion(null)
     if (photoInputRef.current) photoInputRef.current.value = ''
+  }
+
+  function applySuggestion() {
+    if (!suggestion) return
+    if (suggestion.card_name && !selectedCard) setSearch(suggestion.card_name)
+    if (suggestion.condition) setForm((f) => ({ ...f, condition: suggestion.condition }))
+    setSuggestion(null)
   }
 
   async function handleSubmit(e) {
@@ -79,13 +99,14 @@ export default function CreateListingModal({ open, onClose }) {
             </div>
           ) : (
             <div className="relative">
-              <SearchInput value={search} onChange={setSearch} placeholder="Search for a card…" />
+              <SearchInput value={search} onChange={setSearch} placeholder="Search for a card…" data-testid="card-search" />
               {suggestions.length > 0 && search.length > 1 && (
                 <div className="absolute top-full left-0 right-0 z-50 bg-elevated border border-border rounded-xl shadow-xl mt-1 max-h-60 overflow-y-auto">
-                  {suggestions.slice(0, 8).map((c) => (
+                  {suggestions.slice(0, 8).map((c, idx) => (
                     <button
                       key={c.api_id}
                       type="button"
+                      data-testid={`card-suggestion-${idx}`}
                       onClick={() => { setSelectedCard(c); setSearch('') }}
                       className="w-full flex items-center gap-3 px-3 py-2 hover:bg-surface text-left transition-colors"
                     >
@@ -121,6 +142,7 @@ export default function CreateListingModal({ open, onClose }) {
             value={form.price_chf}
             onChange={(e) => setForm({ ...form, price_chf: e.target.value })}
             required
+            data-testid="listing-price"
           />
         </div>
 
@@ -130,6 +152,7 @@ export default function CreateListingModal({ open, onClose }) {
           min="1"
           value={form.quantity}
           onChange={(e) => setForm({ ...form, quantity: e.target.value })}
+          data-testid="listing-quantity"
         />
 
         <label className="flex items-center gap-2 cursor-pointer">
@@ -173,6 +196,7 @@ export default function CreateListingModal({ open, onClose }) {
               type="button"
               onClick={() => photoInputRef.current?.click()}
               className="flex flex-col items-center justify-center gap-2 w-full border border-dashed border-border rounded-xl py-6 text-slate-500 hover:text-slate-300 hover:border-slate-500 transition-colors"
+              data-testid="photo-upload-btn"
             >
               <Camera size={22} />
               <span className="text-xs">Upload a photo of the actual card</span>
@@ -184,12 +208,38 @@ export default function CreateListingModal({ open, onClose }) {
             accept="image/*"
             onChange={handlePhotoChange}
             className="hidden"
+            data-testid="photo-input"
           />
         </div>
 
+        {/* Auto-suggest banner */}
+        {analyzePhoto.isPending && (
+          <div className="flex items-center gap-2 text-xs text-slate-400 bg-elevated border border-border rounded-lg px-3 py-2">
+            <Sparkles size={13} className="animate-pulse text-accent-400" />
+            Analyzing photo…
+          </div>
+        )}
+        {suggestion && !analyzePhoto.isPending && (
+          <div className="bg-accent-500/10 border border-accent-500/30 rounded-lg px-3 py-2 text-xs">
+            <div className="flex items-center justify-between gap-3">
+              <div className="flex items-center gap-1.5 text-accent-300">
+                <Sparkles size={13} />
+                <span className="font-medium">AI suggestion:</span>
+                {suggestion.card_name && <span className="text-slate-300">{suggestion.card_name}</span>}
+                {suggestion.condition && <span className="text-slate-400">· {suggestion.condition}</span>}
+                {suggestion.set_name && <span className="text-slate-500">· {suggestion.set_name}</span>}
+              </div>
+              <div className="flex gap-2 shrink-0">
+                <button type="button" onClick={applySuggestion} className="text-accent-400 hover:text-accent-300 font-medium">Apply</button>
+                <button type="button" onClick={() => setSuggestion(null)} className="text-slate-500 hover:text-slate-300">Dismiss</button>
+              </div>
+            </div>
+          </div>
+        )}
+
         <div className="flex gap-3 justify-end pt-2">
           <Button type="button" variant="secondary" onClick={onClose}>Cancel</Button>
-          <Button type="submit" loading={createListing.isPending}>Create Listing</Button>
+          <Button type="submit" loading={createListing.isPending} data-testid="listing-submit">Create Listing</Button>
         </div>
       </form>
     </Modal>

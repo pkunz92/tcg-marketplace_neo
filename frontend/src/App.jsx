@@ -15,6 +15,7 @@ import MyListingsPage from './pages/MyListingsPage'
 import MyOrdersPage from './pages/MyOrdersPage'
 import MyOffersPage from './pages/MyOffersPage'
 import ProfilePage from './pages/ProfilePage'
+import BulkListingPage from './pages/BulkListingPage'
 import NotFoundPage from './pages/NotFoundPage'
 
 const router = createBrowserRouter([
@@ -38,6 +39,7 @@ const router = createBrowserRouter([
           { path: 'dashboard/orders', element: <MyOrdersPage /> },
           { path: 'dashboard/offers', element: <MyOffersPage /> },
           { path: 'dashboard/profile', element: <ProfilePage /> },
+          { path: 'dashboard/bulk-listing', element: <BulkListingPage /> },
           { path: 'checkout/:listingId', element: <CheckoutPage /> },
         ],
       },

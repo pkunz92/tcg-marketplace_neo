@@ -46,3 +46,23 @@ export function useDeleteListing() {
     onSuccess: () => qc.invalidateQueries({ queryKey: ['listings'] }),
   })
 }
+
+export function useUpdateListing() {
+  const qc = useQueryClient()
+  return useMutation({
+    mutationFn: ({ id, ...data }) => api.patch(`/listings/${id}/`, data).then((r) => r.data),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['listings'] }),
+  })
+}
+
+export function useAnalyzePhoto() {
+  return useMutation({
+    mutationFn: (file) => {
+      const fd = new FormData()
+      fd.append('photo', file)
+      return api.post('/listings/analyze-photo/', fd, {
+        headers: { 'Content-Type': 'multipart/form-data' },
+      }).then((r) => r.data)
+    },
+  })
+}
