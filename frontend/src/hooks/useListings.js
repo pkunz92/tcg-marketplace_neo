@@ -29,7 +29,10 @@ export function useMyListings() {
 export function useCreateListing() {
   const qc = useQueryClient()
   return useMutation({
-    mutationFn: (data) => api.post('/listings/', data).then((r) => r.data),
+    mutationFn: (data) => {
+      const isFormData = data instanceof FormData
+      return api.post('/listings/', data, isFormData ? { headers: { 'Content-Type': 'multipart/form-data' } } : {}).then((r) => r.data)
+    },
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ['listings'] })
     },

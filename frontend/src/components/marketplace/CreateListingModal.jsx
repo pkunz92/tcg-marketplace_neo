@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import Modal from '../ui/Modal'
 import Button from '../ui/Button'
 import Input from '../ui/Input'
@@ -7,6 +7,7 @@ import SearchInput from '../catalog/SearchInput'
 import { useCardsList } from '../../hooks/useCards'
 import { useCreateListing } from '../../hooks/useListings'
 import { useDebounce } from '../../hooks/useDebounce'
+import { Camera, X } from 'lucide-react'
 import toast from 'react-hot-toast'
 
 export default function CreateListingModal({ open, onClose }) {
@@ -14,26 +15,45 @@ export default function CreateListingModal({ open, onClose }) {
   const [selectedCard, setSelectedCard] = useState(null)
   const [form, setForm] = useState({ condition: 'NM', price_chf: '', quantity: '1', grading_company: 'RAW' })
   const [isGraded, setIsGraded] = useState(false)
+  const [photo, setPhoto] = useState(null)
+  const [photoPreview, setPhotoPreview] = useState(null)
+  const photoInputRef = useRef(null)
   const debSearch = useDebounce(search, 300)
   const { data } = useCardsList({ search: debSearch, page: 1 }, { enabled: debSearch.length > 1 })
   const createListing = useCreateListing()
+
+  function handlePhotoChange(e) {
+    const file = e.target.files?.[0]
+    if (!file) return
+    setPhoto(file)
+    setPhotoPreview(URL.createObjectURL(file))
+  }
+
+  function clearPhoto() {
+    setPhoto(null)
+    setPhotoPreview(null)
+    if (photoInputRef.current) photoInputRef.current.value = ''
+  }
 
   async function handleSubmit(e) {
     e.preventDefault()
     if (!selectedCard) return toast.error('Select a card first')
     try {
-      await createListing.mutateAsync({
-        card_master: selectedCard.api_id,
-        condition: form.condition,
-        price_chf: parseFloat(form.price_chf),
-        quantity: parseInt(form.quantity),
-        is_graded: isGraded,
-        grading_company: isGraded ? form.grading_company : 'RAW',
-      })
+      const payload = new FormData()
+      payload.append('card_master', selectedCard.api_id)
+      payload.append('condition', form.condition)
+      payload.append('price_chf', parseFloat(form.price_chf))
+      payload.append('quantity', parseInt(form.quantity))
+      payload.append('is_graded', isGraded)
+      payload.append('grading_company', isGraded ? form.grading_company : 'RAW')
+      if (photo) payload.append('seller_photo', photo)
+      await createListing.mutateAsync(payload)
       toast.success('Listing created!')
       onClose()
       setSelectedCard(null)
       setSearch('')
+      setPhoto(null)
+      setPhotoPreview(null)
       setForm({ condition: 'NM', price_chf: '', quantity: '1', grading_company: 'RAW' })
     } catch (err) {
       toast.error(err.response?.data?.detail || 'Failed to create listing')
@@ -133,6 +153,39 @@ export default function CreateListingModal({ open, onClose }) {
             ))}
           </Select>
         )}
+
+        {/* Photo upload */}
+        <div>
+          <label className="text-sm font-medium text-slate-300 block mb-1">Card Photo (optional)</label>
+          {photoPreview ? (
+            <div className="relative inline-block">
+              <img src={photoPreview} alt="Preview" className="h-32 rounded-xl object-cover border border-border" />
+              <button
+                type="button"
+                onClick={clearPhoto}
+                className="absolute -top-2 -right-2 bg-red-600 rounded-full p-0.5 text-white hover:bg-red-500"
+              >
+                <X size={12} />
+              </button>
+            </div>
+          ) : (
+            <button
+              type="button"
+              onClick={() => photoInputRef.current?.click()}
+              className="flex flex-col items-center justify-center gap-2 w-full border border-dashed border-border rounded-xl py-6 text-slate-500 hover:text-slate-300 hover:border-slate-500 transition-colors"
+            >
+              <Camera size={22} />
+              <span className="text-xs">Upload a photo of the actual card</span>
+            </button>
+          )}
+          <input
+            ref={photoInputRef}
+            type="file"
+            accept="image/*"
+            onChange={handlePhotoChange}
+            className="hidden"
+          />
+        </div>
 
         <div className="flex gap-3 justify-end pt-2">
           <Button type="button" variant="secondary" onClick={onClose}>Cancel</Button>
