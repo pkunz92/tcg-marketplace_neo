@@ -23,3 +23,12 @@ python-dotenv
 # Pokemon TCG SDKs
 pokemontcgsdk
 tcgdex-sdk
+
+# AI Pre-grading (Phase 3)
+opencv-python-headless==4.10.0.84  # image preprocessing — no GUI needed
+numpy>=1.26,<3                     # array ops; already a transitive dep
+
+# Optional: install for model training and production inference
+# torch==2.3.0                     # PyTorch CPU build (~200 MB wheel)
+# torchvision==0.18.0              # EfficientNet pretrained weights
+# scikit-learn>=1.4                # metrics (f1_score, classification_report)
