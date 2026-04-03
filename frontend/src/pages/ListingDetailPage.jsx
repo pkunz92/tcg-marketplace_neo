@@ -67,7 +67,7 @@ export default function ListingDetailPage() {
         Back to Marketplace
       </Link>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+      <div data-testid="listing-detail" className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
         {/* Card image */}
         <div className="flex flex-col items-center gap-4">
           <div className="w-full max-w-xs mx-auto rounded-2xl overflow-hidden shadow-2xl border border-border">
@@ -149,6 +149,7 @@ export default function ListingDetailPage() {
                     className="w-full"
                     onClick={() => setBuying(true)}
                     disabled={!listing.is_available}
+                    data-testid="buy-now-btn"
                   >
                     <ShoppingCart size={18} />
                     {listing.is_available ? 'Buy Now' : 'Sold Out'}
@@ -159,6 +160,7 @@ export default function ListingDetailPage() {
                     className="w-full"
                     onClick={() => setOffering(true)}
                     disabled={!listing.is_available}
+                    data-testid="make-offer-btn"
                   >
                     <Tag size={18} />
                     Make an Offer

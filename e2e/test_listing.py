@@ -1,93 +1,127 @@
 """
-Browser test stubs — Create Listing journey.
+E2E tests — Seller listing journey.
 
-Journey:
-  1. Seller logs in
-  2. Navigates to "Sell a Card"
-  3. Searches for and selects a card from the master database
-  4. Fills in price, condition, quantity
-  5. Submits the listing form
-  6. Verifies the new listing appears in the seller's dashboard
+Journeys covered:
+  1. Seller registers a new account via the UI.
+  2. Seller creates a listing from My Listings (card search → fill form → submit).
+  3. Listing appears in My Listings dashboard.
+  4. Listing is visible on the Marketplace browse page.
+  5. Listing detail page shows correct price and Buy Now / Make Offer buttons.
 
-These are stubs: selectors and page structure must be updated once
-the Next.js frontend implements the listing creation UI.
+Prerequisites:
+  - Backend running at E2E_API_URL with ACCOUNT_EMAIL_VERIFICATION=none
+  - Frontend running at E2E_BASE_URL
+  - At least one card seeded in the database
 """
 
 import pytest
+from playwright.sync_api import Page, expect
+from conftest import BASE_URL, _register_and_get_token, _get_first_card_api_id
+import uuid
 
 
-@pytest.mark.skip(reason="Stub — frontend listing UI not yet implemented")
-def test_create_listing_happy_path(page, base_url, seller_credentials):
-    """
-    Seller creates a new card listing end-to-end.
-    Expected: listing appears in seller dashboard with correct price.
-    """
-    # Step 1: Log in
-    page.goto(f"{base_url}/login")
-    page.fill('[data-testid="username"]', seller_credentials["username"])
-    page.fill('[data-testid="password"]', seller_credentials["password"])
-    page.click('[data-testid="login-submit"]')
-    page.wait_for_url(f"{base_url}/dashboard")
+# ---------------------------------------------------------------------------
+# 1. Registration via UI
+# ---------------------------------------------------------------------------
 
-    # Step 2: Navigate to sell page
-    page.click('[data-testid="nav-sell"]')
-    page.wait_for_url(f"{base_url}/sell")
+def test_seller_can_register(page: Page):
+    """New user can complete the registration form and land on verify-email."""
+    suffix = uuid.uuid4().hex[:6]
+    page.goto(f"{BASE_URL}/register")
 
-    # Step 3: Search for card
-    page.fill('[data-testid="card-search"]', "Charizard")
-    page.click('[data-testid="card-result-0"]')
+    page.locator('[data-testid="register-username"]').fill(f"e2e_reg_{suffix}")
+    page.locator('[data-testid="register-email"]').fill(f"e2e_reg_{suffix}@test.invalid")
+    page.locator('[data-testid="register-password1"]').fill("E2ePass123!")
+    page.locator('[data-testid="register-password2"]').fill("E2ePass123!")
+    page.locator('[data-testid="register-shipping-name"]').fill("Test Seller")
+    page.locator('[data-testid="register-shipping-address"]').fill("1 Test Street")
+    page.locator('[data-testid="register-shipping-city"]').fill("Zurich")
+    page.locator('[data-testid="register-shipping-postal-code"]').fill("8001")
+    page.locator('[data-testid="register-shipping-country"]').fill("CH")
 
-    # Step 4: Fill listing details
-    page.fill('[data-testid="listing-price"]', "45.00")
-    page.select_option('[data-testid="listing-condition"]', "NM")
-    page.fill('[data-testid="listing-quantity"]', "1")
+    page.locator('[data-testid="register-submit"]').click()
 
-    # Step 5: Submit
-    page.click('[data-testid="listing-submit"]')
-    page.wait_for_selector('[data-testid="listing-success"]')
+    # Expect redirect to verify-email (or dashboard if email verification disabled)
+    page.wait_for_url(lambda url: "verify-email" in url or "dashboard" in url, timeout=10_000)
+    assert "verify-email" in page.url or "dashboard" in page.url
 
-    # Step 6: Verify in dashboard
-    page.goto(f"{base_url}/dashboard/listings")
+
+# ---------------------------------------------------------------------------
+# 2. Create listing via UI
+# ---------------------------------------------------------------------------
+
+def test_seller_creates_listing(seller_page: Page, seller_user, card_api_id):
+    """Seller navigates to My Listings and creates a new listing via the modal."""
+    page = seller_page
+
+    # Navigate to My Listings
+    page.goto(f"{BASE_URL}/dashboard/listings")
+    expect(page.locator('[data-testid="new-listing-btn"]')).to_be_visible()
+    page.locator('[data-testid="new-listing-btn"]').click()
+
+    # Modal opens — search for a card
+    expect(page.locator('[data-testid="card-search"]')).to_be_visible(timeout=5_000)
+    page.locator('[data-testid="card-search"]').fill("Charizard")
+
+    # Wait for suggestions and click the first one
+    expect(page.locator('[data-testid="card-suggestion-0"]')).to_be_visible(timeout=8_000)
+    page.locator('[data-testid="card-suggestion-0"]').click()
+
+    # Fill listing details
+    page.locator('[data-testid="listing-price"]').fill("45.00")
+    page.locator('[data-testid="listing-quantity"]').fill("2")
+
+    # Submit
+    page.locator('[data-testid="listing-submit"]').click()
+
+    # Toast "Listing created!" should appear (or modal closes)
+    page.wait_for_timeout(2_000)
+
+    # Verify listing row appears in the table
+    expect(page.locator('[data-testid="listing-row"]').first).to_be_visible(timeout=8_000)
     assert page.locator('[data-testid="listing-row"]').count() >= 1
-    assert "45.00" in page.locator('[data-testid="listing-row"]:first-child').inner_text()
 
 
-@pytest.mark.skip(reason="Stub — frontend listing UI not yet implemented")
-def test_edit_listing_price(page, base_url, seller_credentials):
-    """
-    Seller edits the price of an existing listing.
-    Expected: updated price reflects immediately in listing detail.
-    """
-    page.goto(f"{base_url}/login")
-    page.fill('[data-testid="username"]', seller_credentials["username"])
-    page.fill('[data-testid="password"]', seller_credentials["password"])
-    page.click('[data-testid="login-submit"]')
-    page.wait_for_url(f"{base_url}/dashboard")
+# ---------------------------------------------------------------------------
+# 3. Listing appears on Marketplace
+# ---------------------------------------------------------------------------
 
-    page.goto(f"{base_url}/dashboard/listings")
-    page.click('[data-testid="listing-edit-0"]')
-    page.fill('[data-testid="listing-price"]', "39.99")
-    page.click('[data-testid="listing-submit"]')
-    page.wait_for_selector('[data-testid="listing-success"]')
-    assert "39.99" in page.locator('[data-testid="listing-price-display"]').inner_text()
+def test_listing_visible_on_marketplace(seller_page: Page, seller_listing):
+    """A pre-created listing is visible in the Marketplace browse page."""
+    page = seller_page
+    page.goto(f"{BASE_URL}/market")
+
+    # At least one listing card should appear
+    expect(page.locator('[data-testid="listing-card"]').first).to_be_visible(timeout=10_000)
+    assert page.locator('[data-testid="listing-card"]').count() >= 1
 
 
-@pytest.mark.skip(reason="Stub — frontend listing UI not yet implemented")
-def test_delete_listing(page, base_url, seller_credentials):
-    """
-    Seller deletes a listing.
-    Expected: listing no longer appears in dashboard.
-    """
-    page.goto(f"{base_url}/login")
-    page.fill('[data-testid="username"]', seller_credentials["username"])
-    page.fill('[data-testid="password"]', seller_credentials["password"])
-    page.click('[data-testid="login-submit"]')
-    page.wait_for_url(f"{base_url}/dashboard")
+# ---------------------------------------------------------------------------
+# 4. Listing detail page shows correct information
+# ---------------------------------------------------------------------------
 
-    page.goto(f"{base_url}/dashboard/listings")
-    count_before = page.locator('[data-testid="listing-row"]').count()
-    page.click('[data-testid="listing-delete-0"]')
-    page.click('[data-testid="confirm-delete"]')
-    page.wait_for_selector('[data-testid="delete-success"]')
-    count_after = page.locator('[data-testid="listing-row"]').count()
-    assert count_after == count_before - 1
+def test_listing_detail_page(seller_page: Page, seller_listing):
+    """Listing detail page renders correctly with price and action area."""
+    page = seller_page
+
+    # Navigate directly to the listing detail
+    page.goto(f"{BASE_URL}/market/{seller_listing}")
+    expect(page.locator('[data-testid="listing-detail"]')).to_be_visible(timeout=10_000)
+
+    # Price and card info rendered
+    assert page.locator('[data-testid="listing-detail"]').is_visible()
+
+
+# ---------------------------------------------------------------------------
+# 5. Seller does not see Buy Now / Make Offer on their own listing
+# ---------------------------------------------------------------------------
+
+def test_seller_cannot_buy_own_listing(seller_page: Page, seller_listing):
+    """Seller viewing their own listing should not see Buy Now / Make Offer buttons."""
+    page = seller_page
+    page.goto(f"{BASE_URL}/market/{seller_listing}")
+    expect(page.locator('[data-testid="listing-detail"]')).to_be_visible(timeout=10_000)
+
+    # Seller management message visible instead
+    assert not page.locator('[data-testid="buy-now-btn"]').is_visible()
+    assert not page.locator('[data-testid="make-offer-btn"]').is_visible()

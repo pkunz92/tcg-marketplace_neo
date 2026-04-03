@@ -49,6 +49,7 @@ export default function OfferModal({ listing, card, onClose }) {
           value={price}
           onChange={(e) => setPrice(e.target.value)}
           required
+          data-testid="offer-price"
         />
 
         <div>
@@ -59,6 +60,7 @@ export default function OfferModal({ listing, card, onClose }) {
             placeholder="Add a note to the seller…"
             rows={3}
             className="w-full bg-surface border border-border rounded-lg px-3 py-2 text-sm text-slate-200 placeholder:text-slate-500 focus:outline-none focus:border-accent-500 resize-none"
+            data-testid="offer-message"
           />
         </div>
 
@@ -68,7 +70,7 @@ export default function OfferModal({ listing, card, onClose }) {
 
         <div className="flex gap-3 justify-end pt-1">
           <Button type="button" variant="secondary" onClick={onClose}>Cancel</Button>
-          <Button type="submit" loading={createOffer.isPending}>Send Offer</Button>
+          <Button type="submit" loading={createOffer.isPending} data-testid="offer-submit">Send Offer</Button>
         </div>
       </form>
     </Modal>

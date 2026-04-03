@@ -98,7 +98,7 @@ export default function CheckoutPage() {
   if (step === 'done') {
     return (
       <PageContainer>
-        <div className="max-w-md mx-auto text-center py-24 flex flex-col items-center gap-4">
+        <div data-testid="order-success" className="max-w-md mx-auto text-center py-24 flex flex-col items-center gap-4">
           <CheckCircle size={56} className="text-green-400" />
           <h2 className="text-2xl font-bold text-slate-100">Order Placed!</h2>
           <p className="text-slate-400">Redirecting you to your orders…</p>
@@ -198,6 +198,7 @@ export default function CheckoutPage() {
                 value={shipping.shipping_name}
                 onChange={(e) => setShipping({ ...shipping, shipping_name: e.target.value })}
                 required
+                data-testid="shipping-name"
               />
               <Input
                 label="Address"
@@ -205,6 +206,7 @@ export default function CheckoutPage() {
                 value={shipping.shipping_address_line1}
                 onChange={(e) => setShipping({ ...shipping, shipping_address_line1: e.target.value })}
                 required
+                data-testid="shipping-address"
               />
               <div className="grid grid-cols-2 gap-3">
                 <Input
@@ -213,6 +215,7 @@ export default function CheckoutPage() {
                   value={shipping.shipping_city}
                   onChange={(e) => setShipping({ ...shipping, shipping_city: e.target.value })}
                   required
+                  data-testid="shipping-city"
                 />
                 <Input
                   label="Postal Code"
@@ -220,6 +223,7 @@ export default function CheckoutPage() {
                   value={shipping.shipping_postal_code}
                   onChange={(e) => setShipping({ ...shipping, shipping_postal_code: e.target.value })}
                   required
+                  data-testid="shipping-postal-code"
                 />
               </div>
               <Input
@@ -228,10 +232,11 @@ export default function CheckoutPage() {
                 value={shipping.shipping_country}
                 onChange={(e) => setShipping({ ...shipping, shipping_country: e.target.value })}
                 required
+                data-testid="shipping-country"
               />
 
               <div className="flex justify-end pt-2">
-                <Button type="submit" size="lg" loading={updateProfile.isPending}>
+                <Button type="submit" size="lg" loading={updateProfile.isPending} data-testid="continue-to-payment">
                   Continue to Payment
                 </Button>
               </div>
@@ -280,7 +285,7 @@ export default function CheckoutPage() {
 
               <div className="flex gap-3 justify-end pt-2">
                 <Button variant="secondary" onClick={() => setStep('shipping')}>Back</Button>
-                <Button size="lg" onClick={handlePlaceOrder} loading={createOrder.isPending}>
+                <Button size="lg" onClick={handlePlaceOrder} loading={createOrder.isPending} data-testid="place-order-btn">
                   Place Order · {formatCHF(total)}
                 </Button>
               </div>

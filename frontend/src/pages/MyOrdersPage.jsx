@@ -26,7 +26,7 @@ export default function MyOrdersPage() {
       ) : (
         <div className="space-y-3">
           {orders.map((o) => (
-            <div key={o.id} className="bg-surface border border-border rounded-xl p-4 flex items-center justify-between gap-4">
+            <div key={o.id} data-testid="order-row" className="bg-surface border border-border rounded-xl p-4 flex items-center justify-between gap-4">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-16 shrink-0">
                   <img src={o.card_image_url} alt={o.card_name} className="w-full h-full object-contain rounded" loading="lazy" />

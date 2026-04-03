@@ -48,10 +48,11 @@ function CounterModal({ offer, onClose }) {
           value={price}
           onChange={(e) => setPrice(e.target.value)}
           required
+          data-testid="counter-price"
         />
         <div className="flex gap-3 justify-end">
           <Button type="button" variant="secondary" onClick={onClose}>Cancel</Button>
-          <Button type="submit" loading={counterOffer.isPending}>Send Counter</Button>
+          <Button type="submit" loading={counterOffer.isPending} data-testid="counter-submit">Send Counter</Button>
         </div>
       </form>
     </Modal>
@@ -87,7 +88,7 @@ function OfferRow({ offer, isSeller }) {
   }
 
   return (
-    <div className="bg-surface border border-border rounded-2xl p-4">
+    <div data-testid="offer-row" className="bg-surface border border-border rounded-2xl p-4">
       <div className="flex items-start gap-4 flex-wrap">
         {/* Card image */}
         <img
@@ -143,9 +144,9 @@ function OfferRow({ offer, isSeller }) {
         {/* Actions — only for seller on pending offers */}
         {isSeller && offer.status === 'PENDING' && !isExpired && (
           <div className="flex gap-2 flex-wrap shrink-0">
-            <Button size="sm" onClick={handleAccept} loading={acceptOffer.isPending}>Accept</Button>
-            <Button size="sm" variant="secondary" onClick={() => setCounterOpen(true)}>Counter</Button>
-            <Button size="sm" variant="danger" onClick={handleDecline} loading={declineOffer.isPending}>Decline</Button>
+            <Button size="sm" onClick={handleAccept} loading={acceptOffer.isPending} data-testid="offer-accept-btn">Accept</Button>
+            <Button size="sm" variant="secondary" onClick={() => setCounterOpen(true)} data-testid="offer-counter-btn">Counter</Button>
+            <Button size="sm" variant="danger" onClick={handleDecline} loading={declineOffer.isPending} data-testid="offer-decline-btn">Decline</Button>
           </div>
         )}
       </div>

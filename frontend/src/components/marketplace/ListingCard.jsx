@@ -12,7 +12,7 @@ export default function ListingCard({ listing }) {
   const [buying, setBuying] = useState(false)
 
   return (
-    <div className="bg-surface border border-border rounded-xl overflow-hidden hover:border-accent-500/40 transition-colors group">
+    <div data-testid="listing-card" className="bg-surface border border-border rounded-xl overflow-hidden hover:border-accent-500/40 transition-colors group">
       <Link to={`/cards/${listing.card_master_api_id}`} className="block p-3">
         <div style={{ aspectRatio: '63/88' }}>
           <CardImage
@@ -45,6 +45,7 @@ export default function ListingCard({ listing }) {
           </Button>
           <Link
             to={`/market/${listing.id}`}
+            data-testid="listing-details-link"
             className="px-2 py-1.5 text-xs rounded-lg bg-surface hover:bg-elevated border border-border text-slate-400 hover:text-slate-200 transition-colors"
           >
             Details
