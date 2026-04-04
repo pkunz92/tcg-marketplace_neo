@@ -20,6 +20,8 @@ import {
 
 const navLinks = [
   { href: '/market', label: 'Market' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/how-it-works', label: 'How It Works' },
 ]
 
 const authLinks = [
