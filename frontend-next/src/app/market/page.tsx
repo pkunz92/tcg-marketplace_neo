@@ -1,6 +1,7 @@
 'use client'
 
-import { useState, useRef } from 'react'
+import { useState, useRef, Suspense } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import useSWR from 'swr'
 import Link from 'next/link'
 import { Search, SlidersHorizontal, X, Plus, ChevronLeft, ChevronRight } from 'lucide-react'
@@ -53,20 +54,34 @@ function EmptyState({ search, condition, onClear }: { search: string; condition:
   )
 }
 
-export default function MarketPage() {
-  const [search, setSearch] = useState('')
-  const [debouncedSearch, setDebouncedSearch] = useState('')
+function MarketPageInner() {
+  const router = useRouter()
+  const searchParams = useSearchParams()
+
+  // Initialise from URL — handles navbar search and shared links
+  const initialSearch = searchParams.get('search') ?? ''
+  const [search, setSearch] = useState(initialSearch)
+  const [debouncedSearch, setDebouncedSearch] = useState(initialSearch)
   const [condition, setCondition] = useState('')
   const [sort, setSort] = useState('-created_at')
   const [page, setPage] = useState(1)
   const [showFilters, setShowFilters] = useState(false)
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
+  function syncUrl(nextSearch: string) {
+    const p = new URLSearchParams()
+    if (nextSearch) p.set('search', nextSearch)
+    router.replace(`/market${p.size ? `?${p.toString()}` : ''}`, { scroll: false })
+  }
+
   function handleSearch(val: string) {
     setSearch(val)
     setPage(1)
     if (debounceRef.current) clearTimeout(debounceRef.current)
-    debounceRef.current = setTimeout(() => setDebouncedSearch(val), 300)
+    debounceRef.current = setTimeout(() => {
+      setDebouncedSearch(val)
+      syncUrl(val)
+    }, 300)
   }
 
   const swrPath = buildPath(debouncedSearch, condition, sort, page)
@@ -84,6 +99,7 @@ export default function MarketPage() {
     setDebouncedSearch('')
     setCondition('')
     setPage(1)
+    router.replace('/market', { scroll: false })
   }
 
   return (
@@ -254,5 +270,13 @@ export default function MarketPage() {
         </>
       )}
     </div>
+  )
+}
+
+export default function MarketPage() {
+  return (
+    <Suspense>
+      <MarketPageInner />
+    </Suspense>
   )
 }
