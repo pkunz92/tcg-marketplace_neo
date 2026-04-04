@@ -27,7 +27,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     api
-      .get<User>('/auth/me/')
+      .get<User>('/auth/user/')
       .then(setUser)
       .catch(() => setUser(null))
       .finally(() => setLoading(false))
