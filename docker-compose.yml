@@ -67,5 +67,20 @@ services:
     depends_on:
       - backend
 
+  frontend-next:
+    image: node:22-alpine
+    working_dir: /app
+    command: sh -c "npm install && npm run dev"
+    volumes:
+      - ./frontend-next:/app
+      - frontend_next_node_modules:/app/node_modules
+    ports:
+      - "3001:3001"
+    environment:
+      NEXT_PUBLIC_API_URL: http://backend:8000
+    depends_on:
+      - backend
+
 volumes:
   postgres_data:
+  frontend_next_node_modules:
