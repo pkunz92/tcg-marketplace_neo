@@ -20,9 +20,19 @@ class Command(BaseCommand):
         except ValueError:
             return None
 
+    def resolve_path(self, path: Path) -> Path:
+        """Resolve Windows-encoded symlinks (text files containing relative paths)."""
+        if path.is_file() and path.stat().st_size < 300:
+            content = path.read_text(encoding='utf-8').strip()
+            if not content.startswith('{') and not content.startswith('['):
+                resolved = (path.parent / content).resolve()
+                if resolved.exists():
+                    return resolved
+        return path
+
     def handle(self, *args, **options):
         BASE_DATA_DIR = Path(settings.BASE_DIR) / 'api' / 'data'
-        SETS_JSON_PATH = BASE_DATA_DIR / 'sets' / 'en.json'
+        SETS_JSON_PATH = self.resolve_path(BASE_DATA_DIR / 'sets' / 'en.json')
         CARDS_DIR = BASE_DATA_DIR / 'raw_cards'
 
         if not SETS_JSON_PATH.exists():
@@ -70,7 +80,8 @@ class Command(BaseCommand):
         with transaction.atomic():
             for json_file_path in json_files:
                 try:
-                    with open(json_file_path, 'r', encoding='utf-8') as f:
+                    resolved_path = self.resolve_path(json_file_path)
+                    with open(resolved_path, 'r', encoding='utf-8') as f:
                         set_data = json.load(f)
 
                     if not isinstance(set_data, list):
