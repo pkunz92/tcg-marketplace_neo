@@ -117,6 +117,8 @@ export interface Listing {
   grading_status: GradingStatus
   auto_grade: AutoGrade | null
   created_at: string
+  seller_reputation_score: number | null
+  seller_reputation_count: number
 }
 
 export interface CardSuggestion {
@@ -151,7 +153,8 @@ export interface Order {
   quantity: number
   total_price: number
   total_chf: number
-  status: 'PENDING' | 'COMPLETED' | 'CANCELLED' | 'SHIPPED'
+  status: 'PENDING' | 'COMPLETED' | 'CANCELLED' | 'SHIPPED' | 'DELIVERED'
+  review?: Review | null
   tracking_number: string | null
   buyer_username: string
   seller_username: string
@@ -192,4 +195,31 @@ export interface PaginatedResponse<T> {
   next: string | null
   previous: string | null
   results: T[]
+}
+
+export interface Review {
+  id: number
+  order: number
+  reviewer: number
+  reviewer_username: string
+  seller: number
+  stars: number
+  comment: string
+  card_name: string
+  created_at: string
+}
+
+export interface Reputation {
+  seller_id: number
+  seller_username: string
+  score: number | null
+  total_reviews: number
+  recent_reviews: number
+}
+
+export interface SellerProfile {
+  seller_id: number
+  seller_username: string
+  reputation: Omit<Reputation, 'seller_id' | 'seller_username'>
+  active_listings: Listing[]
 }

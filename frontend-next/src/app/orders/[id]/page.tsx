@@ -1,14 +1,16 @@
 'use client'
 
+import { useState } from 'react'
 import useSWR from 'swr'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowLeft, Package, Truck } from 'lucide-react'
-import { api, type Order } from '@/lib/api'
+import { ArrowLeft, Package, Star, Truck } from 'lucide-react'
+import { api, type Order, type Review } from '@/lib/api'
 import { formatCHF, formatDate } from '@/lib/utils'
 import Badge, { statusVariant } from '@/components/ui/badge'
 import Spinner from '@/components/ui/spinner'
+import ReviewForm from '@/components/ui/review-form'
 import { useAuth } from '@/lib/auth-context'
 
 const fetcher = (id: string) => api.get<Order>(`/orders/${id}/`)
@@ -16,9 +18,10 @@ const fetcher = (id: string) => api.get<Order>(`/orders/${id}/`)
 export default function OrderDetailPage() {
   const { id } = useParams<{ id: string }>()
   const { user } = useAuth()
-  const { data: order, isLoading } = useSWR(id ? `order-${id}` : null, () =>
+  const { data: order, isLoading, mutate } = useSWR(id ? `order-${id}` : null, () =>
     fetcher(id),
   )
+  const [submittedReview, setSubmittedReview] = useState<Review | null>(null)
 
   if (isLoading) {
     return (
@@ -33,6 +36,17 @@ export default function OrderDetailPage() {
   }
 
   const isSeller = user?.username === order.seller_username
+  const isBuyer = user?.username === order.buyer_username
+  const isDelivered = order.status === 'DELIVERED'
+  const alreadyReviewed = submittedReview !== null || order.review != null
+  const canReview = isBuyer && isDelivered && !alreadyReviewed
+
+  function handleReviewSuccess(review: Review) {
+    setSubmittedReview(review)
+    mutate()
+  }
+
+  const review = submittedReview ?? order.review ?? null
 
   return (
     <div className="max-w-2xl mx-auto">
@@ -121,6 +135,38 @@ export default function OrderDetailPage() {
               <h3 className="text-sm font-medium text-slate-300">Tracking Number</h3>
             </div>
             <p className="font-mono text-sm text-blue-400">{order.tracking_number}</p>
+          </div>
+        )}
+
+        {/* Review section */}
+        {review && (
+          <div className="p-5 border-t border-border">
+            <div className="flex items-center gap-2 mb-3">
+              <Star size={15} className="fill-yellow-400 text-yellow-400" />
+              <h3 className="text-sm font-medium text-slate-300">Your Review</h3>
+            </div>
+            <div className="flex gap-0.5 mb-1.5">
+              {[1, 2, 3, 4, 5].map((n) => (
+                <Star
+                  key={n}
+                  size={16}
+                  className={n <= review.stars ? 'fill-yellow-400 text-yellow-400' : 'text-slate-600'}
+                />
+              ))}
+            </div>
+            {review.comment && (
+              <p className="text-sm text-slate-400 mt-1">{review.comment}</p>
+            )}
+          </div>
+        )}
+
+        {canReview && (
+          <div className="p-5 border-t border-border">
+            <div className="flex items-center gap-2 mb-4">
+              <Star size={15} className="text-yellow-400" />
+              <h3 className="text-sm font-medium text-slate-300">Rate this seller</h3>
+            </div>
+            <ReviewForm orderId={id} onSuccess={handleReviewSuccess} />
           </div>
         )}
       </div>

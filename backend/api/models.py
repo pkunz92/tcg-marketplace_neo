@@ -268,6 +268,7 @@ class OrderStatusChoices(models.TextChoices):
     PENDING = 'PENDING', 'Pending'
     COMPLETED = 'COMPLETED', 'Completed'
     CANCELLED = 'CANCELLED', 'Cancelled'
+    DELIVERED = 'DELIVERED', 'Delivered'
 
 
 class Order(models.Model):
@@ -432,3 +433,40 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return f"{self.user.username} Profile"
+
+
+# ---------------------------------------------------------------------------
+# Phase 5A models — Review, Reputation
+# ---------------------------------------------------------------------------
+
+class Review(models.Model):
+    """Post-purchase review left by a buyer for a seller, tied to one order."""
+    order = models.OneToOneField(
+        Order,
+        on_delete=models.PROTECT,
+        related_name='review',
+    )
+    reviewer = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='reviews_given',
+    )
+    seller = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='reviews_received',
+    )
+    stars = models.PositiveSmallIntegerField(
+        help_text="Rating 1-5",
+    )
+    comment = models.TextField(blank=True, default='')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Review #{self.id} ({self.stars}★) for {self.seller.username} by {self.reviewer.username}"
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['seller', 'created_at']),
+        ]
+        ordering = ['-created_at']

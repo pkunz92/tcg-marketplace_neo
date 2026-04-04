@@ -18,9 +18,10 @@ from rest_framework.test import APIClient
 from .models import (
     Card_Master, Card_Listing, CardGrade, ConditionChoices, GradingChoices,
     Offer, OfferStatusChoices, Order, OrderStatusChoices,
-    Set_Master, Transaction, TransactionStatusChoices,
+    Set_Master, Transaction, TransactionStatusChoices, Review,
 )
 from .serializers import CardGradeSerializer, OfferSerializer, TransactionSerializer
+from .reputation import compute_reputation as _compute_reputation
 
 User = get_user_model()
 
@@ -712,3 +713,149 @@ class AnalyzePhotoViewTest(TestCase):
                     resp.data['grading']['suggested_psa_grade'], psa,
                     f'PSA mapping failed for condition {condition}',
                 )
+
+
+# ---------------------------------------------------------------------------
+# Phase 5A: Review & Reputation Tests
+# ---------------------------------------------------------------------------
+
+class ReputationCalculationTest(TestCase):
+    """Unit tests for _compute_reputation weighted average logic."""
+
+    def setUp(self):
+        self.seller = make_user('rep_seller')
+        self.buyer = make_user('rep_buyer')
+        card_set = make_set()
+        card = make_card(card_set)
+        self.listing = make_listing(card, self.seller)
+
+    def _make_delivered_order(self):
+        o = make_order(self.listing, self.buyer)
+        o.status = OrderStatusChoices.DELIVERED
+        o.save()
+        return o
+
+    def test_no_reviews_returns_none_score(self):
+        score, total, recent = _compute_reputation(self.seller)
+        self.assertIsNone(score)
+        self.assertEqual(total, 0)
+        self.assertEqual(recent, 0)
+
+    def test_single_recent_review(self):
+        order = self._make_delivered_order()
+        Review.objects.create(order=order, reviewer=self.buyer, seller=self.seller, stars=5)
+        score, total, recent = _compute_reputation(self.seller)
+        self.assertEqual(score, 5.0)
+        self.assertEqual(total, 1)
+        self.assertEqual(recent, 1)
+
+    def test_weighted_avg_recent_vs_old(self):
+        import datetime
+        from django.utils import timezone
+
+        # Recent review: 5 stars (weight 2)
+        order1 = self._make_delivered_order()
+        r1 = Review.objects.create(order=order1, reviewer=self.buyer, seller=self.seller, stars=5)
+
+        # Old review: 1 star (weight 1)
+        order2 = self._make_delivered_order()
+        r2 = Review.objects.create(order=order2, reviewer=self.buyer, seller=self.seller, stars=1)
+        # Force old created_at (91 days ago)
+        old_date = timezone.now() - datetime.timedelta(days=91)
+        Review.objects.filter(pk=r2.pk).update(created_at=old_date)
+
+        score, total, recent = _compute_reputation(self.seller)
+        # weighted: (5*2 + 1*1) / (2+1) = 11/3 ≈ 3.67
+        self.assertAlmostEqual(score, round(11 / 3, 2), places=2)
+        self.assertEqual(total, 2)
+        self.assertEqual(recent, 1)
+
+    def test_multiple_reviews_same_weight(self):
+        for stars in [3, 4, 5]:
+            o = self._make_delivered_order()
+            Review.objects.create(order=o, reviewer=self.buyer, seller=self.seller, stars=stars)
+        score, total, recent = _compute_reputation(self.seller)
+        # All recent: weighted avg = (3+4+5)/3 = 4.0
+        self.assertEqual(score, 4.0)
+        self.assertEqual(total, 3)
+
+
+class ReviewIntegrationTest(TestCase):
+    """Integration tests: submit review → reputation updates."""
+
+    def setUp(self):
+        self.client = APIClient()
+        self.seller = make_user('int_seller')
+        self.buyer = make_user('int_buyer')
+        card_set = make_set()
+        card = make_card(card_set)
+        self.listing = make_listing(card, self.seller)
+        self.order = make_order(self.listing, self.buyer)
+
+    def _deliver_order(self):
+        self.order.status = OrderStatusChoices.DELIVERED
+        self.order.save()
+
+    def test_submit_review_creates_reputation(self):
+        self._deliver_order()
+        self.client.force_authenticate(user=self.buyer)
+        url = f'/api/orders/{self.order.pk}/review/'
+        resp = self.client.post(url, {'stars': 4, 'comment': 'Great seller!'}, format='json')
+        self.assertEqual(resp.status_code, 201)
+        self.assertEqual(resp.data['stars'], 4)
+
+        # Verify reputation updated
+        rep_url = f'/api/users/{self.seller.pk}/reputation/'
+        rep_resp = self.client.get(rep_url)
+        self.assertEqual(rep_resp.status_code, 200)
+        self.assertEqual(rep_resp.data['score'], 4.0)
+        self.assertEqual(rep_resp.data['total_reviews'], 1)
+
+    def test_cannot_review_non_delivered_order(self):
+        self.client.force_authenticate(user=self.buyer)
+        url = f'/api/orders/{self.order.pk}/review/'
+        resp = self.client.post(url, {'stars': 5, 'comment': 'Too soon'}, format='json')
+        self.assertEqual(resp.status_code, 400)
+
+    def test_cannot_review_twice(self):
+        self._deliver_order()
+        self.client.force_authenticate(user=self.buyer)
+        url = f'/api/orders/{self.order.pk}/review/'
+        self.client.post(url, {'stars': 5}, format='json')
+        resp = self.client.post(url, {'stars': 4}, format='json')
+        self.assertEqual(resp.status_code, 400)
+
+    def test_seller_cannot_review_own_order(self):
+        self._deliver_order()
+        self.client.force_authenticate(user=self.seller)
+        url = f'/api/orders/{self.order.pk}/review/'
+        resp = self.client.post(url, {'stars': 5}, format='json')
+        self.assertEqual(resp.status_code, 403)
+
+    def test_stars_validation(self):
+        self._deliver_order()
+        self.client.force_authenticate(user=self.buyer)
+        url = f'/api/orders/{self.order.pk}/review/'
+        resp = self.client.post(url, {'stars': 6}, format='json')
+        self.assertEqual(resp.status_code, 400)
+
+    def test_user_reviews_list(self):
+        self._deliver_order()
+        Review.objects.create(order=self.order, reviewer=self.buyer, seller=self.seller, stars=3)
+        url = f'/api/users/{self.seller.pk}/reviews/'
+        resp = self.client.get(url)
+        self.assertEqual(resp.status_code, 200)
+        # Response may be paginated (count/next/previous/results dict) or a plain list
+        results = resp.data.get('results', resp.data) if isinstance(resp.data, dict) else resp.data
+        self.assertEqual(len(results), 1)
+        self.assertEqual(results[0]['stars'], 3)
+
+    def test_seller_public_profile(self):
+        self._deliver_order()
+        Review.objects.create(order=self.order, reviewer=self.buyer, seller=self.seller, stars=5)
+        url = f'/api/sellers/{self.seller.pk}/'
+        resp = self.client.get(url)
+        self.assertEqual(resp.status_code, 200)
+        self.assertIn('reputation', resp.data)
+        self.assertEqual(resp.data['reputation']['score'], 5.0)
+        self.assertIn('active_listings', resp.data)

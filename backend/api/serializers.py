@@ -5,6 +5,7 @@ from .models import (
     Card_Master, Card_Listing, Order, OrderStatusChoices,
     Set_Master, UserProfile, CardTranslation, SetTranslation, CardPrice, CardPriceHistory,
     Offer, OfferStatusChoices, Transaction, TransactionStatusChoices, CardGrade, ListingPhoto,
+    Review,
 )
 
 
@@ -125,6 +126,8 @@ class CardListingSerializer(serializers.ModelSerializer):
     ptcgo_code = serializers.CharField(source='card_master.set.ptcgo_code', read_only=True, allow_null=True)
     seller_username = serializers.CharField(source='seller.username', read_only=True)
     seller_photo_url = serializers.SerializerMethodField()
+    seller_reputation_score = serializers.SerializerMethodField()
+    seller_reputation_count = serializers.SerializerMethodField()
     requires_photo = serializers.BooleanField(read_only=True)
     grading_status = serializers.CharField(read_only=True)
     auto_grade = serializers.JSONField(read_only=True)
@@ -138,6 +141,7 @@ class CardListingSerializer(serializers.ModelSerializer):
             'seller', 'seller_username', 'price_chf', 'quantity', 'condition',
             'is_graded', 'seller_photo', 'seller_photo_url', 'is_available',
             'requires_photo', 'grading_status', 'auto_grade', 'created_at',
+            'seller_reputation_score', 'seller_reputation_count',
         ]
         read_only_fields = ['seller']
 
@@ -153,6 +157,14 @@ class CardListingSerializer(serializers.ModelSerializer):
                 return request.build_absolute_uri(obj.seller_photo.url)
             return obj.seller_photo.url
         return None
+
+    def get_seller_reputation_score(self, obj):
+        from .reputation import compute_reputation
+        score, _, _ = compute_reputation(obj.seller)
+        return score
+
+    def get_seller_reputation_count(self, obj):
+        return Review.objects.filter(seller=obj.seller).count()
 
 
 class OrderSerializer(serializers.ModelSerializer):
@@ -361,3 +373,30 @@ class ListingPhotoSerializer(serializers.ModelSerializer):
         model = ListingPhoto
         fields = ['id', 'listing', 's3_key', 's3_bucket', 'mime_type', 'size_bytes', 'created_at']
         read_only_fields = ['id', 'created_at']
+
+
+# ---------------------------------------------------------------------------
+# Phase 5A serializers — Review, Reputation
+# ---------------------------------------------------------------------------
+
+class ReviewSerializer(serializers.ModelSerializer):
+    reviewer_username = serializers.CharField(source='reviewer.username', read_only=True)
+    card_name = serializers.CharField(source='order.listing.card_master.card_name', read_only=True)
+
+    class Meta:
+        model = Review
+        fields = ['id', 'order', 'reviewer', 'reviewer_username', 'seller', 'stars', 'comment', 'card_name', 'created_at']
+        read_only_fields = ['id', 'order', 'reviewer', 'seller', 'created_at']
+
+    def validate_stars(self, value):
+        if not 1 <= value <= 5:
+            raise serializers.ValidationError("Stars must be between 1 and 5.")
+        return value
+
+
+class ReputationSerializer(serializers.Serializer):
+    seller_id = serializers.IntegerField()
+    seller_username = serializers.CharField()
+    score = serializers.FloatField(allow_null=True)
+    total_reviews = serializers.IntegerField()
+    recent_reviews = serializers.IntegerField(help_text="Reviews in last 90 days")

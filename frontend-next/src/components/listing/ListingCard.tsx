@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { ShieldCheck, Star, Zap } from 'lucide-react'
 import { type Listing } from '@/lib/api'
 import { formatCHF } from '@/lib/utils'
+import SellerRepBadge from '@/components/ui/seller-rep-badge'
 
 const CONDITION_LABELS: Record<string, string> = {
   MT: 'Mint',
@@ -84,7 +85,13 @@ export default function ListingCard({ listing }: { listing: Listing }) {
           </span>
         </div>
         {listing.seller_username && (
-          <p className="text-[10px] text-slate-600 truncate">by {listing.seller_username}</p>
+          <div className="flex items-center justify-between gap-1">
+            <p className="text-[10px] text-slate-600 truncate">by {listing.seller_username}</p>
+            <SellerRepBadge
+              score={listing.seller_reputation_score}
+              totalReviews={listing.seller_reputation_count}
+            />
+          </div>
         )}
       </div>
     </Link>

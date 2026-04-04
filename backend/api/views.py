@@ -10,12 +10,14 @@ from django_filters.rest_framework import DjangoFilterBackend
 from .models import (
     Card_Master, Card_Listing, Order, OrderStatusChoices, Set_Master, CardPrice, CardPriceHistory,
     Offer, OfferStatusChoices, Transaction, TransactionStatusChoices, CardGrade, ListingPhoto,
+    Review,
 )
 from .serializers import (
     CardMasterSerializer, CardMasterListSerializer, CardListingSerializer,
     OrderSerializer, SetMasterSerializer, UserProfileSerializer,
     CardPriceSerializer, CardPriceHistorySerializer,
     OfferSerializer, TransactionSerializer, CardGradeSerializer, ListingPhotoSerializer,
+    ReviewSerializer, ReputationSerializer,
 )
 from .permissions import IsSellerOrReadOnly
 from .filters import CardListingFilter, CardMasterFilter
@@ -1186,3 +1188,131 @@ class BulkListingUploadView(generics.GenericAPIView):
             {'created': created_count, 'errors': errors},
             status=status.HTTP_207_MULTI_STATUS if errors else status.HTTP_201_CREATED,
         )
+
+
+# ---------------------------------------------------------------------------
+# Phase 5A: Seller Reputation System & Buyer Reviews
+# ---------------------------------------------------------------------------
+
+from .reputation import compute_reputation as _compute_reputation
+
+
+class OrderReviewCreateView(generics.CreateAPIView):
+    """
+    POST /api/orders/<pk>/review/
+    Buyer submits a review for the seller of a delivered order.
+    Enforces: order must be DELIVERED, caller must be the buyer, one review per order.
+    """
+    serializer_class = ReviewSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def create(self, request, *args, **kwargs):
+        order_id = self.kwargs['pk']
+        try:
+            order = Order.objects.select_related('listing__seller', 'buyer').get(pk=order_id)
+        except Order.DoesNotExist:
+            return Response({'detail': 'Order not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+        if order.buyer != request.user:
+            raise PermissionDenied("Only the buyer can submit a review.")
+
+        if order.status != OrderStatusChoices.DELIVERED:
+            return Response(
+                {'detail': 'Reviews can only be submitted for delivered orders.'},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        if Review.objects.filter(order=order).exists():
+            return Response(
+                {'detail': 'You have already reviewed this order.'},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save(
+            order=order,
+            reviewer=request.user,
+            seller=order.listing.seller,
+        )
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+class UserReviewsView(generics.ListAPIView):
+    """
+    GET /api/users/<pk>/reviews/
+    Returns all reviews received by the given seller user.
+    """
+    serializer_class = ReviewSerializer
+    permission_classes = [permissions.AllowAny]
+
+    def get_queryset(self):
+        from django.contrib.auth import get_user_model
+        User = get_user_model()
+        seller_id = self.kwargs['pk']
+        try:
+            seller = User.objects.get(pk=seller_id)
+        except User.DoesNotExist:
+            return Review.objects.none()
+        return Review.objects.filter(seller=seller).select_related('reviewer', 'order__listing__card_master')
+
+
+class UserReputationView(generics.GenericAPIView):
+    """
+    GET /api/users/<pk>/reputation/
+    Returns the weighted reputation score for a seller.
+    """
+    permission_classes = [permissions.AllowAny]
+    serializer_class = ReputationSerializer
+
+    def get(self, request, pk, *args, **kwargs):
+        from django.contrib.auth import get_user_model
+        User = get_user_model()
+        try:
+            seller = User.objects.get(pk=pk)
+        except User.DoesNotExist:
+            return Response({'detail': 'User not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+        score, total, recent = _compute_reputation(seller)
+        data = {
+            'seller_id': seller.pk,
+            'seller_username': seller.username,
+            'score': score,
+            'total_reviews': total,
+            'recent_reviews': recent,
+        }
+        serializer = self.get_serializer(data)
+        return Response(serializer.data)
+
+
+class SellerPublicProfileView(generics.GenericAPIView):
+    """
+    GET /api/sellers/<pk>/
+    Public seller profile: reputation + active listings.
+    """
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request, pk, *args, **kwargs):
+        from django.contrib.auth import get_user_model
+        User = get_user_model()
+        try:
+            seller = User.objects.get(pk=pk)
+        except User.DoesNotExist:
+            return Response({'detail': 'Seller not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+        score, total, recent = _compute_reputation(seller)
+        listings_qs = Card_Listing.objects.filter(
+            seller=seller, is_available=True
+        ).select_related('card_master', 'card_master__set').order_by('-id')[:50]
+        listings_data = CardListingSerializer(listings_qs, many=True, context={'request': request}).data
+
+        return Response({
+            'seller_id': seller.pk,
+            'seller_username': seller.username,
+            'reputation': {
+                'score': score,
+                'total_reviews': total,
+                'recent_reviews': recent,
+            },
+            'active_listings': listings_data,
+        })

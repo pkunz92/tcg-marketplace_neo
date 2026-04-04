@@ -34,5 +34,10 @@ urlpatterns = [
     path('listings/bulk/', views.BulkListingUploadView.as_view(), name='listing-bulk-upload'),
     # Phase 3: auto-grading webhook (internal)
     path('internal/grade-photo', views.GradePhotoWebhookView.as_view(), name='grade-photo-webhook'),
+    # Phase 5A: Reviews & Reputation
+    path('orders/<int:pk>/review/', views.OrderReviewCreateView.as_view(), name='order-review-create'),
+    path('users/<int:pk>/reviews/', views.UserReviewsView.as_view(), name='user-reviews'),
+    path('users/<int:pk>/reputation/', views.UserReputationView.as_view(), name='user-reputation'),
+    path('sellers/<int:pk>/', views.SellerPublicProfileView.as_view(), name='seller-public-profile'),
     path('', views.api_root, name='api-root'),
 ]
