@@ -9,6 +9,7 @@ import { formatCHF, formatDate } from '@/lib/utils'
 import Badge, { statusVariant } from '@/components/ui/badge'
 import Spinner from '@/components/ui/spinner'
 import Button from '@/components/ui/button'
+import ProtectedRoute from '@/components/auth/protected-route'
 
 const fetcher = () =>
   api.get<PaginatedResponse<Order> | Order[]>('/orders/?role=buyer')
@@ -25,8 +26,8 @@ function EmptyOrders() {
   )
 }
 
-export default function BuyerOrdersPage() {
-  const { data, isLoading } = useSWR('buyer-orders', fetcher)
+function BuyerOrdersContent() {
+  const { data, isLoading, mutate } = useSWR('buyer-orders', fetcher)
   const orders: Order[] = Array.isArray(data)
     ? data
     : (data?.results ?? [])
@@ -78,7 +79,7 @@ export default function BuyerOrdersPage() {
                     onClick={async (e) => {
                       e.preventDefault()
                       await api.patch(`/orders/${o.id}/`, { status: 'CANCELLED' })
-                      window.location.reload()
+                      mutate()
                     }}
                     className="text-xs text-red-400 hover:underline"
                   >
@@ -91,5 +92,13 @@ export default function BuyerOrdersPage() {
         </div>
       )}
     </div>
+  )
+}
+
+export default function BuyerOrdersPage() {
+  return (
+    <ProtectedRoute>
+      <BuyerOrdersContent />
+    </ProtectedRoute>
   )
 }

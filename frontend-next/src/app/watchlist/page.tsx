@@ -3,29 +3,18 @@
 import useSWR from 'swr'
 import Link from 'next/link'
 import Image from 'next/image'
-import { BookHeart, ArrowUpRight, Trash2, TrendingUp, TrendingDown } from 'lucide-react'
+import { BookHeart, ArrowUpRight, Trash2 } from 'lucide-react'
 import { api, type WatchlistItem } from '@/lib/api'
 import { formatCHF } from '@/lib/utils'
 import Button from '@/components/ui/button'
 import Spinner from '@/components/ui/spinner'
 import { useToast } from '@/components/ui/toast'
+import ProtectedRoute from '@/components/auth/protected-route'
 
 const fetcher = () => api.get<WatchlistItem[]>('/watchlist/')
 
-function PriceIndicator({ item }: { item: WatchlistItem }) {
-  // Price change indicator — would use historical data when available
-  // For now we show the current price with a neutral indicator
-  const price = item.listing.price_chf
-  // In a real implementation, compare vs `watched_price` stored at watch time
-  return (
-    <span className="inline-flex items-center gap-0.5 text-xs text-slate-500">
-      <TrendingUp size={11} className="opacity-40" />
-      <span className="font-mono">{formatCHF(price)}</span>
-    </span>
-  )
-}
 
-export default function WatchlistPage() {
+function WatchlistContent() {
   const { data, isLoading, mutate } = useSWR('watchlist', fetcher)
   const { toast } = useToast()
   const items: WatchlistItem[] = data ?? []
@@ -92,7 +81,6 @@ export default function WatchlistPage() {
                   <p className="text-xs text-slate-500">
                     Condition: {listing.condition} · Seller: {listing.seller_username}
                   </p>
-                  <PriceIndicator item={item} />
                 </div>
 
                 {/* Actions */}
@@ -122,5 +110,13 @@ export default function WatchlistPage() {
         </div>
       )}
     </div>
+  )
+}
+
+export default function WatchlistPage() {
+  return (
+    <ProtectedRoute>
+      <WatchlistContent />
+    </ProtectedRoute>
   )
 }

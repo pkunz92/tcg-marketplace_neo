@@ -133,20 +133,6 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* Stats row */}
-          <div className="flex flex-wrap items-center justify-center gap-8 mt-12 text-center">
-            {[
-              { value: '50,000+', label: 'Cards Listed' },
-              { value: '12,000+', label: 'Trades Completed' },
-              { value: '99.8%', label: 'Buyer Satisfaction' },
-              { value: '24h', label: 'Avg. Ship Time' },
-            ].map((s) => (
-              <div key={s.label}>
-                <p className="text-2xl font-black gradient-text-gold stat-value">{s.value}</p>
-                <p className="text-xs text-slate-500 mt-0.5">{s.label}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -165,14 +151,25 @@ export default function HomePage() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-          {isLoading
-            ? Array.from({ length: 8 }).map((_, i) => <SkeletonCard key={i} />)
-            : listings.length > 0
-              ? listings.map((l) => <FeaturedCard key={l.id} listing={l} />)
-              : Array.from({ length: 4 }).map((_, i) => <SkeletonCard key={i} />)
-          }
-        </div>
+        {isLoading ? (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {Array.from({ length: 8 }).map((_, i) => <SkeletonCard key={i} />)}
+          </div>
+        ) : listings.length > 0 ? (
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {listings.map((l) => <FeaturedCard key={l.id} listing={l} />)}
+          </div>
+        ) : (
+          <div className="flex flex-col items-center justify-center py-20 gap-4 text-slate-500">
+            <p className="text-sm">No listings yet. Be the first to sell!</p>
+            <Link
+              href="/market/new"
+              className="inline-flex items-center gap-2 rounded-xl border border-border bg-elevated px-5 py-2.5 text-sm font-semibold text-slate-200 hover:border-accent-500/40 hover:text-white transition-all"
+            >
+              List a Card
+            </Link>
+          </div>
+        )}
       </section>
 
       {/* ── Trust features ─────────────────────────────────────────── */}

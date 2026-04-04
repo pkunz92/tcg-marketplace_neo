@@ -5,8 +5,9 @@ import useSWR from 'swr'
 import { api, type Listing } from '@/lib/api'
 import ListingForm from '@/components/listing/ListingForm'
 import Spinner from '@/components/ui/spinner'
+import ProtectedRoute from '@/components/auth/protected-route'
 
-export default function EditListingPage() {
+function EditListingContent() {
   const { id } = useParams<{ id: string }>()
   const { data: listing, isLoading } = useSWR<Listing>(
     id ? `listing-${id}` : null,
@@ -33,5 +34,13 @@ export default function EditListingPage() {
     <main className="min-h-screen px-4 py-8 max-w-2xl mx-auto">
       <ListingForm mode="edit" initialData={listing} />
     </main>
+  )
+}
+
+export default function EditListingPage() {
+  return (
+    <ProtectedRoute>
+      <EditListingContent />
+    </ProtectedRoute>
   )
 }

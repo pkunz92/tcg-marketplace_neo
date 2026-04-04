@@ -12,6 +12,7 @@ import Spinner from '@/components/ui/spinner'
 import Button from '@/components/ui/button'
 import Input from '@/components/ui/input'
 import { useToast } from '@/components/ui/toast'
+import ProtectedRoute from '@/components/auth/protected-route'
 
 const fetcher = () =>
   api.get<PaginatedResponse<Order> | Order[]>('/orders/?role=seller')
@@ -73,7 +74,7 @@ function MarkShippedModal({
   )
 }
 
-export default function SellerOrdersPage() {
+function SellerOrdersContent() {
   const { data, isLoading, mutate } = useSWR('seller-orders', fetcher)
   const [shippingOrderId, setShippingOrderId] = useState<string | null>(null)
 
@@ -168,5 +169,13 @@ export default function SellerOrdersPage() {
         />
       )}
     </div>
+  )
+}
+
+export default function SellerOrdersPage() {
+  return (
+    <ProtectedRoute>
+      <SellerOrdersContent />
+    </ProtectedRoute>
   )
 }

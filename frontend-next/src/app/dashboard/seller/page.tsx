@@ -11,7 +11,6 @@ import {
   Plus,
   Pencil,
   Trash2,
-  Layers,
   ArrowUpRight,
   TrendingUp,
 } from 'lucide-react'
@@ -23,6 +22,7 @@ import Button from '@/components/ui/button'
 import Spinner from '@/components/ui/spinner'
 import { useToast } from '@/components/ui/toast'
 import { useAuth } from '@/lib/auth-context'
+import ProtectedRoute from '@/components/auth/protected-route'
 
 type Tab = 'inventory' | 'sales' | 'payouts'
 
@@ -52,11 +52,6 @@ function InventoryTab() {
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-lg font-semibold text-slate-200">Active Listings</h2>
         <div className="flex gap-2">
-          <Link href="/dashboard/seller/bulk-upload">
-            <Button variant="secondary" size="sm">
-              <Layers size={14} /> Bulk Upload
-            </Button>
-          </Link>
           <Link href="/market/new">
             <Button size="sm">
               <Plus size={14} /> New Listing
@@ -265,7 +260,7 @@ const tabs: { id: Tab; label: string; icon: React.ElementType }[] = [
   { id: 'payouts', label: 'Payouts', icon: Wallet },
 ]
 
-export default function SellerDashboardPage() {
+function SellerDashboardContent() {
   const [activeTab, setActiveTab] = useState<Tab>('inventory')
   const { user } = useAuth()
 
@@ -320,5 +315,13 @@ export default function SellerDashboardPage() {
       {activeTab === 'sales' && <SalesTab />}
       {activeTab === 'payouts' && <PayoutsTab />}
     </div>
+  )
+}
+
+export default function SellerDashboardPage() {
+  return (
+    <ProtectedRoute>
+      <SellerDashboardContent />
+    </ProtectedRoute>
   )
 }
