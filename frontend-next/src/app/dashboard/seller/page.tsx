@@ -13,6 +13,7 @@ import {
   Trash2,
   Layers,
   ArrowUpRight,
+  TrendingUp,
 } from 'lucide-react'
 import { api, type Listing, type Order, type Payout, type PaginatedResponse } from '@/lib/api'
 import { formatCHF, formatDate } from '@/lib/utils'
@@ -134,13 +135,16 @@ function SalesTab() {
       {/* Revenue summary */}
       <div className="grid grid-cols-3 gap-4 mb-6">
         {[
-          { label: 'Total Sales', value: orders.length, color: 'text-slate-200' },
-          { label: 'Completed', value: completed.length, color: 'text-green-400' },
-          { label: 'Revenue', value: formatCHF(revenue), color: 'text-emerald-400' },
+          { label: 'Total Sales', value: orders.length, color: 'text-slate-200', icon: ShoppingBag },
+          { label: 'Completed', value: completed.length, color: 'text-green-400', icon: TrendingUp },
+          { label: 'Revenue', value: formatCHF(revenue), color: 'text-emerald-400', icon: Wallet },
         ].map((s) => (
-          <div key={s.label} className="bg-surface border border-border rounded-xl p-4 text-center">
-            <p className={`text-xl font-bold font-mono ${s.color}`}>{s.value}</p>
-            <p className="text-xs text-slate-500 mt-0.5">{s.label}</p>
+          <div key={s.label} className="bg-surface border border-border rounded-2xl p-5 relative overflow-hidden">
+            <div className="absolute top-3 right-3 opacity-10">
+              <s.icon size={32} className={s.color} />
+            </div>
+            <p className={`text-2xl font-black font-mono ${s.color} stat-value`}>{s.value}</p>
+            <p className="text-xs text-slate-500 mt-1">{s.label}</p>
           </div>
         ))}
       </div>
@@ -266,33 +270,44 @@ export default function SellerDashboardPage() {
   const { user } = useAuth()
 
   return (
-    <div>
-      <div className="flex items-center justify-between mb-6 flex-wrap gap-3">
+    <div className="max-w-5xl mx-auto">
+      {/* Header */}
+      <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-slate-100">Seller Dashboard</h1>
+          <h1 className="text-3xl font-black text-slate-100">Seller Dashboard</h1>
           {user && (
-            <p className="text-slate-400 text-sm mt-0.5">Welcome, {user.username}</p>
+            <p className="text-slate-500 text-sm mt-1">
+              Welcome back, <span className="text-accent-400 font-medium">{user.username}</span>
+            </p>
           )}
         </div>
-        <Link href="/dashboard/seller/orders">
-          <Button variant="secondary" size="sm">
-            <ShoppingBag size={14} />
-            View Sales Orders
-          </Button>
-        </Link>
+        <div className="flex gap-2">
+          <Link href="/dashboard/seller/orders">
+            <Button variant="secondary" size="sm">
+              <ShoppingBag size={14} />
+              Sales Orders
+            </Button>
+          </Link>
+          <Link href="/market/new">
+            <Button size="sm">
+              <Plus size={14} />
+              New Listing
+            </Button>
+          </Link>
+        </div>
       </div>
 
       {/* Tab bar */}
-      <div className="flex gap-1 mb-6 border-b border-border pb-px">
+      <div className="flex gap-0.5 mb-6 bg-surface border border-border rounded-xl p-1">
         {tabs.map((t) => (
           <button
             key={t.id}
             onClick={() => setActiveTab(t.id)}
             className={cn(
-              'inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium rounded-t-lg transition-colors -mb-px border-b-2',
+              'flex-1 inline-flex items-center justify-center gap-1.5 px-4 py-2 text-sm font-medium rounded-lg transition-all',
               activeTab === t.id
-                ? 'border-accent-500 text-accent-400'
-                : 'border-transparent text-slate-500 hover:text-slate-200',
+                ? 'bg-accent-500/20 text-accent-300 shadow-glow-sm'
+                : 'text-slate-500 hover:text-slate-200 hover:bg-elevated',
             )}
           >
             <t.icon size={14} />
