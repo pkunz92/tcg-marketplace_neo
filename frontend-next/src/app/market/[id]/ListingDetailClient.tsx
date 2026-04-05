@@ -27,6 +27,7 @@ import Button from '@/components/ui/button'
 import Spinner from '@/components/ui/spinner'
 import GradingBadge from '@/components/photo/GradingBadge'
 import PhotoGallery from '@/components/photo/PhotoGallery'
+import SoldPriceSparkline from '@/components/ui/SoldPriceSparkline'
 
 const CONDITION_LABELS: Record<string, string> = {
   MT: 'Mint',
@@ -255,6 +256,11 @@ export default function ListingDetailPage() {
               )}
             </div>
           )}
+
+          {/* Sold price sparkline */}
+          <div className="bg-surface border border-border rounded-2xl px-5 py-4">
+            <SoldPriceSparkline cardApiId={listing.card_master} days={30} />
+          </div>
 
           {/* CTA */}
           {!isSeller && (

@@ -28,7 +28,7 @@ from django.utils import timezone
 from .models import (
     Card_Listing, Card_Master, CardGrade, ConditionChoices, GradingChoices,
     Offer, OfferStatusChoices, Order, OrderStatusChoices,
-    Set_Master, Transaction, TransactionStatusChoices,
+    PriceSoldSnapshot, Set_Master, Transaction, TransactionStatusChoices,
 )
 
 User = get_user_model()
@@ -790,3 +790,109 @@ class EdgeCaseTests(TestCase):
                 stripe_payment_intent_id="pi_dup",
                 amount_chf=Decimal("10.00"),
             )
+
+
+# ---------------------------------------------------------------------------
+# Phase 5C: Price Sold Snapshot & Market Analytics tests
+# ---------------------------------------------------------------------------
+
+class Phase5CPriceSoldSnapshotTests(TestCase):
+    """
+    PS-01: Delivering an order creates a PriceSoldSnapshot.
+    PS-02: Snapshot has correct fields (card, sold_price, condition, tcg_type).
+    PS-03: Snapshot is NOT created for non-DELIVERED status transitions.
+    PS-04: GET /cards/:id/sold-price-history/ returns sold data.
+    PS-05: GET /market/analytics/ returns top_movers, avg_price_by_condition, volume_stats.
+    PS-06: Analytics query completes within 500ms on 500 snapshot rows (perf smoke test).
+    """
+
+    def setUp(self):
+        self.client = Client()
+        self.seller = make_user('ps_seller')
+        self.buyer = make_user('ps_buyer')
+        self.card_set = make_set(code='PS01')
+        self.card = make_card(self.card_set, api_id='ps01-1', name='Pikachu')
+        self.listing = make_listing(self.card, self.seller, price='15.00')
+
+    # PS-01 / PS-02: DELIVERED order → snapshot created with correct data
+    def test_PS01_delivered_order_creates_snapshot(self):
+        order = make_order(self.listing, self.buyer)
+        self.assertEqual(PriceSoldSnapshot.objects.count(), 0)
+
+        order.status = OrderStatusChoices.DELIVERED
+        order.save()
+
+        self.assertEqual(PriceSoldSnapshot.objects.count(), 1)
+        snap = PriceSoldSnapshot.objects.first()
+        self.assertEqual(snap.card, self.card)
+        self.assertEqual(snap.listing, self.listing)
+        self.assertEqual(snap.sold_price, Decimal('15.00'))
+        self.assertEqual(snap.condition, self.listing.condition)
+
+    # PS-03: Non-DELIVERED status does NOT create snapshot
+    def test_PS03_non_delivered_does_not_create_snapshot(self):
+        order = make_order(self.listing, self.buyer)
+        for status in [OrderStatusChoices.PENDING, OrderStatusChoices.COMPLETED, OrderStatusChoices.CANCELLED]:
+            order.status = status
+            order.save()
+        self.assertEqual(PriceSoldSnapshot.objects.count(), 0)
+
+    # PS-04: GET sold-price-history API
+    def test_PS04_sold_price_history_api(self):
+        order = make_order(self.listing, self.buyer)
+        order.status = OrderStatusChoices.DELIVERED
+        order.save()
+
+        url = f'/api/cards/{self.card.api_id}/sold-price-history/'
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+        data = response.json()
+        self.assertIsInstance(data, list)
+        self.assertEqual(len(data), 1)
+        self.assertIn('date', data[0])
+        self.assertIn('price', data[0])
+        self.assertIn('condition', data[0])
+
+    # PS-05: GET market analytics
+    def test_PS05_market_analytics_api(self):
+        order = make_order(self.listing, self.buyer)
+        order.status = OrderStatusChoices.DELIVERED
+        order.save()
+
+        response = self.client.get('/api/market/analytics/')
+        self.assertEqual(response.status_code, 200)
+        data = response.json()
+        self.assertIn('top_movers', data)
+        self.assertIn('avg_price_by_condition', data)
+        self.assertIn('volume_stats', data)
+        self.assertIsInstance(data['top_movers'], list)
+        self.assertGreater(len(data['top_movers']), 0)
+        self.assertEqual(data['top_movers'][0]['sales_count'], 1)
+
+    # PS-06: Analytics query completes within 500ms on 500 rows
+    def test_PS06_analytics_query_performance(self):
+        import time
+        # Bulk-insert 500 snapshots across 10 different cards
+        cards = []
+        for i in range(10):
+            c = make_card(self.card_set, api_id=f'perf-{i}', name=f'PerfCard {i}')
+            cards.append(c)
+
+        snapshots = [
+            PriceSoldSnapshot(
+                card=cards[j % 10],
+                listing=self.listing,
+                sold_price=Decimal('10.00') + Decimal(str(j % 5)),
+                condition=ConditionChoices.NM,
+                tcg_type='pokemon',
+            )
+            for j in range(500)
+        ]
+        PriceSoldSnapshot.objects.bulk_create(snapshots)
+        self.assertEqual(PriceSoldSnapshot.objects.count(), 500)
+
+        start = time.monotonic()
+        response = self.client.get('/api/market/analytics/?days=365')
+        elapsed_ms = (time.monotonic() - start) * 1000
+        self.assertEqual(response.status_code, 200)
+        self.assertLess(elapsed_ms, 500, f"Analytics query took {elapsed_ms:.0f}ms (limit 500ms)")

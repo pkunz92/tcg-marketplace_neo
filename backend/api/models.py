@@ -489,3 +489,45 @@ class Review(models.Model):
             models.Index(fields=['seller', 'created_at']),
         ]
         ordering = ['-created_at']
+
+
+# ---------------------------------------------------------------------------
+# Phase 5C models — Price Sold Snapshots (market analytics)
+# ---------------------------------------------------------------------------
+
+class PriceSoldSnapshot(models.Model):
+    """One row per delivered order — records the actual sold price for market analytics."""
+    card = models.ForeignKey(
+        Card_Master,
+        on_delete=models.CASCADE,
+        related_name='sold_snapshots',
+    )
+    listing = models.ForeignKey(
+        Card_Listing,
+        on_delete=models.SET_NULL,
+        null=True,
+        related_name='sold_snapshots',
+    )
+    sold_price = models.DecimalField(max_digits=10, decimal_places=2)
+    sold_at = models.DateTimeField(auto_now_add=True)
+    condition = models.CharField(
+        max_length=4,
+        choices=ConditionChoices.choices,
+    )
+    tcg_type = models.CharField(
+        max_length=10,
+        choices=TcgTypeChoices.choices,
+        default=TcgTypeChoices.POKEMON,
+        db_index=True,
+    )
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['card', 'sold_at']),
+            models.Index(fields=['tcg_type', 'sold_at']),
+            models.Index(fields=['condition', 'sold_at']),
+        ]
+        ordering = ['-sold_at']
+
+    def __str__(self):
+        return f"PriceSoldSnapshot card={self.card_id} price={self.sold_price} at {self.sold_at:%Y-%m-%d}"

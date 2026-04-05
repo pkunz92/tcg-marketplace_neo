@@ -10,14 +10,14 @@ from django_filters.rest_framework import DjangoFilterBackend
 from .models import (
     Card_Master, Card_Listing, Order, OrderStatusChoices, Set_Master, CardPrice, CardPriceHistory,
     Offer, OfferStatusChoices, Transaction, TransactionStatusChoices, CardGrade, ListingPhoto,
-    Review,
+    Review, PriceSoldSnapshot,
 )
 from .serializers import (
     CardMasterSerializer, CardMasterListSerializer, CardListingSerializer,
     OrderSerializer, SetMasterSerializer, UserProfileSerializer,
     CardPriceSerializer, CardPriceHistorySerializer,
     OfferSerializer, TransactionSerializer, CardGradeSerializer, ListingPhotoSerializer,
-    ReviewSerializer, ReputationSerializer,
+    ReviewSerializer, ReputationSerializer, PriceSoldSnapshotSerializer,
 )
 from .permissions import IsSellerOrReadOnly
 from .filters import CardListingFilter, CardMasterFilter
@@ -1318,4 +1318,116 @@ class SellerPublicProfileView(generics.GenericAPIView):
                 'recent_reviews': recent,
             },
             'active_listings': listings_data,
+        })
+
+
+# ---------------------------------------------------------------------------
+# Phase 5C: Sold Price History & Market Analytics
+# ---------------------------------------------------------------------------
+
+class CardSoldPriceHistoryView(generics.GenericAPIView):
+    """
+    GET /cards/<api_id>/sold-price-history/?days=30|90|365
+
+    Returns actual sold prices for a card from completed orders.
+    Response: [{date, price, condition}, ...]
+    """
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request, api_id):
+        from django.utils import timezone
+        from datetime import timedelta
+
+        days = int(request.query_params.get('days', 30))
+        since = timezone.now() - timedelta(days=days)
+
+        qs = PriceSoldSnapshot.objects.filter(
+            card__api_id=api_id,
+            sold_at__gte=since,
+        ).order_by('sold_at')
+
+        data = PriceSoldSnapshotSerializer(qs, many=True).data
+        return Response(data)
+
+
+class MarketAnalyticsView(generics.GenericAPIView):
+    """
+    GET /market/analytics/
+
+    Returns market-wide analytics:
+      - top_movers: cards with highest sales volume (last 30 days)
+      - avg_price_by_condition: average sold price per condition
+      - volume_stats: total sales count and revenue by tcg_type
+    """
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request):
+        from django.utils import timezone
+        from datetime import timedelta
+        from django.db.models import Avg, Count, Sum
+
+        days = int(request.query_params.get('days', 30))
+        since = timezone.now() - timedelta(days=days)
+        base_qs = PriceSoldSnapshot.objects.filter(sold_at__gte=since)
+
+        # Top movers: cards with most sales
+        top_movers_qs = (
+            base_qs
+            .values('card__api_id', 'card__card_name', 'card__image_url', 'tcg_type')
+            .annotate(
+                sales_count=Count('id'),
+                avg_price=Avg('sold_price'),
+                total_volume=Sum('sold_price'),
+            )
+            .order_by('-sales_count')[:20]
+        )
+        top_movers = [
+            {
+                'card_api_id': row['card__api_id'],
+                'card_name': row['card__card_name'],
+                'image_url': row['card__image_url'],
+                'tcg_type': row['tcg_type'],
+                'sales_count': row['sales_count'],
+                'avg_price': str(row['avg_price']) if row['avg_price'] else None,
+                'total_volume': str(row['total_volume']) if row['total_volume'] else None,
+            }
+            for row in top_movers_qs
+        ]
+
+        # Average price by condition
+        avg_by_condition_qs = (
+            base_qs
+            .values('condition')
+            .annotate(avg_price=Avg('sold_price'), count=Count('id'))
+            .order_by('condition')
+        )
+        avg_price_by_condition = {
+            row['condition']: {
+                'avg_price': str(row['avg_price']) if row['avg_price'] else None,
+                'count': row['count'],
+            }
+            for row in avg_by_condition_qs
+        }
+
+        # Volume stats by tcg_type
+        volume_by_tcg_qs = (
+            base_qs
+            .values('tcg_type')
+            .annotate(count=Count('id'), total_revenue=Sum('sold_price'))
+            .order_by('-count')
+        )
+        volume_stats = [
+            {
+                'tcg_type': row['tcg_type'],
+                'count': row['count'],
+                'total_revenue': str(row['total_revenue']) if row['total_revenue'] else None,
+            }
+            for row in volume_by_tcg_qs
+        ]
+
+        return Response({
+            'period_days': days,
+            'top_movers': top_movers,
+            'avg_price_by_condition': avg_price_by_condition,
+            'volume_stats': volume_stats,
         })

@@ -5,7 +5,7 @@ from .models import (
     Card_Master, Card_Listing, Order, OrderStatusChoices,
     Set_Master, UserProfile, CardTranslation, SetTranslation, CardPrice, CardPriceHistory,
     Offer, OfferStatusChoices, Transaction, TransactionStatusChoices, CardGrade, ListingPhoto,
-    Review,
+    Review, PriceSoldSnapshot,
 )
 
 
@@ -401,3 +401,12 @@ class ReputationSerializer(serializers.Serializer):
     score = serializers.FloatField(allow_null=True)
     total_reviews = serializers.IntegerField()
     recent_reviews = serializers.IntegerField(help_text="Reviews in last 90 days")
+
+
+class PriceSoldSnapshotSerializer(serializers.ModelSerializer):
+    date = serializers.DateTimeField(source='sold_at')
+    price = serializers.DecimalField(source='sold_price', max_digits=10, decimal_places=2)
+
+    class Meta:
+        model = PriceSoldSnapshot
+        fields = ['date', 'price', 'condition']
