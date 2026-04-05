@@ -269,3 +269,26 @@ AWS_PRESIGN_EXPIRY = int(os.getenv('AWS_PRESIGN_EXPIRY', '3600'))
 
 # --- ML GRADING SERVICE (Phase 3) ---
 ML_GRADING_SERVICE_URL = os.getenv('ML_GRADING_SERVICE_URL', '')
+
+# --- API CACHING (Phase 5D) ---
+# In-process LocMemCache; swap for Redis by setting CACHE_BACKEND to
+# "django_redis.cache.RedisCache" and CACHE_LOCATION to your Redis URL.
+_cache_backend = os.getenv('CACHE_BACKEND', 'django.core.cache.backends.locmem.LocMemCache')
+_cache_location = os.getenv('CACHE_LOCATION', 'tcg-api-cache')
+CACHES = {
+    'default': {
+        'BACKEND': _cache_backend,
+        'LOCATION': _cache_location,
+        'TIMEOUT': int(os.getenv('CACHE_TTL', '30')),  # seconds
+    }
+}
+
+# --- CLOUDFLARE R2 / CDN (Phase 5D) ---
+# When set, photo uploads go to R2 instead of AWS S3.
+CLOUDFLARE_R2_ACCOUNT_ID = os.getenv('CLOUDFLARE_R2_ACCOUNT_ID', '')
+CLOUDFLARE_R2_ACCESS_KEY_ID = os.getenv('CLOUDFLARE_R2_ACCESS_KEY_ID', '')
+CLOUDFLARE_R2_SECRET_ACCESS_KEY = os.getenv('CLOUDFLARE_R2_SECRET_ACCESS_KEY', '')
+CLOUDFLARE_R2_BUCKET = os.getenv('CLOUDFLARE_R2_BUCKET', '')
+# Public CDN base URL served in front of R2 (or Supabase Storage).
+# Example: https://cdn.tcgmarketplace.com
+CDN_BASE_URL = os.getenv('CDN_BASE_URL', '')

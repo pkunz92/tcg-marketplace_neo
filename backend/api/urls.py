@@ -41,5 +41,7 @@ urlpatterns = [
     path('users/<int:pk>/reviews/', views.UserReviewsView.as_view(), name='user-reviews'),
     path('users/<int:pk>/reputation/', views.UserReputationView.as_view(), name='user-reputation'),
     path('sellers/<int:pk>/', views.SellerPublicProfileView.as_view(), name='seller-public-profile'),
+    # Phase 5D: fast trigram search endpoint
+    path('search/', views.TrigamSearchView.as_view(), name='fast-search'),
     path('', views.api_root, name='api-root'),
 ]

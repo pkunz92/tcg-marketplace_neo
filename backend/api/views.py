@@ -4,7 +4,8 @@ from rest_framework.reverse import reverse
 from rest_framework import viewsets, permissions, generics, filters, status
 from rest_framework.exceptions import PermissionDenied, ValidationError
 from django.conf import settings
-from django.db import transaction
+from django.core.cache import cache
+from django.db import connection, transaction
 from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import (
@@ -340,6 +341,37 @@ class CardListingViewSet(viewsets.ModelViewSet):
                     ),
                 })
         serializer.save()
+
+    def list(self, request, *args, **kwargs):
+        """
+        Override list to apply a short-lived in-process cache (30 s default).
+        Only unauthenticated / public list calls are cached (my_listings=true and
+        any authenticated call bypass cache so per-user data is never shared).
+        """
+        from .signals import LISTING_CACHE_PREFIX
+
+        bypass = (
+            request.user.is_authenticated
+            or request.query_params.get('my_listings') == 'true'
+        )
+        if bypass:
+            return super().list(request, *args, **kwargs)
+
+        # Build a cache key from the sorted query string so each unique filter
+        # combination gets its own cached page.
+        sorted_params = '&'.join(
+            f'{k}={v}'
+            for k, v in sorted(request.query_params.items())
+        )
+        cache_key = f'{LISTING_CACHE_PREFIX}list:{sorted_params}'
+
+        cached = cache.get(cache_key)
+        if cached is not None:
+            return Response(cached)
+
+        response = super().list(request, *args, **kwargs)
+        cache.set(cache_key, response.data)
+        return response
 
     def get_serializer_context(self):
         context = super().get_serializer_context()
@@ -850,8 +882,30 @@ class SeriesListAPIView(generics.GenericAPIView):
 
 
 # ---------------------------------------------------------------------------
-# Phase 3: S3 Photo Storage Pipeline
+# Phase 3 / Phase 5D: Object Storage (S3 or Cloudflare R2) + CDN
 # ---------------------------------------------------------------------------
+
+def _get_r2_client():
+    """Return a boto3 S3-compatible client pointed at Cloudflare R2, or None."""
+    from django.conf import settings as django_settings
+    try:
+        import boto3
+    except ImportError:
+        return None
+    account_id = getattr(django_settings, 'CLOUDFLARE_R2_ACCOUNT_ID', '')
+    key_id = getattr(django_settings, 'CLOUDFLARE_R2_ACCESS_KEY_ID', '')
+    secret = getattr(django_settings, 'CLOUDFLARE_R2_SECRET_ACCESS_KEY', '')
+    if not (account_id and key_id and secret):
+        return None
+    endpoint = f'https://{account_id}.r2.cloudflarestorage.com'
+    return boto3.client(
+        's3',
+        endpoint_url=endpoint,
+        aws_access_key_id=key_id,
+        aws_secret_access_key=secret,
+        region_name='auto',
+    )
+
 
 def _get_s3_client():
     """Return a boto3 S3 client, or None if AWS credentials are absent."""
@@ -873,15 +927,48 @@ def _get_s3_client():
     )
 
 
+def _get_storage_client_and_bucket():
+    """
+    Return (client, bucket, is_r2) for whichever storage backend is configured.
+    Prefers Cloudflare R2 when CLOUDFLARE_R2_* env vars are present.
+    """
+    from django.conf import settings as django_settings
+    r2_client = _get_r2_client()
+    r2_bucket = getattr(django_settings, 'CLOUDFLARE_R2_BUCKET', '')
+    if r2_client and r2_bucket:
+        return r2_client, r2_bucket, True
+
+    s3_client = _get_s3_client()
+    s3_bucket = getattr(django_settings, 'AWS_S3_BUCKET', '')
+    return s3_client, s3_bucket, False
+
+
+def _public_photo_url(s3_key: str, bucket: str, is_r2: bool) -> str:
+    """
+    Build the public URL for a stored photo.
+    Uses CDN_BASE_URL when set; otherwise falls back to the native bucket URL.
+    """
+    from django.conf import settings as django_settings
+    cdn = getattr(django_settings, 'CDN_BASE_URL', '').rstrip('/')
+    if cdn:
+        return f'{cdn}/{s3_key}'
+    if is_r2:
+        account_id = getattr(django_settings, 'CLOUDFLARE_R2_ACCOUNT_ID', '')
+        return f'https://{account_id}.r2.cloudflarestorage.com/{bucket}/{s3_key}'
+    region = getattr(django_settings, 'AWS_REGION', 'us-east-1')
+    return f'https://{bucket}.s3.{region}.amazonaws.com/{s3_key}'
+
+
 class PresignPhotoView(generics.GenericAPIView):
     """
     POST /api/photos/presign
 
-    Generate an S3 presigned upload URL for a listing photo.
+    Generate a presigned upload URL for a listing photo.
+    Uses Cloudflare R2 when CLOUDFLARE_R2_* env vars are set; falls back to AWS S3.
 
     Request body: { "listingId": <int>, "mimeType": "image/jpeg", "sizeBytes": <int> }
-    Response 200: { "uploadUrl": "...", "photoId": <int>, "key": "..." }
-    Response 503: AWS credentials not configured.
+    Response 200: { "uploadUrl": "...", "photoId": <int>, "key": "...", "cdnUrl": "..." }
+    Response 503: No object-storage backend configured.
     """
     permission_classes = [permissions.IsAuthenticated]
 
@@ -901,11 +988,10 @@ class PresignPhotoView(generics.GenericAPIView):
         except Card_Listing.DoesNotExist:
             raise ValidationError({'listingId': 'Listing not found or not owned by you.'})
 
-        s3 = _get_s3_client()
-        bucket = getattr(django_settings, 'AWS_S3_BUCKET', '')
-        if not s3 or not bucket:
+        client, bucket, is_r2 = _get_storage_client_and_bucket()
+        if not client or not bucket:
             return Response(
-                {'error': 'S3 photo storage is not configured on this server.'},
+                {'error': 'Object storage is not configured on this server.'},
                 status=status.HTTP_503_SERVICE_UNAVAILABLE,
             )
 
@@ -913,7 +999,7 @@ class PresignPhotoView(generics.GenericAPIView):
         key = f"listing-photos/{listing_id}/{uuid.uuid4()}.{ext}"
 
         expiry = getattr(django_settings, 'AWS_PRESIGN_EXPIRY', 3600)
-        upload_url = s3.generate_presigned_url(
+        upload_url = client.generate_presigned_url(
             'put_object',
             Params={
                 'Bucket': bucket,
@@ -931,10 +1017,12 @@ class PresignPhotoView(generics.GenericAPIView):
             size_bytes=size_bytes,
         )
 
+        cdn_url = _public_photo_url(key, bucket, is_r2)
         return Response({
             'uploadUrl': upload_url,
             'photoId': photo.id,
             'key': key,
+            'cdnUrl': cdn_url,
         }, status=status.HTTP_200_OK)
 
 
@@ -943,6 +1031,7 @@ class ListingPhotosView(generics.ListAPIView):
     GET /api/listings/<listing_id>/photos/
 
     List all non-deleted photos for a listing.
+    Images are served via CDN so responses carry a long-lived cache header.
     """
     serializer_class = ListingPhotoSerializer
     permission_classes = [permissions.AllowAny]
@@ -950,6 +1039,12 @@ class ListingPhotosView(generics.ListAPIView):
     def get_queryset(self):
         listing_id = self.kwargs['listing_id']
         return ListingPhoto.objects.filter(listing_id=listing_id, is_deleted=False)
+
+    def list(self, request, *args, **kwargs):
+        response = super().list(request, *args, **kwargs)
+        # Photos are immutable once uploaded – safe to cache aggressively.
+        response['Cache-Control'] = 'public, max-age=31536000, immutable'
+        return response
 
 
 class PhotoDeleteView(generics.DestroyAPIView):
@@ -1002,12 +1097,9 @@ def _run_grading_job(photo_id: int):
     listing.grading_status = 'processing'
     listing.save(update_fields=['grading_status'])
 
-    s3 = _get_s3_client()
-    bucket = getattr(django_settings, 'AWS_S3_BUCKET', '')
-    region = getattr(django_settings, 'AWS_REGION', 'us-east-1')
-
-    if s3 and bucket:
-        photo_url = f"https://{bucket}.s3.{region}.amazonaws.com/{photo.s3_key}"
+    _client, bucket, is_r2 = _get_storage_client_and_bucket()
+    if _client and bucket:
+        photo_url = _public_photo_url(photo.s3_key, bucket, is_r2)
     else:
         photo_url = ''
 
@@ -1431,3 +1523,88 @@ class MarketAnalyticsView(generics.GenericAPIView):
             'avg_price_by_condition': avg_price_by_condition,
             'volume_stats': volume_stats,
         })
+
+
+# ---------------------------------------------------------------------------
+# Phase 5D: Fast Trigram Search  GET /api/search/?q=<term>&page=<n>&limit=<n>
+# ---------------------------------------------------------------------------
+
+class TrigamSearchView(generics.GenericAPIView):
+    """
+    GET /api/search/?q=<query>[&page=1][&limit=20][&tcg_type=pokemon]
+
+    Fast card + listing search endpoint. On PostgreSQL uses pg_trgm similarity
+    ranking (requires migration 0009). Falls back to icontains on SQLite.
+
+    Returns the top matching available listings with card info.
+    Results are cached for 30 s per unique (q, page, limit, tcg_type) tuple.
+    """
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request, *args, **kwargs):
+        from .signals import LISTING_CACHE_PREFIX
+
+        q = (request.query_params.get('q') or '').strip()
+        try:
+            page = max(1, int(request.query_params.get('page', 1)))
+            limit = min(50, max(1, int(request.query_params.get('limit', 20))))
+        except (TypeError, ValueError):
+            page = 1
+            limit = 20
+        tcg_type = request.query_params.get('tcg_type', '')
+
+        if not q:
+            return Response({'results': [], 'count': 0, 'q': q})
+
+        cache_key = (
+            f'{LISTING_CACHE_PREFIX}search:'
+            f'q={q}&page={page}&limit={limit}&tcg={tcg_type}'
+        )
+        cached = cache.get(cache_key)
+        if cached is not None:
+            return Response(cached)
+
+        is_pg = connection.vendor == 'postgresql'
+
+        # --- Build queryset ---
+        qs = (
+            Card_Listing.objects
+            .filter(is_available=True)
+            .select_related('card_master', 'card_master__set', 'seller')
+        )
+        if tcg_type:
+            qs = qs.filter(card_master__tcg_type=tcg_type)
+
+        if is_pg:
+            from django.db.models import FloatField
+            from django.db.models.expressions import RawSQL
+            # Use pg_trgm similarity on card_name; sort by best match first.
+            qs = qs.annotate(
+                sim=RawSQL(
+                    "similarity(api_card_master.card_name, %s)",
+                    (q,),
+                    output_field=FloatField(),
+                )
+            ).filter(sim__gt=0.1).order_by('-sim', '-id')
+        else:
+            qs = qs.filter(card_master__card_name__icontains=q).order_by('-id')
+
+        total = qs.count()
+        offset = (page - 1) * limit
+        page_qs = qs[offset: offset + limit]
+
+        results = CardListingSerializer(
+            page_qs,
+            many=True,
+            context={'request': request},
+        ).data
+
+        payload = {
+            'results': results,
+            'count': total,
+            'q': q,
+            'page': page,
+            'limit': limit,
+        }
+        cache.set(cache_key, payload)
+        return Response(payload)
