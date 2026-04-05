@@ -5,8 +5,8 @@ import useSWR from 'swr'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { ArrowLeft, Package, Star, Truck } from 'lucide-react'
-import { api, type Order, type Review } from '@/lib/api'
+import { AlertTriangle, ArrowLeft, Package, Star, Truck } from 'lucide-react'
+import { api, type Order, type Review, type Dispute, type DisputeReason } from '@/lib/api'
 import { formatCHF, formatDate } from '@/lib/utils'
 import Badge, { statusVariant } from '@/components/ui/badge'
 import Spinner from '@/components/ui/spinner'
@@ -22,6 +22,12 @@ export default function OrderDetailPage() {
     fetcher(id),
   )
   const [submittedReview, setSubmittedReview] = useState<Review | null>(null)
+  const [disputeOpen, setDisputeOpen] = useState(false)
+  const [disputeReason, setDisputeReason] = useState<DisputeReason>('not_received')
+  const [disputeDesc, setDisputeDesc] = useState('')
+  const [disputeError, setDisputeError] = useState('')
+  const [disputeSubmitting, setDisputeSubmitting] = useState(false)
+  const [disputeSuccess, setDisputeSuccess] = useState<Dispute | null>(null)
 
   if (isLoading) {
     return (
@@ -40,10 +46,34 @@ export default function OrderDetailPage() {
   const isDelivered = order.status === 'DELIVERED'
   const alreadyReviewed = submittedReview !== null || order.review != null
   const canReview = isBuyer && isDelivered && !alreadyReviewed
+  const canDispute = isBuyer && (order.status === 'COMPLETED' || order.status === 'SHIPPED') && !disputeSuccess
 
   function handleReviewSuccess(review: Review) {
     setSubmittedReview(review)
     mutate()
+  }
+
+  async function handleDisputeSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    if (!disputeDesc.trim()) {
+      setDisputeError('Please describe the issue.')
+      return
+    }
+    setDisputeSubmitting(true)
+    setDisputeError('')
+    try {
+      const dispute = await api.post<Dispute>(`/orders/${id}/dispute/`, {
+        reason: disputeReason,
+        description: disputeDesc,
+      })
+      setDisputeSuccess(dispute)
+      setDisputeOpen(false)
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Failed to open dispute.'
+      setDisputeError(msg)
+    } finally {
+      setDisputeSubmitting(false)
+    }
   }
 
   const review = submittedReview ?? order.review ?? null
@@ -167,6 +197,84 @@ export default function OrderDetailPage() {
               <h3 className="text-sm font-medium text-slate-300">Rate this seller</h3>
             </div>
             <ReviewForm orderId={id} onSuccess={handleReviewSuccess} />
+          </div>
+        )}
+
+        {/* Dispute section */}
+        {disputeSuccess && (
+          <div className="p-5 border-t border-border">
+            <div className="flex items-center gap-2 text-yellow-400 mb-1">
+              <AlertTriangle size={15} />
+              <span className="text-sm font-medium">Dispute opened</span>
+            </div>
+            <p className="text-xs text-slate-400">
+              Your dispute has been submitted. Our team will review it shortly.
+            </p>
+          </div>
+        )}
+
+        {canDispute && !disputeOpen && (
+          <div className="p-5 border-t border-border">
+            <button
+              onClick={() => setDisputeOpen(true)}
+              className="flex items-center gap-1.5 text-sm text-red-400 hover:text-red-300 transition-colors"
+            >
+              <AlertTriangle size={14} />
+              Open a dispute
+            </button>
+          </div>
+        )}
+
+        {canDispute && disputeOpen && (
+          <div className="p-5 border-t border-border">
+            <div className="flex items-center gap-2 mb-4">
+              <AlertTriangle size={15} className="text-red-400" />
+              <h3 className="text-sm font-medium text-slate-300">Open a dispute</h3>
+            </div>
+            <form onSubmit={handleDisputeSubmit} className="space-y-3">
+              <div>
+                <label className="block text-xs text-slate-400 mb-1">Reason</label>
+                <select
+                  value={disputeReason}
+                  onChange={(e) => setDisputeReason(e.target.value as DisputeReason)}
+                  className="w-full bg-surface-2 border border-border rounded-lg px-3 py-2 text-sm text-slate-200"
+                >
+                  <option value="not_received">Item Not Received</option>
+                  <option value="not_as_described">Item Not As Described</option>
+                  <option value="unauthorized">Unauthorized Payment</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs text-slate-400 mb-1">Description</label>
+                <textarea
+                  value={disputeDesc}
+                  onChange={(e) => setDisputeDesc(e.target.value)}
+                  rows={3}
+                  placeholder="Describe the issue in detail…"
+                  className="w-full bg-surface-2 border border-border rounded-lg px-3 py-2 text-sm text-slate-200 resize-none"
+                />
+              </div>
+              {disputeError && (
+                <p className="text-xs text-red-400">{disputeError}</p>
+              )}
+              <div className="flex gap-2">
+                <button
+                  type="submit"
+                  disabled={disputeSubmitting}
+                  className="px-4 py-2 rounded-lg bg-red-600 hover:bg-red-500 disabled:opacity-50 text-white text-sm font-medium transition-colors"
+                >
+                  {disputeSubmitting ? 'Submitting…' : 'Submit dispute'}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => { setDisputeOpen(false); setDisputeError('') }}
+                  className="px-4 py-2 rounded-lg border border-border text-sm text-slate-400 hover:text-slate-200 transition-colors"
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
           </div>
         )}
       </div>

@@ -11,7 +11,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 from .models import (
     Card_Master, Card_Listing, Order, OrderStatusChoices, Set_Master, CardPrice, CardPriceHistory,
     Offer, OfferStatusChoices, Transaction, TransactionStatusChoices, CardGrade, ListingPhoto,
-    Review, PriceSoldSnapshot,
+    Review, PriceSoldSnapshot, Dispute, DisputeStatusChoices, UserFlag, FlagReasonChoices,
 )
 from .serializers import (
     CardMasterSerializer, CardMasterListSerializer, CardListingSerializer,
@@ -19,6 +19,7 @@ from .serializers import (
     CardPriceSerializer, CardPriceHistorySerializer,
     OfferSerializer, TransactionSerializer, CardGradeSerializer, ListingPhotoSerializer,
     ReviewSerializer, ReputationSerializer, PriceSoldSnapshotSerializer,
+    DisputeSerializer, DisputeResolveSerializer,
 )
 from .permissions import IsSellerOrReadOnly
 from .filters import CardListingFilter, CardMasterFilter
@@ -1608,3 +1609,104 @@ class TrigamSearchView(generics.GenericAPIView):
         }
         cache.set(cache_key, payload)
         return Response(payload)
+
+
+# ---------------------------------------------------------------------------
+# Phase 5E — Dispute views
+# ---------------------------------------------------------------------------
+
+class OpenDisputeView(generics.CreateAPIView):
+    """
+    POST /orders/:id/dispute/
+    Buyer opens a dispute on a paid or shipped order.
+    """
+    serializer_class = DisputeSerializer
+    permission_classes = [permissions.IsAuthenticated]
+
+    def create(self, request, *args, **kwargs):
+        order_pk = self.kwargs['pk']
+        try:
+            order = Order.objects.select_related('buyer', 'listing__seller').get(pk=order_pk)
+        except Order.DoesNotExist:
+            return Response({'detail': 'Order not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+        if order.buyer != request.user:
+            return Response({'detail': 'Only the buyer may open a dispute.'}, status=status.HTTP_403_FORBIDDEN)
+
+        if order.status not in (OrderStatusChoices.COMPLETED, 'SHIPPED'):
+            return Response(
+                {'detail': 'Disputes can only be opened on paid or shipped orders.'},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        if order.disputes.filter(status=DisputeStatusChoices.OPEN).exists():
+            return Response({'detail': 'An open dispute already exists for this order.'}, status=status.HTTP_400_BAD_REQUEST)
+
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        dispute = serializer.save(order=order, opened_by=request.user)
+        return Response(DisputeSerializer(dispute).data, status=status.HTTP_201_CREATED)
+
+
+class AdminDisputeListView(generics.ListAPIView):
+    """
+    GET /disputes/
+    Admin-only: list all open (or filtered) disputes.
+    """
+    serializer_class = DisputeSerializer
+    permission_classes = [permissions.IsAdminUser]
+
+    def get_queryset(self):
+        qs = Dispute.objects.select_related('order', 'opened_by').all()
+        status_filter = self.request.query_params.get('status', 'open')
+        if status_filter:
+            qs = qs.filter(status=status_filter)
+        return qs
+
+
+class AdminDisputeResolveView(generics.GenericAPIView):
+    """
+    PATCH /disputes/:id/
+    Admin-only: resolve or close a dispute, optionally trigger a Stripe refund.
+    """
+    serializer_class = DisputeResolveSerializer
+    permission_classes = [permissions.IsAdminUser]
+
+    def patch(self, request, pk, *args, **kwargs):
+        try:
+            dispute = Dispute.objects.select_related('order__transaction').get(pk=pk)
+        except Dispute.DoesNotExist:
+            return Response({'detail': 'Dispute not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+        if dispute.status != DisputeStatusChoices.OPEN:
+            return Response({'detail': 'Dispute is already resolved or closed.'}, status=status.HTTP_400_BAD_REQUEST)
+
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        data = serializer.validated_data
+
+        import django.utils.timezone as tz
+        new_status = DisputeStatusChoices.CLOSED if data.get('close') else DisputeStatusChoices.RESOLVED
+
+        with transaction.atomic():
+            dispute.status = new_status
+            dispute.resolution = data['resolution']
+            dispute.resolved_at = tz.now()
+            dispute.save(update_fields=['status', 'resolution', 'resolved_at'])
+
+            if data.get('refund') and not data.get('close'):
+                order = dispute.order
+                txn = getattr(order, 'transaction', None)
+                if txn and txn.stripe_charge_id:
+                    try:
+                        import stripe
+                        from django.conf import settings as django_settings
+                        stripe.api_key = django_settings.STRIPE_SECRET_KEY
+                        stripe.Refund.create(charge=txn.stripe_charge_id)
+                    except Exception as e:
+                        import logging
+                        logging.getLogger(__name__).error(
+                            "Stripe refund failed for dispute %s: %s", dispute.id, e
+                        )
+
+        return Response(DisputeSerializer(dispute).data)

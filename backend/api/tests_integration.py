@@ -896,3 +896,134 @@ class Phase5CPriceSoldSnapshotTests(TestCase):
         elapsed_ms = (time.monotonic() - start) * 1000
         self.assertEqual(response.status_code, 200)
         self.assertLess(elapsed_ms, 500, f"Analytics query took {elapsed_ms:.0f}ms (limit 500ms)")
+
+
+# ---------------------------------------------------------------------------
+# Phase 5E — Dispute integration tests (D-01 … D-07)
+# ---------------------------------------------------------------------------
+
+class DisputeIntegrationTests(TestCase):
+    """
+    Integration tests for the dispute open → admin resolve → status flow.
+    """
+
+    def setUp(self):
+        self.buyer = make_user('d_buyer')
+        self.seller = make_user('d_seller')
+        self.admin = make_user('d_admin')
+        self.admin.is_staff = True
+        self.admin.is_superuser = True
+        self.admin.save()
+
+        card_set = make_set('DTEST1')
+        card = make_card(card_set, api_id='dtest-1', name='Mewtwo')
+        self.listing = make_listing(card, self.seller)
+        self.order = Order.objects.create(
+            listing=self.listing,
+            buyer=self.buyer,
+            quantity=1,
+            price_chf='25.00',
+            status=OrderStatusChoices.COMPLETED,
+        )
+        self.client = Client()
+
+    def _login(self, user):
+        self.client.force_login(user)
+
+    # D-01: Buyer can open a dispute on a completed order
+    def test_D01_buyer_opens_dispute(self):
+        from .models import Dispute
+        self._login(self.buyer)
+        resp = self.client.post(
+            f'/api/orders/{self.order.pk}/dispute/',
+            data=json.dumps({'reason': 'not_received', 'description': 'Never arrived.'}),
+            content_type='application/json',
+        )
+        self.assertEqual(resp.status_code, 201)
+        data = resp.json()
+        self.assertEqual(data['status'], 'open')
+        self.assertEqual(data['reason'], 'not_received')
+        self.assertEqual(Dispute.objects.count(), 1)
+
+    # D-02: Seller cannot open a dispute on their own order
+    def test_D02_seller_cannot_open_dispute(self):
+        self._login(self.seller)
+        resp = self.client.post(
+            f'/api/orders/{self.order.pk}/dispute/',
+            data=json.dumps({'reason': 'other', 'description': 'Test.'}),
+            content_type='application/json',
+        )
+        self.assertEqual(resp.status_code, 403)
+
+    # D-03: Buyer cannot open duplicate open dispute
+    def test_D03_no_duplicate_open_dispute(self):
+        from .models import Dispute
+        Dispute.objects.create(
+            order=self.order,
+            opened_by=self.buyer,
+            reason='not_received',
+            description='Already open.',
+        )
+        self._login(self.buyer)
+        resp = self.client.post(
+            f'/api/orders/{self.order.pk}/dispute/',
+            data=json.dumps({'reason': 'other', 'description': 'Another.'}),
+            content_type='application/json',
+        )
+        self.assertEqual(resp.status_code, 400)
+
+    # D-04: Dispute cannot be opened on a pending order
+    def test_D04_dispute_requires_paid_or_shipped_order(self):
+        self.order.status = OrderStatusChoices.PENDING
+        self.order.save()
+        self._login(self.buyer)
+        resp = self.client.post(
+            f'/api/orders/{self.order.pk}/dispute/',
+            data=json.dumps({'reason': 'not_received', 'description': 'Too early.'}),
+            content_type='application/json',
+        )
+        self.assertEqual(resp.status_code, 400)
+
+    # D-05: Admin can list open disputes
+    def test_D05_admin_list_disputes(self):
+        from .models import Dispute
+        Dispute.objects.create(
+            order=self.order,
+            opened_by=self.buyer,
+            reason='not_received',
+            description='Never arrived.',
+        )
+        self._login(self.admin)
+        resp = self.client.get('/api/disputes/?status=open')
+        self.assertEqual(resp.status_code, 200)
+        data = resp.json()
+        results = data.get('results', data) if isinstance(data, dict) else data
+        self.assertEqual(len(results), 1)
+
+    # D-06: Non-admin cannot access dispute list
+    def test_D06_non_admin_cannot_list_disputes(self):
+        self._login(self.buyer)
+        resp = self.client.get('/api/disputes/')
+        self.assertEqual(resp.status_code, 403)
+
+    # D-07: Admin resolves dispute; status transitions correctly
+    def test_D07_admin_resolves_dispute(self):
+        from .models import Dispute, DisputeStatusChoices
+        dispute = Dispute.objects.create(
+            order=self.order,
+            opened_by=self.buyer,
+            reason='not_received',
+            description='Never arrived.',
+        )
+        self._login(self.admin)
+        resp = self.client.patch(
+            f'/api/disputes/{dispute.pk}/',
+            data=json.dumps({'resolution': 'Refund issued.', 'refund': False}),
+            content_type='application/json',
+        )
+        self.assertEqual(resp.status_code, 200)
+        data = resp.json()
+        self.assertEqual(data['status'], DisputeStatusChoices.RESOLVED)
+        self.assertEqual(data['resolution'], 'Refund issued.')
+        dispute.refresh_from_db()
+        self.assertIsNotNone(dispute.resolved_at)

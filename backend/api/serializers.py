@@ -5,7 +5,7 @@ from .models import (
     Card_Master, Card_Listing, Order, OrderStatusChoices,
     Set_Master, UserProfile, CardTranslation, SetTranslation, CardPrice, CardPriceHistory,
     Offer, OfferStatusChoices, Transaction, TransactionStatusChoices, CardGrade, ListingPhoto,
-    Review, PriceSoldSnapshot,
+    Review, PriceSoldSnapshot, Dispute, DisputeStatusChoices, UserFlag,
 )
 
 
@@ -410,3 +410,23 @@ class PriceSoldSnapshotSerializer(serializers.ModelSerializer):
     class Meta:
         model = PriceSoldSnapshot
         fields = ['date', 'price', 'condition']
+
+
+class DisputeSerializer(serializers.ModelSerializer):
+    opened_by_username = serializers.CharField(source='opened_by.username', read_only=True)
+    order_id = serializers.IntegerField(source='order.id', read_only=True)
+
+    class Meta:
+        model = Dispute
+        fields = [
+            'id', 'order', 'order_id', 'opened_by', 'opened_by_username',
+            'reason', 'description', 'status', 'resolution',
+            'created_at', 'resolved_at',
+        ]
+        read_only_fields = ['id', 'order', 'order_id', 'opened_by', 'status', 'resolution', 'created_at', 'resolved_at']
+
+
+class DisputeResolveSerializer(serializers.Serializer):
+    resolution = serializers.CharField(required=True)
+    refund = serializers.BooleanField(default=False)
+    close = serializers.BooleanField(default=False, help_text="Close without resolving if True")

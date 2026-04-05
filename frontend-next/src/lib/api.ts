@@ -223,3 +223,20 @@ export interface SellerProfile {
   reputation: Omit<Reputation, 'seller_id' | 'seller_username'>
   active_listings: Listing[]
 }
+
+export type DisputeReason = 'not_received' | 'not_as_described' | 'unauthorized' | 'other'
+export type DisputeStatus = 'open' | 'resolved' | 'closed'
+
+export interface Dispute {
+  id: number
+  order: number
+  order_id: number
+  opened_by: number
+  opened_by_username: string
+  reason: DisputeReason
+  description: string
+  status: DisputeStatus
+  resolution: string
+  created_at: string
+  resolved_at: string | null
+}

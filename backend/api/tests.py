@@ -976,3 +976,102 @@ class TcgTypeFilterTests(TestCase):
         self.assertEqual(resp.status_code, 200)
         ids = [c['api_id'] for c in resp.data.get('results', resp.data)]
         self.assertIn('mh3-001', ids)
+
+
+# ---------------------------------------------------------------------------
+# Phase 5E — Fraud signal unit tests
+# ---------------------------------------------------------------------------
+
+class FraudSignalThresholdTests(TestCase):
+    """
+    Unit tests for the fraud signal detection logic.
+    These tests exercise the command's helper methods directly
+    without invoking external services.
+    """
+
+    def setUp(self):
+        self.seller = make_user('fraud_seller', 'pass')
+        self.buyer = make_user('fraud_buyer', 'pass')
+        s = make_set()
+        card = make_card(s)
+        self.listing = make_listing(card, self.seller)
+
+    def _make_cancelled_order(self):
+        from .models import Dispute, UserFlag
+        return Order.objects.create(
+            listing=self.listing,
+            buyer=self.buyer,
+            quantity=1,
+            price_chf='10.00',
+            status=OrderStatusChoices.CANCELLED,
+        )
+
+    def test_seller_cancellation_below_threshold_no_flag(self):
+        """3 or fewer cancellations → no flag created."""
+        from .models import UserFlag
+        for _ in range(3):
+            self._make_cancelled_order()
+
+        from django.core.management import call_command
+        from io import StringIO
+        call_command('run_fraud_signals', stdout=StringIO())
+
+        self.assertEqual(UserFlag.objects.filter(user=self.seller).count(), 0)
+
+    def test_seller_cancellation_above_threshold_creates_flag(self):
+        """More than 3 cancellations in 30 days → flag created."""
+        from .models import UserFlag, FlagReasonChoices
+        for _ in range(4):
+            self._make_cancelled_order()
+
+        from django.core.management import call_command
+        from io import StringIO
+        call_command('run_fraud_signals', stdout=StringIO())
+
+        flags = UserFlag.objects.filter(
+            user=self.seller,
+            reason=FlagReasonChoices.EXCESSIVE_CANCELLATIONS,
+        )
+        self.assertEqual(flags.count(), 1)
+
+    def test_seller_cancellation_dedup_no_double_flag(self):
+        """Running the command twice in 24h should not create duplicate flags."""
+        from .models import UserFlag
+        for _ in range(4):
+            self._make_cancelled_order()
+
+        from django.core.management import call_command
+        from io import StringIO
+        call_command('run_fraud_signals', stdout=StringIO())
+        call_command('run_fraud_signals', stdout=StringIO())
+
+        self.assertEqual(UserFlag.objects.filter(user=self.seller).count(), 1)
+
+    def test_dispute_model_str(self):
+        """Smoke test Dispute __str__ and defaults."""
+        from .models import Dispute, DisputeStatusChoices
+        order = Order.objects.create(
+            listing=self.listing,
+            buyer=self.buyer,
+            quantity=1,
+            price_chf='10.00',
+            status=OrderStatusChoices.COMPLETED,
+        )
+        dispute = Dispute.objects.create(
+            order=order,
+            opened_by=self.buyer,
+            reason='not_received',
+            description='I never got my Charizard.',
+        )
+        self.assertEqual(dispute.status, DisputeStatusChoices.OPEN)
+        self.assertIn(str(order.id), str(dispute))
+
+    def test_userflag_str(self):
+        """Smoke test UserFlag __str__."""
+        from .models import UserFlag, FlagReasonChoices
+        flag = UserFlag.objects.create(
+            user=self.seller,
+            reason=FlagReasonChoices.STRIPE_DISPUTE,
+            detail='test flag',
+        )
+        self.assertIn(str(self.seller.id), str(flag))

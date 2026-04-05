@@ -43,5 +43,9 @@ urlpatterns = [
     path('sellers/<int:pk>/', views.SellerPublicProfileView.as_view(), name='seller-public-profile'),
     # Phase 5D: fast trigram search endpoint
     path('search/', views.TrigamSearchView.as_view(), name='fast-search'),
+    # Phase 5E: Fraud Detection & Dispute Resolution
+    path('orders/<int:pk>/dispute/', views.OpenDisputeView.as_view(), name='order-dispute-open'),
+    path('disputes/', views.AdminDisputeListView.as_view(), name='dispute-list'),
+    path('disputes/<int:pk>/', views.AdminDisputeResolveView.as_view(), name='dispute-resolve'),
     path('', views.api_root, name='api-root'),
 ]

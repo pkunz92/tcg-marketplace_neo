@@ -531,3 +531,83 @@ class PriceSoldSnapshot(models.Model):
 
     def __str__(self):
         return f"PriceSoldSnapshot card={self.card_id} price={self.sold_price} at {self.sold_at:%Y-%m-%d}"
+
+
+# ---------------------------------------------------------------------------
+# Phase 5E models — Dispute, UserFlag
+# ---------------------------------------------------------------------------
+
+class DisputeReasonChoices(models.TextChoices):
+    NOT_RECEIVED = 'not_received', 'Item Not Received'
+    NOT_AS_DESCRIBED = 'not_as_described', 'Item Not As Described'
+    UNAUTHORIZED = 'unauthorized', 'Unauthorized Payment'
+    OTHER = 'other', 'Other'
+
+
+class DisputeStatusChoices(models.TextChoices):
+    OPEN = 'open', 'Open'
+    RESOLVED = 'resolved', 'Resolved'
+    CLOSED = 'closed', 'Closed'
+
+
+class Dispute(models.Model):
+    """Buyer-opened dispute tied to one order."""
+    order = models.ForeignKey(
+        Order,
+        on_delete=models.PROTECT,
+        related_name='disputes',
+    )
+    opened_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='disputes_opened',
+    )
+    reason = models.CharField(max_length=20, choices=DisputeReasonChoices.choices)
+    description = models.TextField()
+    status = models.CharField(
+        max_length=10,
+        choices=DisputeStatusChoices.choices,
+        default=DisputeStatusChoices.OPEN,
+    )
+    resolution = models.TextField(blank=True, default='')
+    created_at = models.DateTimeField(auto_now_add=True)
+    resolved_at = models.DateTimeField(null=True, blank=True)
+
+    def __str__(self):
+        return f"Dispute #{self.id} order={self.order_id} ({self.status})"
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['status', 'created_at']),
+            models.Index(fields=['order']),
+        ]
+        ordering = ['-created_at']
+
+
+class FlagReasonChoices(models.TextChoices):
+    EXCESSIVE_CANCELLATIONS = 'excess_cancellations', 'Excessive Cancellations as Seller'
+    PAYMENT_VELOCITY = 'payment_velocity', 'High Payment Velocity'
+    STRIPE_DISPUTE = 'stripe_dispute', 'Stripe Chargeback'
+
+
+class UserFlag(models.Model):
+    """Fraud signal flag written by the automated worker or Stripe webhook."""
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='flags',
+    )
+    reason = models.CharField(max_length=30, choices=FlagReasonChoices.choices)
+    detail = models.TextField(blank=True, default='')
+    reviewed = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"UserFlag #{self.id} user={self.user_id} reason={self.reason}"
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['user', 'reason']),
+            models.Index(fields=['reviewed', 'created_at']),
+        ]
+        ordering = ['-created_at']
