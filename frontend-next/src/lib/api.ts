@@ -79,6 +79,48 @@ export const api = {
 
 /* ---- Domain types ---- */
 
+export interface CardSet {
+  id: string
+  set_name: string
+  set_code: string
+  ptcgo_code?: string
+  series?: string
+  release_date?: string
+  symbol_url?: string
+  logo_url?: string
+}
+
+export interface CardMaster {
+  api_id: string
+  language: string
+  tcg_type: string
+  card_name: string
+  card_number: string
+  secondary_id?: string
+  card_rarity?: string
+  image_url: string
+  supertype?: string
+  hp?: string
+  types?: string[]
+  artist?: string
+  set: CardSet | null
+}
+
+export interface CardPriceStat {
+  min_price: number | null
+  max_price: number | null
+  avg_price: number | null
+  total_listings: number
+}
+
+export interface CardWithStats {
+  card: CardMaster
+  listings: Listing[]
+  statistics: CardPriceStat
+  market_prices: unknown[]
+  translations: unknown[]
+}
+
 export interface User {
   id: number
   username: string
