@@ -5,7 +5,7 @@ import useSWR from 'swr'
 import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import Image from 'next/image'
-import { AlertTriangle, ArrowLeft, Package, Star, Truck } from 'lucide-react'
+import { AlertTriangle, ArrowLeft, CheckCircle, Package, Star, Truck } from 'lucide-react'
 import { api, type Order, type Review, type Dispute, type DisputeReason } from '@/lib/api'
 import { formatCHF, formatDate } from '@/lib/utils'
 import Badge, { statusVariant } from '@/components/ui/badge'
@@ -28,6 +28,8 @@ export default function OrderDetailPage() {
   const [disputeError, setDisputeError] = useState('')
   const [disputeSubmitting, setDisputeSubmitting] = useState(false)
   const [disputeSuccess, setDisputeSuccess] = useState<Dispute | null>(null)
+  const [deliverSubmitting, setDeliverSubmitting] = useState(false)
+  const [deliverError, setDeliverError] = useState('')
 
   if (isLoading) {
     return (
@@ -46,11 +48,25 @@ export default function OrderDetailPage() {
   const isDelivered = order.status === 'DELIVERED'
   const alreadyReviewed = submittedReview !== null || order.review != null
   const canReview = isBuyer && isDelivered && !alreadyReviewed
-  const canDispute = isBuyer && (order.status === 'COMPLETED' || order.status === 'SHIPPED') && !disputeSuccess
+  const canDispute = isBuyer && (order.status === 'COMPLETED' || order.status === 'DELIVERED') && !disputeSuccess
+  const canConfirmDelivery = isBuyer && order.status === 'COMPLETED'
 
   function handleReviewSuccess(review: Review) {
     setSubmittedReview(review)
     mutate()
+  }
+
+  async function handleConfirmDelivery() {
+    setDeliverSubmitting(true)
+    setDeliverError('')
+    try {
+      await api.patch(`/orders/${id}/deliver/`, {})
+      mutate()
+    } catch (err: unknown) {
+      setDeliverError(err instanceof Error ? err.message : 'Failed to confirm delivery.')
+    } finally {
+      setDeliverSubmitting(false)
+    }
   }
 
   async function handleDisputeSubmit(e: React.FormEvent) {
@@ -165,6 +181,27 @@ export default function OrderDetailPage() {
               <h3 className="text-sm font-medium text-slate-300">Tracking Number</h3>
             </div>
             <p className="font-mono text-sm text-blue-400">{order.tracking_number}</p>
+          </div>
+        )}
+
+        {/* Confirm delivery section */}
+        {canConfirmDelivery && (
+          <div className="p-5 border-t border-border">
+            <div className="flex items-center gap-2 mb-3">
+              <CheckCircle size={15} className="text-green-400" />
+              <h3 className="text-sm font-medium text-slate-300">Confirm Delivery</h3>
+            </div>
+            <p className="text-xs text-slate-400 mb-3">
+              Have you received your order? Confirming delivery unlocks the review form and records the final sale price.
+            </p>
+            {deliverError && <p className="text-xs text-red-400 mb-2">{deliverError}</p>}
+            <button
+              onClick={handleConfirmDelivery}
+              disabled={deliverSubmitting}
+              className="px-4 py-2 rounded-lg bg-green-700 hover:bg-green-600 disabled:opacity-50 text-white text-sm font-medium transition-colors"
+            >
+              {deliverSubmitting ? 'Confirming…' : 'Confirm Delivery'}
+            </button>
           </div>
         )}
 

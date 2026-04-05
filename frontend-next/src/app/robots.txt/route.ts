@@ -9,8 +9,10 @@ Allow: /
 # Don't index auth or private pages
 Disallow: /login
 Disallow: /register
+Disallow: /account/
 Disallow: /checkout/
 Disallow: /dashboard/
+Disallow: /admin/
 Disallow: /market/new
 Disallow: /watchlist
 

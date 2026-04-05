@@ -440,6 +440,24 @@ class OrderViewSet(viewsets.ModelViewSet):
             serializer.instance = order
 
 
+    @action(detail=True, methods=['patch'], url_path='deliver')
+    def deliver(self, request, pk=None):
+        """
+        PATCH /api/orders/<pk>/deliver/
+        Buyer confirms receipt; transitions COMPLETED -> DELIVERED and records a price snapshot.
+        """
+        order = self.get_object()
+        if order.buyer != request.user:
+            raise PermissionDenied("Only the buyer can confirm delivery.")
+        if order.status != OrderStatusChoices.COMPLETED:
+            return Response(
+                {'detail': 'Only completed (paid) orders can be confirmed as delivered.'},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        order.status = OrderStatusChoices.DELIVERED
+        order.save(update_fields=['status'])
+        return Response(OrderSerializer(order, context={'request': request}).data)
+
     @action(detail=True, methods=['post'], url_path='create-payment-intent')
     def create_payment_intent(self, request, pk=None):
         """
@@ -1321,7 +1339,7 @@ class OrderReviewCreateView(generics.CreateAPIView):
         if Review.objects.filter(order=order).exists():
             return Response(
                 {'detail': 'You have already reviewed this order.'},
-                status=status.HTTP_400_BAD_REQUEST,
+                status=status.HTTP_409_CONFLICT,
             )
 
         serializer = self.get_serializer(data=request.data)
@@ -1633,9 +1651,9 @@ class OpenDisputeView(generics.CreateAPIView):
         if order.buyer != request.user:
             return Response({'detail': 'Only the buyer may open a dispute.'}, status=status.HTTP_403_FORBIDDEN)
 
-        if order.status not in (OrderStatusChoices.COMPLETED, 'SHIPPED'):
+        if order.status not in (OrderStatusChoices.COMPLETED, OrderStatusChoices.DELIVERED):
             return Response(
-                {'detail': 'Disputes can only be opened on paid or shipped orders.'},
+                {'detail': 'Disputes can only be opened on paid or delivered orders.'},
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
