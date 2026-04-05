@@ -17,7 +17,7 @@ class SetMasterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Set_Master
         fields = [
-            'id', 'set_code', 'language', 'set_name', 'english_name', 'ptcgo_code', 'series',
+            'id', 'set_code', 'language', 'tcg_type', 'set_name', 'english_name', 'ptcgo_code', 'series',
             'total_cards', 'printed_total', 'release_date',
             'symbol_url', 'logo_url', 'legalities', 'translations',
         ]
@@ -108,7 +108,7 @@ class CardMasterListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Card_Master
         fields = [
-            'api_id', 'language', 'card_name', 'card_number', 'secondary_id',
+            'api_id', 'language', 'tcg_type', 'card_name', 'card_number', 'secondary_id',
             'card_rarity', 'image_url', 'supertype', 'hp', 'types',
             'artist', 'set',
         ]
@@ -121,6 +121,7 @@ class CardListingSerializer(serializers.ModelSerializer):
     secondary_id = serializers.CharField(source='card_master.secondary_id', read_only=True)
     card_rarity = serializers.CharField(source='card_master.card_rarity', read_only=True)
     card_image_url = serializers.URLField(source='card_master.image_url', read_only=True)
+    tcg_type = serializers.CharField(source='card_master.tcg_type', read_only=True)
     set_name = serializers.CharField(source='card_master.set.set_name', read_only=True, allow_null=True)
     set_code = serializers.CharField(source='card_master.set.set_code', read_only=True, allow_null=True)
     ptcgo_code = serializers.CharField(source='card_master.set.ptcgo_code', read_only=True, allow_null=True)
@@ -137,7 +138,7 @@ class CardListingSerializer(serializers.ModelSerializer):
         model = Card_Listing
         fields = [
             'id', 'card_master', 'card_name', 'card_number', 'secondary_id',
-            'card_rarity', 'card_image_url', 'set_name', 'set_code', 'ptcgo_code',
+            'card_rarity', 'card_image_url', 'tcg_type', 'set_name', 'set_code', 'ptcgo_code',
             'seller', 'seller_username', 'price_chf', 'quantity', 'condition',
             'is_graded', 'seller_photo', 'seller_photo_url', 'is_available',
             'requires_photo', 'grading_status', 'auto_grade', 'created_at',

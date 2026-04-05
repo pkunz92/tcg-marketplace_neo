@@ -859,3 +859,120 @@ class ReviewIntegrationTest(TestCase):
         self.assertIn('reputation', resp.data)
         self.assertEqual(resp.data['reputation']['score'], 5.0)
         self.assertIn('active_listings', resp.data)
+
+
+# ---------------------------------------------------------------------------
+# Phase 5B tests — TCG type filter
+# ---------------------------------------------------------------------------
+
+class TcgTypeFilterTests(TestCase):
+    """Unit tests for tcg_type filter on Card_Master and Card_Listing endpoints."""
+
+    def setUp(self):
+        self.client = APIClient()
+        self.seller = make_user('seller_tcg', 'pass')
+        self.client.force_authenticate(user=self.seller)
+
+        from .models import TcgTypeChoices
+
+        self.set_pokemon = Set_Master.objects.create(
+            set_code='BASE1', language='en', set_name='Base Set',
+            tcg_type=TcgTypeChoices.POKEMON,
+        )
+        self.set_mtg = Set_Master.objects.create(
+            set_code='MH3', language='en', set_name='Modern Horizons 3',
+            tcg_type=TcgTypeChoices.MTG,
+        )
+        self.set_ygo = Set_Master.objects.create(
+            set_code='YGO-LOB', language='en', set_name='Legend of Blue Eyes',
+            tcg_type=TcgTypeChoices.YUGIOH,
+        )
+
+        self.card_pokemon = Card_Master.objects.create(
+            api_id='base1-4', set=self.set_pokemon,
+            tcg_type=TcgTypeChoices.POKEMON,
+            card_name='Charizard', card_number='4',
+            card_rarity='Holo Rare',
+            image_url='https://example.com/charizard.jpg',
+        )
+        self.card_mtg = Card_Master.objects.create(
+            api_id='mh3-001', set=self.set_mtg,
+            tcg_type=TcgTypeChoices.MTG,
+            card_name='Lightning Bolt', card_number='001',
+            card_rarity='common',
+            image_url='https://example.com/bolt.jpg',
+        )
+        self.card_ygo = Card_Master.objects.create(
+            api_id='ygo-89631139', set=self.set_ygo,
+            tcg_type=TcgTypeChoices.YUGIOH,
+            card_name='Blue-Eyes White Dragon', card_number='LOB-001',
+            card_rarity='Ultra Rare',
+            image_url='https://example.com/bewd.jpg',
+        )
+
+        self.listing_mtg = Card_Listing.objects.create(
+            card_master=self.card_mtg, seller=self.seller,
+            price_chf='5.00', quantity=1,
+            condition=ConditionChoices.NM,
+        )
+        self.listing_ygo = Card_Listing.objects.create(
+            card_master=self.card_ygo, seller=self.seller,
+            price_chf='50.00', quantity=1,
+            condition=ConditionChoices.NM,
+        )
+
+    def test_card_master_filter_pokemon(self):
+        resp = self.client.get('/api/cards/master/', {'tcg_type': 'pokemon'})
+        self.assertEqual(resp.status_code, 200)
+        ids = [c['api_id'] for c in resp.data.get('results', resp.data)]
+        self.assertIn('base1-4', ids)
+        self.assertNotIn('mh3-001', ids)
+        self.assertNotIn('ygo-89631139', ids)
+
+    def test_card_master_filter_mtg(self):
+        resp = self.client.get('/api/cards/master/', {'tcg_type': 'mtg'})
+        self.assertEqual(resp.status_code, 200)
+        ids = [c['api_id'] for c in resp.data.get('results', resp.data)]
+        self.assertIn('mh3-001', ids)
+        self.assertNotIn('base1-4', ids)
+
+    def test_card_master_filter_yugioh(self):
+        resp = self.client.get('/api/cards/master/', {'tcg_type': 'yugioh'})
+        self.assertEqual(resp.status_code, 200)
+        ids = [c['api_id'] for c in resp.data.get('results', resp.data)]
+        self.assertIn('ygo-89631139', ids)
+        self.assertNotIn('base1-4', ids)
+
+    def test_card_master_no_filter_returns_all(self):
+        resp = self.client.get('/api/cards/master/')
+        self.assertEqual(resp.status_code, 200)
+        ids = [c['api_id'] for c in resp.data.get('results', resp.data)]
+        self.assertIn('base1-4', ids)
+        self.assertIn('mh3-001', ids)
+        self.assertIn('ygo-89631139', ids)
+
+    def test_listing_filter_mtg(self):
+        resp = self.client.get('/api/listings/', {'tcg_type': 'mtg'})
+        self.assertEqual(resp.status_code, 200)
+        results = resp.data.get('results', resp.data)
+        self.assertEqual(len(results), 1)
+        self.assertEqual(results[0]['tcg_type'], 'mtg')
+
+    def test_listing_filter_yugioh(self):
+        resp = self.client.get('/api/listings/', {'tcg_type': 'yugioh'})
+        self.assertEqual(resp.status_code, 200)
+        results = resp.data.get('results', resp.data)
+        self.assertEqual(len(results), 1)
+        self.assertEqual(results[0]['tcg_type'], 'yugioh')
+
+    def test_tcg_type_exposed_in_listing_response(self):
+        resp = self.client.get('/api/listings/', {'tcg_type': 'mtg'})
+        self.assertEqual(resp.status_code, 200)
+        results = resp.data.get('results', resp.data)
+        self.assertIn('tcg_type', results[0])
+
+    def test_tcg_type_case_insensitive(self):
+        resp = self.client.get('/api/cards/master/', {'tcg_type': 'MTG'})
+        self.assertEqual(resp.status_code, 200)
+        ids = [c['api_id'] for c in resp.data.get('results', resp.data)]
+        self.assertIn('mh3-001', ids)

@@ -16,13 +16,14 @@ class CardMasterFilter(django_filters.FilterSet):
     set_name = django_filters.CharFilter(field_name='set__set_name', lookup_expr='icontains')
     series = django_filters.CharFilter(field_name='set__series', lookup_expr='icontains')
     language = django_filters.CharFilter(field_name='language', lookup_expr='iexact')
+    tcg_type = django_filters.CharFilter(field_name='tcg_type', lookup_expr='iexact')
     hp_min = django_filters.NumberFilter(method='filter_hp_min')
     hp_max = django_filters.NumberFilter(method='filter_hp_max')
     has_price = django_filters.BooleanFilter(method='filter_has_price')
 
     class Meta:
         model = Card_Master
-        fields = ['supertype', 'rarity', 'set_code', 'artist']
+        fields = ['supertype', 'rarity', 'set_code', 'artist', 'tcg_type']
 
     def filter_types(self, queryset, name, value):
         """Filter cards that contain a specific type in their types JSON array."""
@@ -90,10 +91,14 @@ class CardListingFilter(django_filters.FilterSet):
         field_name='card_master__card_rarity',
         lookup_expr='iexact',
     )
+    tcg_type = django_filters.CharFilter(
+        field_name='card_master__tcg_type',
+        lookup_expr='iexact',
+    )
 
     class Meta:
         model = Card_Listing
         fields = [
             'card_master', 'seller', 'is_available', 'condition',
-            'is_graded', 'min_price', 'max_price',
+            'is_graded', 'min_price', 'max_price', 'tcg_type',
         ]

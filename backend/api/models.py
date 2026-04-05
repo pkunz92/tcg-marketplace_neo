@@ -4,6 +4,13 @@ from django.db.models.fields import DateField
 
 
 # --- CHOICES ---
+class TcgTypeChoices(models.TextChoices):
+    POKEMON = 'pokemon', 'Pokémon'
+    MTG = 'mtg', 'Magic: The Gathering'
+    YUGIOH = 'yugioh', 'Yu-Gi-Oh!'
+    SPORTS = 'sports', 'Sports Cards'
+
+
 class ConditionChoices(models.TextChoices):
     MT = 'MT', 'Mint'
     NM = 'NM', 'Near Mint'
@@ -26,6 +33,12 @@ class Set_Master(models.Model):
     set_code = models.CharField(max_length=20)
     language = models.CharField(max_length=10, default='en', db_index=True)
     set_name = models.CharField(max_length=100)
+    tcg_type = models.CharField(
+        max_length=10,
+        choices=TcgTypeChoices.choices,
+        default=TcgTypeChoices.POKEMON,
+        db_index=True,
+    )
     total_cards = models.IntegerField(default=0)
     printed_total = models.IntegerField(default=0)
     ptcgo_code = models.CharField(max_length=10, blank=True, null=True)
@@ -53,6 +66,12 @@ class Card_Master(models.Model):
     )
     api_id = models.CharField(max_length=60, unique=True, primary_key=True)
     language = models.CharField(max_length=10, default='en', db_index=True)
+    tcg_type = models.CharField(
+        max_length=10,
+        choices=TcgTypeChoices.choices,
+        default=TcgTypeChoices.POKEMON,
+        db_index=True,
+    )
     card_name = models.CharField(max_length=255)
     card_number = models.CharField(max_length=10)
     secondary_id = models.CharField(max_length=50, blank=True, null=True, unique=True)

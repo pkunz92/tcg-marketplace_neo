@@ -42,6 +42,9 @@ class CardMasterViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = Card_Master.objects.select_related('set').all()
     serializer_class = CardMasterSerializer
     permission_classes = [permissions.AllowAny]
+    filter_backends = [SearchFilter, DjangoFilterBackend]
+    filterset_class = CardMasterFilter
+    search_fields = ['card_name', 'secondary_id']
 
 
 class CardMasterListAPIView(generics.ListAPIView):
