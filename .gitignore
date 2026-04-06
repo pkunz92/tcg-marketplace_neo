@@ -46,3 +46,7 @@ media/
 # OS
 .DS_Store
 Thumbs.db
+
+# ML model artefacts (large binaries — mount via Docker volume, don't commit)
+backend/api/ml/models/card_hash_index.npz
+backend/api/ml/models/grader_efficientnet_b4.pt
