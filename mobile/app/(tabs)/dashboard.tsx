@@ -32,7 +32,7 @@ function StatCard({ label, value, color = '#f9fafb' }: { label: string; value: s
 export default function DashboardScreen() {
   const { data: stats, isLoading: statsLoading } = useQuery({
     queryKey: ['dashboard'],
-    queryFn: () => apiClient.get<DashboardStats>('/stats/'),
+    queryFn: () => apiClient.get<DashboardStats>('/user/dashboard-stats/'),
     select: (r) => r.data,
   });
 
@@ -73,9 +73,9 @@ export default function DashboardScreen() {
         <View key={listing.id} style={styles.listingRow}>
           <View style={styles.listingInfo}>
             <Text style={styles.listingTitle} numberOfLines={1}>
-              {listing.title}
+              {listing.card_name}
             </Text>
-            <Text style={styles.listingPrice}>${listing.price}</Text>
+            <Text style={styles.listingPrice}>CHF {listing.price_chf}</Text>
           </View>
           <GradeBadge grade={listing.condition} small />
         </View>

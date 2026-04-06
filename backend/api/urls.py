@@ -18,6 +18,9 @@ urlpatterns = [
 ] + router.urls + [
     path('webhooks/stripe/', stripe_webhook, name='stripe-webhook'),
     path('user/profile/', views.UserProfileView.as_view(), name='user-profile'),
+    path('user/dashboard-stats/', views.UserDashboardStatsView.as_view(), name='user-dashboard-stats'),
+    path('user/push-token/', views.PushTokenView.as_view(), name='user-push-token'),
+    path('listings/<int:pk>/buy/', views.QuickBuyView.as_view(), name='listing-quick-buy'),
     path('cards/list/', views.CardMasterListAPIView.as_view(), name='card-list'),
     path('cards/<str:api_id>/', views.CardMasterDetailAPIView.as_view(), name='card-detail'),
     path('cards/<str:api_id>/stats/', views.CardDetailWithStatsAPIView.as_view(), name='card-stats'),

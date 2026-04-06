@@ -39,12 +39,15 @@ export default function ListingDetailScreen() {
         { text: 'OK' },
       ]);
     },
-    onError: () => Alert.alert('Error', 'Could not place order. Try again.'),
+    onError: (err: any) => {
+      const msg = err?.response?.data?.detail ?? 'Could not place order. Try again.';
+      Alert.alert('Error', msg);
+    },
   });
 
   const offerMutation = useMutation({
-    mutationFn: (amount: string) =>
-      apiClient.post(`/offers/`, { listing: Number(id), amount }),
+    mutationFn: (price_chf: string) =>
+      apiClient.post(`/offers/`, { listing: Number(id), price_chf }),
     onSuccess: () => Alert.alert('Offer sent!', 'The seller will respond shortly.'),
     onError: () => Alert.alert('Error', 'Could not send offer.'),
   });
@@ -60,27 +63,12 @@ export default function ListingDetailScreen() {
   return (
     <ScrollView style={styles.root} contentContainerStyle={styles.content}>
       {/* Photo carousel */}
-      {listing.photos.length > 0 ? (
-        <>
-          <Image
-            source={{ uri: listing.photos[activePhoto]?.url }}
-            style={styles.mainPhoto}
-            resizeMode="contain"
-          />
-          {listing.photos.length > 1 && (
-            <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.photoStrip}>
-              {listing.photos.map((p, i) => (
-                <TouchableOpacity key={p.id} onPress={() => setActivePhoto(i)}>
-                  <Image
-                    source={{ uri: p.url }}
-                    style={[styles.stripPhoto, i === activePhoto && styles.stripPhotoActive]}
-                    resizeMode="cover"
-                  />
-                </TouchableOpacity>
-              ))}
-            </ScrollView>
-          )}
-        </>
+      {listing.card_image_url ? (
+        <Image
+          source={{ uri: listing.card_image_url }}
+          style={styles.mainPhoto}
+          resizeMode="contain"
+        />
       ) : (
         <View style={styles.noPhoto}>
           <Text style={{ fontSize: 64 }}>🃏</Text>
@@ -89,12 +77,12 @@ export default function ListingDetailScreen() {
 
       {/* Details */}
       <View style={styles.details}>
-        <Text style={styles.title}>{listing.title}</Text>
+        <Text style={styles.title}>{listing.card_name}</Text>
         <View style={styles.metaRow}>
           <GradeBadge grade={listing.condition} />
-          <Text style={styles.price}>${listing.price}</Text>
+          <Text style={styles.price}>CHF {listing.price_chf}</Text>
         </View>
-        <Text style={styles.seller}>Sold by {listing.seller.username}</Text>
+        <Text style={styles.seller}>Sold by {listing.seller_username}</Text>
 
         {listing.description ? (
           <>
@@ -103,13 +91,12 @@ export default function ListingDetailScreen() {
           </>
         ) : null}
 
-        {listing.card && (
+        {listing.set_name ? (
           <View style={styles.cardInfo}>
             <Text style={styles.sectionLabel}>Card Info</Text>
-            <Text style={styles.cardInfoText}>Name: {listing.card.name}</Text>
-            <Text style={styles.cardInfoText}>Set: {listing.card.set_name}</Text>
+            <Text style={styles.cardInfoText}>Set: {listing.set_name}</Text>
           </View>
-        )}
+        ) : null}
       </View>
 
       {/* Actions */}
@@ -117,7 +104,7 @@ export default function ListingDetailScreen() {
         <TouchableOpacity
           style={[styles.buyBtn, buyMutation.isPending && styles.btnDisabled]}
           onPress={() =>
-            Alert.alert('Buy Now', `Purchase for $${listing.price}?`, [
+            Alert.alert('Buy Now', `Purchase for CHF ${listing.price_chf}?`, [
               { text: 'Cancel', style: 'cancel' },
               { text: 'Buy', onPress: () => buyMutation.mutate() },
             ])
@@ -127,7 +114,7 @@ export default function ListingDetailScreen() {
           {buyMutation.isPending ? (
             <ActivityIndicator color="#fff" />
           ) : (
-            <Text style={styles.buyBtnText}>Buy Now — ${listing.price}</Text>
+            <Text style={styles.buyBtnText}>Buy Now — CHF {listing.price_chf}</Text>
           )}
         </TouchableOpacity>
 
@@ -136,13 +123,13 @@ export default function ListingDetailScreen() {
           onPress={() =>
             Alert.prompt(
               'Make an Offer',
-              'Enter your offer amount (USD):',
+              'Enter your offer amount (CHF):',
               [
                 { text: 'Cancel', style: 'cancel' },
                 {
                   text: 'Send Offer',
-                  onPress: (amount) => {
-                    if (amount) offerMutation.mutate(amount);
+                  onPress: (price_chf) => {
+                    if (price_chf) offerMutation.mutate(price_chf);
                   },
                 },
               ],

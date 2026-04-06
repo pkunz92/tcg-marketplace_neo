@@ -1731,3 +1731,112 @@ class AdminDisputeResolveView(generics.GenericAPIView):
                         )
 
         return Response(DisputeSerializer(dispute).data)
+
+
+# ---------------------------------------------------------------------------
+# Mobile API: QuickBuyView, UserDashboardStatsView, PushTokenView
+# ---------------------------------------------------------------------------
+
+class QuickBuyView(generics.GenericAPIView):
+    """
+    POST /api/listings/<pk>/buy/
+    One-tap purchase using the buyer's saved shipping address from UserProfile.
+    Creates an Order and marks the listing unavailable.
+    """
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request, pk, *args, **kwargs):
+        try:
+            listing = Card_Listing.objects.select_related('seller').get(pk=pk)
+        except Card_Listing.DoesNotExist:
+            return Response({'detail': 'Listing not found.'}, status=status.HTTP_404_NOT_FOUND)
+
+        if not listing.is_available:
+            return Response({'detail': 'This listing is no longer available.'}, status=status.HTTP_409_CONFLICT)
+
+        if listing.seller == request.user:
+            return Response({'detail': 'You cannot buy your own listing.'}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            profile = request.user.profile
+        except Exception:
+            return Response(
+                {'detail': 'Please add a shipping address in your profile before purchasing.'},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        if not profile.shipping_address_line1 or not profile.shipping_city:
+            return Response(
+                {'detail': 'Please add a shipping address in your profile before purchasing.'},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        with transaction.atomic():
+            order = Order.objects.create(
+                listing=listing,
+                buyer=request.user,
+                quantity=1,
+                price_chf=listing.price_chf,
+                shipping_name=profile.shipping_name,
+                shipping_address_line1=profile.shipping_address_line1,
+                shipping_address_line2=profile.shipping_address_line2 or '',
+                shipping_city=profile.shipping_city,
+                shipping_postal_code=profile.shipping_postal_code,
+                shipping_country=profile.shipping_country,
+                status=OrderStatusChoices.PENDING,
+            )
+            listing.is_available = False
+            listing.save(update_fields=['is_available'])
+
+        from .serializers import OrderSerializer
+        return Response(OrderSerializer(order).data, status=status.HTTP_201_CREATED)
+
+
+class UserDashboardStatsView(generics.GenericAPIView):
+    """
+    GET /api/user/dashboard-stats/
+    Per-seller stats for the mobile dashboard.
+    """
+    permission_classes = [permissions.IsAuthenticated]
+
+    def get(self, request, *args, **kwargs):
+        from django.db.models import Sum, Count, Q
+
+        user = request.user
+        active_listings = Card_Listing.objects.filter(
+            seller=user, is_available=True
+        ).count()
+
+        orders_qs = Order.objects.filter(listing__seller=user)
+        total_sales = orders_qs.exclude(
+            status__in=[OrderStatusChoices.PENDING, OrderStatusChoices.CANCELLED]
+        ).count()
+        total_revenue = orders_qs.filter(
+            status=OrderStatusChoices.DELIVERED
+        ).aggregate(total=Sum('price_chf'))['total'] or '0.00'
+        pending_orders = orders_qs.filter(status=OrderStatusChoices.PENDING).count()
+
+        return Response({
+            'active_listings': active_listings,
+            'total_sales': total_sales,
+            'total_revenue': str(total_revenue),
+            'pending_orders': pending_orders,
+        })
+
+
+class PushTokenView(generics.GenericAPIView):
+    """
+    POST /api/user/push-token/
+    Register or update an Expo push token for the authenticated user.
+    Body: { "token": "ExponentPushToken[...]" }
+    """
+    permission_classes = [permissions.IsAuthenticated]
+
+    def post(self, request, *args, **kwargs):
+        token = request.data.get('token', '').strip()
+        if not token:
+            return Response({'detail': 'token is required.'}, status=status.HTTP_400_BAD_REQUEST)
+
+        from .models import UserProfile as _UP
+        _UP.objects.update_or_create(user=request.user, defaults={'push_token': token})
+        return Response({'detail': 'Push token registered.'})

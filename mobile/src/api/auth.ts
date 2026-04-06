@@ -13,7 +13,8 @@ export interface RegisterPayload {
 }
 
 export interface AuthResponse {
-  key: string;
+  access: string;
+  refresh: string;
   user?: { pk: number; username: string; email: string };
 }
 

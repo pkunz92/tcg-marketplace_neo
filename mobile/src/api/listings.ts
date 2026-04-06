@@ -1,24 +1,29 @@
 import { apiClient } from './client';
 
 export interface CreateListingPayload {
-  card_id?: string;
-  title: string;
-  price: string;
+  card_master?: string;
+  card_name: string;
+  price_chf: string;
   condition: string;
   description?: string;
   photo_ids?: number[];
 }
 
+// Field names match CardListingSerializer in backend/api/serializers.py
 export interface Listing {
   id: number;
-  title: string;
-  price: string;
+  card_name: string;
+  price_chf: string;
   condition: string;
   description: string;
-  photos: { id: number; url: string }[];
-  seller: { username: string };
+  is_available: boolean;
+  seller_username: string;
+  seller_photo_url: string | null;
+  card_image_url: string | null;
+  set_name: string | null;
   created_at: string;
-  card?: { name: string; set_name: string; image_url: string };
+  is_graded: string;
+  quantity: number;
 }
 
 export interface BulkListingItem {

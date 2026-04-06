@@ -269,7 +269,7 @@ class UserProfileSerializer(serializers.ModelSerializer):
         model = UserProfile
         fields = [
             'shipping_name', 'shipping_address_line1', 'shipping_address_line2',
-            'shipping_city', 'shipping_postal_code', 'shipping_country',
+            'shipping_city', 'shipping_postal_code', 'shipping_country', 'push_token',
         ]
 
 

@@ -42,26 +42,38 @@ export default function ProfileScreen() {
 
       <View style={styles.menuSection}>
         <Text style={styles.menuSectionLabel}>Account</Text>
-        <TouchableOpacity style={styles.menuItem}>
+        <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/(tabs)/dashboard')}>
           <Text style={styles.menuItemText}>📋  My Listings</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
+        <TouchableOpacity style={styles.menuItem} onPress={() => router.push('/(tabs)/orders')}>
           <Text style={styles.menuItemText}>📦  My Orders</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
+        <TouchableOpacity
+          style={styles.menuItem}
+          onPress={() => Alert.alert('Watchlist', 'Watchlist screen coming soon.')}
+        >
           <Text style={styles.menuItemText}>❤️   Watchlist</Text>
         </TouchableOpacity>
       </View>
 
       <View style={styles.menuSection}>
         <Text style={styles.menuSectionLabel}>Settings</Text>
-        <TouchableOpacity style={styles.menuItem}>
+        <TouchableOpacity
+          style={styles.menuItem}
+          onPress={() => Alert.alert('Notifications', 'Notification preferences coming soon.')}
+        >
           <Text style={styles.menuItemText}>🔔  Notifications</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
+        <TouchableOpacity
+          style={styles.menuItem}
+          onPress={() => Alert.alert('Payment Methods', 'Manage payment methods via the web app.')}
+        >
           <Text style={styles.menuItemText}>💳  Payment Methods</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.menuItem}>
+        <TouchableOpacity
+          style={styles.menuItem}
+          onPress={() => router.push('/profile/shipping')}
+        >
           <Text style={styles.menuItemText}>🚚  Shipping Address</Text>
         </TouchableOpacity>
       </View>

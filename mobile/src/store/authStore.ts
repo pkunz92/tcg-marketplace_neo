@@ -20,6 +20,16 @@ interface AuthState {
   logout: () => Promise<void>;
 }
 
+async function storeTokens(access: string, refresh: string) {
+  await SecureStore.setItemAsync('access_token', access);
+  await SecureStore.setItemAsync('refresh_token', refresh);
+}
+
+async function clearTokens() {
+  await SecureStore.deleteItemAsync('access_token');
+  await SecureStore.deleteItemAsync('refresh_token');
+}
+
 export const useAuthStore = create<AuthState>((set) => ({
   token: null,
   user: null,
@@ -27,13 +37,13 @@ export const useAuthStore = create<AuthState>((set) => ({
   isHydrated: false,
 
   hydrate: async () => {
-    const token = await SecureStore.getItemAsync('auth_token');
+    const token = await SecureStore.getItemAsync('access_token');
     if (token) {
       try {
         const { data } = await authApi.getProfile();
         set({ token, user: data, isHydrated: true });
       } catch {
-        await SecureStore.deleteItemAsync('auth_token');
+        await clearTokens();
         set({ token: null, user: null, isHydrated: true });
       }
     } else {
@@ -45,9 +55,9 @@ export const useAuthStore = create<AuthState>((set) => ({
     set({ isLoading: true });
     try {
       const { data } = await authApi.login({ username, password });
-      await SecureStore.setItemAsync('auth_token', data.key);
+      await storeTokens(data.access, data.refresh);
       const profileRes = await authApi.getProfile();
-      set({ token: data.key, user: profileRes.data, isLoading: false });
+      set({ token: data.access, user: profileRes.data, isLoading: false });
     } catch (e) {
       set({ isLoading: false });
       throw e;
@@ -63,9 +73,9 @@ export const useAuthStore = create<AuthState>((set) => ({
         password1: password,
         password2: password,
       });
-      await SecureStore.setItemAsync('auth_token', data.key);
+      await storeTokens(data.access, data.refresh);
       const profileRes = await authApi.getProfile();
-      set({ token: data.key, user: profileRes.data, isLoading: false });
+      set({ token: data.access, user: profileRes.data, isLoading: false });
     } catch (e) {
       set({ isLoading: false });
       throw e;
@@ -78,7 +88,7 @@ export const useAuthStore = create<AuthState>((set) => ({
     } catch {
       // best effort
     }
-    await SecureStore.deleteItemAsync('auth_token');
+    await clearTokens();
     set({ token: null, user: null });
   },
 }));

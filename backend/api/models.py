@@ -465,6 +465,7 @@ class UserProfile(models.Model):
     shipping_city = models.CharField(max_length=100, default='')
     shipping_postal_code = models.CharField(max_length=20, default='')
     shipping_country = models.CharField(max_length=100, default='')
+    push_token = models.CharField(max_length=500, blank=True, default='')
 
     def __str__(self):
         return f"{self.user.username} Profile"

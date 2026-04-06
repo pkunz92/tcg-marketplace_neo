@@ -21,8 +21,8 @@ function ListingCard({ item }: { item: Listing }) {
       onPress={() => router.push(`/listing/${item.id}`)}
       activeOpacity={0.8}
     >
-      {item.photos[0] ? (
-        <Image source={{ uri: item.photos[0].url }} style={styles.cardImage} resizeMode="cover" />
+      {item.card_image_url ? (
+        <Image source={{ uri: item.card_image_url }} style={styles.cardImage} resizeMode="cover" />
       ) : (
         <View style={[styles.cardImage, styles.noImage]}>
           <Text style={{ color: '#6b7280', fontSize: 28 }}>🃏</Text>
@@ -30,13 +30,13 @@ function ListingCard({ item }: { item: Listing }) {
       )}
       <View style={styles.cardInfo}>
         <Text style={styles.cardTitle} numberOfLines={2}>
-          {item.title}
+          {item.card_name}
         </Text>
         <View style={styles.cardMeta}>
           <GradeBadge grade={item.condition} small />
-          <Text style={styles.price}>${item.price}</Text>
+          <Text style={styles.price}>CHF {item.price_chf}</Text>
         </View>
-        <Text style={styles.seller}>by {item.seller.username}</Text>
+        <Text style={styles.seller}>by {item.seller_username}</Text>
       </View>
     </TouchableOpacity>
   );

@@ -2,6 +2,8 @@
 Filter classes for API views.
 """
 import django_filters
+from django.db.models import IntegerField
+from django.db.models.functions import Cast
 from .models import Card_Listing, Card_Master
 
 
@@ -31,16 +33,18 @@ class CardMasterFilter(django_filters.FilterSet):
 
     def filter_hp_min(self, queryset, name, value):
         """Filter by minimum HP (HP is stored as CharField, cast for comparison)."""
-        return queryset.exclude(hp='').exclude(hp__isnull=True).extra(
-            where=["CAST(hp AS INTEGER) >= %s"],
-            params=[value],
+        return (
+            queryset.exclude(hp='').exclude(hp__isnull=True)
+            .annotate(_hp_int=Cast('hp', IntegerField()))
+            .filter(_hp_int__gte=value)
         )
 
     def filter_hp_max(self, queryset, name, value):
         """Filter by maximum HP."""
-        return queryset.exclude(hp='').exclude(hp__isnull=True).extra(
-            where=["CAST(hp AS INTEGER) <= %s"],
-            params=[value],
+        return (
+            queryset.exclude(hp='').exclude(hp__isnull=True)
+            .annotate(_hp_int=Cast('hp', IntegerField()))
+            .filter(_hp_int__lte=value)
         )
 
     def filter_has_price(self, queryset, name, value):
