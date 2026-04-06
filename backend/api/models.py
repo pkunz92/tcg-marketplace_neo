@@ -169,6 +169,9 @@ class CardPrice(models.Model):
     class Meta:
         unique_together = ('card_master', 'source', 'variant')
         verbose_name_plural = "Card Prices"
+        indexes = [
+            models.Index(fields=['card_master']),
+        ]
 
 
 class CardPriceHistory(models.Model):
@@ -210,7 +213,7 @@ class Card_Listing(models.Model):
         related_name='sold_listings',
     )
     price_chf = models.DecimalField(max_digits=8, decimal_places=2)
-    quantity = models.IntegerField(default=1)
+    quantity = models.PositiveIntegerField(default=1)
     condition = models.CharField(
         max_length=4,
         choices=ConditionChoices.choices,
@@ -260,6 +263,12 @@ class Card_Listing(models.Model):
 
     def __str__(self):
         return f"{self.card_master.card_name} - {self.get_condition_display()} by {self.seller.username}"
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['seller', 'is_available']),
+            models.Index(fields=['is_available']),
+        ]
 
 
 class ListingPhoto(models.Model):
@@ -318,6 +327,13 @@ class Order(models.Model):
 
     def __str__(self):
         return f"Order #{self.id} - {self.listing.card_master.card_name} x{self.quantity}"
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['buyer', 'status']),
+            models.Index(fields=['status']),
+            models.Index(fields=['-created_at']),
+        ]
 
 
 # ---------------------------------------------------------------------------

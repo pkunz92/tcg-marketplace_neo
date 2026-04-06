@@ -17,12 +17,12 @@ jobs:
       DJANGO_SETTINGS_MODULE: backend.settings
       ACCOUNT_EMAIL_VERIFICATION: none
       EMAIL_BACKEND: django.core.mail.backends.locmem.EmailBackend
-      SECRET_KEY: ci-not-secret
+      DJANGO_SECRET_KEY: ci-not-secret
       DEBUG: "1"
       ALLOWED_HOSTS: "localhost,127.0.0.1"
       DATABASE_URL: sqlite:///ci_test.db
-      # E2E URLs
-      E2E_BASE_URL: http://localhost:3000
+      # E2E URLs — frontend-next runs on 3001
+      E2E_BASE_URL: http://localhost:3001
       E2E_API_URL: http://localhost:8000/api
       E2E_BACKEND_DIR: backend
 
@@ -60,10 +60,10 @@ jobs:
         with:
           node-version: "20"
           cache: npm
-          cache-dependency-path: frontend/package-lock.json
+          cache-dependency-path: frontend-next/package-lock.json
 
-      - name: Install frontend dependencies
-        working-directory: frontend
+      - name: Install frontend-next dependencies
+        working-directory: frontend-next
         run: npm ci
 
       # -----------------------------------------------------------------------
@@ -90,16 +90,22 @@ jobs:
           done
 
       # -----------------------------------------------------------------------
-      # 6. Start frontend dev server (background)
+      # 6. Build and start Next.js frontend (background)
       # -----------------------------------------------------------------------
-      - name: Start Vite dev server
-        working-directory: frontend
+      - name: Build frontend-next
+        working-directory: frontend-next
+        run: npm run build
+        env:
+          NEXT_PUBLIC_API_URL: http://localhost:8000
+
+      - name: Start Next.js server
+        working-directory: frontend-next
         run: |
-          npm run dev -- --port 3000 &
-          echo $! > /tmp/vite.pid
+          npm run start -- --port 3001 &
+          echo $! > /tmp/nextjs.pid
           # Wait for the server to be ready
           for i in $(seq 1 30); do
-            curl -sf http://localhost:3000/ && break || sleep 1
+            curl -sf http://localhost:3001/ && break || sleep 1
           done
 
       # -----------------------------------------------------------------------
@@ -134,4 +140,4 @@ jobs:
         if: always()
         run: |
           kill $(cat /tmp/django.pid) 2>/dev/null || true
-          kill $(cat /tmp/vite.pid) 2>/dev/null || true
+          kill $(cat /tmp/nextjs.pid) 2>/dev/null || true

@@ -100,11 +100,9 @@ class CardMasterDetailAPIView(generics.RetrieveAPIView):
 
     def get_serializer_context(self):
         context = super().get_serializer_context()
-        # Always include prices in detail view
-        if self.request:
-            self.request.query_params._mutable = True
-            self.request.query_params['include_prices'] = 'true'
-            self.request.query_params._mutable = False
+        # Always include prices in the detail view — pass via context to avoid
+        # mutating the immutable QueryDict.
+        context['include_prices'] = True
         return context
 
 
@@ -178,7 +176,12 @@ class CardPriceHistoryAPIView(generics.GenericAPIView):
         from django.utils import timezone
         from datetime import timedelta
 
-        days    = int(request.query_params.get('days', 90))
+        try:
+            days = int(request.query_params.get('days', 90))
+            if days not in (30, 90, 365):
+                days = 90
+        except (ValueError, TypeError):
+            days = 90
         source  = request.query_params.get('source', '')
         variant = request.query_params.get('variant', '')
         since   = timezone.now() - timedelta(days=days)

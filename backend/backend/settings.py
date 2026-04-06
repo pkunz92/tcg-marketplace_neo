@@ -31,11 +31,15 @@ POKEMON_TCG_API_KEY = os.getenv('POKEMON_TCG_API_KEY', None)
 if not POKEMON_TCG_API_KEY:
     print("WARNING: POKEMON_TCG_API_KEY is missing. API features will fail.")
 
-# SECURITY WARNING: keep the secret key used in production secret! MOVE TO .env IN PRODUCTION!
-SECRET_KEY = os.getenv(
-    'DJANGO_SECRET_KEY',
-    'django-insecure-zilj0mf#vs%jn-xrx67r9#v-d(yp58n7rsylfeklk0r#@pkjow',
-)
+from django.core.exceptions import ImproperlyConfigured
+
+_secret_key = os.getenv('DJANGO_SECRET_KEY')
+if not _secret_key:
+    raise ImproperlyConfigured(
+        'DJANGO_SECRET_KEY environment variable is not set. '
+        'Generate one with: python -c "import secrets; print(secrets.token_urlsafe(50))"'
+    )
+SECRET_KEY = _secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'True').lower() in ('true', '1', 'yes')
@@ -68,6 +72,8 @@ INSTALLED_APPS = [
     'corsheaders',
     # --- FILTERING ---
     'django_filters',
+    # --- JWT TOKEN BLACKLIST (required for BLACKLIST_AFTER_ROTATION) ---
+    'rest_framework_simplejwt.token_blacklist',
 ]
 
 MIDDLEWARE = [
@@ -164,6 +170,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -218,12 +228,8 @@ REST_AUTH = {
 }
 
 # --- CORS SETTINGS ---
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "http://localhost:3001",
-    "http://127.0.0.1:3001",
-]
+_cors_default = 'http://localhost:3000,http://127.0.0.1:3000,http://localhost:3001,http://127.0.0.1:3001'
+CORS_ALLOWED_ORIGINS = [o.strip() for o in os.getenv('CORS_ALLOWED_ORIGINS', _cors_default).split(',') if o.strip()]
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_HEADERS = True
@@ -238,10 +244,8 @@ CORS_ALLOW_METHODS = [
 ]
 
 # --- CSRF SETTINGS ---
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
+_csrf_default = 'http://localhost:3000,http://127.0.0.1:3000,http://localhost:3001,http://127.0.0.1:3001'
+CSRF_TRUSTED_ORIGINS = [o.strip() for o in os.getenv('CSRF_TRUSTED_ORIGINS', _csrf_default).split(',') if o.strip()]
 
 CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = False

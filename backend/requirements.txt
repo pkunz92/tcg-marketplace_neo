@@ -1,6 +1,7 @@
 # Django Backend Core
 Django==4.2.7
 djangorestframework==3.14.0
+gunicorn==22.0.0
 
 # Database Drivers
 psycopg2-binary
@@ -30,6 +31,9 @@ numpy>=1.26,<3                     # array ops; already a transitive dep
 
 # Phase 3: S3 photo storage
 boto3>=1.34
+
+# Payments
+stripe>=9.0
 
 # Optional: install for model training and production inference
 # torch==2.3.0                     # PyTorch CPU build (~200 MB wheel)

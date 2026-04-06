@@ -90,10 +90,16 @@ class CardMasterSerializer(serializers.ModelSerializer):
         return CardTranslationSerializer(translations, many=True).data
 
     def get_prices(self, obj):
-        include_prices = True
-        request = self.context.get('request')
-        if request and hasattr(request, 'query_params'):
-            include_prices = request.query_params.get('include_prices', 'false').lower() == 'true'
+        # Check explicit context flag first (set by detail views), then query param.
+        if self.context.get('include_prices'):
+            include_prices = True
+        else:
+            request = self.context.get('request')
+            include_prices = bool(
+                request
+                and hasattr(request, 'query_params')
+                and request.query_params.get('include_prices', 'false').lower() == 'true'
+            )
 
         if not include_prices:
             return []

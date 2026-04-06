@@ -266,6 +266,20 @@ export interface SellerProfile {
   active_listings: Listing[]
 }
 
+export type OfferStatus = 'PENDING' | 'ACCEPTED' | 'DECLINED' | 'EXPIRED' | 'COUNTERED'
+
+export interface Offer {
+  id: number
+  listing: number
+  buyer: number
+  buyer_username: string
+  price_chf: string
+  counter_price_chf: string | null
+  status: OfferStatus
+  expires_at: string
+  created_at: string
+}
+
 export type DisputeReason = 'not_received' | 'not_as_described' | 'unauthorized' | 'other'
 export type DisputeStatus = 'open' | 'resolved' | 'closed'
 

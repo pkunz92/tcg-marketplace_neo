@@ -15,11 +15,13 @@ import {
   AlertTriangle,
   Zap,
   Star,
+  Tag,
   User,
   Calendar,
   TrendingUp,
 } from 'lucide-react'
-import { api, type Listing } from '@/lib/api'
+import { api, type Listing, type Offer } from '@/lib/api'
+import MakeOfferModal from '@/components/listing/MakeOfferModal'
 import { formatCHF, formatDate } from '@/lib/utils'
 import { useAuth } from '@/lib/auth-context'
 import { useToast } from '@/components/ui/toast'
@@ -54,6 +56,8 @@ export default function ListingDetailPage() {
   const router = useRouter()
   const [buying, setBuying] = useState(false)
   const [watchlisting, setWatchlisting] = useState(false)
+  const [showOfferModal, setShowOfferModal] = useState(false)
+  const [activeOffer, setActiveOffer] = useState<Offer | null>(null)
 
   const { data: listing, isLoading, error } = useSWR<Listing>(
     id ? `listing-${id}` : null,
@@ -269,9 +273,12 @@ export default function ListingDetailPage() {
                 <ShoppingCart size={15} />
                 Buy Now · {formatCHF(listing.price_chf)}
               </Button>
+              <Button variant="secondary" onClick={() => setShowOfferModal(true)}>
+                <Tag size={15} />
+                Offer
+              </Button>
               <Button variant="secondary" onClick={addToWatchlist} loading={watchlisting}>
                 <Heart size={15} />
-                Watchlist
               </Button>
             </div>
           )}
@@ -283,6 +290,28 @@ export default function ListingDetailPage() {
           )}
         </div>
       </div>
+
+      {/* Offer modal */}
+      {showOfferModal && !isSeller && (
+        <MakeOfferModal
+          listingId={listing.id}
+          listingPrice={listing.price_chf}
+          existingOffer={activeOffer}
+          onClose={() => setShowOfferModal(false)}
+          onSuccess={(offer) => {
+            setActiveOffer(offer)
+            if (offer.status === 'ACCEPTED') {
+              toast('Offer accepted! Proceed to checkout.', 'success')
+              setShowOfferModal(false)
+            } else if (offer.status === 'DECLINED') {
+              toast('Offer declined by seller.', 'error')
+              setShowOfferModal(false)
+            } else {
+              toast('Offer sent!', 'success')
+            }
+          }}
+        />
+      )}
     </div>
   )
 }
