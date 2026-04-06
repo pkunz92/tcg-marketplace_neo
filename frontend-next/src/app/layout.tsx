@@ -3,6 +3,7 @@ import './globals.css'
 import { AuthProvider } from '@/lib/auth-context'
 import { ToastProvider } from '@/components/ui/toast'
 import Navbar from '@/components/layout/navbar'
+import Footer from '@/components/layout/footer'
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://tcgmarketplace.example.com'
 
@@ -55,6 +56,7 @@ export default function RootLayout({
           <ToastProvider>
             <Navbar />
             <main className="mx-auto max-w-7xl px-4 py-6">{children}</main>
+            <Footer />
           </ToastProvider>
         </AuthProvider>
       </body>
