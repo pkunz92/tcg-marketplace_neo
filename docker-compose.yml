@@ -23,7 +23,7 @@ services:
       dockerfile: Dockerfile
     command: >
       sh -c "python manage.py migrate &&
-             python manage.py runserver 0.0.0.0:8000"
+             gunicorn backend.wsgi:application --bind 0.0.0.0:8000 --workers 3 --timeout 120"
     volumes:
       - ./backend:/app
     ports:
@@ -34,9 +34,62 @@ services:
       DB_ENGINE: postgresql
       DB_HOST: db
       DB_PORT: 5432
+      ML_GRADING_SERVICE_URL: http://grading-service:8001
+      GRADING_SECRET: ${GRADING_SECRET:-changeme}
     depends_on:
       db:
         condition: service_healthy
+      grading-service:
+        condition: service_healthy
+
+  grading-service:
+    build:
+      context: .
+      dockerfile: grading-service/Dockerfile
+    ports:
+      - "8001:8001"
+    environment:
+      GRADING_SECRET: ${GRADING_SECRET:-changeme}
+      POKEMON_TCG_API_KEY: ${POKEMON_TCG_API_KEY:-}
+      LOG_LEVEL: INFO
+    volumes:
+      # Mount the pre-built hash index and optional ML weights into the container.
+      # Build the index once with: python -m api.ml.card_recognizer --build-index
+      - ./backend/api/ml/models:/app/ml/models
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8001/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    environment:
+      VITE_BACKEND_URL: http://backend:8000
+    depends_on:
+      - backend
+
+  frontend-next:
+    image: node:22-alpine
+    working_dir: /app
+    command: sh -c "npm install && npm run dev"
+    volumes:
+      - ./frontend-next:/app
+      - frontend_next_node_modules:/app/node_modules
+    ports:
+      - "3001:3001"
+    environment:
+      NEXT_PUBLIC_API_URL: http://backend:8000
+    depends_on:
+      - backend
 
 volumes:
   postgres_data:
+  frontend_next_node_modules:

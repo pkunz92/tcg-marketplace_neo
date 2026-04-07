@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
-import { Zap, Search, Menu, X, ShoppingBag, LayoutDashboard, LogOut, User } from 'lucide-react'
+import { Zap, Search, Menu, X, ShoppingBag, LayoutDashboard, LogOut, User, Tag, Package } from 'lucide-react'
 import { useAuth } from '../../context/AuthContext'
 import { cn } from '../../lib/utils'
 import toast from 'react-hot-toast'
@@ -93,6 +93,20 @@ export default function Navbar() {
                       onClick={() => setUserOpen(false)}
                     >
                       <ShoppingBag size={15} /> My Listings
+                    </Link>
+                    <Link
+                      to="/dashboard/offers"
+                      className="flex items-center gap-2 px-4 py-3 text-sm text-slate-300 hover:bg-surface hover:text-slate-100 transition-colors"
+                      onClick={() => setUserOpen(false)}
+                    >
+                      <Tag size={15} /> My Offers
+                    </Link>
+                    <Link
+                      to="/dashboard/orders"
+                      className="flex items-center gap-2 px-4 py-3 text-sm text-slate-300 hover:bg-surface hover:text-slate-100 transition-colors"
+                      onClick={() => setUserOpen(false)}
+                    >
+                      <Package size={15} /> My Orders
                     </Link>
                     <div className="border-t border-border" />
                     <button

@@ -52,6 +52,7 @@ export default function BuyModal({ listing, card, onClose }) {
             value={qty}
             onChange={(e) => setQty(Math.min(Number(e.target.value), listing.quantity))}
             className="w-20 bg-surface border border-border rounded-lg px-3 py-1.5 text-sm text-slate-100 focus:outline-none focus:border-accent-500"
+            data-testid="buy-qty"
           />
           <span className="text-xs text-slate-500">(max {listing.quantity})</span>
         </div>
@@ -81,6 +82,7 @@ export default function BuyModal({ listing, card, onClose }) {
             onClick={handleBuy}
             loading={createOrder.isPending}
             disabled={!profile?.shipping_city}
+            data-testid="buy-confirm-btn"
           >
             Confirm Order
           </Button>

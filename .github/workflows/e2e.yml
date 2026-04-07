@@ -1,0 +1,143 @@
+name: E2E Tests (Playwright)
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  e2e:
+    name: Playwright E2E
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      # Django settings
+      DJANGO_SETTINGS_MODULE: backend.settings
+      ACCOUNT_EMAIL_VERIFICATION: none
+      EMAIL_BACKEND: django.core.mail.backends.locmem.EmailBackend
+      DJANGO_SECRET_KEY: ci-not-secret
+      DEBUG: "1"
+      ALLOWED_HOSTS: "localhost,127.0.0.1"
+      DATABASE_URL: sqlite:///ci_test.db
+      # E2E URLs — frontend-next runs on 3001
+      E2E_BASE_URL: http://localhost:3001
+      E2E_API_URL: http://localhost:8000/api
+      E2E_BACKEND_DIR: backend
+
+    steps:
+      # -----------------------------------------------------------------------
+      # 1. Checkout
+      # -----------------------------------------------------------------------
+      - uses: actions/checkout@v4
+
+      # -----------------------------------------------------------------------
+      # 2. Python setup — backend
+      # -----------------------------------------------------------------------
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install backend dependencies
+        working-directory: backend
+        run: pip install -r requirements.txt
+
+      - name: Apply migrations & seed minimal data
+        working-directory: backend
+        run: |
+          python manage.py migrate --run-syncdb
+          # Import a small card sample so tests have catalog data
+          python manage.py import_master_cards --limit 20 || true
+
+      # -----------------------------------------------------------------------
+      # 3. Node / frontend setup
+      # -----------------------------------------------------------------------
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: frontend-next/package-lock.json
+
+      - name: Install frontend-next dependencies
+        working-directory: frontend-next
+        run: npm ci
+
+      # -----------------------------------------------------------------------
+      # 4. Install Playwright + E2E deps
+      # -----------------------------------------------------------------------
+      - name: Install E2E dependencies
+        working-directory: e2e
+        run: pip install -r requirements.txt
+
+      - name: Install Playwright browsers
+        run: playwright install chromium --with-deps
+
+      # -----------------------------------------------------------------------
+      # 5. Start backend server (background)
+      # -----------------------------------------------------------------------
+      - name: Start Django dev server
+        working-directory: backend
+        run: |
+          python manage.py runserver 8000 &
+          echo $! > /tmp/django.pid
+          # Wait for the server to be ready
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:8000/api/ && break || sleep 1
+          done
+
+      # -----------------------------------------------------------------------
+      # 6. Build and start Next.js frontend (background)
+      # -----------------------------------------------------------------------
+      - name: Build frontend-next
+        working-directory: frontend-next
+        run: npm run build
+        env:
+          NEXT_PUBLIC_API_URL: http://localhost:8000
+
+      - name: Start Next.js server
+        working-directory: frontend-next
+        run: |
+          npm run start -- --port 3001 &
+          echo $! > /tmp/nextjs.pid
+          # Wait for the server to be ready
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:3001/ && break || sleep 1
+          done
+
+      # -----------------------------------------------------------------------
+      # 7. Run Playwright E2E tests
+      # -----------------------------------------------------------------------
+      - name: Run E2E tests
+        working-directory: e2e
+        run: |
+          python -m pytest \
+            --browser chromium \
+            --screenshot on-failure \
+            --video retain-on-failure \
+            --output e2e-results \
+            -v \
+            --tb=short
+
+      # -----------------------------------------------------------------------
+      # 8. Upload artifacts on failure
+      # -----------------------------------------------------------------------
+      - name: Upload E2E artifacts
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-results
+          path: e2e/e2e-results/
+          retention-days: 7
+
+      # -----------------------------------------------------------------------
+      # 9. Stop servers
+      # -----------------------------------------------------------------------
+      - name: Stop servers
+        if: always()
+        run: |
+          kill $(cat /tmp/django.pid) 2>/dev/null || true
+          kill $(cat /tmp/nextjs.pid) 2>/dev/null || true

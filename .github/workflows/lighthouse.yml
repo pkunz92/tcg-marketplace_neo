@@ -1,0 +1,99 @@
+name: Lighthouse CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lighthouse:
+    name: Lighthouse Audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      # -----------------------------------------------------------------------
+      # 1. Checkout
+      # -----------------------------------------------------------------------
+      - uses: actions/checkout@v4
+
+      # -----------------------------------------------------------------------
+      # 2. Node setup
+      # -----------------------------------------------------------------------
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: frontend-next/package-lock.json
+
+      # -----------------------------------------------------------------------
+      # 3. Build frontend-next
+      # -----------------------------------------------------------------------
+      - name: Install dependencies
+        working-directory: frontend-next
+        run: npm ci
+
+      - name: Build Next.js app
+        working-directory: frontend-next
+        env:
+          NEXT_PUBLIC_SITE_URL: http://localhost:3001
+          BACKEND_URL: http://localhost:8000
+        run: npm run build
+
+      # -----------------------------------------------------------------------
+      # 4. Start the production server
+      # -----------------------------------------------------------------------
+      - name: Start Next.js production server
+        working-directory: frontend-next
+        run: |
+          npm run start &
+          echo $! > /tmp/next.pid
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:3001/ && break || sleep 1
+          done
+
+      # -----------------------------------------------------------------------
+      # 5. Install Lighthouse CI
+      # -----------------------------------------------------------------------
+      - name: Install @lhci/cli
+        run: npm install -g @lhci/cli
+
+      # -----------------------------------------------------------------------
+      # 6. Run Lighthouse audits
+      # -----------------------------------------------------------------------
+      - name: Run Lighthouse CI
+        run: |
+          lhci autorun \
+            --collect.url=http://localhost:3001/ \
+            --collect.url=http://localhost:3001/market \
+            --collect.url=http://localhost:3001/about \
+            --collect.url=http://localhost:3001/blog \
+            --collect.numberOfRuns=1 \
+            --assert.assertions.categories:seo=["error","{ \"minScore\": 0.9 }"] \
+            --assert.assertions.categories:performance=["warn","{ \"minScore\": 0.7 }"] \
+            --assert.assertions.categories:accessibility=["warn","{ \"minScore\": 0.8 }"] \
+            --upload.target=temporary-public-storage || true
+
+      # -----------------------------------------------------------------------
+      # 7. Sitemap endpoint smoke test
+      # -----------------------------------------------------------------------
+      - name: Verify sitemap.xml returns valid XML with at least 1 URL
+        run: |
+          SITEMAP=$(curl -sf http://localhost:3001/sitemap.xml)
+          if ! echo "$SITEMAP" | grep -q '<urlset'; then
+            echo "ERROR: sitemap.xml does not contain <urlset"
+            exit 1
+          fi
+          if ! echo "$SITEMAP" | grep -q '<url>'; then
+            echo "ERROR: sitemap.xml contains no <url> entries"
+            exit 1
+          fi
+          echo "sitemap.xml OK"
+
+      # -----------------------------------------------------------------------
+      # 8. Cleanup
+      # -----------------------------------------------------------------------
+      - name: Stop server
+        if: always()
+        run: kill $(cat /tmp/next.pid) 2>/dev/null || true

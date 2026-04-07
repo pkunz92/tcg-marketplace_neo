@@ -56,28 +56,28 @@ export default function RegisterPage() {
 
         <form onSubmit={handleSubmit(onSubmit)} className="bg-surface border border-border rounded-2xl p-6 space-y-4">
           <div className="grid grid-cols-2 gap-3">
-            <Input label="Username" error={errors.username?.message} {...register('username')} />
-            <Input label="Email" type="email" error={errors.email?.message} {...register('email')} />
+            <Input label="Username" error={errors.username?.message} data-testid="register-username" {...register('username')} />
+            <Input label="Email" type="email" error={errors.email?.message} data-testid="register-email" {...register('email')} />
           </div>
           <div className="grid grid-cols-2 gap-3">
-            <Input label="Password" type="password" error={errors.password1?.message} {...register('password1')} />
-            <Input label="Confirm Password" type="password" error={errors.password2?.message} {...register('password2')} />
+            <Input label="Password" type="password" error={errors.password1?.message} data-testid="register-password1" {...register('password1')} />
+            <Input label="Confirm Password" type="password" error={errors.password2?.message} data-testid="register-password2" {...register('password2')} />
           </div>
 
           <div className="border-t border-border pt-4">
             <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-3">Shipping Address</p>
             <div className="space-y-3">
-              <Input label="Full Name" error={errors.shipping_name?.message} {...register('shipping_name')} />
-              <Input label="Address" error={errors.shipping_address_line1?.message} {...register('shipping_address_line1')} />
+              <Input label="Full Name" error={errors.shipping_name?.message} data-testid="register-shipping-name" {...register('shipping_name')} />
+              <Input label="Address" error={errors.shipping_address_line1?.message} data-testid="register-shipping-address" {...register('shipping_address_line1')} />
               <div className="grid grid-cols-2 gap-3">
-                <Input label="City" error={errors.shipping_city?.message} {...register('shipping_city')} />
-                <Input label="Postal Code" error={errors.shipping_postal_code?.message} {...register('shipping_postal_code')} />
+                <Input label="City" error={errors.shipping_city?.message} data-testid="register-shipping-city" {...register('shipping_city')} />
+                <Input label="Postal Code" error={errors.shipping_postal_code?.message} data-testid="register-shipping-postal-code" {...register('shipping_postal_code')} />
               </div>
-              <Input label="Country (e.g. CH)" error={errors.shipping_country?.message} {...register('shipping_country')} />
+              <Input label="Country (e.g. CH)" error={errors.shipping_country?.message} data-testid="register-shipping-country" {...register('shipping_country')} />
             </div>
           </div>
 
-          <Button type="submit" className="w-full" loading={registerPending}>
+          <Button type="submit" className="w-full" loading={registerPending} data-testid="register-submit">
             Create Account
           </Button>
         </form>

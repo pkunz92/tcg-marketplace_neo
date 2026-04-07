@@ -45,6 +45,7 @@ export default function LoginPage() {
             label="Username"
             placeholder="your_username"
             error={errors.username?.message}
+            data-testid="login-username"
             {...register('username')}
           />
           <Input
@@ -52,9 +53,10 @@ export default function LoginPage() {
             type="password"
             placeholder="••••••••"
             error={errors.password?.message}
+            data-testid="login-password"
             {...register('password')}
           />
-          <Button type="submit" className="w-full" loading={loginPending}>
+          <Button type="submit" className="w-full" loading={loginPending} data-testid="login-submit">
             Sign In
           </Button>
         </form>

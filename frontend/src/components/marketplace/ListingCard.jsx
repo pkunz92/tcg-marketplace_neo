@@ -12,7 +12,7 @@ export default function ListingCard({ listing }) {
   const [buying, setBuying] = useState(false)
 
   return (
-    <div className="bg-surface border border-border rounded-xl overflow-hidden hover:border-accent-500/40 transition-colors group">
+    <div data-testid="listing-card" className="bg-surface border border-border rounded-xl overflow-hidden hover:border-accent-500/40 transition-colors group">
       <Link to={`/cards/${listing.card_master_api_id}`} className="block p-3">
         <div style={{ aspectRatio: '63/88' }}>
           <CardImage
@@ -34,14 +34,23 @@ export default function ListingCard({ listing }) {
           <ConditionBadge condition={listing.condition} />
           <PriceTag price={listing.price_chf} />
         </div>
-        <Button
-          size="sm"
-          className="w-full mt-2"
-          onClick={() => setBuying(true)}
-          disabled={!isAuthenticated}
-        >
-          {isAuthenticated ? 'Buy' : 'Sign in to buy'}
-        </Button>
+        <div className="flex gap-1.5 mt-2">
+          <Button
+            size="sm"
+            className="flex-1"
+            onClick={() => setBuying(true)}
+            disabled={!isAuthenticated}
+          >
+            {isAuthenticated ? 'Buy' : 'Sign in'}
+          </Button>
+          <Link
+            to={`/market/${listing.id}`}
+            data-testid="listing-details-link"
+            className="px-2 py-1.5 text-xs rounded-lg bg-surface hover:bg-elevated border border-border text-slate-400 hover:text-slate-200 transition-colors"
+          >
+            Details
+          </Link>
+        </div>
       </div>
       {buying && (
         <BuyModal

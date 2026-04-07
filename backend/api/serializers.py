@@ -4,6 +4,8 @@ from rest_framework import serializers
 from .models import (
     Card_Master, Card_Listing, Order, OrderStatusChoices,
     Set_Master, UserProfile, CardTranslation, SetTranslation, CardPrice, CardPriceHistory,
+    Offer, OfferStatusChoices, Transaction, TransactionStatusChoices, CardGrade, ListingPhoto,
+    Review, PriceSoldSnapshot, Dispute, DisputeStatusChoices, UserFlag,
 )
 
 
@@ -15,7 +17,7 @@ class SetMasterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Set_Master
         fields = [
-            'id', 'set_code', 'language', 'set_name', 'english_name', 'ptcgo_code', 'series',
+            'id', 'set_code', 'language', 'tcg_type', 'set_name', 'english_name', 'ptcgo_code', 'series',
             'total_cards', 'printed_total', 'release_date',
             'symbol_url', 'logo_url', 'legalities', 'translations',
         ]
@@ -88,10 +90,16 @@ class CardMasterSerializer(serializers.ModelSerializer):
         return CardTranslationSerializer(translations, many=True).data
 
     def get_prices(self, obj):
-        include_prices = True
-        request = self.context.get('request')
-        if request and hasattr(request, 'query_params'):
-            include_prices = request.query_params.get('include_prices', 'false').lower() == 'true'
+        # Check explicit context flag first (set by detail views), then query param.
+        if self.context.get('include_prices'):
+            include_prices = True
+        else:
+            request = self.context.get('request')
+            include_prices = bool(
+                request
+                and hasattr(request, 'query_params')
+                and request.query_params.get('include_prices', 'false').lower() == 'true'
+            )
 
         if not include_prices:
             return []
@@ -106,7 +114,7 @@ class CardMasterListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Card_Master
         fields = [
-            'api_id', 'language', 'card_name', 'card_number', 'secondary_id',
+            'api_id', 'language', 'tcg_type', 'card_name', 'card_number', 'secondary_id',
             'card_rarity', 'image_url', 'supertype', 'hp', 'types',
             'artist', 'set',
         ]
@@ -119,19 +127,28 @@ class CardListingSerializer(serializers.ModelSerializer):
     secondary_id = serializers.CharField(source='card_master.secondary_id', read_only=True)
     card_rarity = serializers.CharField(source='card_master.card_rarity', read_only=True)
     card_image_url = serializers.URLField(source='card_master.image_url', read_only=True)
+    tcg_type = serializers.CharField(source='card_master.tcg_type', read_only=True)
     set_name = serializers.CharField(source='card_master.set.set_name', read_only=True, allow_null=True)
     set_code = serializers.CharField(source='card_master.set.set_code', read_only=True, allow_null=True)
     ptcgo_code = serializers.CharField(source='card_master.set.ptcgo_code', read_only=True, allow_null=True)
     seller_username = serializers.CharField(source='seller.username', read_only=True)
     seller_photo_url = serializers.SerializerMethodField()
+    seller_reputation_score = serializers.SerializerMethodField()
+    seller_reputation_count = serializers.SerializerMethodField()
+    requires_photo = serializers.BooleanField(read_only=True)
+    grading_status = serializers.CharField(read_only=True)
+    auto_grade = serializers.JSONField(read_only=True)
+    created_at = serializers.DateTimeField(read_only=True)
 
     class Meta:
         model = Card_Listing
         fields = [
             'id', 'card_master', 'card_name', 'card_number', 'secondary_id',
-            'card_rarity', 'card_image_url', 'set_name', 'set_code', 'ptcgo_code',
+            'card_rarity', 'card_image_url', 'tcg_type', 'set_name', 'set_code', 'ptcgo_code',
             'seller', 'seller_username', 'price_chf', 'quantity', 'condition',
             'is_graded', 'seller_photo', 'seller_photo_url', 'is_available',
+            'requires_photo', 'grading_status', 'auto_grade', 'created_at',
+            'seller_reputation_score', 'seller_reputation_count',
         ]
         read_only_fields = ['seller']
 
@@ -147,6 +164,14 @@ class CardListingSerializer(serializers.ModelSerializer):
                 return request.build_absolute_uri(obj.seller_photo.url)
             return obj.seller_photo.url
         return None
+
+    def get_seller_reputation_score(self, obj):
+        from .reputation import compute_reputation
+        score, _, _ = compute_reputation(obj.seller)
+        return score
+
+    def get_seller_reputation_count(self, obj):
+        return Review.objects.filter(seller=obj.seller).count()
 
 
 class OrderSerializer(serializers.ModelSerializer):
@@ -168,6 +193,10 @@ class OrderSerializer(serializers.ModelSerializer):
         read_only_fields = ['buyer', 'price_chf', 'created_at']
 
     def validate(self, attrs):
+        # Skip creation-only checks on partial updates (PATCH) — only status is writable.
+        if self.partial:
+            return attrs
+
         listing = attrs.get('listing')
         quantity = attrs.get('quantity', 1)
         required_fields = [
@@ -240,7 +269,78 @@ class UserProfileSerializer(serializers.ModelSerializer):
         model = UserProfile
         fields = [
             'shipping_name', 'shipping_address_line1', 'shipping_address_line2',
-            'shipping_city', 'shipping_postal_code', 'shipping_country',
+            'shipping_city', 'shipping_postal_code', 'shipping_country', 'push_token',
+        ]
+
+
+# ---------------------------------------------------------------------------
+# Phase 2 serializers
+# ---------------------------------------------------------------------------
+
+class CardGradeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CardGrade
+        fields = ['id', 'listing', 'company', 'grade', 'cert_number', 'graded_at', 'notes']
+        read_only_fields = ['id']
+
+    def validate_grade(self, value):
+        if value < 1 or value > 10:
+            raise serializers.ValidationError("Grade must be between 1.0 and 10.0.")
+        return value
+
+
+class OfferSerializer(serializers.ModelSerializer):
+    buyer_username = serializers.CharField(source='buyer.username', read_only=True)
+    listing_card_name = serializers.CharField(
+        source='listing.card_master.card_name', read_only=True
+    )
+    expires_at = serializers.DateTimeField(required=False, read_only=False)
+
+    class Meta:
+        model = Offer
+        fields = [
+            'id', 'listing', 'listing_card_name', 'buyer', 'buyer_username',
+            'offer_price_chf', 'counter_price_chf', 'message',
+            'status', 'expires_at', 'created_at', 'updated_at',
+        ]
+        read_only_fields = ['id', 'buyer', 'created_at', 'updated_at']
+
+    def validate(self, attrs):
+        listing = attrs.get('listing')
+        if listing and not listing.is_available:
+            raise serializers.ValidationError({'listing': 'Listing is not available.'})
+        offer_price = attrs.get('offer_price_chf')
+        if offer_price is not None and offer_price <= 0:
+            raise serializers.ValidationError({'offer_price_chf': 'Offer price must be positive.'})
+        return attrs
+
+    def validate_status(self, value):
+        request = self.context.get('request')
+        if request and request.method in ['PUT', 'PATCH']:
+            allowed = [
+                OfferStatusChoices.ACCEPTED,
+                OfferStatusChoices.DECLINED,
+                OfferStatusChoices.COUNTERED,
+            ]
+            if value not in allowed:
+                raise serializers.ValidationError(
+                    f"Status must be one of: {', '.join(allowed)}"
+                )
+        return value
+
+
+class TransactionSerializer(serializers.ModelSerializer):
+    order_id = serializers.IntegerField(source='order.id', read_only=True)
+
+    class Meta:
+        model = Transaction
+        fields = [
+            'id', 'order', 'order_id', 'stripe_payment_intent_id', 'stripe_charge_id',
+            'amount_chf', 'status', 'stripe_metadata', 'created_at', 'updated_at',
+        ]
+        read_only_fields = [
+            'id', 'stripe_payment_intent_id', 'stripe_charge_id',
+            'stripe_metadata', 'created_at', 'updated_at',
         ]
 
 
@@ -273,3 +373,66 @@ class CustomRegisterSerializer(RegisterSerializer):
         profile.shipping_country = self.cleaned_data.get('shipping_country', '')
         profile.save()
         return user
+
+
+class ListingPhotoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ListingPhoto
+        fields = ['id', 'listing', 's3_key', 's3_bucket', 'mime_type', 'size_bytes', 'created_at']
+        read_only_fields = ['id', 'created_at']
+
+
+# ---------------------------------------------------------------------------
+# Phase 5A serializers — Review, Reputation
+# ---------------------------------------------------------------------------
+
+class ReviewSerializer(serializers.ModelSerializer):
+    reviewer_username = serializers.CharField(source='reviewer.username', read_only=True)
+    card_name = serializers.CharField(source='order.listing.card_master.card_name', read_only=True)
+
+    class Meta:
+        model = Review
+        fields = ['id', 'order', 'reviewer', 'reviewer_username', 'seller', 'stars', 'comment', 'card_name', 'created_at']
+        read_only_fields = ['id', 'order', 'reviewer', 'seller', 'created_at']
+
+    def validate_stars(self, value):
+        if not 1 <= value <= 5:
+            raise serializers.ValidationError("Stars must be between 1 and 5.")
+        return value
+
+
+class ReputationSerializer(serializers.Serializer):
+    seller_id = serializers.IntegerField()
+    seller_username = serializers.CharField()
+    score = serializers.FloatField(allow_null=True)
+    total_reviews = serializers.IntegerField()
+    recent_reviews = serializers.IntegerField(help_text="Reviews in last 90 days")
+
+
+class PriceSoldSnapshotSerializer(serializers.ModelSerializer):
+    date = serializers.DateTimeField(source='sold_at')
+    price = serializers.DecimalField(source='sold_price', max_digits=10, decimal_places=2)
+
+    class Meta:
+        model = PriceSoldSnapshot
+        fields = ['date', 'price', 'condition']
+
+
+class DisputeSerializer(serializers.ModelSerializer):
+    opened_by_username = serializers.CharField(source='opened_by.username', read_only=True)
+    order_id = serializers.IntegerField(source='order.id', read_only=True)
+
+    class Meta:
+        model = Dispute
+        fields = [
+            'id', 'order', 'order_id', 'opened_by', 'opened_by_username',
+            'reason', 'description', 'status', 'resolution',
+            'created_at', 'resolved_at',
+        ]
+        read_only_fields = ['id', 'order', 'order_id', 'opened_by', 'status', 'resolution', 'created_at', 'resolved_at']
+
+
+class DisputeResolveSerializer(serializers.Serializer):
+    resolution = serializers.CharField(required=True)
+    refund = serializers.BooleanField(default=False)
+    close = serializers.BooleanField(default=False, help_text="Close without resolving if True")

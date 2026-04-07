@@ -4,6 +4,13 @@ from django.db.models.fields import DateField
 
 
 # --- CHOICES ---
+class TcgTypeChoices(models.TextChoices):
+    POKEMON = 'pokemon', 'Pokémon'
+    MTG = 'mtg', 'Magic: The Gathering'
+    YUGIOH = 'yugioh', 'Yu-Gi-Oh!'
+    SPORTS = 'sports', 'Sports Cards'
+
+
 class ConditionChoices(models.TextChoices):
     MT = 'MT', 'Mint'
     NM = 'NM', 'Near Mint'
@@ -26,6 +33,12 @@ class Set_Master(models.Model):
     set_code = models.CharField(max_length=20)
     language = models.CharField(max_length=10, default='en', db_index=True)
     set_name = models.CharField(max_length=100)
+    tcg_type = models.CharField(
+        max_length=10,
+        choices=TcgTypeChoices.choices,
+        default=TcgTypeChoices.POKEMON,
+        db_index=True,
+    )
     total_cards = models.IntegerField(default=0)
     printed_total = models.IntegerField(default=0)
     ptcgo_code = models.CharField(max_length=10, blank=True, null=True)
@@ -53,6 +66,12 @@ class Card_Master(models.Model):
     )
     api_id = models.CharField(max_length=60, unique=True, primary_key=True)
     language = models.CharField(max_length=10, default='en', db_index=True)
+    tcg_type = models.CharField(
+        max_length=10,
+        choices=TcgTypeChoices.choices,
+        default=TcgTypeChoices.POKEMON,
+        db_index=True,
+    )
     card_name = models.CharField(max_length=255)
     card_number = models.CharField(max_length=10)
     secondary_id = models.CharField(max_length=50, blank=True, null=True, unique=True)
@@ -150,6 +169,9 @@ class CardPrice(models.Model):
     class Meta:
         unique_together = ('card_master', 'source', 'variant')
         verbose_name_plural = "Card Prices"
+        indexes = [
+            models.Index(fields=['card_master']),
+        ]
 
 
 class CardPriceHistory(models.Model):
@@ -191,7 +213,7 @@ class Card_Listing(models.Model):
         related_name='sold_listings',
     )
     price_chf = models.DecimalField(max_digits=8, decimal_places=2)
-    quantity = models.IntegerField(default=1)
+    quantity = models.PositiveIntegerField(default=1)
     condition = models.CharField(
         max_length=4,
         choices=ConditionChoices.choices,
@@ -209,14 +231,72 @@ class Card_Listing(models.Model):
     )
     is_available = models.BooleanField(default=True)
 
+    # --- Phase 3: auto-grading result ---
+    grading_status = models.CharField(
+        max_length=12,
+        choices=[
+            ('none', 'None'),
+            ('queued', 'Queued'),
+            ('processing', 'Processing'),
+            ('complete', 'Complete'),
+            ('failed', 'Failed'),
+        ],
+        default='none',
+    )
+    auto_grade = models.JSONField(
+        null=True,
+        blank=True,
+        help_text="ML grading result: {grade, confidence, detectedCard}",
+    )
+
+    # Rarities that require a photo before publishing
+    PHOTO_REQUIRED_RARITIES = {'Rare Holo', 'Ultra Rare', 'Secret Rare'}
+    PHOTO_REQUIRED_VALUE_THRESHOLD = 20  # CHF
+
+    @property
+    def requires_photo(self):
+        rarity = getattr(self.card_master, 'card_rarity', '') or ''
+        return (
+            rarity in self.PHOTO_REQUIRED_RARITIES
+            or float(self.price_chf or 0) >= self.PHOTO_REQUIRED_VALUE_THRESHOLD
+        )
+
     def __str__(self):
         return f"{self.card_master.card_name} - {self.get_condition_display()} by {self.seller.username}"
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['seller', 'is_available']),
+            models.Index(fields=['is_available']),
+        ]
+
+
+class ListingPhoto(models.Model):
+    """S3-backed photo attached to a listing (Phase 3)."""
+    listing = models.ForeignKey(
+        Card_Listing,
+        on_delete=models.CASCADE,
+        related_name='photos',
+    )
+    s3_key = models.CharField(max_length=500)
+    s3_bucket = models.CharField(max_length=200, default='')
+    mime_type = models.CharField(max_length=80, default='image/jpeg')
+    size_bytes = models.PositiveIntegerField(null=True, blank=True)
+    is_deleted = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['created_at']
+
+    def __str__(self):
+        return f"Photo {self.id} for listing {self.listing_id}"
 
 
 class OrderStatusChoices(models.TextChoices):
     PENDING = 'PENDING', 'Pending'
     COMPLETED = 'COMPLETED', 'Completed'
     CANCELLED = 'CANCELLED', 'Cancelled'
+    DELIVERED = 'DELIVERED', 'Delivered'
 
 
 class Order(models.Model):
@@ -248,6 +328,130 @@ class Order(models.Model):
     def __str__(self):
         return f"Order #{self.id} - {self.listing.card_master.card_name} x{self.quantity}"
 
+    class Meta:
+        indexes = [
+            models.Index(fields=['buyer', 'status']),
+            models.Index(fields=['status']),
+            models.Index(fields=['-created_at']),
+        ]
+
+
+# ---------------------------------------------------------------------------
+# Phase 2 models — Offer, Transaction, CardGrade
+# ---------------------------------------------------------------------------
+
+class OfferStatusChoices(models.TextChoices):
+    PENDING = 'PENDING', 'Pending'
+    ACCEPTED = 'ACCEPTED', 'Accepted'
+    DECLINED = 'DECLINED', 'Declined'
+    EXPIRED = 'EXPIRED', 'Expired'
+    COUNTERED = 'COUNTERED', 'Countered'
+
+
+class Offer(models.Model):
+    """A buyer makes a price offer on an available Card_Listing."""
+    listing = models.ForeignKey(
+        Card_Listing,
+        on_delete=models.CASCADE,
+        related_name='offers',
+    )
+    buyer = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='offers',
+    )
+    offer_price_chf = models.DecimalField(max_digits=8, decimal_places=2)
+    counter_price_chf = models.DecimalField(
+        max_digits=8, decimal_places=2, null=True, blank=True,
+        help_text="Seller's counter-offer price, set when status=COUNTERED.",
+    )
+    message = models.TextField(blank=True, default='')
+    status = models.CharField(
+        max_length=10,
+        choices=OfferStatusChoices.choices,
+        default=OfferStatusChoices.PENDING,
+    )
+    expires_at = models.DateTimeField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Offer #{self.id} CHF {self.offer_price_chf} on listing {self.listing_id}"
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['listing', 'status']),
+            models.Index(fields=['buyer', 'status']),
+        ]
+        ordering = ['-created_at']
+
+
+class TransactionStatusChoices(models.TextChoices):
+    PENDING = 'PENDING', 'Pending'
+    SUCCEEDED = 'SUCCEEDED', 'Succeeded'
+    FAILED = 'FAILED', 'Failed'
+    REFUNDED = 'REFUNDED', 'Refunded'
+
+
+class Transaction(models.Model):
+    """Stripe payment record linked 1:1 to an Order."""
+    order = models.OneToOneField(
+        Order,
+        on_delete=models.PROTECT,
+        related_name='transaction',
+    )
+    stripe_payment_intent_id = models.CharField(max_length=100, unique=True)
+    stripe_charge_id = models.CharField(max_length=100, blank=True, default='')
+    amount_chf = models.DecimalField(max_digits=8, decimal_places=2)
+    status = models.CharField(
+        max_length=10,
+        choices=TransactionStatusChoices.choices,
+        default=TransactionStatusChoices.PENDING,
+    )
+    stripe_metadata = models.JSONField(default=dict, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f"Transaction {self.stripe_payment_intent_id} ({self.status})"
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['status']),
+        ]
+        ordering = ['-created_at']
+
+
+class CardGrade(models.Model):
+    """Professional grading certificate details for a graded listing."""
+    listing = models.OneToOneField(
+        Card_Listing,
+        on_delete=models.CASCADE,
+        related_name='grade_detail',
+    )
+    company = models.CharField(
+        max_length=4,
+        choices=GradingChoices.choices,
+        help_text="Grading company (PSA, BGS, CGC, etc.)",
+    )
+    grade = models.DecimalField(
+        max_digits=4, decimal_places=1,
+        help_text="Numeric grade, e.g. 9.5 or 10.0",
+    )
+    cert_number = models.CharField(
+        max_length=50, unique=True,
+        help_text="Grading certificate/population report ID.",
+    )
+    graded_at = models.DateField(null=True, blank=True)
+    notes = models.TextField(blank=True, default='')
+
+    def __str__(self):
+        return f"{self.company} {self.grade} — cert {self.cert_number}"
+
+    class Meta:
+        verbose_name = "Card Grade"
+        verbose_name_plural = "Card Grades"
+
 
 class UserProfile(models.Model):
     user = models.OneToOneField(
@@ -261,6 +465,166 @@ class UserProfile(models.Model):
     shipping_city = models.CharField(max_length=100, default='')
     shipping_postal_code = models.CharField(max_length=20, default='')
     shipping_country = models.CharField(max_length=100, default='')
+    push_token = models.CharField(max_length=500, blank=True, default='')
 
     def __str__(self):
         return f"{self.user.username} Profile"
+
+
+# ---------------------------------------------------------------------------
+# Phase 5A models — Review, Reputation
+# ---------------------------------------------------------------------------
+
+class Review(models.Model):
+    """Post-purchase review left by a buyer for a seller, tied to one order."""
+    order = models.OneToOneField(
+        Order,
+        on_delete=models.PROTECT,
+        related_name='review',
+    )
+    reviewer = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='reviews_given',
+    )
+    seller = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='reviews_received',
+    )
+    stars = models.PositiveSmallIntegerField(
+        help_text="Rating 1-5",
+    )
+    comment = models.TextField(blank=True, default='')
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Review #{self.id} ({self.stars}★) for {self.seller.username} by {self.reviewer.username}"
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['seller', 'created_at']),
+        ]
+        ordering = ['-created_at']
+
+
+# ---------------------------------------------------------------------------
+# Phase 5C models — Price Sold Snapshots (market analytics)
+# ---------------------------------------------------------------------------
+
+class PriceSoldSnapshot(models.Model):
+    """One row per delivered order — records the actual sold price for market analytics."""
+    card = models.ForeignKey(
+        Card_Master,
+        on_delete=models.CASCADE,
+        related_name='sold_snapshots',
+    )
+    listing = models.ForeignKey(
+        Card_Listing,
+        on_delete=models.SET_NULL,
+        null=True,
+        related_name='sold_snapshots',
+    )
+    sold_price = models.DecimalField(max_digits=10, decimal_places=2)
+    sold_at = models.DateTimeField(auto_now_add=True)
+    condition = models.CharField(
+        max_length=4,
+        choices=ConditionChoices.choices,
+    )
+    tcg_type = models.CharField(
+        max_length=10,
+        choices=TcgTypeChoices.choices,
+        default=TcgTypeChoices.POKEMON,
+        db_index=True,
+    )
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['card', 'sold_at']),
+            models.Index(fields=['tcg_type', 'sold_at']),
+            models.Index(fields=['condition', 'sold_at']),
+        ]
+        ordering = ['-sold_at']
+
+    def __str__(self):
+        return f"PriceSoldSnapshot card={self.card_id} price={self.sold_price} at {self.sold_at:%Y-%m-%d}"
+
+
+# ---------------------------------------------------------------------------
+# Phase 5E models — Dispute, UserFlag
+# ---------------------------------------------------------------------------
+
+class DisputeReasonChoices(models.TextChoices):
+    NOT_RECEIVED = 'not_received', 'Item Not Received'
+    NOT_AS_DESCRIBED = 'not_as_described', 'Item Not As Described'
+    UNAUTHORIZED = 'unauthorized', 'Unauthorized Payment'
+    OTHER = 'other', 'Other'
+
+
+class DisputeStatusChoices(models.TextChoices):
+    OPEN = 'open', 'Open'
+    RESOLVED = 'resolved', 'Resolved'
+    CLOSED = 'closed', 'Closed'
+
+
+class Dispute(models.Model):
+    """Buyer-opened dispute tied to one order."""
+    order = models.ForeignKey(
+        Order,
+        on_delete=models.PROTECT,
+        related_name='disputes',
+    )
+    opened_by = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='disputes_opened',
+    )
+    reason = models.CharField(max_length=20, choices=DisputeReasonChoices.choices)
+    description = models.TextField()
+    status = models.CharField(
+        max_length=10,
+        choices=DisputeStatusChoices.choices,
+        default=DisputeStatusChoices.OPEN,
+    )
+    resolution = models.TextField(blank=True, default='')
+    created_at = models.DateTimeField(auto_now_add=True)
+    resolved_at = models.DateTimeField(null=True, blank=True)
+
+    def __str__(self):
+        return f"Dispute #{self.id} order={self.order_id} ({self.status})"
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['status', 'created_at']),
+            models.Index(fields=['order']),
+        ]
+        ordering = ['-created_at']
+
+
+class FlagReasonChoices(models.TextChoices):
+    EXCESSIVE_CANCELLATIONS = 'excess_cancellations', 'Excessive Cancellations as Seller'
+    PAYMENT_VELOCITY = 'payment_velocity', 'High Payment Velocity'
+    STRIPE_DISPUTE = 'stripe_dispute', 'Stripe Chargeback'
+
+
+class UserFlag(models.Model):
+    """Fraud signal flag written by the automated worker or Stripe webhook."""
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='flags',
+    )
+    reason = models.CharField(max_length=30, choices=FlagReasonChoices.choices)
+    detail = models.TextField(blank=True, default='')
+    reviewed = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"UserFlag #{self.id} user={self.user_id} reason={self.reason}"
+
+    class Meta:
+        indexes = [
+            models.Index(fields=['user', 'reason']),
+            models.Index(fields=['reviewed', 'created_at']),
+        ]
+        ordering = ['-created_at']

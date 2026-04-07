@@ -31,11 +31,15 @@ POKEMON_TCG_API_KEY = os.getenv('POKEMON_TCG_API_KEY', None)
 if not POKEMON_TCG_API_KEY:
     print("WARNING: POKEMON_TCG_API_KEY is missing. API features will fail.")
 
-# SECURITY WARNING: keep the secret key used in production secret! MOVE TO .env IN PRODUCTION!
-SECRET_KEY = os.getenv(
-    'DJANGO_SECRET_KEY',
-    'django-insecure-zilj0mf#vs%jn-xrx67r9#v-d(yp58n7rsylfeklk0r#@pkjow',
-)
+from django.core.exceptions import ImproperlyConfigured
+
+_secret_key = os.getenv('DJANGO_SECRET_KEY')
+if not _secret_key:
+    raise ImproperlyConfigured(
+        'DJANGO_SECRET_KEY environment variable is not set. '
+        'Generate one with: python -c "import secrets; print(secrets.token_urlsafe(50))"'
+    )
+SECRET_KEY = _secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'True').lower() in ('true', '1', 'yes')
@@ -68,6 +72,8 @@ INSTALLED_APPS = [
     'corsheaders',
     # --- FILTERING ---
     'django_filters',
+    # --- JWT TOKEN BLACKLIST (required for BLACKLIST_AFTER_ROTATION) ---
+    'rest_framework_simplejwt.token_blacklist',
 ]
 
 MIDDLEWARE = [
@@ -164,6 +170,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -174,10 +184,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SITE_ID = 1
 
 # --- DJANGO-ALLAUTH SETTINGS ---
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
-ACCOUNT_AUTHENTICATION_METHOD = 'username'
-ACCOUNT_USERNAME_REQUIRED = True
+# allauth v0.62+ settings (replaces deprecated ACCOUNT_AUTHENTICATION_METHOD etc.)
+ACCOUNT_LOGIN_METHODS = {'username'}
+ACCOUNT_SIGNUP_FIELDS = ['username*', 'email*', 'password1*', 'password2*']
+ACCOUNT_EMAIL_VERIFICATION = os.getenv('ACCOUNT_EMAIL_VERIFICATION', 'none')
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_CONFIRM_EMAIL_ON_GET = True
 ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 7
@@ -188,6 +198,7 @@ ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = '/verify-email?verified=true
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'dj_rest_auth.jwt_auth.JWTCookieAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
         'rest_framework.authentication.SessionAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': (
@@ -218,10 +229,8 @@ REST_AUTH = {
 }
 
 # --- CORS SETTINGS ---
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
+_cors_default = 'http://localhost:3000,http://127.0.0.1:3000,http://localhost:3001,http://127.0.0.1:3001'
+CORS_ALLOWED_ORIGINS = [o.strip() for o in os.getenv('CORS_ALLOWED_ORIGINS', _cors_default).split(',') if o.strip()]
 
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_ALL_HEADERS = True
@@ -236,14 +245,57 @@ CORS_ALLOW_METHODS = [
 ]
 
 # --- CSRF SETTINGS ---
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-]
+_csrf_default = 'http://localhost:3000,http://127.0.0.1:3000,http://localhost:3001,http://127.0.0.1:3001'
+CSRF_TRUSTED_ORIGINS = [o.strip() for o in os.getenv('CSRF_TRUSTED_ORIGINS', _csrf_default).split(',') if o.strip()]
 
 CSRF_COOKIE_SECURE = False
 CSRF_COOKIE_HTTPONLY = False
 CSRF_USE_SESSIONS = False
 
 # --- EMAIL SETTINGS ---
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = os.getenv('EMAIL_BACKEND', 'django.core.mail.backends.console.EmailBackend')
+EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.sendgrid.net')
+EMAIL_PORT = int(os.getenv('EMAIL_PORT', '587'))
+EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True').lower() in ('true', '1', 'yes')
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', '')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', '')
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL', 'noreply@tcgmarketplace.local')
+
+# --- STRIPE SETTINGS ---
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WEBHOOK_SECRET = os.getenv('STRIPE_WEBHOOK_SECRET', '')
+STRIPE_CONNECT_CLIENT_ID = os.getenv('STRIPE_CONNECT_CLIENT_ID', '')
+
+# --- AWS S3 SETTINGS (Phase 3: photo storage) ---
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID', '')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY', '')
+AWS_S3_BUCKET = os.getenv('AWS_S3_BUCKET', '')
+AWS_REGION = os.getenv('AWS_REGION', 'us-east-1')
+# Pre-signed URL expiry in seconds (default 1 hour)
+AWS_PRESIGN_EXPIRY = int(os.getenv('AWS_PRESIGN_EXPIRY', '3600'))
+
+# --- ML GRADING SERVICE (Phase 3) ---
+ML_GRADING_SERVICE_URL = os.getenv('ML_GRADING_SERVICE_URL', '')
+
+# --- API CACHING (Phase 5D) ---
+# In-process LocMemCache; swap for Redis by setting CACHE_BACKEND to
+# "django_redis.cache.RedisCache" and CACHE_LOCATION to your Redis URL.
+_cache_backend = os.getenv('CACHE_BACKEND', 'django.core.cache.backends.locmem.LocMemCache')
+_cache_location = os.getenv('CACHE_LOCATION', 'tcg-api-cache')
+CACHES = {
+    'default': {
+        'BACKEND': _cache_backend,
+        'LOCATION': _cache_location,
+        'TIMEOUT': int(os.getenv('CACHE_TTL', '30')),  # seconds
+    }
+}
+
+# --- CLOUDFLARE R2 / CDN (Phase 5D) ---
+# When set, photo uploads go to R2 instead of AWS S3.
+CLOUDFLARE_R2_ACCOUNT_ID = os.getenv('CLOUDFLARE_R2_ACCOUNT_ID', '')
+CLOUDFLARE_R2_ACCESS_KEY_ID = os.getenv('CLOUDFLARE_R2_ACCESS_KEY_ID', '')
+CLOUDFLARE_R2_SECRET_ACCESS_KEY = os.getenv('CLOUDFLARE_R2_SECRET_ACCESS_KEY', '')
+CLOUDFLARE_R2_BUCKET = os.getenv('CLOUDFLARE_R2_BUCKET', '')
+# Public CDN base URL served in front of R2 (or Supabase Storage).
+# Example: https://cdn.tcgmarketplace.com
+CDN_BASE_URL = os.getenv('CDN_BASE_URL', '')
