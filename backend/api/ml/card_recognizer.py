@@ -156,39 +156,71 @@ def build_hash_index(limit: Optional[int] = None) -> None:
     Download card images from the PokémonTCG API, compute perceptual hashes,
     and save the index to HASH_INDEX_PATH.
 
+    Calls the REST API directly (avoids pokemontcgsdk/dacite Python 3.12+ bugs).
+
     Run once:
         python -m api.ml.card_recognizer --build-index [--limit 500]
     """
-    try:
-        import pokemontcgsdk as sdk  # noqa: PLC0415
-    except ImportError:
-        raise RuntimeError("pokemontcgsdk is not installed")
+    import json
+    import urllib.request  # noqa: PLC0415
 
-    cards = sdk.Card.all()
+    api_key = os.environ.get("POKEMON_TCG_API_KEY", "")
+    base_url = "https://api.pokemontcg.io/v2/cards"
+    page_size = 250
+    headers = {"X-Api-Key": api_key} if api_key else {}
+
+    # ── Fetch all card stubs (id, name, set.name, images.small) ──────────────
+    all_cards: List[dict] = []
+    page = 1
+    while True:
+        url = f"{base_url}?pageSize={page_size}&page={page}&select=id,name,set,images"
+        req = urllib.request.Request(url, headers=headers)
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                payload = json.loads(resp.read().decode())
+        except Exception as exc:  # noqa: BLE001
+            logger.error("Failed to fetch card list page %d: %s", page, exc)
+            break
+
+        batch = payload.get("data", [])
+        if not batch:
+            break
+        all_cards.extend(batch)
+        logger.info("Fetched page %d — %d cards so far", page, len(all_cards))
+
+        total = payload.get("totalCount", 0)
+        if len(all_cards) >= total:
+            break
+        page += 1
+
     if limit:
-        cards = cards[:limit]
+        all_cards = all_cards[:limit]
 
+    logger.info("Total cards to index: %d", len(all_cards))
+
+    # ── Download images and compute hashes ────────────────────────────────────
     hashes: List[np.ndarray] = []
     metadata: List[dict] = []
 
-    import urllib.request  # noqa: PLC0415
-
-    for card in cards:
+    for card in all_cards:
+        card_id = card.get("id", "?")
         try:
-            img_url = card.images.small
-            with urllib.request.urlopen(img_url, timeout=5) as resp:
+            img_url = card.get("images", {}).get("small")
+            if not img_url:
+                continue
+            with urllib.request.urlopen(img_url, timeout=10) as resp:
                 arr = np.frombuffer(resp.read(), dtype=np.uint8)
             img = cv2.imdecode(arr, cv2.IMREAD_COLOR)
             if img is None:
                 continue
             hashes.append(_compute_phash(img))
             metadata.append({
-                "id": card.id,
-                "name": card.name,
-                "set_name": card.set.name if card.set else None,
+                "id": card_id,
+                "name": card.get("name"),
+                "set_name": card.get("set", {}).get("name"),
             })
         except Exception as exc:  # noqa: BLE001
-            logger.warning("Skipping card %s: %s", getattr(card, "id", "?"), exc)
+            logger.warning("Skipping card %s: %s", card_id, exc)
 
     HASH_INDEX_PATH.parent.mkdir(parents=True, exist_ok=True)
     np.savez_compressed(
