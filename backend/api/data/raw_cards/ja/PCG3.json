@@ -1,0 +1,767 @@
+[
+  {
+    "id": "PCG3-001",
+    "name": "エカン",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-002",
+    "name": "Zubat",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-003",
+    "name": "グリマー",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-004",
+    "name": "Koffing",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-005",
+    "name": "レディバ",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-006",
+    "name": "レディアン",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-007",
+    "name": "ホッピップ",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-008",
+    "name": "スキプルーム",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-009",
+    "name": "ジャンプラフ",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-010",
+    "name": "ヤンマ",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-011",
+    "name": "Treecko Star",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-012",
+    "name": "ダークアーボック",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-013",
+    "name": "暗いゴルバット",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-014",
+    "name": "暗いMuk",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-015",
+    "name": "暗いweezing",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-016",
+    "name": "暗いクロバット",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-017",
+    "name": "マグマー",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-018",
+    "name": "猟犬",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-019",
+    "name": "マグビー",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-020",
+    "name": "トーチの星",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-021",
+    "name": "暗い猟犬",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-022",
+    "name": "馬",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-023",
+    "name": "シードラ",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-024",
+    "name": "マリル",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-025",
+    "name": "アズマリル",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-026",
+    "name": "ウーパー",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-027",
+    "name": "quagsire",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-028",
+    "name": "qwilfish",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-029",
+    "name": "REMORAID",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-030",
+    "name": "Delibird",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-031",
+    "name": "マンティン",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-032",
+    "name": "キングドラ",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-033",
+    "name": "マッドキップスター",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-034",
+    "name": "ダークオクタリリー",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-035",
+    "name": "Voltorb",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-036",
+    "name": "Mareep",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-037",
+    "name": "暗い電極",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-038",
+    "name": "暗いフラフィ",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-039",
+    "name": "暗いアンファロ",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-040",
+    "name": "slowpoke",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-041",
+    "name": "ドロージー",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-042",
+    "name": "ミスレアヴァス",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-043",
+    "name": "暗い催眠",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-044",
+    "name": "暗いスローキング",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-045",
+    "name": "サンドシュー",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-046",
+    "name": "onix",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-047",
+    "name": "キューボン",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-048",
+    "name": "ヘラクロス",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-049",
+    "name": "swinub",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-050",
+    "name": "ピロスワイン",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-051",
+    "name": "ダークサンドスラッシュ",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-052",
+    "name": "ダークマロワック",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-053",
+    "name": "ラッタタ",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-054",
+    "name": "セントレット",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-055",
+    "name": "Furret",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-056",
+    "name": "togepi",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-057",
+    "name": "togetic",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-058",
+    "name": "暗いラティテート",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-059",
+    "name": "ロケットの鳴き声",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-060",
+    "name": "Rocket's Hitmonchan ex",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-061",
+    "name": "Rocket's Scyther Ex",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-062",
+    "name": "Rocket's Snorlax Ex",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-063",
+    "name": "Rocket's Zapdos Ex",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-064",
+    "name": "RocketのMewtwo Ex",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-065",
+    "name": "ロケットのウォブバッフェット",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-066",
+    "name": "Rocket's Scizor Ex",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-067",
+    "name": "Rocket's Sneasel Ex",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-068",
+    "name": "Rocket's Entei Ex",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-069",
+    "name": "Rocket's Suicune Ex",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-070",
+    "name": "ダークタイラナター",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-071",
+    "name": "ロケットのセレビ",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-072",
+    "name": "暗いSteelix",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-073",
+    "name": "捕虜！ハンドエクステンション",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-074",
+    "name": "急降下！テレポーター",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-075",
+    "name": "驚き！  タイムマシン",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-076",
+    "name": "ベンチャー爆弾",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-077",
+    "name": "ポケモンレトリバー",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-078",
+    "name": "模倣",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-079",
+    "name": "ロケットの管理者。",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-080",
+    "name": "ロケットの使命",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-081",
+    "name": "ロケットの隠れ家",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-082",
+    "name": "ロケットのトリッキーなジム",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-083",
+    "name": "rエネルギー",
+    "number": "083",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-084",
+    "name": "ダークメタルエネルギー",
+    "number": "084",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG3-085",
+    "name": "これがチームロケットが来ます！",
+    "number": "085",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

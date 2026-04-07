@@ -1,0 +1,398 @@
+[
+  {
+    "id": "SVK-001",
+    "name": "かがやくリザードン",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/001"
+    }
+  },
+  {
+    "id": "SVK-002",
+    "name": "ネオラントV",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/002"
+    }
+  },
+  {
+    "id": "SVK-003",
+    "name": "マナフィ",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/003"
+    }
+  },
+  {
+    "id": "SVK-004",
+    "name": "かがやくゲッコウガ",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/004"
+    }
+  },
+  {
+    "id": "SVK-005",
+    "name": "かがやくフーディン",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/005"
+    }
+  },
+  {
+    "id": "SVK-006",
+    "name": "ミュウex",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/006"
+    }
+  },
+  {
+    "id": "SVK-007",
+    "name": "ポッポ",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/007"
+    }
+  },
+  {
+    "id": "SVK-008",
+    "name": "ピジョン",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/008"
+    }
+  },
+  {
+    "id": "SVK-009",
+    "name": "ピジョットex",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/009"
+    }
+  },
+  {
+    "id": "SVK-010",
+    "name": "ビッパ",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/010"
+    }
+  },
+  {
+    "id": "SVK-011",
+    "name": "ビーダル",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/011"
+    }
+  },
+  {
+    "id": "SVK-012",
+    "name": "イキリンコex",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/012"
+    }
+  },
+  {
+    "id": "SVK-013",
+    "name": "カウンターキャッチャー",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/013"
+    }
+  },
+  {
+    "id": "SVK-014",
+    "name": "キャプチャーアロマ",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/014"
+    }
+  },
+  {
+    "id": "SVK-015",
+    "name": "すごいつりざお",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/015"
+    }
+  },
+  {
+    "id": "SVK-016",
+    "name": "ダークパッチ",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/016"
+    }
+  },
+  {
+    "id": "SVK-017",
+    "name": "大地の器",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/017"
+    }
+  },
+  {
+    "id": "SVK-018",
+    "name": "なかよしポフィン",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/018"
+    }
+  },
+  {
+    "id": "SVK-019",
+    "name": "ネストボール",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/019"
+    }
+  },
+  {
+    "id": "SVK-020",
+    "name": "ハイパーボール",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/020"
+    }
+  },
+  {
+    "id": "SVK-021",
+    "name": "ふしぎなアメ",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/021"
+    }
+  },
+  {
+    "id": "SVK-022",
+    "name": "ポケモンいれかえ",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/022"
+    }
+  },
+  {
+    "id": "SVK-023",
+    "name": "むしとりセット",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/023"
+    }
+  },
+  {
+    "id": "SVK-024",
+    "name": "ロストスイーパー",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/024"
+    }
+  },
+  {
+    "id": "SVK-025",
+    "name": "緊急ボード",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/025"
+    }
+  },
+  {
+    "id": "SVK-026",
+    "name": "森の封印石",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/026"
+    }
+  },
+  {
+    "id": "SVK-027",
+    "name": "勇気のおまもり",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/027"
+    }
+  },
+  {
+    "id": "SVK-028",
+    "name": "ワザマシン エヴォリューション",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/028"
+    }
+  },
+  {
+    "id": "SVK-029",
+    "name": "ワザマシン デヴォリューション",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/029"
+    }
+  },
+  {
+    "id": "SVK-030",
+    "name": "アカマツ",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/030"
+    }
+  },
+  {
+    "id": "SVK-031",
+    "name": "アクロマの実験",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/031"
+    }
+  },
+  {
+    "id": "SVK-032",
+    "name": "スイレンのお世話",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/032"
+    }
+  },
+  {
+    "id": "SVK-033",
+    "name": "スグリ",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/033"
+    }
+  },
+  {
+    "id": "SVK-034",
+    "name": "ナンジャモ",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/034"
+    }
+  },
+  {
+    "id": "SVK-035",
+    "name": "博士の研究",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/035"
+    }
+  },
+  {
+    "id": "SVK-036",
+    "name": "博士の研究",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/036"
+    }
+  },
+  {
+    "id": "SVK-037",
+    "name": "フトゥー博士のシナリオ",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/037"
+    }
+  },
+  {
+    "id": "SVK-038",
+    "name": "ペパー",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/038"
+    }
+  },
+  {
+    "id": "SVK-039",
+    "name": "ボスの指令",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/039"
+    }
+  },
+  {
+    "id": "SVK-040",
+    "name": "タウンデパート",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/040"
+    }
+  },
+  {
+    "id": "SVK-041",
+    "name": "ボウルタウン",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/041"
+    }
+  },
+  {
+    "id": "SVK-042",
+    "name": "ジェットエネルギー",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/042"
+    }
+  },
+  {
+    "id": "SVK-043",
+    "name": "ダブルターボエネルギー",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/043"
+    }
+  },
+  {
+    "id": "SVK-044",
+    "name": "ルミナスエネルギー",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVK/044"
+    }
+  }
+]

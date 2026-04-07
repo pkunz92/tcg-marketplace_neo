@@ -1,0 +1,893 @@
+[
+  {
+    "id": "sv06.5-001",
+    "name": "Joltik",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/001"
+    }
+  },
+  {
+    "id": "sv06.5-002",
+    "name": "Galvantula",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/002"
+    }
+  },
+  {
+    "id": "sv06.5-003",
+    "name": "Rowlet",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/003"
+    }
+  },
+  {
+    "id": "sv06.5-004",
+    "name": "Dartrix",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/004"
+    }
+  },
+  {
+    "id": "sv06.5-005",
+    "name": "Decidueye",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/005"
+    }
+  },
+  {
+    "id": "sv06.5-006",
+    "name": "Tapu Bulu",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/006"
+    }
+  },
+  {
+    "id": "sv06.5-007",
+    "name": "Houndour",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/007"
+    }
+  },
+  {
+    "id": "sv06.5-008",
+    "name": "Houndoom",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/008"
+    }
+  },
+  {
+    "id": "sv06.5-009",
+    "name": "Iron Moth",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/009"
+    }
+  },
+  {
+    "id": "sv06.5-010",
+    "name": "Horsea",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/010"
+    }
+  },
+  {
+    "id": "sv06.5-011",
+    "name": "Seadra",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/011"
+    }
+  },
+  {
+    "id": "sv06.5-012",
+    "name": "Kingdra ex",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/012"
+    }
+  },
+  {
+    "id": "sv06.5-013",
+    "name": "Sneasel",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/013"
+    }
+  },
+  {
+    "id": "sv06.5-014",
+    "name": "Weavile",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/014"
+    }
+  },
+  {
+    "id": "sv06.5-015",
+    "name": "Revavroom ex",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/015"
+    }
+  },
+  {
+    "id": "sv06.5-016",
+    "name": "Drowzee",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/016"
+    }
+  },
+  {
+    "id": "sv06.5-017",
+    "name": "Hypno",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/017"
+    }
+  },
+  {
+    "id": "sv06.5-018",
+    "name": "Duskull",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/018"
+    }
+  },
+  {
+    "id": "sv06.5-019",
+    "name": "Dusclops",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/019"
+    }
+  },
+  {
+    "id": "sv06.5-020",
+    "name": "Dusknoir",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/020"
+    }
+  },
+  {
+    "id": "sv06.5-021",
+    "name": "Cresselia",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/021"
+    }
+  },
+  {
+    "id": "sv06.5-022",
+    "name": "Sylveon",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/022"
+    }
+  },
+  {
+    "id": "sv06.5-023",
+    "name": "Croagunk",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/023"
+    }
+  },
+  {
+    "id": "sv06.5-024",
+    "name": "Toxicroak",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/024"
+    }
+  },
+  {
+    "id": "sv06.5-025",
+    "name": "Bloodmoon Ursaluna",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/025"
+    }
+  },
+  {
+    "id": "sv06.5-026",
+    "name": "Slither Wing",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/026"
+    }
+  },
+  {
+    "id": "sv06.5-027",
+    "name": "Zubat",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/027"
+    }
+  },
+  {
+    "id": "sv06.5-028",
+    "name": "Golbat",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/028"
+    }
+  },
+  {
+    "id": "sv06.5-029",
+    "name": "Crobat",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/029"
+    }
+  },
+  {
+    "id": "sv06.5-030",
+    "name": "Absol",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/030"
+    }
+  },
+  {
+    "id": "sv06.5-031",
+    "name": "Zorua",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/031"
+    }
+  },
+  {
+    "id": "sv06.5-032",
+    "name": "Zoroark",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/032"
+    }
+  },
+  {
+    "id": "sv06.5-033",
+    "name": "Inkay",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/033"
+    }
+  },
+  {
+    "id": "sv06.5-034",
+    "name": "Malamar",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/034"
+    }
+  },
+  {
+    "id": "sv06.5-035",
+    "name": "Yveltal",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/035"
+    }
+  },
+  {
+    "id": "sv06.5-036",
+    "name": "Okidogi ex",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/036"
+    }
+  },
+  {
+    "id": "sv06.5-037",
+    "name": "Munkidori ex",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/037"
+    }
+  },
+  {
+    "id": "sv06.5-038",
+    "name": "Fezandipiti ex",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/038"
+    }
+  },
+  {
+    "id": "sv06.5-039",
+    "name": "Pecharunt ex",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/039"
+    }
+  },
+  {
+    "id": "sv06.5-040",
+    "name": "Genesect",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/040"
+    }
+  },
+  {
+    "id": "sv06.5-041",
+    "name": "Cufant",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/041"
+    }
+  },
+  {
+    "id": "sv06.5-042",
+    "name": "Copperajah",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/042"
+    }
+  },
+  {
+    "id": "sv06.5-043",
+    "name": "Varoom",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/043"
+    }
+  },
+  {
+    "id": "sv06.5-044",
+    "name": "Axew",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/044"
+    }
+  },
+  {
+    "id": "sv06.5-045",
+    "name": "Fraxure",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/045"
+    }
+  },
+  {
+    "id": "sv06.5-046",
+    "name": "Haxorus",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/046"
+    }
+  },
+  {
+    "id": "sv06.5-047",
+    "name": "Kyurem",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/047"
+    }
+  },
+  {
+    "id": "sv06.5-048",
+    "name": "Meowth",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/048"
+    }
+  },
+  {
+    "id": "sv06.5-049",
+    "name": "Persian",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/049"
+    }
+  },
+  {
+    "id": "sv06.5-050",
+    "name": "Eevee",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/050"
+    }
+  },
+  {
+    "id": "sv06.5-051",
+    "name": "Furfrou",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/051"
+    }
+  },
+  {
+    "id": "sv06.5-052",
+    "name": "Stufful",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/052"
+    }
+  },
+  {
+    "id": "sv06.5-053",
+    "name": "Bewear",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/053"
+    }
+  },
+  {
+    "id": "sv06.5-054",
+    "name": "Academy at Night",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/054"
+    }
+  },
+  {
+    "id": "sv06.5-055",
+    "name": "Binding Mochi",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/055"
+    }
+  },
+  {
+    "id": "sv06.5-056",
+    "name": "Cassiopeia",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/056"
+    }
+  },
+  {
+    "id": "sv06.5-057",
+    "name": "Colress's Tenacity",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/057"
+    }
+  },
+  {
+    "id": "sv06.5-058",
+    "name": "Dangerous Laser",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/058"
+    }
+  },
+  {
+    "id": "sv06.5-059",
+    "name": "Janine's Secret Art",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/059"
+    }
+  },
+  {
+    "id": "sv06.5-060",
+    "name": "Neutralization Zone",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/060"
+    }
+  },
+  {
+    "id": "sv06.5-061",
+    "name": "Night Stretcher",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/061"
+    }
+  },
+  {
+    "id": "sv06.5-062",
+    "name": "Poké Vital A",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/062"
+    }
+  },
+  {
+    "id": "sv06.5-063",
+    "name": "Powerglass",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/063"
+    }
+  },
+  {
+    "id": "sv06.5-064",
+    "name": "Xerosic's Machinations",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/064"
+    }
+  },
+  {
+    "id": "sv06.5-065",
+    "name": "Tapu Bulu",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/065"
+    }
+  },
+  {
+    "id": "sv06.5-066",
+    "name": "Houndoom",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/066"
+    }
+  },
+  {
+    "id": "sv06.5-067",
+    "name": "Horsea",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/067"
+    }
+  },
+  {
+    "id": "sv06.5-068",
+    "name": "Duskull",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/068"
+    }
+  },
+  {
+    "id": "sv06.5-069",
+    "name": "Dusclops",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/069"
+    }
+  },
+  {
+    "id": "sv06.5-070",
+    "name": "Dusknoir",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/070"
+    }
+  },
+  {
+    "id": "sv06.5-071",
+    "name": "Cresselia",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/071"
+    }
+  },
+  {
+    "id": "sv06.5-072",
+    "name": "Munkidori",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/072"
+    }
+  },
+  {
+    "id": "sv06.5-073",
+    "name": "Fezandipiti",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/073"
+    }
+  },
+  {
+    "id": "sv06.5-074",
+    "name": "Okidogi",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/074"
+    }
+  },
+  {
+    "id": "sv06.5-075",
+    "name": "Zorua",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/075"
+    }
+  },
+  {
+    "id": "sv06.5-076",
+    "name": "Cufant",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/076"
+    }
+  },
+  {
+    "id": "sv06.5-077",
+    "name": "Fraxure",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/077"
+    }
+  },
+  {
+    "id": "sv06.5-078",
+    "name": "Persian",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/078"
+    }
+  },
+  {
+    "id": "sv06.5-079",
+    "name": "Bewear",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/079"
+    }
+  },
+  {
+    "id": "sv06.5-080",
+    "name": "Kingdra ex",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/080"
+    }
+  },
+  {
+    "id": "sv06.5-081",
+    "name": "Revavroom ex",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/081"
+    }
+  },
+  {
+    "id": "sv06.5-082",
+    "name": "Okidogi ex",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/082"
+    }
+  },
+  {
+    "id": "sv06.5-083",
+    "name": "Munkidori ex",
+    "number": "083",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/083"
+    }
+  },
+  {
+    "id": "sv06.5-084",
+    "name": "Fezandipiti ex",
+    "number": "084",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/084"
+    }
+  },
+  {
+    "id": "sv06.5-085",
+    "name": "Pecharunt ex",
+    "number": "085",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/085"
+    }
+  },
+  {
+    "id": "sv06.5-086",
+    "name": "Cassiopeia",
+    "number": "086",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/086"
+    }
+  },
+  {
+    "id": "sv06.5-087",
+    "name": "Colress's Tenacity",
+    "number": "087",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/087"
+    }
+  },
+  {
+    "id": "sv06.5-088",
+    "name": "Janine's Secret Art",
+    "number": "088",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/088"
+    }
+  },
+  {
+    "id": "sv06.5-089",
+    "name": "Xerosic's Machinations",
+    "number": "089",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/089"
+    }
+  },
+  {
+    "id": "sv06.5-090",
+    "name": "Okidogi ex",
+    "number": "090",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/090"
+    }
+  },
+  {
+    "id": "sv06.5-091",
+    "name": "Munkidori ex",
+    "number": "091",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/091"
+    }
+  },
+  {
+    "id": "sv06.5-092",
+    "name": "Fezandipiti ex",
+    "number": "092",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/092"
+    }
+  },
+  {
+    "id": "sv06.5-093",
+    "name": "Pecharunt ex",
+    "number": "093",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/093"
+    }
+  },
+  {
+    "id": "sv06.5-094",
+    "name": "Cassiopeia",
+    "number": "094",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/094"
+    }
+  },
+  {
+    "id": "sv06.5-095",
+    "name": "Pecharunt ex",
+    "number": "095",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/095"
+    }
+  },
+  {
+    "id": "sv06.5-096",
+    "name": "Earthen Vessel",
+    "number": "096",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/096"
+    }
+  },
+  {
+    "id": "sv06.5-097",
+    "name": "Powerglass",
+    "number": "097",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/097"
+    }
+  },
+  {
+    "id": "sv06.5-098",
+    "name": "Basic Darkness Energy",
+    "number": "098",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/098"
+    }
+  },
+  {
+    "id": "sv06.5-099",
+    "name": "Basic Metal Energy",
+    "number": "099",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/sv/sv06.5/099"
+    }
+  }
+]

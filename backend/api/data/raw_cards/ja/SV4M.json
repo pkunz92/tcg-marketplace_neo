@@ -1,0 +1,857 @@
+[
+  {
+    "id": "SV4M-001",
+    "name": "アメタマ",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/001"
+    }
+  },
+  {
+    "id": "SV4M-002",
+    "name": "アメモース",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/002"
+    }
+  },
+  {
+    "id": "SV4M-003",
+    "name": "サッチムシ",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/003"
+    }
+  },
+  {
+    "id": "SV4M-004",
+    "name": "レドームシ",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/004"
+    }
+  },
+  {
+    "id": "SV4M-005",
+    "name": "イオルブ",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/005"
+    }
+  },
+  {
+    "id": "SV4M-006",
+    "name": "ノノクラゲ",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/006"
+    }
+  },
+  {
+    "id": "SV4M-007",
+    "name": "ノノクラゲ",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/007"
+    }
+  },
+  {
+    "id": "SV4M-008",
+    "name": "リククラゲ",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/008"
+    }
+  },
+  {
+    "id": "SV4M-009",
+    "name": "チオンジェン",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/009"
+    }
+  },
+  {
+    "id": "SV4M-010",
+    "name": "バオップ",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/010"
+    }
+  },
+  {
+    "id": "SV4M-011",
+    "name": "バオッキー",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/011"
+    }
+  },
+  {
+    "id": "SV4M-012",
+    "name": "テツノドクガ",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/012"
+    }
+  },
+  {
+    "id": "SV4M-013",
+    "name": "ヒンバス",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/013"
+    }
+  },
+  {
+    "id": "SV4M-014",
+    "name": "ミロカロス",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/014"
+    }
+  },
+  {
+    "id": "SV4M-015",
+    "name": "ヒヤップ",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/015"
+    }
+  },
+  {
+    "id": "SV4M-016",
+    "name": "ヒヤッキー",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/016"
+    }
+  },
+  {
+    "id": "SV4M-017",
+    "name": "バニプッチ",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/017"
+    }
+  },
+  {
+    "id": "SV4M-018",
+    "name": "バニリッチ",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/018"
+    }
+  },
+  {
+    "id": "SV4M-019",
+    "name": "バイバニラ",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/019"
+    }
+  },
+  {
+    "id": "SV4M-020",
+    "name": "テツノツツミ",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/020"
+    }
+  },
+  {
+    "id": "SV4M-021",
+    "name": "パオジアン",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/021"
+    }
+  },
+  {
+    "id": "SV4M-022",
+    "name": "エレキッド",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/022"
+    }
+  },
+  {
+    "id": "SV4M-023",
+    "name": "シママ",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/023"
+    }
+  },
+  {
+    "id": "SV4M-024",
+    "name": "ゼブライカ",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/024"
+    }
+  },
+  {
+    "id": "SV4M-025",
+    "name": "オドリドリ",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/025"
+    }
+  },
+  {
+    "id": "SV4M-026",
+    "name": "エレズン",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/026"
+    }
+  },
+  {
+    "id": "SV4M-027",
+    "name": "テツノカイナex",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/027"
+    }
+  },
+  {
+    "id": "SV4M-028",
+    "name": "チリーン",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/028"
+    }
+  },
+  {
+    "id": "SV4M-029",
+    "name": "バケッチャ",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/029"
+    }
+  },
+  {
+    "id": "SV4M-030",
+    "name": "パンプジン",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/030"
+    }
+  },
+  {
+    "id": "SV4M-031",
+    "name": "ヒラヒナ",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/031"
+    }
+  },
+  {
+    "id": "SV4M-032",
+    "name": "ヒラヒナ",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/032"
+    }
+  },
+  {
+    "id": "SV4M-033",
+    "name": "クエスパトラ",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/033"
+    }
+  },
+  {
+    "id": "SV4M-034",
+    "name": "カヌチャン",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/034"
+    }
+  },
+  {
+    "id": "SV4M-035",
+    "name": "カヌチャン",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/035"
+    }
+  },
+  {
+    "id": "SV4M-036",
+    "name": "ナカヌチャン",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/036"
+    }
+  },
+  {
+    "id": "SV4M-037",
+    "name": "デカヌチャン",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/037"
+    }
+  },
+  {
+    "id": "SV4M-038",
+    "name": "テツノブジンex",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/038"
+    }
+  },
+  {
+    "id": "SV4M-039",
+    "name": "イワーク",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/039"
+    }
+  },
+  {
+    "id": "SV4M-040",
+    "name": "ストリンダーex",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/040"
+    }
+  },
+  {
+    "id": "SV4M-041",
+    "name": "ハガネール",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/041"
+    }
+  },
+  {
+    "id": "SV4M-042",
+    "name": "アイアント",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/042"
+    }
+  },
+  {
+    "id": "SV4M-043",
+    "name": "ヒトツキ",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/043"
+    }
+  },
+  {
+    "id": "SV4M-044",
+    "name": "ニダンギル",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/044"
+    }
+  },
+  {
+    "id": "SV4M-045",
+    "name": "ギルガルドex",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/045"
+    }
+  },
+  {
+    "id": "SV4M-046",
+    "name": "チルタリスex",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/046"
+    }
+  },
+  {
+    "id": "SV4M-047",
+    "name": "シャリタツ",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/047"
+    }
+  },
+  {
+    "id": "SV4M-048",
+    "name": "ポリゴン",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/048"
+    }
+  },
+  {
+    "id": "SV4M-049",
+    "name": "ポリゴン2",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/049"
+    }
+  },
+  {
+    "id": "SV4M-050",
+    "name": "ポリゴンZ",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/050"
+    }
+  },
+  {
+    "id": "SV4M-051",
+    "name": "エイパム",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/051"
+    }
+  },
+  {
+    "id": "SV4M-052",
+    "name": "エテボース",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/052"
+    }
+  },
+  {
+    "id": "SV4M-053",
+    "name": "ミルタンク",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/053"
+    }
+  },
+  {
+    "id": "SV4M-054",
+    "name": "チルット",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/054"
+    }
+  },
+  {
+    "id": "SV4M-055",
+    "name": "ワッカネズミ",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/055"
+    }
+  },
+  {
+    "id": "SV4M-056",
+    "name": "ワッカネズミ",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/056"
+    }
+  },
+  {
+    "id": "SV4M-057",
+    "name": "イッカネズミex",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/057"
+    }
+  },
+  {
+    "id": "SV4M-058",
+    "name": "テツノコウベ",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/058"
+    }
+  },
+  {
+    "id": "SV4M-059",
+    "name": "カウンターキャッチャー",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/059"
+    }
+  },
+  {
+    "id": "SV4M-060",
+    "name": "テクノレーダー",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/060"
+    }
+  },
+  {
+    "id": "SV4M-061",
+    "name": "のろいのはたき",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/061"
+    }
+  },
+  {
+    "id": "SV4M-062",
+    "name": "ブーストエナジー 未来",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/062"
+    }
+  },
+  {
+    "id": "SV4M-063",
+    "name": "ワザマシン エヴォリューション",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/063"
+    }
+  },
+  {
+    "id": "SV4M-064",
+    "name": "ヒョウタ",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/064"
+    }
+  },
+  {
+    "id": "SV4M-065",
+    "name": "フトゥー博士のシナリオ",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/065"
+    }
+  },
+  {
+    "id": "SV4M-066",
+    "name": "リップ",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/066"
+    }
+  },
+  {
+    "id": "SV4M-067",
+    "name": "レドームシ",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/067"
+    }
+  },
+  {
+    "id": "SV4M-068",
+    "name": "リククラゲ",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/068"
+    }
+  },
+  {
+    "id": "SV4M-069",
+    "name": "テツノドクガ",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/069"
+    }
+  },
+  {
+    "id": "SV4M-070",
+    "name": "バニリッチ",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/070"
+    }
+  },
+  {
+    "id": "SV4M-071",
+    "name": "テツノツツミ",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/071"
+    }
+  },
+  {
+    "id": "SV4M-072",
+    "name": "シママ",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/072"
+    }
+  },
+  {
+    "id": "SV4M-073",
+    "name": "クエスパトラ",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/073"
+    }
+  },
+  {
+    "id": "SV4M-074",
+    "name": "ハガネール",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/074"
+    }
+  },
+  {
+    "id": "SV4M-075",
+    "name": "エイパム",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/075"
+    }
+  },
+  {
+    "id": "SV4M-076",
+    "name": "チルット",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/076"
+    }
+  },
+  {
+    "id": "SV4M-077",
+    "name": "ポリゴンZ",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/077"
+    }
+  },
+  {
+    "id": "SV4M-078",
+    "name": "テツノコウベ",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/078"
+    }
+  },
+  {
+    "id": "SV4M-079",
+    "name": "テツノカイナex",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/079"
+    }
+  },
+  {
+    "id": "SV4M-080",
+    "name": "テツノブジンex",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/080"
+    }
+  },
+  {
+    "id": "SV4M-081",
+    "name": "ストリンダーex",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/081"
+    }
+  },
+  {
+    "id": "SV4M-082",
+    "name": "ギルガルドex",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/082"
+    }
+  },
+  {
+    "id": "SV4M-083",
+    "name": "チルタリスex",
+    "number": "083",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/083"
+    }
+  },
+  {
+    "id": "SV4M-084",
+    "name": "イッカネズミex",
+    "number": "084",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/084"
+    }
+  },
+  {
+    "id": "SV4M-085",
+    "name": "ヒョウタ",
+    "number": "085",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/085"
+    }
+  },
+  {
+    "id": "SV4M-086",
+    "name": "フトゥー博士のシナリオ",
+    "number": "086",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/086"
+    }
+  },
+  {
+    "id": "SV4M-087",
+    "name": "リップ",
+    "number": "087",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/087"
+    }
+  },
+  {
+    "id": "SV4M-088",
+    "name": "テツノカイナex",
+    "number": "088",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/088"
+    }
+  },
+  {
+    "id": "SV4M-089",
+    "name": "テツノブジンex",
+    "number": "089",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/089"
+    }
+  },
+  {
+    "id": "SV4M-090",
+    "name": "チルタリスex",
+    "number": "090",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/090"
+    }
+  },
+  {
+    "id": "SV4M-091",
+    "name": "フトゥー博士のシナリオ",
+    "number": "091",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/091"
+    }
+  },
+  {
+    "id": "SV4M-092",
+    "name": "リップ",
+    "number": "092",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/092"
+    }
+  },
+  {
+    "id": "SV4M-093",
+    "name": "テツノブジンex",
+    "number": "093",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/093"
+    }
+  },
+  {
+    "id": "SV4M-094",
+    "name": "カウンターキャッチャー",
+    "number": "094",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/094"
+    }
+  },
+  {
+    "id": "SV4M-095",
+    "name": "基本鋼エネルギー",
+    "number": "095",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV4M/095"
+    }
+  }
+]

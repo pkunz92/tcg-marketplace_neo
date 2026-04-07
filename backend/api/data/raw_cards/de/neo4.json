@@ -1,0 +1,1019 @@
+[
+  {
+    "id": "neo4-1",
+    "name": "Dunkles Ampharos",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-2",
+    "name": "Dunkles Iksbat",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-3",
+    "name": "Dunkles Donphan",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-4",
+    "name": "Dunkles Psiana",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-5",
+    "name": "Dunkles Impergator",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-6",
+    "name": "Dunkles Gengar",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-7",
+    "name": "Dunkles Hundemon",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-8",
+    "name": "Dunkles Porygon2",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-9",
+    "name": "Dunkles Scherox",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-10",
+    "name": "Dunkles Tornupto",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-11",
+    "name": "Dunkles Despotar",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-12",
+    "name": "Helles Arkani",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-13",
+    "name": "Helles Azumarill",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-14",
+    "name": "Helles Dragoran",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-15",
+    "name": "Helles Togetic",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-16",
+    "name": "Wunder-Energie",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-17",
+    "name": "Dunkles Ariados",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-18",
+    "name": "Dunkles Magcargo",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-19",
+    "name": "Dunkles Amoroso",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-20",
+    "name": "Dunkles Laschoking",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-21",
+    "name": "Dunkles Ursaring",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-22",
+    "name": "Helles Dragonir",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-23",
+    "name": "Helles Lanturn",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-24",
+    "name": "Helles Ledian",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-25",
+    "name": "Helles Machomei",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-26",
+    "name": "Helles Keifel",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-27",
+    "name": "Icognito G",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-28",
+    "name": "Icognito H",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-29",
+    "name": "Icognito W",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-30",
+    "name": "Icognito X",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-31",
+    "name": "Chaneira",
+    "number": "31",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-32",
+    "name": "Dunkles Tyracroc",
+    "number": "32",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-33",
+    "name": "Dunkles Kokowei",
+    "number": "33",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-34",
+    "name": "Dunkles Waaty",
+    "number": "34",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-35",
+    "name": "Dunkles Forstellka",
+    "number": "35",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-36",
+    "name": "Dunkles Alpollo",
+    "number": "36",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-37",
+    "name": "Dunkles Amonitas",
+    "number": "37",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-38",
+    "name": "Dunkles Pupitar",
+    "number": "38",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-39",
+    "name": "Dunkles Igelavar",
+    "number": "39",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-40",
+    "name": "Dunkles Knuddeluff",
+    "number": "40",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-41",
+    "name": "Skaraborn",
+    "number": "41",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-42",
+    "name": "Kicklee",
+    "number": "42",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-43",
+    "name": "Hunduster",
+    "number": "43",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-44",
+    "name": "Pummeluff",
+    "number": "44",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-45",
+    "name": "Helles Jugong",
+    "number": "45",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-46",
+    "name": "Helles Flamara",
+    "number": "46",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-47",
+    "name": "Helles Entoron",
+    "number": "47",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-48",
+    "name": "Helles Blitza",
+    "number": "48",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-49",
+    "name": "Helles Maschock",
+    "number": "49",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-50",
+    "name": "Helles Vulnona",
+    "number": "50",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-51",
+    "name": "Helles Lahmus",
+    "number": "51",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-52",
+    "name": "Helles Aquana",
+    "number": "52",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-53",
+    "name": "Helles Omot",
+    "number": "53",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-54",
+    "name": "Helles Knuddeluff",
+    "number": "54",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-55",
+    "name": "Sichlor",
+    "number": "55",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-56",
+    "name": "Togepi",
+    "number": "56",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-57",
+    "name": "Icognito C",
+    "number": "57",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-58",
+    "name": "Icognito P",
+    "number": "58",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-59",
+    "name": "Icognito Q",
+    "number": "59",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-60",
+    "name": "Icognito Z",
+    "number": "60",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-61",
+    "name": "Feurigel",
+    "number": "61",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-62",
+    "name": "Dunkles Octillery",
+    "number": "62",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-63",
+    "name": "Dratini",
+    "number": "63",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-64",
+    "name": "Owei",
+    "number": "64",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-65",
+    "name": "Nebulak",
+    "number": "65",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-66",
+    "name": "Girafarig",
+    "number": "66",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-67",
+    "name": "Skorgla",
+    "number": "67",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-68",
+    "name": "Fukano",
+    "number": "68",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-69",
+    "name": "Nockchan",
+    "number": "69",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-70",
+    "name": "Larvitar",
+    "number": "70",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-71",
+    "name": "Ledyba",
+    "number": "71",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-72",
+    "name": "Helles Sonnflora",
+    "number": "72",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-73",
+    "name": "Machollo",
+    "number": "73",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-74",
+    "name": "Mantax",
+    "number": "74",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-75",
+    "name": "Voltilamm",
+    "number": "75",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-76",
+    "name": "Phanpy",
+    "number": "76",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-77",
+    "name": "Tannza",
+    "number": "77",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-78",
+    "name": "Porygon",
+    "number": "78",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-79",
+    "name": "Enton",
+    "number": "79",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-80",
+    "name": "Remoraid",
+    "number": "80",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-81",
+    "name": "Jurob",
+    "number": "81",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-82",
+    "name": "Schneckmag",
+    "number": "82",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-83",
+    "name": "Sonnkern",
+    "number": "83",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-84",
+    "name": "Quiekel",
+    "number": "84",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-85",
+    "name": "Karnimani",
+    "number": "85",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-86",
+    "name": "Icognito L",
+    "number": "86",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-87",
+    "name": "Icognito S",
+    "number": "87",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-88",
+    "name": "Icognito T",
+    "number": "88",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-89",
+    "name": "Icognito V",
+    "number": "89",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-90",
+    "name": "Bluzuk",
+    "number": "90",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-91",
+    "name": "Vulpix",
+    "number": "91",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-92",
+    "name": "Broken Ground Gym*",
+    "number": "92",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-93",
+    "name": "EXP.ALL*",
+    "number": "93",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-94",
+    "name": "Erfindung des falschen Professor Eich",
+    "number": "94",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-95",
+    "name": "Radio Turm",
+    "number": "95",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-96",
+    "name": "Thought Wave Machine*",
+    "number": "96",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-97",
+    "name": "Gegenangriffs-Klauen",
+    "number": "97",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-98",
+    "name": "Energie-Verstärker",
+    "number": "98",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-99",
+    "name": "Energie-Arena",
+    "number": "99",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-100",
+    "name": "Glücksarena",
+    "number": "100",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-101",
+    "name": "Vergrößerungsglas",
+    "number": "101",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-102",
+    "name": "Pokémon-Persönlichkeitstest",
+    "number": "102",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-103",
+    "name": "Die Übeltaten des Team Rocket",
+    "number": "103",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-104",
+    "name": "Heilpuder",
+    "number": "104",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-105",
+    "name": "Post von Bill",
+    "number": "105",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-106",
+    "name": "Schimmerndes Celebi",
+    "number": "106",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-107",
+    "name": "Schimmerndes Glurak",
+    "number": "107",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-108",
+    "name": "Schimmerndes Kabutops",
+    "number": "108",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-109",
+    "name": "Schimmerndes Mewtu",
+    "number": "109",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-110",
+    "name": "Schimmerndes Noctuh",
+    "number": "110",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-111",
+    "name": "Schimmerndes Raichu",
+    "number": "111",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-112",
+    "name": "Schimmerndes Stahlos",
+    "number": "112",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo4-113",
+    "name": "Schimmerndes Despotar",
+    "number": "113",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

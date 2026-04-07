@@ -1,0 +1,677 @@
+[
+  {
+    "id": "neo2-1",
+    "name": "Mentali",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/1"
+    }
+  },
+  {
+    "id": "neo2-2",
+    "name": "Foretress",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/2"
+    }
+  },
+  {
+    "id": "neo2-3",
+    "name": "Kapoera",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/3"
+    }
+  },
+  {
+    "id": "neo2-4",
+    "name": "Démolosse",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/4"
+    }
+  },
+  {
+    "id": "neo2-5",
+    "name": "Malosse",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/5"
+    }
+  },
+  {
+    "id": "neo2-6",
+    "name": "Kabutops",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/6"
+    }
+  },
+  {
+    "id": "neo2-7",
+    "name": "Magneti",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/7"
+    }
+  },
+  {
+    "id": "neo2-8",
+    "name": "Tarpaud",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/8"
+    }
+  },
+  {
+    "id": "neo2-9",
+    "name": "Tartard",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/9"
+    }
+  },
+  {
+    "id": "neo2-10",
+    "name": "Cizayox",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/10"
+    }
+  },
+  {
+    "id": "neo2-11",
+    "name": "Queulorior",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/11"
+    }
+  },
+  {
+    "id": "neo2-12",
+    "name": "Tyranocif",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/12"
+    }
+  },
+  {
+    "id": "neo2-13",
+    "name": "Noctali",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/13"
+    }
+  },
+  {
+    "id": "neo2-14",
+    "name": "Zarbi A",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/14"
+    }
+  },
+  {
+    "id": "neo2-15",
+    "name": "Ursaring",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/15"
+    }
+  },
+  {
+    "id": "neo2-16",
+    "name": "Qulbutoke",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/16"
+    }
+  },
+  {
+    "id": "neo2-17",
+    "name": "Yanma",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/17"
+    }
+  },
+  {
+    "id": "neo2-18",
+    "name": "Dardargnan",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/18"
+    }
+  },
+  {
+    "id": "neo2-19",
+    "name": "Papilusion",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/19"
+    }
+  },
+  {
+    "id": "neo2-20",
+    "name": "Mentali",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/20"
+    }
+  },
+  {
+    "id": "neo2-21",
+    "name": "Foretress",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/21"
+    }
+  },
+  {
+    "id": "neo2-22",
+    "name": "Kapoera",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/22"
+    }
+  },
+  {
+    "id": "neo2-23",
+    "name": "Démolosse",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/23"
+    }
+  },
+  {
+    "id": "neo2-24",
+    "name": "Malosse",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/24"
+    }
+  },
+  {
+    "id": "neo2-25",
+    "name": "Kabutops",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/25"
+    }
+  },
+  {
+    "id": "neo2-26",
+    "name": "Magneti",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/26"
+    }
+  },
+  {
+    "id": "neo2-27",
+    "name": "Tarpaud",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/27"
+    }
+  },
+  {
+    "id": "neo2-28",
+    "name": "Tartard",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/28"
+    }
+  },
+  {
+    "id": "neo2-29",
+    "name": "Cizayox",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/29"
+    }
+  },
+  {
+    "id": "neo2-30",
+    "name": "Queulorior",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/30"
+    }
+  },
+  {
+    "id": "neo2-31",
+    "name": "Tyranocif",
+    "number": "31",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/31"
+    }
+  },
+  {
+    "id": "neo2-32",
+    "name": "Noctali",
+    "number": "32",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/32"
+    }
+  },
+  {
+    "id": "neo2-33",
+    "name": "Zarbi A",
+    "number": "33",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/33"
+    }
+  },
+  {
+    "id": "neo2-34",
+    "name": "Ursaring",
+    "number": "34",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/34"
+    }
+  },
+  {
+    "id": "neo2-35",
+    "name": "Qulbutoke",
+    "number": "35",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/35"
+    }
+  },
+  {
+    "id": "neo2-36",
+    "name": "Yanma",
+    "number": "36",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/36"
+    }
+  },
+  {
+    "id": "neo2-37",
+    "name": "Corayon",
+    "number": "37",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/37"
+    }
+  },
+  {
+    "id": "neo2-38",
+    "name": "Évoli",
+    "number": "38",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/38"
+    }
+  },
+  {
+    "id": "neo2-39",
+    "name": "Malosse",
+    "number": "39",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/39"
+    }
+  },
+  {
+    "id": "neo2-40",
+    "name": "Toudoudou",
+    "number": "40",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/40"
+    }
+  },
+  {
+    "id": "neo2-41",
+    "name": "Coconfort",
+    "number": "41",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/41"
+    }
+  },
+  {
+    "id": "neo2-42",
+    "name": "Chrysacier",
+    "number": "42",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/42"
+    }
+  },
+  {
+    "id": "neo2-43",
+    "name": "Amonistar",
+    "number": "43",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/43"
+    }
+  },
+  {
+    "id": "neo2-44",
+    "name": "Têtarte",
+    "number": "44",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/44"
+    }
+  },
+  {
+    "id": "neo2-45",
+    "name": "Ymphect",
+    "number": "45",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/45"
+    }
+  },
+  {
+    "id": "neo2-46",
+    "name": "Insécateur",
+    "number": "46",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/46"
+    }
+  },
+  {
+    "id": "neo2-47",
+    "name": "Zarbi D",
+    "number": "47",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/47"
+    }
+  },
+  {
+    "id": "neo2-48",
+    "name": "Zarbi F",
+    "number": "48",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/48"
+    }
+  },
+  {
+    "id": "neo2-49",
+    "name": "Zarbi M",
+    "number": "49",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/49"
+    }
+  },
+  {
+    "id": "neo2-50",
+    "name": "Zarbi N",
+    "number": "50",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/50"
+    }
+  },
+  {
+    "id": "neo2-51",
+    "name": "Zarbi U",
+    "number": "51",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/51"
+    }
+  },
+  {
+    "id": "neo2-52",
+    "name": "Xatu",
+    "number": "52",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/52"
+    }
+  },
+  {
+    "id": "neo2-53",
+    "name": "Chenipan",
+    "number": "53",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/53"
+    }
+  },
+  {
+    "id": "neo2-54",
+    "name": "Insolourdo",
+    "number": "54",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/54"
+    }
+  },
+  {
+    "id": "neo2-55",
+    "name": "Granivol",
+    "number": "55",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/55"
+    }
+  },
+  {
+    "id": "neo2-56",
+    "name": "Kabuto",
+    "number": "56",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/56"
+    }
+  },
+  {
+    "id": "neo2-57",
+    "name": "Embrylex",
+    "number": "57",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/57"
+    }
+  },
+  {
+    "id": "neo2-58",
+    "name": "Wattouat",
+    "number": "58",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/58"
+    }
+  },
+  {
+    "id": "neo2-59",
+    "name": "Natu",
+    "number": "59",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/59"
+    }
+  },
+  {
+    "id": "neo2-60",
+    "name": "Amonita",
+    "number": "60",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/60"
+    }
+  },
+  {
+    "id": "neo2-61",
+    "name": "Pomdepik",
+    "number": "61",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/61"
+    }
+  },
+  {
+    "id": "neo2-62",
+    "name": "Ptitard",
+    "number": "62",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/62"
+    }
+  },
+  {
+    "id": "neo2-63",
+    "name": "Fouinette",
+    "number": "63",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/63"
+    }
+  },
+  {
+    "id": "neo2-64",
+    "name": "Mimigal",
+    "number": "64",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/64"
+    }
+  },
+  {
+    "id": "neo2-65",
+    "name": "Teddiursa",
+    "number": "65",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/65"
+    }
+  },
+  {
+    "id": "neo2-66",
+    "name": "Débugant",
+    "number": "66",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/66"
+    }
+  },
+  {
+    "id": "neo2-67",
+    "name": "Zarbi E",
+    "number": "67",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/67"
+    }
+  },
+  {
+    "id": "neo2-68",
+    "name": "Zarbi I",
+    "number": "68",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/68"
+    }
+  },
+  {
+    "id": "neo2-69",
+    "name": "Zarbi O",
+    "number": "69",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/69"
+    }
+  },
+  {
+    "id": "neo2-70",
+    "name": "Aspicot",
+    "number": "70",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/70"
+    }
+  },
+  {
+    "id": "neo2-71",
+    "name": "Axoloto",
+    "number": "71",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/71"
+    }
+  },
+  {
+    "id": "neo2-72",
+    "name": "Oeuf fossile",
+    "number": "72",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/72"
+    }
+  },
+  {
+    "id": "neo2-73",
+    "name": "Vaporisateur hyper rétrograde",
+    "number": "73",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/73"
+    }
+  },
+  {
+    "id": "neo2-74",
+    "name": "Mur en ruines",
+    "number": "74",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/74"
+    }
+  },
+  {
+    "id": "neo2-75",
+    "name": "Arche d'Énergie",
+    "number": "75",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/neo/neo2/75"
+    }
+  }
+]

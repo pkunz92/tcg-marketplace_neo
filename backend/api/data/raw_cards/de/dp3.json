@@ -1,0 +1,1190 @@
+[
+  {
+    "id": "dp3-1",
+    "name": "Ampharos",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-2",
+    "name": "Turtok",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-3",
+    "name": "Glurak",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-4",
+    "name": "Entei",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-5",
+    "name": "Libelldra",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-6",
+    "name": "Galagladi",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-7",
+    "name": "Guardevoir",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-8",
+    "name": "Gastrodon Östliches Meer",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-9",
+    "name": "Gastrodon Westliches Meer",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-10",
+    "name": "Ho-Oh",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-11",
+    "name": "Papungha",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-12",
+    "name": "Schlurplek",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-13",
+    "name": "Kappalores",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-14",
+    "name": "Lugia",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-15",
+    "name": "Mew",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-16",
+    "name": "Raikou",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-17",
+    "name": "Roserade",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-18",
+    "name": "Brutalanda",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-19",
+    "name": "Suicune",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-20",
+    "name": "Bisaflor",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-21",
+    "name": "Absol",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-22",
+    "name": "Arkani",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-23",
+    "name": "Banette",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-24",
+    "name": "Digdri",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-25",
+    "name": "Elevoltek",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-26",
+    "name": "Lektrobal",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-27",
+    "name": "Wiesenior",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-28",
+    "name": "Entoron",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-29",
+    "name": "Geowaz",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-30",
+    "name": "Rossana",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-31",
+    "name": "Magbrant",
+    "number": "31",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-32",
+    "name": "Minun",
+    "number": "32",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-33",
+    "name": "Moterpel",
+    "number": "33",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-34",
+    "name": "Nidoking",
+    "number": "34",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-35",
+    "name": "Tauboss",
+    "number": "35",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-36",
+    "name": "Plusle",
+    "number": "36",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-37",
+    "name": "Tohaido",
+    "number": "37",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-38",
+    "name": "Sonnflora",
+    "number": "38",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-39",
+    "name": "Icognito S",
+    "number": "39",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-40",
+    "name": "Snibunna",
+    "number": "40",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-41",
+    "name": "Burmadame Pflanzenumhang",
+    "number": "41",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-42",
+    "name": "Burmadame Sandumhang",
+    "number": "42",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-43",
+    "name": "Burmadame Lumpenumhang",
+    "number": "43",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-44",
+    "name": "Xatu",
+    "number": "44",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-45",
+    "name": "Kapilz",
+    "number": "45",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-46",
+    "name": "Glutexo",
+    "number": "46",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-47",
+    "name": "Austos",
+    "number": "47",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-48",
+    "name": "Donphan",
+    "number": "48",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-49",
+    "name": "Porenta",
+    "number": "49",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-50",
+    "name": "Waaty",
+    "number": "50",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-51",
+    "name": "Bisaknosp",
+    "number": "51",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-52",
+    "name": "Kecleon",
+    "number": "52",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-53",
+    "name": "Kirlia",
+    "number": "53",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-54",
+    "name": "Lombrero",
+    "number": "54",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-55",
+    "name": "Miltank",
+    "number": "55",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-56",
+    "name": "Sleimok",
+    "number": "56",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-57",
+    "name": "Nidorino",
+    "number": "57",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-58",
+    "name": "Tauboga",
+    "number": "58",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-59",
+    "name": "Pinsir",
+    "number": "59",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-60",
+    "name": "Morlord",
+    "number": "60",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-61",
+    "name": "Rattikarl",
+    "number": "61",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-62",
+    "name": "Roselia",
+    "number": "62",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-63",
+    "name": "Zobiris",
+    "number": "63",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-64",
+    "name": "Draschel",
+    "number": "64",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-65",
+    "name": "Hubelupf",
+    "number": "65",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-66",
+    "name": "Farbeagle",
+    "number": "66",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-67",
+    "name": "Kussilla",
+    "number": "67",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-68",
+    "name": "Icognito K",
+    "number": "68",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-69",
+    "name": "Icognito N",
+    "number": "69",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-70",
+    "name": "Icognito O",
+    "number": "70",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-71",
+    "name": "Icognito X",
+    "number": "71",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-72",
+    "name": "Icognito Z",
+    "number": "72",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-73",
+    "name": "Omot",
+    "number": "73",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-74",
+    "name": "Vibrava",
+    "number": "74",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-75",
+    "name": "Schillok",
+    "number": "75",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-76",
+    "name": "Kindwurm",
+    "number": "76",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-77",
+    "name": "Bisasam",
+    "number": "77",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-78",
+    "name": "Burmy Pflanzenumhang",
+    "number": "78",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-79",
+    "name": "Burmy Sandumhang",
+    "number": "79",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-80",
+    "name": "Burmy Lumpenumhang",
+    "number": "80",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-81",
+    "name": "Kanivanha",
+    "number": "81",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-82",
+    "name": "Glumanda",
+    "number": "82",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-83",
+    "name": "Piepi",
+    "number": "83",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-84",
+    "name": "Corasonn",
+    "number": "84",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-85",
+    "name": "Digda",
+    "number": "85",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-86",
+    "name": "Zwirrlicht",
+    "number": "86",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-87",
+    "name": "Elektek",
+    "number": "87",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-88",
+    "name": "Sleima",
+    "number": "88",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-89",
+    "name": "Fukano",
+    "number": "89",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-90",
+    "name": "Hoppspross",
+    "number": "90",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-91",
+    "name": "Schlurp",
+    "number": "91",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-92",
+    "name": "Loturzel",
+    "number": "92",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-93",
+    "name": "Magmar",
+    "number": "93",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-94",
+    "name": "Voltilamm",
+    "number": "94",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-95",
+    "name": "Kramurx",
+    "number": "95",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-96",
+    "name": "Natu",
+    "number": "96",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-97",
+    "name": "Nidoran m",
+    "number": "97",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-98",
+    "name": "Phanpy",
+    "number": "98",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-99",
+    "name": "Taubsi",
+    "number": "99",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-100",
+    "name": "Enton",
+    "number": "100",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-101",
+    "name": "Baldorfish",
+    "number": "101",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-102",
+    "name": "Trasla",
+    "number": "102",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-103",
+    "name": "Rattfratz",
+    "number": "103",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-104",
+    "name": "Wiesor",
+    "number": "104",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-105",
+    "name": "Muschas",
+    "number": "105",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-106",
+    "name": "Schalellos Östliches Meer",
+    "number": "106",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-107",
+    "name": "Schalellos Westliches Meer",
+    "number": "107",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-108",
+    "name": "Knilz",
+    "number": "108",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-109",
+    "name": "Pottrott",
+    "number": "109",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-110",
+    "name": "Shuppet",
+    "number": "110",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-111",
+    "name": "Pandir",
+    "number": "111",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-112",
+    "name": "Schiggy",
+    "number": "112",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-113",
+    "name": "Damhirplex",
+    "number": "113",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-114",
+    "name": "Sonnkern",
+    "number": "114",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-115",
+    "name": "Knacklion",
+    "number": "115",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-116",
+    "name": "Bluzuk",
+    "number": "116",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-117",
+    "name": "Voltobal",
+    "number": "117",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-118",
+    "name": "Felino",
+    "number": "118",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-119",
+    "name": "Lanas Suche",
+    "number": "119",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-120",
+    "name": "Nächtliche Wartung",
+    "number": "120",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-121",
+    "name": "PlusPower",
+    "number": "121",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-122",
+    "name": "Professor Eichs Besuch",
+    "number": "122",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-123",
+    "name": "Professor Eibe",
+    "number": "123",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-124",
+    "name": "Rivale",
+    "number": "124",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-125",
+    "name": "Roxanas Nachforschungen",
+    "number": "125",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-126",
+    "name": "Team Galaktiks Mars",
+    "number": "126",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-127",
+    "name": "Trank",
+    "number": "127",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-128",
+    "name": "Tausch",
+    "number": "128",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-129",
+    "name": "Finsternis-Energie",
+    "number": "129",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-130",
+    "name": "Metall-Energie",
+    "number": "130",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-131",
+    "name": "Guardevoir",
+    "number": "131",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp3-132",
+    "name": "Kramshef",
+    "number": "132",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

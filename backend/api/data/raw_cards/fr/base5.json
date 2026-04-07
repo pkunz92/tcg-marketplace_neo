@@ -1,0 +1,749 @@
+[
+  {
+    "id": "base5-1",
+    "name": "Alakazam obscur",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/1"
+    }
+  },
+  {
+    "id": "base5-2",
+    "name": "Arbok obscur",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/2"
+    }
+  },
+  {
+    "id": "base5-3",
+    "name": "Tortank obscur",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/3"
+    }
+  },
+  {
+    "id": "base5-4",
+    "name": "Dracaufeu obscur",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/4"
+    }
+  },
+  {
+    "id": "base5-5",
+    "name": "Dracolosse obscur",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/5"
+    }
+  },
+  {
+    "id": "base5-6",
+    "name": "Triopikeur obscur",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/6"
+    }
+  },
+  {
+    "id": "base5-7",
+    "name": "Nosferalto obscur",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/7"
+    }
+  },
+  {
+    "id": "base5-8",
+    "name": "Léviator obscur",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/8"
+    }
+  },
+  {
+    "id": "base5-9",
+    "name": "Hypnomade obscur",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/9"
+    }
+  },
+  {
+    "id": "base5-10",
+    "name": "Mackogneur obscur",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/10"
+    }
+  },
+  {
+    "id": "base5-11",
+    "name": "Magneton obscur",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/11"
+    }
+  },
+  {
+    "id": "base5-12",
+    "name": "Flagadoss obscur",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/12"
+    }
+  },
+  {
+    "id": "base5-13",
+    "name": "Rafflesia obscur",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/13"
+    }
+  },
+  {
+    "id": "base5-14",
+    "name": "Smogogo obscur",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/14"
+    }
+  },
+  {
+    "id": "base5-15",
+    "name": "Et voila les Team Rocket !",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/15"
+    }
+  },
+  {
+    "id": "base5-16",
+    "name": "Attaque sournoise des Rocket",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/16"
+    }
+  },
+  {
+    "id": "base5-17",
+    "name": "Énergie multicolore",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/17"
+    }
+  },
+  {
+    "id": "base5-18",
+    "name": "Alakazam obscur",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/18"
+    }
+  },
+  {
+    "id": "base5-19",
+    "name": "Arbok obscur",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/19"
+    }
+  },
+  {
+    "id": "base5-20",
+    "name": "Tortank obscur",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/20"
+    }
+  },
+  {
+    "id": "base5-21",
+    "name": "Dracaufeu obscur",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/21"
+    }
+  },
+  {
+    "id": "base5-22",
+    "name": "Dracolosse obscur",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/22"
+    }
+  },
+  {
+    "id": "base5-23",
+    "name": "Triopikeur obscur",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/23"
+    }
+  },
+  {
+    "id": "base5-24",
+    "name": "Nosferalto obscur",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/24"
+    }
+  },
+  {
+    "id": "base5-25",
+    "name": "Léviator obscur",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/25"
+    }
+  },
+  {
+    "id": "base5-26",
+    "name": "Hypnomade obscur",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/26"
+    }
+  },
+  {
+    "id": "base5-27",
+    "name": "Mackogneur obscur",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/27"
+    }
+  },
+  {
+    "id": "base5-28",
+    "name": "Magneton obscur",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/28"
+    }
+  },
+  {
+    "id": "base5-29",
+    "name": "Flagadoss obscur",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/29"
+    }
+  },
+  {
+    "id": "base5-30",
+    "name": "Rafflesia obscur",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/30"
+    }
+  },
+  {
+    "id": "base5-31",
+    "name": "Smogogo obscur",
+    "number": "31",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/31"
+    }
+  },
+  {
+    "id": "base5-32",
+    "name": "Reptincel Obscur",
+    "number": "32",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/32"
+    }
+  },
+  {
+    "id": "base5-33",
+    "name": "Draco obscur",
+    "number": "33",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/33"
+    }
+  },
+  {
+    "id": "base5-34",
+    "name": "Electrode obscur",
+    "number": "34",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/34"
+    }
+  },
+  {
+    "id": "base5-35",
+    "name": "Pyroli obscur",
+    "number": "35",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/35"
+    }
+  },
+  {
+    "id": "base5-36",
+    "name": "Ortide obscur",
+    "number": "36",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/36"
+    }
+  },
+  {
+    "id": "base5-37",
+    "name": "Akwakwak obscur",
+    "number": "37",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/37"
+    }
+  },
+  {
+    "id": "base5-38",
+    "name": "Voltali obscur",
+    "number": "38",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/38"
+    }
+  },
+  {
+    "id": "base5-39",
+    "name": "Kadabra obscur",
+    "number": "39",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/39"
+    }
+  },
+  {
+    "id": "base5-40",
+    "name": "Machopeur obscur",
+    "number": "40",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/40"
+    }
+  },
+  {
+    "id": "base5-41",
+    "name": "Grotadmorv obscur",
+    "number": "41",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/41"
+    }
+  },
+  {
+    "id": "base5-42",
+    "name": "Persian obscur",
+    "number": "42",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/42"
+    }
+  },
+  {
+    "id": "base5-43",
+    "name": "Colossinge obscur",
+    "number": "43",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/43"
+    }
+  },
+  {
+    "id": "base5-44",
+    "name": "Galopa obscur",
+    "number": "44",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/44"
+    }
+  },
+  {
+    "id": "base5-45",
+    "name": "Aquali obscur",
+    "number": "45",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/45"
+    }
+  },
+  {
+    "id": "base5-46",
+    "name": "Carabaffe obscur",
+    "number": "46",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/46"
+    }
+  },
+  {
+    "id": "base5-47",
+    "name": "Magicarpe",
+    "number": "47",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/47"
+    }
+  },
+  {
+    "id": "base5-48",
+    "name": "Porygon",
+    "number": "48",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/48"
+    }
+  },
+  {
+    "id": "base5-49",
+    "name": "Abra",
+    "number": "49",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/49"
+    }
+  },
+  {
+    "id": "base5-50",
+    "name": "Salamèche",
+    "number": "50",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/50"
+    }
+  },
+  {
+    "id": "base5-51",
+    "name": "Rattatac obscur",
+    "number": "51",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/51"
+    }
+  },
+  {
+    "id": "base5-52",
+    "name": "Taupiqueur",
+    "number": "52",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/52"
+    }
+  },
+  {
+    "id": "base5-53",
+    "name": "Minidraco",
+    "number": "53",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/53"
+    }
+  },
+  {
+    "id": "base5-54",
+    "name": "Soporifik",
+    "number": "54",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/54"
+    }
+  },
+  {
+    "id": "base5-55",
+    "name": "Évoli",
+    "number": "55",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/55"
+    }
+  },
+  {
+    "id": "base5-56",
+    "name": "Abo",
+    "number": "56",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/56"
+    }
+  },
+  {
+    "id": "base5-57",
+    "name": "Tadmorv",
+    "number": "57",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/57"
+    }
+  },
+  {
+    "id": "base5-58",
+    "name": "Smogo",
+    "number": "58",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/58"
+    }
+  },
+  {
+    "id": "base5-59",
+    "name": "Machoc",
+    "number": "59",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/59"
+    }
+  },
+  {
+    "id": "base5-60",
+    "name": "Magneti",
+    "number": "60",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/60"
+    }
+  },
+  {
+    "id": "base5-61",
+    "name": "Férosinge",
+    "number": "61",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/61"
+    }
+  },
+  {
+    "id": "base5-62",
+    "name": "Miaouss",
+    "number": "62",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/62"
+    }
+  },
+  {
+    "id": "base5-63",
+    "name": "Mystherbe",
+    "number": "63",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/63"
+    }
+  },
+  {
+    "id": "base5-64",
+    "name": "Ponyta",
+    "number": "64",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/64"
+    }
+  },
+  {
+    "id": "base5-65",
+    "name": "Psykokwak",
+    "number": "65",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/65"
+    }
+  },
+  {
+    "id": "base5-66",
+    "name": "Rattata",
+    "number": "66",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/66"
+    }
+  },
+  {
+    "id": "base5-67",
+    "name": "Ramoloss",
+    "number": "67",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/67"
+    }
+  },
+  {
+    "id": "base5-68",
+    "name": "Carapuce",
+    "number": "68",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/68"
+    }
+  },
+  {
+    "id": "base5-69",
+    "name": "Voltorbe",
+    "number": "69",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/69"
+    }
+  },
+  {
+    "id": "base5-70",
+    "name": "Nosferapti",
+    "number": "70",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/70"
+    }
+  },
+  {
+    "id": "base5-71",
+    "name": "Et voila les Team Rocket !",
+    "number": "71",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/71"
+    }
+  },
+  {
+    "id": "base5-72",
+    "name": "Attaque sournoise des Rocket",
+    "number": "72",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/72"
+    }
+  },
+  {
+    "id": "base5-73",
+    "name": "À la façon du Boss",
+    "number": "73",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/73"
+    }
+  },
+  {
+    "id": "base5-74",
+    "name": "Défi !",
+    "number": "74",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/74"
+    }
+  },
+  {
+    "id": "base5-75",
+    "name": "Excavatrice",
+    "number": "75",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/75"
+    }
+  },
+  {
+    "id": "base5-76",
+    "name": "La revanche de Chen, l'imposteur",
+    "number": "76",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/76"
+    }
+  },
+  {
+    "id": "base5-77",
+    "name": "Raid nocturne dans les poubelles",
+    "number": "77",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/77"
+    }
+  },
+  {
+    "id": "base5-78",
+    "name": "Attaque au gaz gluant",
+    "number": "78",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/78"
+    }
+  },
+  {
+    "id": "base5-79",
+    "name": "Bonne nuit, les petits !",
+    "number": "79",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/79"
+    }
+  },
+  {
+    "id": "base5-80",
+    "name": "Énergie multicolore",
+    "number": "80",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/80"
+    }
+  },
+  {
+    "id": "base5-81",
+    "name": "Énergie guérisseuse",
+    "number": "81",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/81"
+    }
+  },
+  {
+    "id": "base5-82",
+    "name": "Énergie potion",
+    "number": "82",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/82"
+    }
+  },
+  {
+    "id": "base5-83",
+    "name": "Raichu obscur",
+    "number": "83",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/base/base5/83"
+    }
+  }
+]

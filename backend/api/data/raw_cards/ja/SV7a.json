@@ -1,0 +1,848 @@
+[
+  {
+    "id": "SV7a-001",
+    "name": "タマタマ",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/001"
+    }
+  },
+  {
+    "id": "SV7a-002",
+    "name": "ネマシュ",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/002"
+    }
+  },
+  {
+    "id": "SV7a-003",
+    "name": "マシェード",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/003"
+    }
+  },
+  {
+    "id": "SV7a-004",
+    "name": "ダダリン",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/004"
+    }
+  },
+  {
+    "id": "SV7a-005",
+    "name": "ザルード",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/005"
+    }
+  },
+  {
+    "id": "SV7a-006",
+    "name": "ポワルン たいようのすがた",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/006"
+    }
+  },
+  {
+    "id": "SV7a-007",
+    "name": "バオップ",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/007"
+    }
+  },
+  {
+    "id": "SV7a-008",
+    "name": "バオッキー",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/008"
+    }
+  },
+  {
+    "id": "SV7a-009",
+    "name": "ウガツホムラ",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/009"
+    }
+  },
+  {
+    "id": "SV7a-010",
+    "name": "フリージオ",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/010"
+    }
+  },
+  {
+    "id": "SV7a-011",
+    "name": "ブラックキュレムex",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/011"
+    }
+  },
+  {
+    "id": "SV7a-012",
+    "name": "ハギギシリ",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/012"
+    }
+  },
+  {
+    "id": "SV7a-013",
+    "name": "クワッス",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/013"
+    }
+  },
+  {
+    "id": "SV7a-014",
+    "name": "ウェルカモ",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/014"
+    }
+  },
+  {
+    "id": "SV7a-015",
+    "name": "ウェーニバル",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/015"
+    }
+  },
+  {
+    "id": "SV7a-016",
+    "name": "アルクジラ",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/016"
+    }
+  },
+  {
+    "id": "SV7a-017",
+    "name": "ハルクジラ",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/017"
+    }
+  },
+  {
+    "id": "SV7a-018",
+    "name": "ムチュール",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/018"
+    }
+  },
+  {
+    "id": "SV7a-019",
+    "name": "ラティアスex",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/019"
+    }
+  },
+  {
+    "id": "SV7a-020",
+    "name": "ラティオス",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/020"
+    }
+  },
+  {
+    "id": "SV7a-021",
+    "name": "カプ・テテフ",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/021"
+    }
+  },
+  {
+    "id": "SV7a-022",
+    "name": "ヒラヒナ",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/022"
+    }
+  },
+  {
+    "id": "SV7a-023",
+    "name": "クエスパトラ",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/023"
+    }
+  },
+  {
+    "id": "SV7a-024",
+    "name": "コレクレー",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/024"
+    }
+  },
+  {
+    "id": "SV7a-025",
+    "name": "ナックラー",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/025"
+    }
+  },
+  {
+    "id": "SV7a-026",
+    "name": "ビブラーバ",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/026"
+    }
+  },
+  {
+    "id": "SV7a-027",
+    "name": "フライゴンex",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/027"
+    }
+  },
+  {
+    "id": "SV7a-028",
+    "name": "モグリュー",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/028"
+    }
+  },
+  {
+    "id": "SV7a-029",
+    "name": "ドリュウズ",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/029"
+    }
+  },
+  {
+    "id": "SV7a-030",
+    "name": "ランドロス",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/030"
+    }
+  },
+  {
+    "id": "SV7a-031",
+    "name": "ナゲツケサル",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/031"
+    }
+  },
+  {
+    "id": "SV7a-032",
+    "name": "タタッコ",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/032"
+    }
+  },
+  {
+    "id": "SV7a-033",
+    "name": "オトスパス",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/033"
+    }
+  },
+  {
+    "id": "SV7a-034",
+    "name": "エアームド",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/034"
+    }
+  },
+  {
+    "id": "SV7a-035",
+    "name": "クレッフィ",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/035"
+    }
+  },
+  {
+    "id": "SV7a-036",
+    "name": "ジュラルドン",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/036"
+    }
+  },
+  {
+    "id": "SV7a-037",
+    "name": "ブリジュラスex",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/037"
+    }
+  },
+  {
+    "id": "SV7a-038",
+    "name": "サーフゴー",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/038"
+    }
+  },
+  {
+    "id": "SV7a-039",
+    "name": "テツノカシラ",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/039"
+    }
+  },
+  {
+    "id": "SV7a-040",
+    "name": "アローラ ナッシーex",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/040"
+    }
+  },
+  {
+    "id": "SV7a-041",
+    "name": "チルタリス",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/041"
+    }
+  },
+  {
+    "id": "SV7a-042",
+    "name": "ディアルガ",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/042"
+    }
+  },
+  {
+    "id": "SV7a-043",
+    "name": "パルキア",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/043"
+    }
+  },
+  {
+    "id": "SV7a-044",
+    "name": "バクガメス",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/044"
+    }
+  },
+  {
+    "id": "SV7a-045",
+    "name": "カジッチュ",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/045"
+    }
+  },
+  {
+    "id": "SV7a-046",
+    "name": "アップリュー",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/046"
+    }
+  },
+  {
+    "id": "SV7a-047",
+    "name": "タルップル",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/047"
+    }
+  },
+  {
+    "id": "SV7a-048",
+    "name": "チルット",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/048"
+    }
+  },
+  {
+    "id": "SV7a-049",
+    "name": "ワシボン",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/049"
+    }
+  },
+  {
+    "id": "SV7a-050",
+    "name": "ウォーグル",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/050"
+    }
+  },
+  {
+    "id": "SV7a-051",
+    "name": "モトトカゲex",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/051"
+    }
+  },
+  {
+    "id": "SV7a-052",
+    "name": "エネルギー転送PRO",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/052"
+    }
+  },
+  {
+    "id": "SV7a-053",
+    "name": "おたすけベル",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/053"
+    }
+  },
+  {
+    "id": "SV7a-054",
+    "name": "ダークボール",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/054"
+    }
+  },
+  {
+    "id": "SV7a-055",
+    "name": "ぼうがいレター",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/055"
+    }
+  },
+  {
+    "id": "SV7a-056",
+    "name": "メガトンブロアー",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/056"
+    }
+  },
+  {
+    "id": "SV7a-057",
+    "name": "竜の秘薬",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/057"
+    }
+  },
+  {
+    "id": "SV7a-058",
+    "name": "イトケのみ",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/058"
+    }
+  },
+  {
+    "id": "SV7a-059",
+    "name": "カウンターゲイン",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/059"
+    }
+  },
+  {
+    "id": "SV7a-060",
+    "name": "カキツバタ",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/060"
+    }
+  },
+  {
+    "id": "SV7a-061",
+    "name": "サーファー",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/061"
+    }
+  },
+  {
+    "id": "SV7a-062",
+    "name": "ドラセナ",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/062"
+    }
+  },
+  {
+    "id": "SV7a-063",
+    "name": "ルチアのアピール",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/063"
+    }
+  },
+  {
+    "id": "SV7a-064",
+    "name": "リッチエネルギー",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/064"
+    }
+  },
+  {
+    "id": "SV7a-065",
+    "name": "タマタマ",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/065"
+    }
+  },
+  {
+    "id": "SV7a-066",
+    "name": "マシェード",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/066"
+    }
+  },
+  {
+    "id": "SV7a-067",
+    "name": "ポワルン たいようのすがた",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/067"
+    }
+  },
+  {
+    "id": "SV7a-068",
+    "name": "ハギギシリ",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/068"
+    }
+  },
+  {
+    "id": "SV7a-069",
+    "name": "ハルクジラ",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/069"
+    }
+  },
+  {
+    "id": "SV7a-070",
+    "name": "ラティオス",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/070"
+    }
+  },
+  {
+    "id": "SV7a-071",
+    "name": "ビブラーバ",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/071"
+    }
+  },
+  {
+    "id": "SV7a-072",
+    "name": "タタッコ",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/072"
+    }
+  },
+  {
+    "id": "SV7a-073",
+    "name": "エアームド",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/073"
+    }
+  },
+  {
+    "id": "SV7a-074",
+    "name": "アップリュー",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/074"
+    }
+  },
+  {
+    "id": "SV7a-075",
+    "name": "タルップル",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/075"
+    }
+  },
+  {
+    "id": "SV7a-076",
+    "name": "ウォーグル",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/076"
+    }
+  },
+  {
+    "id": "SV7a-077",
+    "name": "ブラックキュレムex",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/077"
+    }
+  },
+  {
+    "id": "SV7a-078",
+    "name": "ラティアスex",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/078"
+    }
+  },
+  {
+    "id": "SV7a-079",
+    "name": "フライゴンex",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/079"
+    }
+  },
+  {
+    "id": "SV7a-080",
+    "name": "ブリジュラスex",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/080"
+    }
+  },
+  {
+    "id": "SV7a-081",
+    "name": "アローラ ナッシーex",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/081"
+    }
+  },
+  {
+    "id": "SV7a-082",
+    "name": "モトトカゲex",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/082"
+    }
+  },
+  {
+    "id": "SV7a-083",
+    "name": "カキツバタ",
+    "number": "083",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/083"
+    }
+  },
+  {
+    "id": "SV7a-084",
+    "name": "サーファー",
+    "number": "084",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/084"
+    }
+  },
+  {
+    "id": "SV7a-085",
+    "name": "ドラセナ",
+    "number": "085",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/085"
+    }
+  },
+  {
+    "id": "SV7a-086",
+    "name": "ルチアのアピール",
+    "number": "086",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/086"
+    }
+  },
+  {
+    "id": "SV7a-087",
+    "name": "ラティアスex",
+    "number": "087",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/087"
+    }
+  },
+  {
+    "id": "SV7a-088",
+    "name": "ブリジュラスex",
+    "number": "088",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/088"
+    }
+  },
+  {
+    "id": "SV7a-089",
+    "name": "アローラ ナッシーex",
+    "number": "089",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/089"
+    }
+  },
+  {
+    "id": "SV7a-090",
+    "name": "カキツバタ",
+    "number": "090",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/090"
+    }
+  },
+  {
+    "id": "SV7a-091",
+    "name": "ルチアのアピール",
+    "number": "091",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/091"
+    }
+  },
+  {
+    "id": "SV7a-092",
+    "name": "アローラ ナッシーex",
+    "number": "092",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/092"
+    }
+  },
+  {
+    "id": "SV7a-093",
+    "name": "カウンターゲイン",
+    "number": "093",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/093"
+    }
+  },
+  {
+    "id": "SV7a-094",
+    "name": "ジェットエネルギー",
+    "number": "094",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV7a/094"
+    }
+  }
+]

@@ -1,0 +1,1028 @@
+[
+  {
+    "id": "ex11-1",
+    "name": "Dardargnan δ",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/1"
+    }
+  },
+  {
+    "id": "ex11-2",
+    "name": "Nostenfer δ",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/2"
+    }
+  },
+  {
+    "id": "ex11-3",
+    "name": "Dracolosse δ",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/3"
+    }
+  },
+  {
+    "id": "ex11-4",
+    "name": "Mentali δ",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/4"
+    }
+  },
+  {
+    "id": "ex11-5",
+    "name": "Pyroli δ",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/5"
+    }
+  },
+  {
+    "id": "ex11-6",
+    "name": "Gardevoir δ",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/6"
+    }
+  },
+  {
+    "id": "ex11-7",
+    "name": "Voltali δ",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/7"
+    }
+  },
+  {
+    "id": "ex11-8",
+    "name": "Latias δ",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/8"
+    }
+  },
+  {
+    "id": "ex11-9",
+    "name": "Latios δ",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/9"
+    }
+  },
+  {
+    "id": "ex11-10",
+    "name": "Ossatueur δ",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/10"
+    }
+  },
+  {
+    "id": "ex11-11",
+    "name": "Metalosse δ",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/11"
+    }
+  },
+  {
+    "id": "ex11-12",
+    "name": "Mewtwo δ",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/12"
+    }
+  },
+  {
+    "id": "ex11-13",
+    "name": "Rayquaza δ",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/13"
+    }
+  },
+  {
+    "id": "ex11-14",
+    "name": "Drattak δ",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/14"
+    }
+  },
+  {
+    "id": "ex11-15",
+    "name": "Staross δ",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/15"
+    }
+  },
+  {
+    "id": "ex11-16",
+    "name": "Tyranocif δ",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/16"
+    }
+  },
+  {
+    "id": "ex11-17",
+    "name": "Noctali δ",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/17"
+    }
+  },
+  {
+    "id": "ex11-18",
+    "name": "Aquali δ",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/18"
+    }
+  },
+  {
+    "id": "ex11-19",
+    "name": "Azumarill δ",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/19"
+    }
+  },
+  {
+    "id": "ex11-20",
+    "name": "Azurill",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/20"
+    }
+  },
+  {
+    "id": "ex11-21",
+    "name": "Electrode d'Holon",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/21"
+    }
+  },
+  {
+    "id": "ex11-22",
+    "name": "Magneton d'Holon",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/22"
+    }
+  },
+  {
+    "id": "ex11-23",
+    "name": "Hypnomade",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/23"
+    }
+  },
+  {
+    "id": "ex11-24",
+    "name": "Grahyena δ",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/24"
+    }
+  },
+  {
+    "id": "ex11-25",
+    "name": "Porygon2",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/25"
+    }
+  },
+  {
+    "id": "ex11-26",
+    "name": "Morpheo Pluie",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/26"
+    }
+  },
+  {
+    "id": "ex11-27",
+    "name": "Sablaireau δ",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/27"
+    }
+  },
+  {
+    "id": "ex11-28",
+    "name": "Roigada",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/28"
+    }
+  },
+  {
+    "id": "ex11-29",
+    "name": "Morpheo Neige",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/29"
+    }
+  },
+  {
+    "id": "ex11-30",
+    "name": "Staross δ",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/30"
+    }
+  },
+  {
+    "id": "ex11-31",
+    "name": "Morpheo Soleil",
+    "number": "31",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/31"
+    }
+  },
+  {
+    "id": "ex11-32",
+    "name": "Heledelle",
+    "number": "32",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/32"
+    }
+  },
+  {
+    "id": "ex11-33",
+    "name": "Smogogo",
+    "number": "33",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/33"
+    }
+  },
+  {
+    "id": "ex11-34",
+    "name": "Morpheo",
+    "number": "34",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/34"
+    }
+  },
+  {
+    "id": "ex11-35",
+    "name": "Metamorph",
+    "number": "35",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/35"
+    }
+  },
+  {
+    "id": "ex11-36",
+    "name": "Metamorph",
+    "number": "36",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/36"
+    }
+  },
+  {
+    "id": "ex11-37",
+    "name": "Metamorph",
+    "number": "37",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/37"
+    }
+  },
+  {
+    "id": "ex11-38",
+    "name": "Metamorph",
+    "number": "38",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/38"
+    }
+  },
+  {
+    "id": "ex11-39",
+    "name": "Metamorph",
+    "number": "39",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/39"
+    }
+  },
+  {
+    "id": "ex11-40",
+    "name": "Metamorph",
+    "number": "40",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/40"
+    }
+  },
+  {
+    "id": "ex11-41",
+    "name": "Draco δ",
+    "number": "41",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/41"
+    }
+  },
+  {
+    "id": "ex11-42",
+    "name": "Draco δ",
+    "number": "42",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/42"
+    }
+  },
+  {
+    "id": "ex11-43",
+    "name": "Nosferalto",
+    "number": "43",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/43"
+    }
+  },
+  {
+    "id": "ex11-44",
+    "name": "Hariyama",
+    "number": "44",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/44"
+    }
+  },
+  {
+    "id": "ex11-45",
+    "name": "Lumivole",
+    "number": "45",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/45"
+    }
+  },
+  {
+    "id": "ex11-46",
+    "name": "Coconfort",
+    "number": "46",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/46"
+    }
+  },
+  {
+    "id": "ex11-47",
+    "name": "Kirlia",
+    "number": "47",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/47"
+    }
+  },
+  {
+    "id": "ex11-48",
+    "name": "Magneton",
+    "number": "48",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/48"
+    }
+  },
+  {
+    "id": "ex11-49",
+    "name": "Metang δ",
+    "number": "49",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/49"
+    }
+  },
+  {
+    "id": "ex11-50",
+    "name": "Persian",
+    "number": "50",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/50"
+    }
+  },
+  {
+    "id": "ex11-51",
+    "name": "Ymphect δ",
+    "number": "51",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/51"
+    }
+  },
+  {
+    "id": "ex11-52",
+    "name": "Galopa",
+    "number": "52",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/52"
+    }
+  },
+  {
+    "id": "ex11-53",
+    "name": "Drackhaus δ",
+    "number": "53",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/53"
+    }
+  },
+  {
+    "id": "ex11-54",
+    "name": "Drackhaus δ",
+    "number": "54",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/54"
+    }
+  },
+  {
+    "id": "ex11-55",
+    "name": "Airmure",
+    "number": "55",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/55"
+    }
+  },
+  {
+    "id": "ex11-56",
+    "name": "Muciole",
+    "number": "56",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/56"
+    }
+  },
+  {
+    "id": "ex11-57",
+    "name": "Draby δ",
+    "number": "57",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/57"
+    }
+  },
+  {
+    "id": "ex11-58",
+    "name": "Draby δ",
+    "number": "58",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/58"
+    }
+  },
+  {
+    "id": "ex11-59",
+    "name": "Terhal δ",
+    "number": "59",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/59"
+    }
+  },
+  {
+    "id": "ex11-60",
+    "name": "Osselait",
+    "number": "60",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/60"
+    }
+  },
+  {
+    "id": "ex11-61",
+    "name": "Metamorph",
+    "number": "61",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/61"
+    }
+  },
+  {
+    "id": "ex11-62",
+    "name": "Metamorph",
+    "number": "62",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/62"
+    }
+  },
+  {
+    "id": "ex11-63",
+    "name": "Metamorph",
+    "number": "63",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/63"
+    }
+  },
+  {
+    "id": "ex11-64",
+    "name": "Metamorph",
+    "number": "64",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/64"
+    }
+  },
+  {
+    "id": "ex11-65",
+    "name": "Minidraco δ",
+    "number": "65",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/65"
+    }
+  },
+  {
+    "id": "ex11-66",
+    "name": "Minidraco δ",
+    "number": "66",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/66"
+    }
+  },
+  {
+    "id": "ex11-67",
+    "name": "Soporifik",
+    "number": "67",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/67"
+    }
+  },
+  {
+    "id": "ex11-68",
+    "name": "Evoli δ",
+    "number": "68",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/68"
+    }
+  },
+  {
+    "id": "ex11-69",
+    "name": "Evoli",
+    "number": "69",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/69"
+    }
+  },
+  {
+    "id": "ex11-70",
+    "name": "Magneti d'Holon",
+    "number": "70",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/70"
+    }
+  },
+  {
+    "id": "ex11-71",
+    "name": "Voltorbe d'Holon",
+    "number": "71",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/71"
+    }
+  },
+  {
+    "id": "ex11-72",
+    "name": "Smogo",
+    "number": "72",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/72"
+    }
+  },
+  {
+    "id": "ex11-73",
+    "name": "Embrylex δ",
+    "number": "73",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/73"
+    }
+  },
+  {
+    "id": "ex11-74",
+    "name": "Magneti",
+    "number": "74",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/74"
+    }
+  },
+  {
+    "id": "ex11-75",
+    "name": "Makuhita",
+    "number": "75",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/75"
+    }
+  },
+  {
+    "id": "ex11-76",
+    "name": "Marill",
+    "number": "76",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/76"
+    }
+  },
+  {
+    "id": "ex11-77",
+    "name": "Miaouss",
+    "number": "77",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/77"
+    }
+  },
+  {
+    "id": "ex11-78",
+    "name": "Ponyta",
+    "number": "78",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/78"
+    }
+  },
+  {
+    "id": "ex11-79",
+    "name": "Medhyena",
+    "number": "79",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/79"
+    }
+  },
+  {
+    "id": "ex11-80",
+    "name": "Porygon",
+    "number": "80",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/80"
+    }
+  },
+  {
+    "id": "ex11-81",
+    "name": "Tarsal",
+    "number": "81",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/81"
+    }
+  },
+  {
+    "id": "ex11-82",
+    "name": "Sabelette",
+    "number": "82",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/82"
+    }
+  },
+  {
+    "id": "ex11-83",
+    "name": "Ramoloss",
+    "number": "83",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/83"
+    }
+  },
+  {
+    "id": "ex11-84",
+    "name": "Stari",
+    "number": "84",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/84"
+    }
+  },
+  {
+    "id": "ex11-85",
+    "name": "Stari",
+    "number": "85",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/85"
+    }
+  },
+  {
+    "id": "ex11-86",
+    "name": "Nirondelle",
+    "number": "86",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/86"
+    }
+  },
+  {
+    "id": "ex11-87",
+    "name": "Aspicot",
+    "number": "87",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/87"
+    }
+  },
+  {
+    "id": "ex11-88",
+    "name": "Nosferapti",
+    "number": "88",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/88"
+    }
+  },
+  {
+    "id": "ex11-89",
+    "name": "Double boule",
+    "number": "89",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/89"
+    }
+  },
+  {
+    "id": "ex11-90",
+    "name": "Super Ball",
+    "number": "90",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/90"
+    }
+  },
+  {
+    "id": "ex11-91",
+    "name": "Fermier Holon",
+    "number": "91",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/91"
+    }
+  },
+  {
+    "id": "ex11-92",
+    "name": "Jeune fille Holon",
+    "number": "92",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/92"
+    }
+  },
+  {
+    "id": "ex11-93",
+    "name": "Mentor Holon",
+    "number": "93",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/93"
+    }
+  },
+  {
+    "id": "ex11-94",
+    "name": "Tour de recherche Holon",
+    "number": "94",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/94"
+    }
+  },
+  {
+    "id": "ex11-95",
+    "name": "Chercheur Holon",
+    "number": "95",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/95"
+    }
+  },
+  {
+    "id": "ex11-96",
+    "name": "Ruines Holon",
+    "number": "96",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/96"
+    }
+  },
+  {
+    "id": "ex11-97",
+    "name": "Scientifique Holon",
+    "number": "97",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/97"
+    }
+  },
+  {
+    "id": "ex11-98",
+    "name": "Émetteur-récepteur Holon",
+    "number": "98",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/98"
+    }
+  },
+  {
+    "id": "ex11-99",
+    "name": "Master Ball",
+    "number": "99",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/99"
+    }
+  },
+  {
+    "id": "ex11-100",
+    "name": "Super rappel",
+    "number": "100",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/100"
+    }
+  },
+  {
+    "id": "ex11-101",
+    "name": "Potion",
+    "number": "101",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/101"
+    }
+  },
+  {
+    "id": "ex11-102",
+    "name": "Échange",
+    "number": "102",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/102"
+    }
+  },
+  {
+    "id": "ex11-103",
+    "name": "Énergie Obscurité",
+    "number": "103",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/103"
+    }
+  },
+  {
+    "id": "ex11-104",
+    "name": "Énergie Holon FF",
+    "number": "104",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/104"
+    }
+  },
+  {
+    "id": "ex11-105",
+    "name": "Énergie Holon GL",
+    "number": "105",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/105"
+    }
+  },
+  {
+    "id": "ex11-106",
+    "name": "Énergie Holon WP",
+    "number": "106",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/106"
+    }
+  },
+  {
+    "id": "ex11-107",
+    "name": "Énergie Métal",
+    "number": "107",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/107"
+    }
+  },
+  {
+    "id": "ex11-108",
+    "name": "Pyroli ex",
+    "number": "108",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/108"
+    }
+  },
+  {
+    "id": "ex11-109",
+    "name": "Voltali ex",
+    "number": "109",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/109"
+    }
+  },
+  {
+    "id": "ex11-110",
+    "name": "Aquali ex",
+    "number": "110",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/110"
+    }
+  },
+  {
+    "id": "ex11-111",
+    "name": "Groudon ☆",
+    "number": "111",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/111"
+    }
+  },
+  {
+    "id": "ex11-112",
+    "name": "Kyogre ☆",
+    "number": "112",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/112"
+    }
+  },
+  {
+    "id": "ex11-113",
+    "name": "Metalosse ☆",
+    "number": "113",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/113"
+    }
+  },
+  {
+    "id": "ex11-114",
+    "name": "Azumarill",
+    "number": "114",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex11/114"
+    }
+  }
+]

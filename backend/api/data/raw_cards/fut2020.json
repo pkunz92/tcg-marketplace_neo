@@ -1,0 +1,47 @@
+[
+  {
+    "id": "fut2020-1",
+    "name": "Pikachu on the Ball",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/swsh/fut2020/1"
+    }
+  },
+  {
+    "id": "fut2020-2",
+    "name": "Eevee on the Ball",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/swsh/fut2020/2"
+    }
+  },
+  {
+    "id": "fut2020-3",
+    "name": "Grookey on the Ball",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/swsh/fut2020/3"
+    }
+  },
+  {
+    "id": "fut2020-4",
+    "name": "Scorbunny on the Ball",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/swsh/fut2020/4"
+    }
+  },
+  {
+    "id": "fut2020-5",
+    "name": "Sobble on the Ball",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/swsh/fut2020/5"
+    }
+  }
+]

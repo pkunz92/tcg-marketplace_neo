@@ -1,0 +1,965 @@
+[
+  {
+    "id": "ex9-1",
+    "name": "Lohgock",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-2",
+    "name": "Deoxys",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-3",
+    "name": "Krawumms",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-4",
+    "name": "Guardevoir",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-5",
+    "name": "Groudon",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-6",
+    "name": "Kyogre",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-7",
+    "name": "Voltenso",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-8",
+    "name": "Milotic",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-9",
+    "name": "Rayquaza",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-10",
+    "name": "Gewaldro",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-11",
+    "name": "Sumpex",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-12",
+    "name": "Palimpalim",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-13",
+    "name": "Firnontor",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-14",
+    "name": "Groudon",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-15",
+    "name": "Kyogre",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-16",
+    "name": "Voltenso",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-17",
+    "name": "Nasgnet",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-18",
+    "name": "Relicanth",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-19",
+    "name": "Rizeros",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-20",
+    "name": "Vipitis",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-21",
+    "name": "Sengo",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-22",
+    "name": "Kapilz",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-23",
+    "name": "Camerupt",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-24",
+    "name": "Lepumentas",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-25",
+    "name": "Jungglut",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-26",
+    "name": "Dodri",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-27",
+    "name": "Lektrobal",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-28",
+    "name": "Reptain",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-29",
+    "name": "Groink",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-30",
+    "name": "Groink",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-31",
+    "name": "Hariyama",
+    "number": "31",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-32",
+    "name": "Illumise",
+    "number": "32",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-33",
+    "name": "Kirlia",
+    "number": "33",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-34",
+    "name": "Geradaks",
+    "number": "34",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-35",
+    "name": "Krakeelo",
+    "number": "35",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-36",
+    "name": "Moorabbel",
+    "number": "36",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-37",
+    "name": "Minun",
+    "number": "37",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-38",
+    "name": "Vulnona",
+    "number": "38",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-39",
+    "name": "Plusle",
+    "number": "39",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-40",
+    "name": "Schlukwech",
+    "number": "40",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-41",
+    "name": "Schwalboss",
+    "number": "41",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-42",
+    "name": "Volbeat",
+    "number": "42",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-43",
+    "name": "Puppance",
+    "number": "43",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-44",
+    "name": "Tuska",
+    "number": "44",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-45",
+    "name": "Dodu",
+    "number": "45",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-46",
+    "name": "Zwirrlicht",
+    "number": "46",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-47",
+    "name": "Frizelbliz",
+    "number": "47",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-48",
+    "name": "Frizelbliz",
+    "number": "48",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-49",
+    "name": "Barschwa",
+    "number": "49",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-50",
+    "name": "Barschwa",
+    "number": "50",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-51",
+    "name": "Schluppuck",
+    "number": "51",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-52",
+    "name": "Larvitar",
+    "number": "52",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-53",
+    "name": "Liebiskus",
+    "number": "53",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-54",
+    "name": "Makuhita",
+    "number": "54",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-55",
+    "name": "Meditie",
+    "number": "55",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-56",
+    "name": "Hydropi",
+    "number": "56",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-57",
+    "name": "Camaub",
+    "number": "57",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-58",
+    "name": "Camaub",
+    "number": "58",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-59",
+    "name": "Pichu",
+    "number": "59",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-60",
+    "name": "Pikachu",
+    "number": "60",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-61",
+    "name": "Trasla",
+    "number": "61",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-62",
+    "name": "Rihorn",
+    "number": "62",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-63",
+    "name": "Knilz",
+    "number": "63",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-64",
+    "name": "Schneppke",
+    "number": "64",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-65",
+    "name": "Spoink",
+    "number": "65",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-66",
+    "name": "Spoink",
+    "number": "66",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-67",
+    "name": "Wablu",
+    "number": "67",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-68",
+    "name": "Schwalbini",
+    "number": "68",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-69",
+    "name": "Flemmli",
+    "number": "69",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-70",
+    "name": "Geckarbor",
+    "number": "70",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-71",
+    "name": "Voltobal",
+    "number": "71",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-72",
+    "name": "Vulpix",
+    "number": "72",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-73",
+    "name": "Flurmel",
+    "number": "73",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-74",
+    "name": "Zigzachs",
+    "number": "74",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-75",
+    "name": "Kampfzone",
+    "number": "75",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-76",
+    "name": "Doppel Hyperheiler",
+    "number": "76",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-77",
+    "name": "Lanette's Internet Suche",
+    "number": "77",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-78",
+    "name": "Prunusbeere",
+    "number": "78",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-79",
+    "name": "Mr. Trumms Projekt",
+    "number": "79",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-80",
+    "name": "Oran Berry*",
+    "number": "80",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-81",
+    "name": "PokéNav",
+    "number": "81",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-82",
+    "name": "Professor Birk",
+    "number": "82",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-83",
+    "name": "Sonderbonbon",
+    "number": "83",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-84",
+    "name": "Scott",
+    "number": "84",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-85",
+    "name": "Heikos Training",
+    "number": "85",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-86",
+    "name": "Finsternis-Energie",
+    "number": "86",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-87",
+    "name": "Doppelte Regenbogen Energie",
+    "number": "87",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-88",
+    "name": "Metall-Energie",
+    "number": "88",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-89",
+    "name": "Multi-Energie",
+    "number": "89",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-90",
+    "name": "Altaria ex",
+    "number": "90",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-91",
+    "name": "Noktuska ex",
+    "number": "91",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-92",
+    "name": "Camerupt ex",
+    "number": "92",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-93",
+    "name": "Deoxys ex",
+    "number": "93",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-94",
+    "name": "Zwirrklop ex",
+    "number": "94",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-95",
+    "name": "Meditalis ex",
+    "number": "95",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-96",
+    "name": "Milotic ex",
+    "number": "96",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-97",
+    "name": "Raichu ex",
+    "number": "97",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-98",
+    "name": "Regice ex",
+    "number": "98",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-99",
+    "name": "Regirock ex",
+    "number": "99",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-100",
+    "name": "Registeel ex",
+    "number": "100",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-101",
+    "name": "Pflanzenenergie",
+    "number": "101",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-102",
+    "name": "Feuerenergie",
+    "number": "102",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-103",
+    "name": "Wasserenergie",
+    "number": "103",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-104",
+    "name": "Elektroenergie",
+    "number": "104",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-105",
+    "name": "Psychoenergie",
+    "number": "105",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-106",
+    "name": "Kampfenergie",
+    "number": "106",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex9-107",
+    "name": "Porenta",
+    "number": "107",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

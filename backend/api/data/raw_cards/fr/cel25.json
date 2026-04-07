@@ -1,0 +1,353 @@
+[
+  {
+    "id": "cel25-1",
+    "name": "Ho-Oh",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/1"
+    }
+  },
+  {
+    "id": "cel25-2A",
+    "name": "Reshiram",
+    "number": "2A",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "cel25-2",
+    "name": "Reshiram",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/2"
+    }
+  },
+  {
+    "id": "cel25-3",
+    "name": "Kyogre",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/3"
+    }
+  },
+  {
+    "id": "cel25-4",
+    "name": "Palkia",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/4"
+    }
+  },
+  {
+    "id": "cel25-4A",
+    "name": "Palkia",
+    "number": "4A",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "cel25-5",
+    "name": "Pikachu",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/5"
+    }
+  },
+  {
+    "id": "cel25-6",
+    "name": "Pikachu Volant V",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/6"
+    }
+  },
+  {
+    "id": "cel25-7",
+    "name": "Pikachu Volant VMAX",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/7"
+    }
+  },
+  {
+    "id": "cel25-8A",
+    "name": "Pikachu Surfeur-V",
+    "number": "8A",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "cel25-8",
+    "name": "Pikachu Surfeur V",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/8"
+    }
+  },
+  {
+    "id": "cel25-9",
+    "name": "Pikachu Surfeur VMAX",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/9"
+    }
+  },
+  {
+    "id": "cel25-9A",
+    "name": "Pikachu Surfeur-VMAX",
+    "number": "9A",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "cel25-10",
+    "name": "Zekrom",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/10"
+    }
+  },
+  {
+    "id": "cel25-11",
+    "name": "Mew",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/11"
+    }
+  },
+  {
+    "id": "cel25-12",
+    "name": "Xerneas",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/12"
+    }
+  },
+  {
+    "id": "cel25-13",
+    "name": "Cosmog",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/13"
+    }
+  },
+  {
+    "id": "cel25-14",
+    "name": "Cosmovum",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/14"
+    }
+  },
+  {
+    "id": "cel25-15A",
+    "name": "Lunala",
+    "number": "15A",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "cel25-15",
+    "name": "Lunala",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/15"
+    }
+  },
+  {
+    "id": "cel25-15A1",
+    "name": "Lunala",
+    "number": "15A1",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "cel25-15A3",
+    "name": "Lunala",
+    "number": "15A3",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "cel25-15A4",
+    "name": "Lunala",
+    "number": "15A4",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "cel25-15A2",
+    "name": "Lunala",
+    "number": "15A2",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "cel25-16",
+    "name": "Zacian V",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/16"
+    }
+  },
+  {
+    "id": "cel25-17A",
+    "name": "Groudon",
+    "number": "17A",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "cel25-17",
+    "name": "Groudon",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/17"
+    }
+  },
+  {
+    "id": "cel25-18",
+    "name": "Zamazenta V",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/18"
+    }
+  },
+  {
+    "id": "cel25-19",
+    "name": "Yveltal",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/19"
+    }
+  },
+  {
+    "id": "cel25-20A",
+    "name": "Dialga",
+    "number": "20A",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "cel25-20",
+    "name": "Dialga",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/20"
+    }
+  },
+  {
+    "id": "cel25-21",
+    "name": "Solgaleo",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/21"
+    }
+  },
+  {
+    "id": "cel25-22",
+    "name": "Lugia",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/22"
+    }
+  },
+  {
+    "id": "cel25-23",
+    "name": "Recherches Professorales (Professeur Chen)",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/23"
+    }
+  },
+  {
+    "id": "cel25-24A",
+    "name": "Recherches Professorales",
+    "number": "24A",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "cel25-24",
+    "name": "Recherches Professorales (Professeur Chen)",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/cel25/24"
+    }
+  },
+  {
+    "id": "cel25-25",
+    "name": "Mew",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "cel25-113A",
+    "name": "Reshiram",
+    "number": "113A",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "cel25-114A",
+    "name": "Zekrom",
+    "number": "114A",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

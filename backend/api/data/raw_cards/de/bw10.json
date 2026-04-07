@@ -1,0 +1,947 @@
+[
+  {
+    "id": "bw10-1",
+    "name": "Gehweiher",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/1"
+    }
+  },
+  {
+    "id": "bw10-2",
+    "name": "Maskeregen",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/2"
+    }
+  },
+  {
+    "id": "bw10-3",
+    "name": "Liliep",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/3"
+    }
+  },
+  {
+    "id": "bw10-4",
+    "name": "Wielie",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/4"
+    }
+  },
+  {
+    "id": "bw10-5",
+    "name": "Tropius",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/5"
+    }
+  },
+  {
+    "id": "bw10-6",
+    "name": "Laukaps",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/6"
+    }
+  },
+  {
+    "id": "bw10-7",
+    "name": "Schnuthelm",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/7"
+    }
+  },
+  {
+    "id": "bw10-8",
+    "name": "Hydragil",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/8"
+    }
+  },
+  {
+    "id": "bw10-9",
+    "name": "Viridium-EX",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/9"
+    }
+  },
+  {
+    "id": "bw10-10",
+    "name": "Genesect",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/10"
+    }
+  },
+  {
+    "id": "bw10-11",
+    "name": "Genesect-EX",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/11"
+    }
+  },
+  {
+    "id": "bw10-12",
+    "name": "Ignivor",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/12"
+    }
+  },
+  {
+    "id": "bw10-13",
+    "name": "Ramoth",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/13"
+    }
+  },
+  {
+    "id": "bw10-14",
+    "name": "Schiggy",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/14"
+    }
+  },
+  {
+    "id": "bw10-15",
+    "name": "Schillok",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/15"
+    }
+  },
+  {
+    "id": "bw10-16",
+    "name": "Turtok",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/16"
+    }
+  },
+  {
+    "id": "bw10-17",
+    "name": "Lapras",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/17"
+    }
+  },
+  {
+    "id": "bw10-18",
+    "name": "Remoraid",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/18"
+    }
+  },
+  {
+    "id": "bw10-19",
+    "name": "Octillery",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/19"
+    }
+  },
+  {
+    "id": "bw10-20",
+    "name": "Suicune",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/20"
+    }
+  },
+  {
+    "id": "bw10-21",
+    "name": "Schneppke",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/21"
+    }
+  },
+  {
+    "id": "bw10-22",
+    "name": "Firnontor",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/22"
+    }
+  },
+  {
+    "id": "bw10-23",
+    "name": "Frosdedje",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/23"
+    }
+  },
+  {
+    "id": "bw10-24",
+    "name": "Relicanth",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/24"
+    }
+  },
+  {
+    "id": "bw10-25",
+    "name": "Shnebedeck",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/25"
+    }
+  },
+  {
+    "id": "bw10-26",
+    "name": "Rexblisar",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/26"
+    }
+  },
+  {
+    "id": "bw10-27",
+    "name": "Galapaflos",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/27"
+    }
+  },
+  {
+    "id": "bw10-28",
+    "name": "Karippas",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/28"
+    }
+  },
+  {
+    "id": "bw10-29",
+    "name": "Piccolente",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/29"
+    }
+  },
+  {
+    "id": "bw10-30",
+    "name": "Kyurem-EX",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/30"
+    }
+  },
+  {
+    "id": "bw10-31",
+    "name": "Zapplardin",
+    "number": "31",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/31"
+    }
+  },
+  {
+    "id": "bw10-32",
+    "name": "Zapplalek",
+    "number": "32",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/32"
+    }
+  },
+  {
+    "id": "bw10-33",
+    "name": "Zapplarang",
+    "number": "33",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/33"
+    }
+  },
+  {
+    "id": "bw10-34",
+    "name": "Driftlon",
+    "number": "34",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/34"
+    }
+  },
+  {
+    "id": "bw10-35",
+    "name": "Drifzepeli",
+    "number": "35",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/35"
+    }
+  },
+  {
+    "id": "bw10-36",
+    "name": "Selfe",
+    "number": "36",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/36"
+    }
+  },
+  {
+    "id": "bw10-37",
+    "name": "Vesprit",
+    "number": "37",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/37"
+    }
+  },
+  {
+    "id": "bw10-38",
+    "name": "Tobutz",
+    "number": "38",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/38"
+    }
+  },
+  {
+    "id": "bw10-39",
+    "name": "Somniam",
+    "number": "39",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/39"
+    }
+  },
+  {
+    "id": "bw10-40",
+    "name": "Somnivora",
+    "number": "40",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/40"
+    }
+  },
+  {
+    "id": "bw10-41",
+    "name": "Symvolara",
+    "number": "41",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/41"
+    }
+  },
+  {
+    "id": "bw10-42",
+    "name": "Monozyto",
+    "number": "42",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/42"
+    }
+  },
+  {
+    "id": "bw10-43",
+    "name": "Mitodos",
+    "number": "43",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/43"
+    }
+  },
+  {
+    "id": "bw10-44",
+    "name": "Zytomega",
+    "number": "44",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/44"
+    }
+  },
+  {
+    "id": "bw10-45",
+    "name": "Golbit",
+    "number": "45",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/45"
+    }
+  },
+  {
+    "id": "bw10-46",
+    "name": "Golgantes",
+    "number": "46",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/46"
+    }
+  },
+  {
+    "id": "bw10-47",
+    "name": "Machollo",
+    "number": "47",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/47"
+    }
+  },
+  {
+    "id": "bw10-48",
+    "name": "Maschock",
+    "number": "48",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/48"
+    }
+  },
+  {
+    "id": "bw10-49",
+    "name": "Machomei",
+    "number": "49",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/49"
+    }
+  },
+  {
+    "id": "bw10-50",
+    "name": "Machomei",
+    "number": "50",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/50"
+    }
+  },
+  {
+    "id": "bw10-51",
+    "name": "Jiutesto",
+    "number": "51",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/51"
+    }
+  },
+  {
+    "id": "bw10-52",
+    "name": "Karadonis",
+    "number": "52",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/52"
+    }
+  },
+  {
+    "id": "bw10-53",
+    "name": "Flapteryx",
+    "number": "53",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/53"
+    }
+  },
+  {
+    "id": "bw10-54",
+    "name": "Aeropteryx",
+    "number": "54",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/54"
+    }
+  },
+  {
+    "id": "bw10-55",
+    "name": "Hunduster",
+    "number": "55",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/55"
+    }
+  },
+  {
+    "id": "bw10-56",
+    "name": "Hundemon",
+    "number": "56",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/56"
+    }
+  },
+  {
+    "id": "bw10-57",
+    "name": "Stollunior",
+    "number": "57",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/57"
+    }
+  },
+  {
+    "id": "bw10-58",
+    "name": "Stollrak",
+    "number": "58",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/58"
+    }
+  },
+  {
+    "id": "bw10-59",
+    "name": "Stolloss",
+    "number": "59",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/59"
+    }
+  },
+  {
+    "id": "bw10-60",
+    "name": "Jirachi-EX",
+    "number": "60",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/60"
+    }
+  },
+  {
+    "id": "bw10-61",
+    "name": "Cavalanzas",
+    "number": "61",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/61"
+    }
+  },
+  {
+    "id": "bw10-62",
+    "name": "Kindwurm",
+    "number": "62",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/62"
+    }
+  },
+  {
+    "id": "bw10-63",
+    "name": "Draschel",
+    "number": "63",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/63"
+    }
+  },
+  {
+    "id": "bw10-64",
+    "name": "Brutalanda",
+    "number": "64",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/64"
+    }
+  },
+  {
+    "id": "bw10-65",
+    "name": "Dialga-EX",
+    "number": "65",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/65"
+    }
+  },
+  {
+    "id": "bw10-66",
+    "name": "Palkia-EX",
+    "number": "66",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/66"
+    }
+  },
+  {
+    "id": "bw10-67",
+    "name": "Milza",
+    "number": "67",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/67"
+    }
+  },
+  {
+    "id": "bw10-68",
+    "name": "Sharfax",
+    "number": "68",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/68"
+    }
+  },
+  {
+    "id": "bw10-69",
+    "name": "Maxax",
+    "number": "69",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/69"
+    }
+  },
+  {
+    "id": "bw10-70",
+    "name": "Shardrago",
+    "number": "70",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/70"
+    }
+  },
+  {
+    "id": "bw10-71",
+    "name": "Kangama",
+    "number": "71",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/71"
+    }
+  },
+  {
+    "id": "bw10-72",
+    "name": "Porygon",
+    "number": "72",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/72"
+    }
+  },
+  {
+    "id": "bw10-73",
+    "name": "Porygon2",
+    "number": "73",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/73"
+    }
+  },
+  {
+    "id": "bw10-74",
+    "name": "Porygon-Z",
+    "number": "74",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/74"
+    }
+  },
+  {
+    "id": "bw10-75",
+    "name": "Teddiursa",
+    "number": "75",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/75"
+    }
+  },
+  {
+    "id": "bw10-76",
+    "name": "Ursaring",
+    "number": "76",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/76"
+    }
+  },
+  {
+    "id": "bw10-77",
+    "name": "Plaudagei",
+    "number": "77",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/77"
+    }
+  },
+  {
+    "id": "bw10-78",
+    "name": "Kattlea",
+    "number": "78",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/78"
+    }
+  },
+  {
+    "id": "bw10-79",
+    "name": "Schildfossil",
+    "number": "79",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/79"
+    }
+  },
+  {
+    "id": "bw10-80",
+    "name": "Energie-Zugewinn",
+    "number": "80",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/80"
+    }
+  },
+  {
+    "id": "bw10-81",
+    "name": "Lilia",
+    "number": "81",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/81"
+    }
+  },
+  {
+    "id": "bw10-82",
+    "name": "Federfossil",
+    "number": "82",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/82"
+    }
+  },
+  {
+    "id": "bw10-83",
+    "name": "Pokémon-Fänger",
+    "number": "83",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/83"
+    }
+  },
+  {
+    "id": "bw10-84",
+    "name": "Prof. Esche",
+    "number": "84",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/84"
+    }
+  },
+  {
+    "id": "bw10-85",
+    "name": "Sonderbonbon",
+    "number": "85",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/85"
+    }
+  },
+  {
+    "id": "bw10-86",
+    "name": "Rückauslöser",
+    "number": "86",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/86"
+    }
+  },
+  {
+    "id": "bw10-87",
+    "name": "Wurzelfossil Liliep",
+    "number": "87",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/87"
+    }
+  },
+  {
+    "id": "bw10-88",
+    "name": "Silberreif",
+    "number": "88",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/88"
+    }
+  },
+  {
+    "id": "bw10-89",
+    "name": "Silberspiegel",
+    "number": "89",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/89"
+    }
+  },
+  {
+    "id": "bw10-90",
+    "name": "Hyperball",
+    "number": "90",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/90"
+    }
+  },
+  {
+    "id": "bw10-91",
+    "name": "Plasma-Energie",
+    "number": "91",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/91"
+    }
+  },
+  {
+    "id": "bw10-92",
+    "name": "G-Booster",
+    "number": "92",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/92"
+    }
+  },
+  {
+    "id": "bw10-93",
+    "name": "G-Skop",
+    "number": "93",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/93"
+    }
+  },
+  {
+    "id": "bw10-94",
+    "name": "Meisterball",
+    "number": "94",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/94"
+    }
+  },
+  {
+    "id": "bw10-95",
+    "name": "Aufwisch-Zyklon",
+    "number": "95",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/95"
+    }
+  },
+  {
+    "id": "bw10-96",
+    "name": "Viridium-EX",
+    "number": "96",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/96"
+    }
+  },
+  {
+    "id": "bw10-97",
+    "name": "Genesect-EX",
+    "number": "97",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/97"
+    }
+  },
+  {
+    "id": "bw10-98",
+    "name": "Jirachi-EX",
+    "number": "98",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/98"
+    }
+  },
+  {
+    "id": "bw10-99",
+    "name": "Dialga-EX",
+    "number": "99",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/99"
+    }
+  },
+  {
+    "id": "bw10-100",
+    "name": "Palkia-EX",
+    "number": "100",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/100"
+    }
+  },
+  {
+    "id": "bw10-101",
+    "name": "Lilia",
+    "number": "101",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/101"
+    }
+  },
+  {
+    "id": "bw10-102",
+    "name": "Owei",
+    "number": "102",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/102"
+    }
+  },
+  {
+    "id": "bw10-103",
+    "name": "Viridium",
+    "number": "103",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/103"
+    }
+  },
+  {
+    "id": "bw10-104",
+    "name": "Zwirrfinst",
+    "number": "104",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/104"
+    }
+  },
+  {
+    "id": "bw10-105",
+    "name": "Sonderbonbon",
+    "number": "105",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/bw/bw10/105"
+    }
+  }
+]

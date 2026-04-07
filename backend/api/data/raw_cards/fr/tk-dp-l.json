@@ -1,0 +1,101 @@
+[
+  {
+    "id": "tk-dp-l-1",
+    "name": "Racaillou",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-2",
+    "name": "Gravalanch",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-3",
+    "name": "Lucario",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-4",
+    "name": "Machopeur",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-5",
+    "name": "Machoc",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-6",
+    "name": "Riolu",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-7",
+    "name": "Etourmi",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-8",
+    "name": "Recherche d'énergie",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-9",
+    "name": "Potion",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-10",
+    "name": "Balle rapide",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-11",
+    "name": "Énergie Combat",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

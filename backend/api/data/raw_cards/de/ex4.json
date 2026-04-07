@@ -1,0 +1,875 @@
+[
+  {
+    "id": "ex4-1",
+    "name": "Team Aquas Noktuska",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-2",
+    "name": "Team Aquas Krebutack",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-3",
+    "name": "Team Aquas Kyogre",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-4",
+    "name": "Team Aquas Voltenso",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-5",
+    "name": "Team Aquas Tohaido",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-6",
+    "name": "Team Aquas Walraisa",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-7",
+    "name": "Team Magmas Stolloss",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-8",
+    "name": "Team Magmas Lepumentas",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-9",
+    "name": "Team Magmas Groudon",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-10",
+    "name": "Team Magmas Hundemon",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-11",
+    "name": "Team Magmas Rizeros",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-12",
+    "name": "Team Magmas Qurtel",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-13",
+    "name": "Raichu",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-14",
+    "name": "Team Aquas Krebutack",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-15",
+    "name": "Team Aquas Magnayen",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-16",
+    "name": "Team Aquas Seejong",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-17",
+    "name": "Team Aquas Vipitis",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-18",
+    "name": "Team Aquas Tohaido",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-19",
+    "name": "Team Magmas Camerupt",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-20",
+    "name": "Team Magmas Stollrak",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-21",
+    "name": "Team Magmas Magnayen",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-22",
+    "name": "Team Magmas Rizeros",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-23",
+    "name": "Team Magmas Sengo",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-24",
+    "name": "Team Aquas Tuska",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-25",
+    "name": "Team Aquas Kanivanha",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-26",
+    "name": "Team Aquas Krebscorps",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-27",
+    "name": "Team Aquas Frizelbliz",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-28",
+    "name": "Team Aquas Lanturn",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-29",
+    "name": "Team Aquas Voltenso",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-30",
+    "name": "Team Aquas Magnayen",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-31",
+    "name": "Team Aquas Seejong",
+    "number": "31",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-32",
+    "name": "Team Magmas Puppance",
+    "number": "32",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-33",
+    "name": "Team Magmas Lepumentas",
+    "number": "33",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-34",
+    "name": "Team Magmas Hundemon",
+    "number": "34",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-35",
+    "name": "Team Magmas Hunduster",
+    "number": "35",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-36",
+    "name": "Team Magmas Stollrak",
+    "number": "36",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-37",
+    "name": "Team Magmas Magnayen",
+    "number": "37",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-38",
+    "name": "Team Magmas Rihorn",
+    "number": "38",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-39",
+    "name": "Bisasam",
+    "number": "39",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-40",
+    "name": "Tragosso",
+    "number": "40",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-41",
+    "name": "Pummeluff",
+    "number": "41",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-42",
+    "name": "Mauzi",
+    "number": "42",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-43",
+    "name": "Pikachu",
+    "number": "43",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-44",
+    "name": "Enton",
+    "number": "44",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-45",
+    "name": "Flegmon",
+    "number": "45",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-46",
+    "name": "Schiggy",
+    "number": "46",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-47",
+    "name": "Team Aquas Kanivanha",
+    "number": "47",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-48",
+    "name": "Team Aquas Kanivanha",
+    "number": "48",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-49",
+    "name": "Team Aquas Lampi",
+    "number": "49",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-50",
+    "name": "Team Aquas Krebscorps",
+    "number": "50",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-51",
+    "name": "Team Aquas Krebscorps",
+    "number": "51",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-52",
+    "name": "Team Aquas Frizelbliz",
+    "number": "52",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-53",
+    "name": "Team Aquas Frizelbliz",
+    "number": "53",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-54",
+    "name": "Team Aquas Fiffyen",
+    "number": "54",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-55",
+    "name": "Team Aquas Fiffyen",
+    "number": "55",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-56",
+    "name": "Team Aquas Seemops",
+    "number": "56",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-57",
+    "name": "Team Aquas Seemops",
+    "number": "57",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-58",
+    "name": "Team Magmas Stollunior",
+    "number": "58",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-59",
+    "name": "Team Magmas Stollunior",
+    "number": "59",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-60",
+    "name": "Team Magmas Puppance",
+    "number": "60",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-61",
+    "name": "Team Magmas Puppance",
+    "number": "61",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-62",
+    "name": "Team Magmas Hunduster",
+    "number": "62",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-63",
+    "name": "Team Magmas Hunduster",
+    "number": "63",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-64",
+    "name": "Team Magmas Camaub",
+    "number": "64",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-65",
+    "name": "Team Magmas Fiffyen",
+    "number": "65",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-66",
+    "name": "Team Magmas Fiffyen",
+    "number": "66",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-67",
+    "name": "Team Magmas Rihorn",
+    "number": "67",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-68",
+    "name": "Team Magmas Rihorn",
+    "number": "68",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-69",
+    "name": "Team Aqua Intrigant",
+    "number": "69",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-70",
+    "name": "Team Magma Intrigant",
+    "number": "70",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-71",
+    "name": "Adrian",
+    "number": "71",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-72",
+    "name": "Doppelter Ball",
+    "number": "72",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-73",
+    "name": "Marc",
+    "number": "73",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-74",
+    "name": "Stärkeamulett",
+    "number": "74",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-75",
+    "name": "Team Aqua Ball",
+    "number": "75",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-76",
+    "name": "Team Aqua Gürtel",
+    "number": "76",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-77",
+    "name": "Team Aqua Verschwörer",
+    "number": "77",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-78",
+    "name": "Team Aquas Versteck",
+    "number": "78",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-79",
+    "name": "Team Aqua Technical Machine 01",
+    "number": "79",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-80",
+    "name": "Team Magma Ball",
+    "number": "80",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-81",
+    "name": "Team Magma Gürtel",
+    "number": "81",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-82",
+    "name": "Team Magma Verschwörer",
+    "number": "82",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-83",
+    "name": "Team Magmas Versteck",
+    "number": "83",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-84",
+    "name": "Team Magma Technische Maschine",
+    "number": "84",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-85",
+    "name": "Verkrümmungspunkt",
+    "number": "85",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-86",
+    "name": "Aqua-Energie",
+    "number": "86",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-87",
+    "name": "Magma-Energie",
+    "number": "87",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-88",
+    "name": "Doppel-Regenbogen-Energie",
+    "number": "88",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-89",
+    "name": "Lohgock ex",
+    "number": "89",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-90",
+    "name": "Wielie ex",
+    "number": "90",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-91",
+    "name": "Entei ex",
+    "number": "91",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-92",
+    "name": "Raikou ex",
+    "number": "92",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-93",
+    "name": "Gewaldro ex",
+    "number": "93",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-94",
+    "name": "Suicune ex",
+    "number": "94",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-95",
+    "name": "Sumpex ex",
+    "number": "95",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-96",
+    "name": "Absol",
+    "number": "96",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex4-97",
+    "name": "Jirachi",
+    "number": "97",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

@@ -1,0 +1,1028 @@
+[
+  {
+    "id": "ex11-1",
+    "name": "Bibor",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-2",
+    "name": "Iksbat",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-3",
+    "name": "Dragoran",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-4",
+    "name": "Psiana",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-5",
+    "name": "Flamara",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-6",
+    "name": "Guardevoir",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-7",
+    "name": "Blitza",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-8",
+    "name": "Latias",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-9",
+    "name": "Latios",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-10",
+    "name": "Knogga",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-11",
+    "name": "Metagross",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-12",
+    "name": "Mewtu",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-13",
+    "name": "Rayquaza",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-14",
+    "name": "Brutalanda",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-15",
+    "name": "Starmie",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-16",
+    "name": "Despotar",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-17",
+    "name": "Nachtara",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-18",
+    "name": "Aquana",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-19",
+    "name": "Azumarill",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-20",
+    "name": "Azurill",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-21",
+    "name": "Holon-Lektrobal",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-22",
+    "name": "Holon-Magneton",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-23",
+    "name": "Hypno",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-24",
+    "name": "Magnayen",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-25",
+    "name": "Porygon2",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-26",
+    "name": "Regen-Formeo",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-27",
+    "name": "Sandamer",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-28",
+    "name": "Laschoking",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-29",
+    "name": "Schneesturm Formeo",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-30",
+    "name": "Starmie",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-31",
+    "name": "Sonnenschein Formeo",
+    "number": "31",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-32",
+    "name": "Schwalboss",
+    "number": "32",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-33",
+    "name": "Smogmog",
+    "number": "33",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-34",
+    "name": "Formeo",
+    "number": "34",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-35",
+    "name": "Ditto",
+    "number": "35",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-36",
+    "name": "Ditto",
+    "number": "36",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-37",
+    "name": "Ditto",
+    "number": "37",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-38",
+    "name": "Ditto",
+    "number": "38",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-39",
+    "name": "Ditto",
+    "number": "39",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-40",
+    "name": "Ditto",
+    "number": "40",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-41",
+    "name": "Dragonir",
+    "number": "41",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-42",
+    "name": "Dragonir",
+    "number": "42",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-43",
+    "name": "Golbat",
+    "number": "43",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-44",
+    "name": "Hariyama",
+    "number": "44",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-45",
+    "name": "Illumise",
+    "number": "45",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-46",
+    "name": "Kokuna",
+    "number": "46",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-47",
+    "name": "Kirlia",
+    "number": "47",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-48",
+    "name": "Magneton",
+    "number": "48",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-49",
+    "name": "Metang",
+    "number": "49",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-50",
+    "name": "Snobilikat",
+    "number": "50",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-51",
+    "name": "Pupitar",
+    "number": "51",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-52",
+    "name": "Gallopa",
+    "number": "52",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-53",
+    "name": "Draschel",
+    "number": "53",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-54",
+    "name": "Draschel",
+    "number": "54",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-55",
+    "name": "Panzaeron",
+    "number": "55",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-56",
+    "name": "Volbeat",
+    "number": "56",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-57",
+    "name": "Kindwurm",
+    "number": "57",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-58",
+    "name": "Kindwurm",
+    "number": "58",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-59",
+    "name": "Tanhel",
+    "number": "59",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-60",
+    "name": "Tragosso",
+    "number": "60",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-61",
+    "name": "Ditto",
+    "number": "61",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-62",
+    "name": "Ditto",
+    "number": "62",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-63",
+    "name": "Ditto",
+    "number": "63",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-64",
+    "name": "Ditto",
+    "number": "64",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-65",
+    "name": "Dratini",
+    "number": "65",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-66",
+    "name": "Dratini",
+    "number": "66",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-67",
+    "name": "Traumato",
+    "number": "67",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-68",
+    "name": "Evoli",
+    "number": "68",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-69",
+    "name": "Evoli",
+    "number": "69",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-70",
+    "name": "Holon-Magnetilo",
+    "number": "70",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-71",
+    "name": "Holon-Voltobal",
+    "number": "71",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-72",
+    "name": "Smogon",
+    "number": "72",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-73",
+    "name": "Larvitar",
+    "number": "73",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-74",
+    "name": "Magnetilo",
+    "number": "74",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-75",
+    "name": "Makuhita",
+    "number": "75",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-76",
+    "name": "Marill",
+    "number": "76",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-77",
+    "name": "Mauzi",
+    "number": "77",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-78",
+    "name": "Ponita",
+    "number": "78",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-79",
+    "name": "Fiffyen",
+    "number": "79",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-80",
+    "name": "Porygon",
+    "number": "80",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-81",
+    "name": "Trasla",
+    "number": "81",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-82",
+    "name": "Sandan",
+    "number": "82",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-83",
+    "name": "Flegmon",
+    "number": "83",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-84",
+    "name": "Sterndu",
+    "number": "84",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-85",
+    "name": "Sterndu",
+    "number": "85",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-86",
+    "name": "Schwalbini",
+    "number": "86",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-87",
+    "name": "Hornliu",
+    "number": "87",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-88",
+    "name": "Zubat",
+    "number": "88",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-89",
+    "name": "Doppelter Ball",
+    "number": "89",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-90",
+    "name": "Superball",
+    "number": "90",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-91",
+    "name": "Holon-Bauer",
+    "number": "91",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-92",
+    "name": "Holon-Mädel",
+    "number": "92",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-93",
+    "name": "Holon-Lehrer",
+    "number": "93",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-94",
+    "name": "Holon-Forschungsturm",
+    "number": "94",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-95",
+    "name": "Holon-Forscher",
+    "number": "95",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-96",
+    "name": "Holon-Ruinen",
+    "number": "96",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-97",
+    "name": "Holon-Wissenschaftler",
+    "number": "97",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-98",
+    "name": "Holon-Funkgerät",
+    "number": "98",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-99",
+    "name": "Meisterball",
+    "number": "99",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-100",
+    "name": "Super-Anziehungskraft",
+    "number": "100",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-101",
+    "name": "Trank",
+    "number": "101",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-102",
+    "name": "Tausch",
+    "number": "102",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-103",
+    "name": "Finsternis-Energie",
+    "number": "103",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-104",
+    "name": "Holon-Energie FK",
+    "number": "104",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-105",
+    "name": "Holon-Energie PE",
+    "number": "105",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-106",
+    "name": "Holon-Energie WP",
+    "number": "106",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-107",
+    "name": "Metallenergie",
+    "number": "107",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-108",
+    "name": "Flamara ex",
+    "number": "108",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-109",
+    "name": "Blitza ex",
+    "number": "109",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-110",
+    "name": "Aquana ex",
+    "number": "110",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-111",
+    "name": "Groudon *",
+    "number": "111",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-112",
+    "name": "Kyogre *",
+    "number": "112",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-113",
+    "name": "Metagross *",
+    "number": "113",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex11-114",
+    "name": "Azumarill",
+    "number": "114",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

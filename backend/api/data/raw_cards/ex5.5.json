@@ -1,0 +1,47 @@
+[
+  {
+    "id": "ex5.5-1",
+    "name": "Treecko",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex5.5-2",
+    "name": "Wurmple",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex5.5-3",
+    "name": "Torchic",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex5.5-4",
+    "name": "Mudkip",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ex5.5-5",
+    "name": "Pikachu",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

@@ -1,0 +1,794 @@
+[
+  {
+    "id": "swsh10.5-001",
+    "name": "Bulbizarre",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/001"
+    }
+  },
+  {
+    "id": "swsh10.5-002",
+    "name": "Herbizarre",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/002"
+    }
+  },
+  {
+    "id": "swsh10.5-003",
+    "name": "Florizarre",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/003"
+    }
+  },
+  {
+    "id": "swsh10.5-004",
+    "name": "Florizarre Radieux",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/004"
+    }
+  },
+  {
+    "id": "swsh10.5-005",
+    "name": "Noadkoko d'Alola V",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/005"
+    }
+  },
+  {
+    "id": "swsh10.5-006",
+    "name": "Mimigal",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/006"
+    }
+  },
+  {
+    "id": "swsh10.5-007",
+    "name": "Migalos",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/007"
+    }
+  },
+  {
+    "id": "swsh10.5-008",
+    "name": "Salamèche",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/008"
+    }
+  },
+  {
+    "id": "swsh10.5-009",
+    "name": "Reptincel",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/009"
+    }
+  },
+  {
+    "id": "swsh10.5-010",
+    "name": "Dracaufeu",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/010"
+    }
+  },
+  {
+    "id": "swsh10.5-011",
+    "name": "Dracaufeu Radieux",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/011"
+    }
+  },
+  {
+    "id": "swsh10.5-012",
+    "name": "Sulfura",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/012"
+    }
+  },
+  {
+    "id": "swsh10.5-013",
+    "name": "Chamallot",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/013"
+    }
+  },
+  {
+    "id": "swsh10.5-014",
+    "name": "Camérupt",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/014"
+    }
+  },
+  {
+    "id": "swsh10.5-015",
+    "name": "Carapuce",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/015"
+    }
+  },
+  {
+    "id": "swsh10.5-016",
+    "name": "Carabaffe",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/016"
+    }
+  },
+  {
+    "id": "swsh10.5-017",
+    "name": "Tortank",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/017"
+    }
+  },
+  {
+    "id": "swsh10.5-018",
+    "name": "Tortank Radieux",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/018"
+    }
+  },
+  {
+    "id": "swsh10.5-019",
+    "name": "Ramoloss",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/019"
+    }
+  },
+  {
+    "id": "swsh10.5-020",
+    "name": "Flagadoss",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/020"
+    }
+  },
+  {
+    "id": "swsh10.5-021",
+    "name": "Magicarpe",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/021"
+    }
+  },
+  {
+    "id": "swsh10.5-022",
+    "name": "Léviator",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/022"
+    }
+  },
+  {
+    "id": "swsh10.5-023",
+    "name": "Lokhlass",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/023"
+    }
+  },
+  {
+    "id": "swsh10.5-024",
+    "name": "Artikodin",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/024"
+    }
+  },
+  {
+    "id": "swsh10.5-025",
+    "name": "Sovkipou",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/025"
+    }
+  },
+  {
+    "id": "swsh10.5-026",
+    "name": "Sarmuraï",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/026"
+    }
+  },
+  {
+    "id": "swsh10.5-027",
+    "name": "Pikachu",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/027"
+    }
+  },
+  {
+    "id": "swsh10.5-028",
+    "name": "Pikachu",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/028"
+    }
+  },
+  {
+    "id": "swsh10.5-029",
+    "name": "Électhor",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/029"
+    }
+  },
+  {
+    "id": "swsh10.5-030",
+    "name": "Mewtwo V",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/030"
+    }
+  },
+  {
+    "id": "swsh10.5-031",
+    "name": "Mewtwo VSTAR",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/031"
+    }
+  },
+  {
+    "id": "swsh10.5-032",
+    "name": "Natu",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/032"
+    }
+  },
+  {
+    "id": "swsh10.5-033",
+    "name": "Xatu",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/033"
+    }
+  },
+  {
+    "id": "swsh10.5-034",
+    "name": "Séléroc",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/034"
+    }
+  },
+  {
+    "id": "swsh10.5-035",
+    "name": "Nymphali",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/035"
+    }
+  },
+  {
+    "id": "swsh10.5-036",
+    "name": "Onix",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/036"
+    }
+  },
+  {
+    "id": "swsh10.5-037",
+    "name": "Embrylex",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/037"
+    }
+  },
+  {
+    "id": "swsh10.5-038",
+    "name": "Ymphect",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/038"
+    }
+  },
+  {
+    "id": "swsh10.5-039",
+    "name": "Solaroc",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/039"
+    }
+  },
+  {
+    "id": "swsh10.5-040",
+    "name": "Bétochef V",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/040"
+    }
+  },
+  {
+    "id": "swsh10.5-041",
+    "name": "Rattata d'Alola",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/041"
+    }
+  },
+  {
+    "id": "swsh10.5-042",
+    "name": "Rattatac d'Alola",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/042"
+    }
+  },
+  {
+    "id": "swsh10.5-043",
+    "name": "Tyranocif",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/043"
+    }
+  },
+  {
+    "id": "swsh10.5-044",
+    "name": "Steelix",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/044"
+    }
+  },
+  {
+    "id": "swsh10.5-045",
+    "name": "Meltan",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/045"
+    }
+  },
+  {
+    "id": "swsh10.5-046",
+    "name": "Melmetal",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/046"
+    }
+  },
+  {
+    "id": "swsh10.5-047",
+    "name": "Melmetal V",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/047"
+    }
+  },
+  {
+    "id": "swsh10.5-048",
+    "name": "Melmetal VMAX",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/048"
+    }
+  },
+  {
+    "id": "swsh10.5-049",
+    "name": "Dracolosse V",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/049"
+    }
+  },
+  {
+    "id": "swsh10.5-050",
+    "name": "Dracolosse VSTAR",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/050"
+    }
+  },
+  {
+    "id": "swsh10.5-051",
+    "name": "Leveinard",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/051"
+    }
+  },
+  {
+    "id": "swsh10.5-052",
+    "name": "Leuphorie",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/052"
+    }
+  },
+  {
+    "id": "swsh10.5-053",
+    "name": "Métamorph",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/053"
+    }
+  },
+  {
+    "id": "swsh10.5-054",
+    "name": "Évoli",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/054"
+    }
+  },
+  {
+    "id": "swsh10.5-055",
+    "name": "Ronflex",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/055"
+    }
+  },
+  {
+    "id": "swsh10.5-056",
+    "name": "Capumain",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/056"
+    }
+  },
+  {
+    "id": "swsh10.5-057",
+    "name": "Capidextre",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/057"
+    }
+  },
+  {
+    "id": "swsh10.5-058",
+    "name": "Monaflèmit V",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/058"
+    }
+  },
+  {
+    "id": "swsh10.5-059",
+    "name": "Keunotor",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/059"
+    }
+  },
+  {
+    "id": "swsh10.5-060",
+    "name": "Castorno",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/060"
+    }
+  },
+  {
+    "id": "swsh10.5-061",
+    "name": "Poichigeon",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/061"
+    }
+  },
+  {
+    "id": "swsh10.5-062",
+    "name": "Colombeau",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/062"
+    }
+  },
+  {
+    "id": "swsh10.5-063",
+    "name": "Déflaisan",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/063"
+    }
+  },
+  {
+    "id": "swsh10.5-064",
+    "name": "Capitaine d'équipe Blanche",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/064"
+    }
+  },
+  {
+    "id": "swsh10.5-065",
+    "name": "Capitaine d'équipe Candela",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/065"
+    }
+  },
+  {
+    "id": "swsh10.5-066",
+    "name": "Incubateur d'Œufs",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/066"
+    }
+  },
+  {
+    "id": "swsh10.5-067",
+    "name": "Module Leurre",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/067"
+    }
+  },
+  {
+    "id": "swsh10.5-068",
+    "name": "PokéStop",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/068"
+    }
+  },
+  {
+    "id": "swsh10.5-069",
+    "name": "Super Bonbon",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/069"
+    }
+  },
+  {
+    "id": "swsh10.5-070",
+    "name": "Capitaine d'équipe Spark",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/070"
+    }
+  },
+  {
+    "id": "swsh10.5-071",
+    "name": "Noadkoko d'Alola V",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/071"
+    }
+  },
+  {
+    "id": "swsh10.5-072",
+    "name": "Mewtwo V",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/072"
+    }
+  },
+  {
+    "id": "swsh10.5-073",
+    "name": "Bétochef V",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/073"
+    }
+  },
+  {
+    "id": "swsh10.5-074",
+    "name": "Bétochef V",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/074"
+    }
+  },
+  {
+    "id": "swsh10.5-075",
+    "name": "Melmetal V",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/075"
+    }
+  },
+  {
+    "id": "swsh10.5-076",
+    "name": "Dracolosse V",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/076"
+    }
+  },
+  {
+    "id": "swsh10.5-077",
+    "name": "Monaflèmit V",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/077"
+    }
+  },
+  {
+    "id": "swsh10.5-078",
+    "name": "Recherches Professorales",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/078"
+    }
+  },
+  {
+    "id": "swsh10.5-079",
+    "name": "Mewtwo VSTAR",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/079"
+    }
+  },
+  {
+    "id": "swsh10.5-080",
+    "name": "Melmetal VMAX",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/080"
+    }
+  },
+  {
+    "id": "swsh10.5-081",
+    "name": "Dracolosse VSTAR",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/081"
+    }
+  },
+  {
+    "id": "swsh10.5-082",
+    "name": "Capitaine d'équipe Blanche",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/082"
+    }
+  },
+  {
+    "id": "swsh10.5-083",
+    "name": "Capitaine d'équipe Candela",
+    "number": "083",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/083"
+    }
+  },
+  {
+    "id": "swsh10.5-084",
+    "name": "Recherches Professorales",
+    "number": "084",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/084"
+    }
+  },
+  {
+    "id": "swsh10.5-085",
+    "name": "Capitaine d'équipe Spark",
+    "number": "085",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/085"
+    }
+  },
+  {
+    "id": "swsh10.5-086",
+    "name": "Mewtwo VSTAR",
+    "number": "086",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/086"
+    }
+  },
+  {
+    "id": "swsh10.5-087",
+    "name": "Incubateur d'Œufs",
+    "number": "087",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/087"
+    }
+  },
+  {
+    "id": "swsh10.5-088",
+    "name": "Module Leurre",
+    "number": "088",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/swsh/swsh10.5/088"
+    }
+  }
+]

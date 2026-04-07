@@ -1,0 +1,830 @@
+[
+  {
+    "id": "E2-001",
+    "name": "ニドランm",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-002",
+    "name": "ニドリーノ",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-003",
+    "name": "グリマー",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-004",
+    "name": "MUK -004/092",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-005",
+    "name": "MUK -005/092",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-006",
+    "name": "Spinarak -006/092",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-007",
+    "name": "Spinarak -007/092",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-008",
+    "name": "アリアドス-008/092",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-009",
+    "name": "アリアドス-009/092",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-010",
+    "name": "ホッピップ",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-011",
+    "name": "スキプルーム",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-012",
+    "name": "ジャンプラフ-012/092",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-013",
+    "name": "ジャンプラフ-013/092",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-014",
+    "name": "Growlithe -014/092",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-015",
+    "name": "Growlithe -015/092",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-016",
+    "name": "アルカニン-016/092",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-017",
+    "name": "アルカニン-017/092",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-018",
+    "name": "Houndour -018/092",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-019",
+    "name": "猟犬-019/092",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-020",
+    "name": "Psyduck",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-021",
+    "name": "ゴルダック",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-022",
+    "name": "ゴールデン",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-023",
+    "name": "航海",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-024",
+    "name": "マリル",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-025",
+    "name": "アズマリル-025/092",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-026",
+    "name": "アズマリル-026/092",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-027",
+    "name": "Wooper -027/092",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-028",
+    "name": "Wooper -028/092",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-029",
+    "name": "quagsire",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-030",
+    "name": "Suicune -030/092",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-031",
+    "name": "Suicune -031/092",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-032",
+    "name": "マグネマイト-032/092",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-033",
+    "name": "Voltorb -033/092",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-034",
+    "name": "Voltorb -034/092",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-035",
+    "name": "電極-035/092",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-036",
+    "name": "電極-036/092",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-037",
+    "name": "Zapdos -037/092",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-038",
+    "name": "Zapdos -038/092",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-039",
+    "name": "Elekid",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-040",
+    "name": "ドロージー",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-041",
+    "name": "Hypno -041/092",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-042",
+    "name": "Hypno -042/092",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-043",
+    "name": "マイムさん",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-044",
+    "name": "ジンクス",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-045",
+    "name": "Espeon -045/092",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-046",
+    "name": "Espeon -046/092",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-047",
+    "name": "スムーチュム",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-048",
+    "name": "nidooking -048/092",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-049",
+    "name": "ニドギング-049/092",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-050",
+    "name": "キューボン",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-051",
+    "name": "マロワク",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-052",
+    "name": "ヒットモンチャン",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-053",
+    "name": "ファンピー",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-054",
+    "name": "ドンファン",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-055",
+    "name": "タイログ",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-056",
+    "name": "ヒットモントップ",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-057",
+    "name": "チャンジー",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-058",
+    "name": "Eevee",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-059",
+    "name": "ポリゴン",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-060",
+    "name": "togepi",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-061",
+    "name": "togetic -061/092",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-062",
+    "name": "togetic -062/092",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-063",
+    "name": "Porygon2",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-064",
+    "name": "Smeargle",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-065",
+    "name": "Blissey -065/092",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-066",
+    "name": "Blissey -066/092",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-067",
+    "name": "Umbreon -067/092",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-068",
+    "name": "Umbreon -068/092",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-069",
+    "name": "Houndour -069/092",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-070",
+    "name": "猟犬-070/092",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-071",
+    "name": "猟犬-071/092",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-072",
+    "name": "マグナイト-072/092",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-073",
+    "name": "マグネトン-073/092",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-074",
+    "name": "マグネトン-074/092",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-075",
+    "name": "脱力感ガード",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-076",
+    "name": "スーパーエネルギー除去2",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-077",
+    "name": "先見者",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-078",
+    "name": "ポケモンファンクラブ",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-079",
+    "name": "町のボランティア",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-080",
+    "name": "グラスキューブ01",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-081",
+    "name": "ファイアキューブ01",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-082",
+    "name": "ウォーターキューブ01",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-083",
+    "name": "ライトニングキューブ01",
+    "number": "083",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-084",
+    "name": "サイキックキューブ01",
+    "number": "084",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-085",
+    "name": "戦いキューブ01",
+    "number": "085",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-086",
+    "name": "闇キューブ01",
+    "number": "086",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-087",
+    "name": "金属キューブ01",
+    "number": "087",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-088",
+    "name": "ポケモンパーク",
+    "number": "088",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-089",
+    "name": "発電所",
+    "number": "089",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-090",
+    "name": "闇のエネルギー",
+    "number": "090",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-091",
+    "name": "金属エネルギー",
+    "number": "091",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "E2-092",
+    "name": "レインボーエネルギー",
+    "number": "092",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

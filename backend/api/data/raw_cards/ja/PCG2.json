@@ -1,0 +1,740 @@
+[
+  {
+    "id": "PCG2-001",
+    "name": "Zubat",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-002",
+    "name": "ゴルバット",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-003",
+    "name": "Koffing",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-004",
+    "name": "おしっこ",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-005",
+    "name": "Crobat Ex",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-006",
+    "name": "Wurmple",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-007",
+    "name": "シルクーン",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-008",
+    "name": "美しい",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-009",
+    "name": "Surskit",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-010",
+    "name": "仮面舞踏会",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-011",
+    "name": "shroomish",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-012",
+    "name": "NINCADA",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-013",
+    "name": "ニンジャスク",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-014",
+    "name": "トロピウス",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-015",
+    "name": "slugma",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-016",
+    "name": "マグカルゴ",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-017",
+    "name": "numel",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-018",
+    "name": "カメラプ",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-019",
+    "name": "ゴールデン",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-020",
+    "name": "航海",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-021",
+    "name": "staryu",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-022",
+    "name": "スターミー",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-023",
+    "name": "Magikarp",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-024",
+    "name": "ギャラドス",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-025",
+    "name": "lotad",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-026",
+    "name": "ロンベル",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-027",
+    "name": "ルディコロ",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-028",
+    "name": "wingull",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-029",
+    "name": "ペリッパー",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-030",
+    "name": "バルボハ",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-031",
+    "name": "コーフィッシュ",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-032",
+    "name": "電気",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-033",
+    "name": "Manectric Ex",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-034",
+    "name": "プラスレ",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-035",
+    "name": "ミンン",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-036",
+    "name": "natu",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-037",
+    "name": "xatu",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-038",
+    "name": "Shedinja",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-039",
+    "name": "ソロック",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-040",
+    "name": "duskull",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-041",
+    "name": "Dusclops",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-042",
+    "name": "ベルダム",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-043",
+    "name": "メタン",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-044",
+    "name": "メタグロス",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-045",
+    "name": "Deoxys ex",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-046",
+    "name": "Deoxys ex",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-047",
+    "name": "ブレルーム",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-048",
+    "name": "マクヒタ",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-049",
+    "name": "Hariyama ex",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-050",
+    "name": "ノセパス",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-051",
+    "name": "ルナトン",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-052",
+    "name": "ウィスカッシュ",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-053",
+    "name": "バルトイ",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-054",
+    "name": "クレイドル",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-055",
+    "name": "テイロウ",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-056",
+    "name": "スウラー",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-057",
+    "name": "スラコス",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-058",
+    "name": "vigoroth",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-059",
+    "name": "スレーキング",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-060",
+    "name": "Swablu",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-061",
+    "name": "アルタリア",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-062",
+    "name": "バゴン",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-063",
+    "name": "シェルゴン",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-064",
+    "name": "Salamence Ex",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-065",
+    "name": "ラティアススター",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-066",
+    "name": "ラティオススター",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-067",
+    "name": "レイカザの星",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-068",
+    "name": "プーチエナ",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-069",
+    "name": "マイティエナ",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-070",
+    "name": "sableye",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-071",
+    "name": "カルバンハ",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-072",
+    "name": "Sharpedo ex",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-073",
+    "name": "クローダント",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-074",
+    "name": "スカルモリー",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-075",
+    "name": "ジラチ",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-076",
+    "name": "コズモ教授の発見",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-077",
+    "name": "クリスタルシャード",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-078",
+    "name": "宇宙センター",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-079",
+    "name": "流星滝",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-080",
+    "name": "スクランブルエネルギー",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-081",
+    "name": "エネルギーを癒します",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG2-082",
+    "name": "エネルギーを高めます",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

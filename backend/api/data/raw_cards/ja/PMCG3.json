@@ -1,0 +1,434 @@
+[
+  {
+    "id": "PMCG3-001",
+    "name": "エカン",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-002",
+    "name": "Zubat",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-003",
+    "name": "グリマー",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-004",
+    "name": "アーボック",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-005",
+    "name": "ゴルバット",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-006",
+    "name": "おしっこ",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-007",
+    "name": "Muk",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-008",
+    "name": "マグマー",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-009",
+    "name": "モルトレス",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-010",
+    "name": "Psyduck",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-011",
+    "name": "Tentacool",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-012",
+    "name": "シェルダー",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-013",
+    "name": "クラビー",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-014",
+    "name": "馬",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-015",
+    "name": "オマニテ",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-016",
+    "name": "ゴルダック",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-017",
+    "name": "テンタクルエル",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-018",
+    "name": "クロイスター",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-019",
+    "name": "キングラー",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-020",
+    "name": "シードラ",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-021",
+    "name": "Omastar",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-022",
+    "name": "ラプラス",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-023",
+    "name": "articuno",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-024",
+    "name": "ライチュ",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-025",
+    "name": "マグネトン",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-026",
+    "name": "ザプドス",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-027",
+    "name": "slowpoke",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-028",
+    "name": "スローブロ",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-029",
+    "name": "ガストリー",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-030",
+    "name": "ハンター",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-031",
+    "name": "ジェンガー",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-032",
+    "name": "催眠",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-033",
+    "name": "ミュー",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-034",
+    "name": "ジオドード",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-035",
+    "name": "カブト",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-036",
+    "name": "サンドスラッシュ",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-037",
+    "name": "砂利",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-038",
+    "name": "ゴーレム",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-039",
+    "name": "Hitmonlee",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-040",
+    "name": "カブトップス",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-041",
+    "name": "アエロダクチル",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-042",
+    "name": "同上",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-043",
+    "name": "ドラゴナイト",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-044",
+    "name": "エネルギー検索",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-045",
+    "name": "ギャンブラー",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-046",
+    "name": "神秘的な化石",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-047",
+    "name": "リサイクル",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG3-048",
+    "name": "富士通り",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

@@ -1,0 +1,2135 @@
+[
+  {
+    "id": "SV8a-001",
+    "name": "含羞苞",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-002",
+    "name": "葉伊布",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-003",
+    "name": "葉伊布ex",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-004",
+    "name": "木棉球",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-005",
+    "name": "風妖精",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-006",
+    "name": "敲音猴",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-007",
+    "name": "啪咚猴",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-008",
+    "name": "啃果蟲",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-009",
+    "name": "裹蜜蟲",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-010",
+    "name": "蜜集大蛇ex",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-011",
+    "name": "納噬草",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-012",
+    "name": "怖納噬草",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-013",
+    "name": "蟲滾泥",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-014",
+    "name": "蟲甲聖",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-015",
+    "name": "古簡蝸",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-016",
+    "name": "鐵斑葉ex",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-017",
+    "name": "斯魔茶",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-018",
+    "name": "來悲粗茶",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-019",
+    "name": "來悲粗茶ex",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-020",
+    "name": "厄鬼椪 碧草面具ex",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-021",
+    "name": "火伊布",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-022",
+    "name": "火伊布ex",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-023",
+    "name": "炭小侍",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-024",
+    "name": "鐵毒蛾",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-025",
+    "name": "古玉魚",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-026",
+    "name": "厄鬼椪 火灶面具ex",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-027",
+    "name": "破空焰ex",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-028",
+    "name": "角金魚",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-029",
+    "name": "金魚王",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-030",
+    "name": "水伊布",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-031",
+    "name": "水伊布ex",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-032",
+    "name": "小鋸鱷",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-033",
+    "name": "藍鱷",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-034",
+    "name": "大力鱷",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-035",
+    "name": "醜醜魚",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-036",
+    "name": "美納斯",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-037",
+    "name": "雪童子",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-038",
+    "name": "雪妖女",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-039",
+    "name": "烈咬陸鯊ex",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-040",
+    "name": "冰伊布",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-041",
+    "name": "冰伊布ex",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-042",
+    "name": "海地鼠",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-043",
+    "name": "三海地鼠",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-044",
+    "name": "波普海豚",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-045",
+    "name": "海豚俠",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-046",
+    "name": "海豚俠ex",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-047",
+    "name": "鐵包袱",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-048",
+    "name": "古劍豹",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-049",
+    "name": "波盪水ex",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-050",
+    "name": "厄鬼椪 水井面具ex",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-051",
+    "name": "雷伊布",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-052",
+    "name": "雷伊布ex",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-053",
+    "name": "捷拉奧拉",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-054",
+    "name": "鐵臂膀ex",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-055",
+    "name": "鐵荊棘",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-056",
+    "name": "鐵荊棘ex",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-057",
+    "name": "凱西",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-058",
+    "name": "勇基拉",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-059",
+    "name": "胡地",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-060",
+    "name": "天然雀",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-061",
+    "name": "天然鳥",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-062",
+    "name": "太陽伊布",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-063",
+    "name": "太陽伊布ex",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-064",
+    "name": "夜巡靈",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-065",
+    "name": "彷徨夜靈",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-066",
+    "name": "黑夜魔靈",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-067",
+    "name": "綿綿泡芙",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-068",
+    "name": "仙子伊布",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-069",
+    "name": "仙子伊布ex",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-070",
+    "name": "蒼炎刃鬼",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-071",
+    "name": "吼叫尾",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-072",
+    "name": "振翼髮",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-073",
+    "name": "索財靈",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-074",
+    "name": "鐵武者ex",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-075",
+    "name": "願增猿",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-076",
+    "name": "吉雉雞",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-077",
+    "name": "鐵磐岩",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-078",
+    "name": "鐵頭殼ex",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-079",
+    "name": "古空棘魚",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-080",
+    "name": "固拉多",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-081",
+    "name": "圓陸鯊",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-082",
+    "name": "尖牙陸鯊",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-083",
+    "name": "螺釘地鼠",
+    "number": "083",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-084",
+    "name": "摔角鷹人",
+    "number": "084",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-085",
+    "name": "月月熊 赫月",
+    "number": "085",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-086",
+    "name": "雄偉牙",
+    "number": "086",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-087",
+    "name": "爬地翅",
+    "number": "087",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-088",
+    "name": "沙鐵皮ex",
+    "number": "088",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-089",
+    "name": "古鼎鹿",
+    "number": "089",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-090",
+    "name": "夠讚狗",
+    "number": "090",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-091",
+    "name": "厄鬼椪 礎石面具ex",
+    "number": "091",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-092",
+    "name": "月亮伊布",
+    "number": "092",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-093",
+    "name": "月亮伊布ex",
+    "number": "093",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-094",
+    "name": "破破袋",
+    "number": "094",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-095",
+    "name": "灰塵山",
+    "number": "095",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-096",
+    "name": "索羅亞",
+    "number": "096",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-097",
+    "name": "索羅亞克",
+    "number": "097",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-098",
+    "name": "莫魯貝可",
+    "number": "098",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-099",
+    "name": "猛惡菇",
+    "number": "099",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-100",
+    "name": "轟鳴月",
+    "number": "100",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-101",
+    "name": "轟鳴月ex",
+    "number": "101",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-102",
+    "name": "夠讚狗ex",
+    "number": "102",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-103",
+    "name": "願增猿ex",
+    "number": "103",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-104",
+    "name": "吉雉雞ex",
+    "number": "104",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-105",
+    "name": "桃歹郎ex",
+    "number": "105",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-106",
+    "name": "鐵啞鈴",
+    "number": "106",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-107",
+    "name": "金屬怪",
+    "number": "107",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-108",
+    "name": "基拉祈",
+    "number": "108",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-109",
+    "name": "獨劍鞘",
+    "number": "109",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-110",
+    "name": "雙劍鞘",
+    "number": "110",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-111",
+    "name": "堅盾劍怪",
+    "number": "111",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-112",
+    "name": "鋁鋼龍",
+    "number": "112",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-113",
+    "name": "鋁鋼橋龍",
+    "number": "113",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-114",
+    "name": "噗隆隆",
+    "number": "114",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-115",
+    "name": "普隆隆姆",
+    "number": "115",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-116",
+    "name": "鐵轍跡",
+    "number": "116",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-117",
+    "name": "賽富豪ex",
+    "number": "117",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-118",
+    "name": "多龍梅西亞",
+    "number": "118",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-119",
+    "name": "多龍奇",
+    "number": "119",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-120",
+    "name": "多龍巴魯托ex",
+    "number": "120",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-121",
+    "name": "米立龍",
+    "number": "121",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-122",
+    "name": "故勒頓",
+    "number": "122",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-123",
+    "name": "密勒頓",
+    "number": "123",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-124",
+    "name": "猛雷鼓ex",
+    "number": "124",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-125",
+    "name": "伊布",
+    "number": "125",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-126",
+    "name": "伊布ex",
+    "number": "126",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-127",
+    "name": "咕咕",
+    "number": "127",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-128",
+    "name": "貓頭夜鷹",
+    "number": "128",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-129",
+    "name": "土龍弟弟",
+    "number": "129",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-130",
+    "name": "土龍節節",
+    "number": "130",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-131",
+    "name": "旋轉洛托姆",
+    "number": "131",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-132",
+    "name": "雷吉奇卡斯",
+    "number": "132",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-133",
+    "name": "爆炸頭水牛",
+    "number": "133",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-134",
+    "name": "月月熊 赫月ex",
+    "number": "134",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-135",
+    "name": "鐵脖頸",
+    "number": "135",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-136",
+    "name": "太樂巴戈斯ex",
+    "number": "136",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-137",
+    "name": "鬼之假面",
+    "number": "137",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-138",
+    "name": "改造之錘",
+    "number": "138",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-139",
+    "name": "反擊捕捉器",
+    "number": "139",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-140",
+    "name": "玻璃喇叭",
+    "number": "140",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-141",
+    "name": "超級能量回收",
+    "number": "141",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-142",
+    "name": "釣竿MAX",
+    "number": "142",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-143",
+    "name": "大地之容器",
+    "number": "143",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-144",
+    "name": "高科技雷達",
+    "number": "144",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-145",
+    "name": "太晶珠",
+    "number": "145",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-146",
+    "name": "珍寶配件",
+    "number": "146",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-147",
+    "name": "好友寶芬",
+    "number": "147",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-148",
+    "name": "頂尖捕捉器",
+    "number": "148",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-149",
+    "name": "寶可夢旋風回收機",
+    "number": "149",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-150",
+    "name": "捕蟲組合",
+    "number": "150",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-151",
+    "name": "夜間擔架",
+    "number": "151",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-152",
+    "name": "璀璨結晶",
+    "number": "152",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-153",
+    "name": "緊急滑板",
+    "number": "153",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-154",
+    "name": "鎖鏈糬",
+    "number": "154",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-155",
+    "name": "豪華斗篷",
+    "number": "155",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-156",
+    "name": "莓榴果",
+    "number": "156",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-157",
+    "name": "驅勁能量 古代",
+    "number": "157",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-158",
+    "name": "驅勁能量 未來",
+    "number": "158",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-159",
+    "name": "極限腰帶",
+    "number": "159",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-160",
+    "name": "招式學習器 演進",
+    "number": "160",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-161",
+    "name": "招式學習器 ‌衰退",
+    "number": "161",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-162",
+    "name": "青木的手法",
+    "number": "162",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-163",
+    "name": "赤松",
+    "number": "163",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-164",
+    "name": "阿克羅瑪的執著",
+    "number": "164",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-165",
+    "name": "暗碼迷的解讀",
+    "number": "165",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-166",
+    "name": "阿杏的秘招",
+    "number": "166",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-167",
+    "name": "奧琳博士的氣魄",
+    "number": "167",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-168",
+    "name": "水蓮的照顧",
+    "number": "168",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-169",
+    "name": "烏栗",
+    "number": "169",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-170",
+    "name": "丹瑜",
+    "number": "170",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-171",
+    "name": "紫竽",
+    "number": "171",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-172",
+    "name": "探險家的嚮導",
+    "number": "172",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-173",
+    "name": "納莉",
+    "number": "173",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-174",
+    "name": "帕底亞的夥伴",
+    "number": "174",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-175",
+    "name": "弗圖博士的劇本",
+    "number": "175",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-176",
+    "name": "白蕾雅",
+    "number": "176",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-177",
+    "name": "白露的真心",
+    "number": "177",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-178",
+    "name": "松葉的信心",
+    "number": "178",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-179",
+    "name": "梅洛可",
+    "number": "179",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-180",
+    "name": "祭典會場",
+    "number": "180",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-181",
+    "name": "阻礙之塔",
+    "number": "181",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-182",
+    "name": "零之大空洞",
+    "number": "182",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-183",
+    "name": "月光丘陵",
+    "number": "183",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-184",
+    "name": "中立中心",
+    "number": "184",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-185",
+    "name": "噴射能量",
+    "number": "185",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-186",
+    "name": "薄霧能量",
+    "number": "186",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-187",
+    "name": "古舊能量",
+    "number": "187",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-188",
+    "name": "青木的手法",
+    "number": "188",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-189",
+    "name": "奧爾迪加",
+    "number": "189",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-190",
+    "name": "寇沙",
+    "number": "190",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-191",
+    "name": "秋明",
+    "number": "191",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-192",
+    "name": "秋明",
+    "number": "192",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-193",
+    "name": "泰姆",
+    "number": "193",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-194",
+    "name": "納莉",
+    "number": "194",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-195",
+    "name": "帕底亞的夥伴",
+    "number": "195",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-196",
+    "name": "皮拿",
+    "number": "196",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-197",
+    "name": "枇琶",
+    "number": "197",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-198",
+    "name": "梅洛可",
+    "number": "198",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-199",
+    "name": "蕾荷",
+    "number": "199",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-200",
+    "name": "葉伊布ex",
+    "number": "200",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-201",
+    "name": "厄鬼椪 碧草面具ex",
+    "number": "201",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-202",
+    "name": "火伊布ex",
+    "number": "202",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-203",
+    "name": "蒼炎刃鬼ex",
+    "number": "203",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-204",
+    "name": "厄鬼椪 火灶面具ex",
+    "number": "204",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-205",
+    "name": "水伊布ex",
+    "number": "205",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-206",
+    "name": "冰伊布ex",
+    "number": "206",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-207",
+    "name": "海豚俠ex",
+    "number": "207",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-208",
+    "name": "厄鬼椪 水井面具ex",
+    "number": "208",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-209",
+    "name": "雷伊布ex",
+    "number": "209",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-210",
+    "name": "鐵臂膀ex",
+    "number": "210",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-211",
+    "name": "太陽伊布ex",
+    "number": "211",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-212",
+    "name": "仙子伊布ex",
+    "number": "212",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-213",
+    "name": "鐵武者ex",
+    "number": "213",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-214",
+    "name": "鐵頭殼ex",
+    "number": "214",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-215",
+    "name": "沙鐵皮ex",
+    "number": "215",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-216",
+    "name": "厄鬼椪 礎石面具ex",
+    "number": "216",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-217",
+    "name": "月亮伊布ex",
+    "number": "217",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-218",
+    "name": "轟鳴月ex",
+    "number": "218",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-219",
+    "name": "桃歹郎ex",
+    "number": "219",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-220",
+    "name": "賽富豪ex",
+    "number": "220",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-221",
+    "name": "多龍巴魯托ex",
+    "number": "221",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-222",
+    "name": "猛雷鼓ex",
+    "number": "222",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-223",
+    "name": "伊布ex",
+    "number": "223",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-224",
+    "name": "伊布ex",
+    "number": "224",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-225",
+    "name": "月月熊 赫月ex",
+    "number": "225",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-226",
+    "name": "太樂巴戈斯ex",
+    "number": "226",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-227",
+    "name": "赤松",
+    "number": "227",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-228",
+    "name": "阿杏的秘招",
+    "number": "228",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-229",
+    "name": "杜若",
+    "number": "229",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-230",
+    "name": "烏栗",
+    "number": "230",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-231",
+    "name": "紫竽",
+    "number": "231",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-232",
+    "name": "納莉",
+    "number": "232",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-233",
+    "name": "鐵斑葉ex",
+    "number": "233",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-234",
+    "name": "厄鬼椪 碧草面具ex",
+    "number": "234",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-235",
+    "name": "波盪水ex",
+    "number": "235",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-236",
+    "name": "皮卡丘ex",
+    "number": "236",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV8a-237",
+    "name": "太樂巴戈斯ex",
+    "number": "237",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

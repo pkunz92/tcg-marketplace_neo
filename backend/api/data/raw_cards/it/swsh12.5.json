@@ -1,0 +1,2072 @@
+[
+  {
+    "id": "swsh12.5-001",
+    "name": "Oddish",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/001"
+    }
+  },
+  {
+    "id": "swsh12.5-002",
+    "name": "Gloom",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/002"
+    }
+  },
+  {
+    "id": "swsh12.5-003",
+    "name": "Bellossom",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/003"
+    }
+  },
+  {
+    "id": "swsh12.5-004",
+    "name": "Tangela",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/004"
+    }
+  },
+  {
+    "id": "swsh12.5-005",
+    "name": "Tangrowth",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/005"
+    }
+  },
+  {
+    "id": "swsh12.5-006",
+    "name": "Scyther",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/006"
+    }
+  },
+  {
+    "id": "swsh12.5-007",
+    "name": "Sunkern",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/007"
+    }
+  },
+  {
+    "id": "swsh12.5-008",
+    "name": "Yanma",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/008"
+    }
+  },
+  {
+    "id": "swsh12.5-009",
+    "name": "Yanmega",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/009"
+    }
+  },
+  {
+    "id": "swsh12.5-010",
+    "name": "Kricketot",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/010"
+    }
+  },
+  {
+    "id": "swsh12.5-011",
+    "name": "Cherubi",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/011"
+    }
+  },
+  {
+    "id": "swsh12.5-012",
+    "name": "Carnivine",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/012"
+    }
+  },
+  {
+    "id": "swsh12.5-013",
+    "name": "Leafeon V",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/013"
+    }
+  },
+  {
+    "id": "swsh12.5-014",
+    "name": "Leafeon V ASTRO",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/014"
+    }
+  },
+  {
+    "id": "swsh12.5-015",
+    "name": "Grubbin",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/015"
+    }
+  },
+  {
+    "id": "swsh12.5-016",
+    "name": "Zarude",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/016"
+    }
+  },
+  {
+    "id": "swsh12.5-017",
+    "name": "Calyrex",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/017"
+    }
+  },
+  {
+    "id": "swsh12.5-018",
+    "name": "Charizard V",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/018"
+    }
+  },
+  {
+    "id": "swsh12.5-019",
+    "name": "Charizard V ASTRO",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/019"
+    }
+  },
+  {
+    "id": "swsh12.5-020",
+    "name": "Charizard Lucente",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/020"
+    }
+  },
+  {
+    "id": "swsh12.5-021",
+    "name": "Entei",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/021"
+    }
+  },
+  {
+    "id": "swsh12.5-022",
+    "name": "Simisear V",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/022"
+    }
+  },
+  {
+    "id": "swsh12.5-023",
+    "name": "Simisear V ASTRO",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/023"
+    }
+  },
+  {
+    "id": "swsh12.5-024",
+    "name": "Larvesta",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/024"
+    }
+  },
+  {
+    "id": "swsh12.5-025",
+    "name": "Volcarona",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/025"
+    }
+  },
+  {
+    "id": "swsh12.5-026",
+    "name": "Volcanion",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/026"
+    }
+  },
+  {
+    "id": "swsh12.5-027",
+    "name": "Salandit",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/027"
+    }
+  },
+  {
+    "id": "swsh12.5-028",
+    "name": "Salazzle",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/028"
+    }
+  },
+  {
+    "id": "swsh12.5-029",
+    "name": "Seel",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/029"
+    }
+  },
+  {
+    "id": "swsh12.5-030",
+    "name": "Mr. Mime di Galar",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/030"
+    }
+  },
+  {
+    "id": "swsh12.5-031",
+    "name": "Wailmer",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/031"
+    }
+  },
+  {
+    "id": "swsh12.5-032",
+    "name": "Wailord",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/032"
+    }
+  },
+  {
+    "id": "swsh12.5-033",
+    "name": "Corphish",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/033"
+    }
+  },
+  {
+    "id": "swsh12.5-034",
+    "name": "Snorunt",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/034"
+    }
+  },
+  {
+    "id": "swsh12.5-035",
+    "name": "Luvdisc",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/035"
+    }
+  },
+  {
+    "id": "swsh12.5-036",
+    "name": "Kyogre",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/036"
+    }
+  },
+  {
+    "id": "swsh12.5-037",
+    "name": "Kyogre V",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/037"
+    }
+  },
+  {
+    "id": "swsh12.5-038",
+    "name": "Glaceon V",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/038"
+    }
+  },
+  {
+    "id": "swsh12.5-039",
+    "name": "Shinx",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/039"
+    }
+  },
+  {
+    "id": "swsh12.5-040",
+    "name": "Shinx",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/040"
+    }
+  },
+  {
+    "id": "swsh12.5-041",
+    "name": "Luxio",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/041"
+    }
+  },
+  {
+    "id": "swsh12.5-042",
+    "name": "Luxio",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/042"
+    }
+  },
+  {
+    "id": "swsh12.5-043",
+    "name": "Luxray",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/043"
+    }
+  },
+  {
+    "id": "swsh12.5-044",
+    "name": "Luxray",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/044"
+    }
+  },
+  {
+    "id": "swsh12.5-045",
+    "name": "Rotom V",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/045"
+    }
+  },
+  {
+    "id": "swsh12.5-046",
+    "name": "Rotom V ASTRO",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/046"
+    }
+  },
+  {
+    "id": "swsh12.5-047",
+    "name": "Emolga",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/047"
+    }
+  },
+  {
+    "id": "swsh12.5-048",
+    "name": "Eelektrik",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/048"
+    }
+  },
+  {
+    "id": "swsh12.5-049",
+    "name": "Helioptile",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/049"
+    }
+  },
+  {
+    "id": "swsh12.5-050",
+    "name": "Heliolisk",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/050"
+    }
+  },
+  {
+    "id": "swsh12.5-051",
+    "name": "Charjabug Lucente",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/051"
+    }
+  },
+  {
+    "id": "swsh12.5-052",
+    "name": "Zeraora",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/052"
+    }
+  },
+  {
+    "id": "swsh12.5-053",
+    "name": "Zeraora V",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/053"
+    }
+  },
+  {
+    "id": "swsh12.5-054",
+    "name": "Zeraora VMAX",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/054"
+    }
+  },
+  {
+    "id": "swsh12.5-055",
+    "name": "Zeraora V ASTRO",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/055"
+    }
+  },
+  {
+    "id": "swsh12.5-056",
+    "name": "Pincurchin",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/056"
+    }
+  },
+  {
+    "id": "swsh12.5-057",
+    "name": "Exeggcute",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/057"
+    }
+  },
+  {
+    "id": "swsh12.5-058",
+    "name": "Exeggutor",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/058"
+    }
+  },
+  {
+    "id": "swsh12.5-059",
+    "name": "Mewtwo",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/059"
+    }
+  },
+  {
+    "id": "swsh12.5-060",
+    "name": "Mew V",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/060"
+    }
+  },
+  {
+    "id": "swsh12.5-061",
+    "name": "Girafarig",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/061"
+    }
+  },
+  {
+    "id": "swsh12.5-062",
+    "name": "Lunatone",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/062"
+    }
+  },
+  {
+    "id": "swsh12.5-063",
+    "name": "Dusclops",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/063"
+    }
+  },
+  {
+    "id": "swsh12.5-064",
+    "name": "Tapu Lele",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/064"
+    }
+  },
+  {
+    "id": "swsh12.5-065",
+    "name": "Hatterene V",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/065"
+    }
+  },
+  {
+    "id": "swsh12.5-066",
+    "name": "Hatterene VMAX",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/066"
+    }
+  },
+  {
+    "id": "swsh12.5-067",
+    "name": "Enamorus",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/067"
+    }
+  },
+  {
+    "id": "swsh12.5-068",
+    "name": "Graveler",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/068"
+    }
+  },
+  {
+    "id": "swsh12.5-069",
+    "name": "Solrock",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/069"
+    }
+  },
+  {
+    "id": "swsh12.5-070",
+    "name": "Baltoy",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/070"
+    }
+  },
+  {
+    "id": "swsh12.5-071",
+    "name": "Riolu",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/071"
+    }
+  },
+  {
+    "id": "swsh12.5-072",
+    "name": "Pancham",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/072"
+    }
+  },
+  {
+    "id": "swsh12.5-073",
+    "name": "Rockruff",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/073"
+    }
+  },
+  {
+    "id": "swsh12.5-074",
+    "name": "Lycanroc",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/074"
+    }
+  },
+  {
+    "id": "swsh12.5-075",
+    "name": "Koffing",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/075"
+    }
+  },
+  {
+    "id": "swsh12.5-076",
+    "name": "Absol",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/076"
+    }
+  },
+  {
+    "id": "swsh12.5-077",
+    "name": "Purrloin",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/077"
+    }
+  },
+  {
+    "id": "swsh12.5-078",
+    "name": "Liepard",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/078"
+    }
+  },
+  {
+    "id": "swsh12.5-079",
+    "name": "Krokorok",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/079"
+    }
+  },
+  {
+    "id": "swsh12.5-080",
+    "name": "Pangoro",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/080"
+    }
+  },
+  {
+    "id": "swsh12.5-081",
+    "name": "Skrelp",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/081"
+    }
+  },
+  {
+    "id": "swsh12.5-082",
+    "name": "Dragalge",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/082"
+    }
+  },
+  {
+    "id": "swsh12.5-083",
+    "name": "Hoopa",
+    "number": "083",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/083"
+    }
+  },
+  {
+    "id": "swsh12.5-084",
+    "name": "Meowth di Galar",
+    "number": "084",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/084"
+    }
+  },
+  {
+    "id": "swsh12.5-085",
+    "name": "Perrserker di Galar",
+    "number": "085",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/085"
+    }
+  },
+  {
+    "id": "swsh12.5-086",
+    "name": "Scizor",
+    "number": "086",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/086"
+    }
+  },
+  {
+    "id": "swsh12.5-087",
+    "name": "Aron",
+    "number": "087",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/087"
+    }
+  },
+  {
+    "id": "swsh12.5-088",
+    "name": "Lairon",
+    "number": "088",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/088"
+    }
+  },
+  {
+    "id": "swsh12.5-089",
+    "name": "Aggron",
+    "number": "089",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/089"
+    }
+  },
+  {
+    "id": "swsh12.5-090",
+    "name": "Metang",
+    "number": "090",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/090"
+    }
+  },
+  {
+    "id": "swsh12.5-091",
+    "name": "Pawniard",
+    "number": "091",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/091"
+    }
+  },
+  {
+    "id": "swsh12.5-092",
+    "name": "Pawniard",
+    "number": "092",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/092"
+    }
+  },
+  {
+    "id": "swsh12.5-093",
+    "name": "Bisharp",
+    "number": "093",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/093"
+    }
+  },
+  {
+    "id": "swsh12.5-094",
+    "name": "Zacian",
+    "number": "094",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/094"
+    }
+  },
+  {
+    "id": "swsh12.5-095",
+    "name": "Zacian V",
+    "number": "095",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/095"
+    }
+  },
+  {
+    "id": "swsh12.5-096",
+    "name": "Zacian V ASTRO",
+    "number": "096",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/096"
+    }
+  },
+  {
+    "id": "swsh12.5-097",
+    "name": "Zamazenta",
+    "number": "097",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/097"
+    }
+  },
+  {
+    "id": "swsh12.5-098",
+    "name": "Zamazenta V",
+    "number": "098",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/098"
+    }
+  },
+  {
+    "id": "swsh12.5-099",
+    "name": "Zamazenta V ASTRO",
+    "number": "099",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/099"
+    }
+  },
+  {
+    "id": "swsh12.5-100",
+    "name": "Rayquaza V",
+    "number": "100",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/100"
+    }
+  },
+  {
+    "id": "swsh12.5-101",
+    "name": "Rayquaza VMAX",
+    "number": "101",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/101"
+    }
+  },
+  {
+    "id": "swsh12.5-102",
+    "name": "Rayquaza VMAX",
+    "number": "102",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/102"
+    }
+  },
+  {
+    "id": "swsh12.5-103",
+    "name": "Duraludon V",
+    "number": "103",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/103"
+    }
+  },
+  {
+    "id": "swsh12.5-104",
+    "name": "Duraludon VMAX",
+    "number": "104",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/104"
+    }
+  },
+  {
+    "id": "swsh12.5-105",
+    "name": "Eternatus Lucente",
+    "number": "105",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/105"
+    }
+  },
+  {
+    "id": "swsh12.5-106",
+    "name": "Tauros",
+    "number": "106",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/106"
+    }
+  },
+  {
+    "id": "swsh12.5-107",
+    "name": "Ditto",
+    "number": "107",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/107"
+    }
+  },
+  {
+    "id": "swsh12.5-108",
+    "name": "Eevee V",
+    "number": "108",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/108"
+    }
+  },
+  {
+    "id": "swsh12.5-109",
+    "name": "Snorlax",
+    "number": "109",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/109"
+    }
+  },
+  {
+    "id": "swsh12.5-110",
+    "name": "Starly",
+    "number": "110",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/110"
+    }
+  },
+  {
+    "id": "swsh12.5-111",
+    "name": "Bidoof",
+    "number": "111",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/111"
+    }
+  },
+  {
+    "id": "swsh12.5-112",
+    "name": "Chatot",
+    "number": "112",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/112"
+    }
+  },
+  {
+    "id": "swsh12.5-113",
+    "name": "Regigigas V",
+    "number": "113",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/113"
+    }
+  },
+  {
+    "id": "swsh12.5-114",
+    "name": "Regigigas V ASTRO",
+    "number": "114",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/114"
+    }
+  },
+  {
+    "id": "swsh12.5-115",
+    "name": "Shaymin",
+    "number": "115",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/115"
+    }
+  },
+  {
+    "id": "swsh12.5-116",
+    "name": "Stoutland V",
+    "number": "116",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/116"
+    }
+  },
+  {
+    "id": "swsh12.5-117",
+    "name": "Yungoos",
+    "number": "117",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/117"
+    }
+  },
+  {
+    "id": "swsh12.5-118",
+    "name": "Gumshoos",
+    "number": "118",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/118"
+    }
+  },
+  {
+    "id": "swsh12.5-119",
+    "name": "Oranguru",
+    "number": "119",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/119"
+    }
+  },
+  {
+    "id": "swsh12.5-120",
+    "name": "Greedent V",
+    "number": "120",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/120"
+    }
+  },
+  {
+    "id": "swsh12.5-121",
+    "name": "Wooloo",
+    "number": "121",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/121"
+    }
+  },
+  {
+    "id": "swsh12.5-122",
+    "name": "Dubwool",
+    "number": "122",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/122"
+    }
+  },
+  {
+    "id": "swsh12.5-123",
+    "name": "Fabia",
+    "number": "123",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/123"
+    }
+  },
+  {
+    "id": "swsh12.5-124",
+    "name": "Beet",
+    "number": "124",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/124"
+    }
+  },
+  {
+    "id": "swsh12.5-125",
+    "name": "Martello Dirompente",
+    "number": "125",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/125"
+    }
+  },
+  {
+    "id": "swsh12.5-126",
+    "name": "Fratelli Vanghe in Spalla",
+    "number": "126",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/126"
+    }
+  },
+  {
+    "id": "swsh12.5-127",
+    "name": "Recupero di Energia",
+    "number": "127",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/127"
+    }
+  },
+  {
+    "id": "swsh12.5-128",
+    "name": "Ricerca di Energia",
+    "number": "128",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/128"
+    }
+  },
+  {
+    "id": "swsh12.5-129",
+    "name": "Scambio di Energia",
+    "number": "129",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/129"
+    }
+  },
+  {
+    "id": "swsh12.5-130",
+    "name": "Amici a Hisui",
+    "number": "130",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/130"
+    }
+  },
+  {
+    "id": "swsh12.5-131",
+    "name": "Amici a Sinnoh",
+    "number": "131",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/131"
+    }
+  },
+  {
+    "id": "swsh12.5-132",
+    "name": "Mega Ball",
+    "number": "132",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/132"
+    }
+  },
+  {
+    "id": "swsh12.5-133",
+    "name": "Hop",
+    "number": "133",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/133"
+    }
+  },
+  {
+    "id": "swsh12.5-134",
+    "name": "Dandel",
+    "number": "134",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/134"
+    }
+  },
+  {
+    "id": "swsh12.5-135",
+    "name": "Aspiratore Perduto",
+    "number": "135",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/135"
+    }
+  },
+  {
+    "id": "swsh12.5-136",
+    "name": "Azzurra",
+    "number": "136",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/136"
+    }
+  },
+  {
+    "id": "swsh12.5-137",
+    "name": "Poké Ball",
+    "number": "137",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/137"
+    }
+  },
+  {
+    "id": "swsh12.5-138",
+    "name": "Acchiappa-Pokémon",
+    "number": "138",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/138"
+    }
+  },
+  {
+    "id": "swsh12.5-139",
+    "name": "Pozione",
+    "number": "139",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/139"
+    }
+  },
+  {
+    "id": "swsh12.5-140",
+    "name": "Laburno",
+    "number": "140",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/140"
+    }
+  },
+  {
+    "id": "swsh12.5-141",
+    "name": "Caramella Rara",
+    "number": "141",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/141"
+    }
+  },
+  {
+    "id": "swsh12.5-142",
+    "name": "Trolley di Salvataggio",
+    "number": "142",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/142"
+    }
+  },
+  {
+    "id": "swsh12.5-143",
+    "name": "Sigillo Celeste",
+    "number": "143",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/143"
+    }
+  },
+  {
+    "id": "swsh12.5-144",
+    "name": "Scambio",
+    "number": "144",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/144"
+    }
+  },
+  {
+    "id": "swsh12.5-145",
+    "name": "Scarpe da trekking",
+    "number": "145",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/145"
+    }
+  },
+  {
+    "id": "swsh12.5-146",
+    "name": "Ultra Ball",
+    "number": "146",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/146"
+    }
+  },
+  {
+    "id": "swsh12.5-147",
+    "name": "Leggiadria di Camelia",
+    "number": "147",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/147"
+    }
+  },
+  {
+    "id": "swsh12.5-148",
+    "name": "Amici a Hisui",
+    "number": "148",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/148"
+    }
+  },
+  {
+    "id": "swsh12.5-149",
+    "name": "Amici a Sinnoh",
+    "number": "149",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/149"
+    }
+  },
+  {
+    "id": "swsh12.5-150",
+    "name": "Ricerca Accademica",
+    "number": "150",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/150"
+    }
+  },
+  {
+    "id": "swsh12.5-151",
+    "name": "Ethelo",
+    "number": "151",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/151"
+    }
+  },
+  {
+    "id": "swsh12.5-152",
+    "name": "Energia Erba",
+    "number": "152",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/152"
+    }
+  },
+  {
+    "id": "swsh12.5-153",
+    "name": "Energia Fuoco",
+    "number": "153",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/153"
+    }
+  },
+  {
+    "id": "swsh12.5-154",
+    "name": "Energia Acqua",
+    "number": "154",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/154"
+    }
+  },
+  {
+    "id": "swsh12.5-155",
+    "name": "Energia Lampo",
+    "number": "155",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/155"
+    }
+  },
+  {
+    "id": "swsh12.5-156",
+    "name": "Energia Psiche",
+    "number": "156",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/156"
+    }
+  },
+  {
+    "id": "swsh12.5-157",
+    "name": "Energia Combattimento",
+    "number": "157",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/157"
+    }
+  },
+  {
+    "id": "swsh12.5-158",
+    "name": "Energia Oscurità",
+    "number": "158",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/158"
+    }
+  },
+  {
+    "id": "swsh12.5-159",
+    "name": "Energia Metallo",
+    "number": "159",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/159"
+    }
+  },
+  {
+    "id": "swsh12.5-160",
+    "name": "Pikachu",
+    "number": "160",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/160"
+    }
+  },
+  {
+    "id": "swsh12.5-GG01",
+    "name": "Voltorb di Hisui",
+    "number": "GG01",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG01"
+    }
+  },
+  {
+    "id": "swsh12.5-GG02",
+    "name": "Kricketune",
+    "number": "GG02",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG02"
+    }
+  },
+  {
+    "id": "swsh12.5-GG03",
+    "name": "Magmortar",
+    "number": "GG03",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG03"
+    }
+  },
+  {
+    "id": "swsh12.5-GG04",
+    "name": "Oricorio",
+    "number": "GG04",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG04"
+    }
+  },
+  {
+    "id": "swsh12.5-GG05",
+    "name": "Lapras",
+    "number": "GG05",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG05"
+    }
+  },
+  {
+    "id": "swsh12.5-GG06",
+    "name": "Manaphy",
+    "number": "GG06",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG06"
+    }
+  },
+  {
+    "id": "swsh12.5-GG07",
+    "name": "Keldeo",
+    "number": "GG07",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG07"
+    }
+  },
+  {
+    "id": "swsh12.5-GG08",
+    "name": "Electivire",
+    "number": "GG08",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG08"
+    }
+  },
+  {
+    "id": "swsh12.5-GG09",
+    "name": "Toxtricity",
+    "number": "GG09",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG09"
+    }
+  },
+  {
+    "id": "swsh12.5-GG10",
+    "name": "Mew",
+    "number": "GG10",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG10"
+    }
+  },
+  {
+    "id": "swsh12.5-GG11",
+    "name": "Lunatone",
+    "number": "GG11",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG11"
+    }
+  },
+  {
+    "id": "swsh12.5-GG12",
+    "name": "Deoxys",
+    "number": "GG12",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG12"
+    }
+  },
+  {
+    "id": "swsh12.5-GG13",
+    "name": "Diancie",
+    "number": "GG13",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG13"
+    }
+  },
+  {
+    "id": "swsh12.5-GG14",
+    "name": "Comfey",
+    "number": "GG14",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG14"
+    }
+  },
+  {
+    "id": "swsh12.5-GG15",
+    "name": "Solrock",
+    "number": "GG15",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG15"
+    }
+  },
+  {
+    "id": "swsh12.5-GG16",
+    "name": "Absol",
+    "number": "GG16",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG16"
+    }
+  },
+  {
+    "id": "swsh12.5-GG17",
+    "name": "Thievul",
+    "number": "GG17",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG17"
+    }
+  },
+  {
+    "id": "swsh12.5-GG18",
+    "name": "Magnezone",
+    "number": "GG18",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG18"
+    }
+  },
+  {
+    "id": "swsh12.5-GG19",
+    "name": "Altaria",
+    "number": "GG19",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG19"
+    }
+  },
+  {
+    "id": "swsh12.5-GG20",
+    "name": "Latias",
+    "number": "GG20",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG20"
+    }
+  },
+  {
+    "id": "swsh12.5-GG21",
+    "name": "Goodra di Hisui",
+    "number": "GG21",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG21"
+    }
+  },
+  {
+    "id": "swsh12.5-GG22",
+    "name": "Ditto",
+    "number": "GG22",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG22"
+    }
+  },
+  {
+    "id": "swsh12.5-GG23",
+    "name": "Dunsparce",
+    "number": "GG23",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG23"
+    }
+  },
+  {
+    "id": "swsh12.5-GG24",
+    "name": "Miltank",
+    "number": "GG24",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG24"
+    }
+  },
+  {
+    "id": "swsh12.5-GG25",
+    "name": "Bibarel",
+    "number": "GG25",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG25"
+    }
+  },
+  {
+    "id": "swsh12.5-GG26",
+    "name": "Riolu",
+    "number": "GG26",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG26"
+    }
+  },
+  {
+    "id": "swsh12.5-GG27",
+    "name": "Swablu",
+    "number": "GG27",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG27"
+    }
+  },
+  {
+    "id": "swsh12.5-GG28",
+    "name": "Duskull",
+    "number": "GG28",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG28"
+    }
+  },
+  {
+    "id": "swsh12.5-GG29",
+    "name": "Bidoof",
+    "number": "GG29",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG29"
+    }
+  },
+  {
+    "id": "swsh12.5-GG30",
+    "name": "Pikachu",
+    "number": "GG30",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG30"
+    }
+  },
+  {
+    "id": "swsh12.5-GG31",
+    "name": "Turtwig",
+    "number": "GG31",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG31"
+    }
+  },
+  {
+    "id": "swsh12.5-GG32",
+    "name": "Paras",
+    "number": "GG32",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG32"
+    }
+  },
+  {
+    "id": "swsh12.5-GG33",
+    "name": "Poochyena",
+    "number": "GG33",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG33"
+    }
+  },
+  {
+    "id": "swsh12.5-GG34",
+    "name": "Mareep",
+    "number": "GG34",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG34"
+    }
+  },
+  {
+    "id": "swsh12.5-GG35",
+    "name": "Leafeon V ASTRO",
+    "number": "GG35",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG35"
+    }
+  },
+  {
+    "id": "swsh12.5-GG36",
+    "name": "Entei V",
+    "number": "GG36",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG36"
+    }
+  },
+  {
+    "id": "swsh12.5-GG37",
+    "name": "Simisear V ASTRO",
+    "number": "GG37",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG37"
+    }
+  },
+  {
+    "id": "swsh12.5-GG38",
+    "name": "Suicune V",
+    "number": "GG38",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG38"
+    }
+  },
+  {
+    "id": "swsh12.5-GG39",
+    "name": "Lumineon V",
+    "number": "GG39",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG39"
+    }
+  },
+  {
+    "id": "swsh12.5-GG40",
+    "name": "Glaceon V ASTRO",
+    "number": "GG40",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG40"
+    }
+  },
+  {
+    "id": "swsh12.5-GG41",
+    "name": "Raikou V",
+    "number": "GG41",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG41"
+    }
+  },
+  {
+    "id": "swsh12.5-GG42",
+    "name": "Zeraora VMAX",
+    "number": "GG42",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG42"
+    }
+  },
+  {
+    "id": "swsh12.5-GG43",
+    "name": "Zeraora V ASTRO",
+    "number": "GG43",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG43"
+    }
+  },
+  {
+    "id": "swsh12.5-GG44",
+    "name": "Mewtwo V ASTRO",
+    "number": "GG44",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG44"
+    }
+  },
+  {
+    "id": "swsh12.5-GG45",
+    "name": "Deoxys VMAX",
+    "number": "GG45",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG45"
+    }
+  },
+  {
+    "id": "swsh12.5-GG46",
+    "name": "Deoxys V ASTRO",
+    "number": "GG46",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG46"
+    }
+  },
+  {
+    "id": "swsh12.5-GG47",
+    "name": "Hatterene VMAX",
+    "number": "GG47",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG47"
+    }
+  },
+  {
+    "id": "swsh12.5-GG48",
+    "name": "Zacian V",
+    "number": "GG48",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG48"
+    }
+  },
+  {
+    "id": "swsh12.5-GG49",
+    "name": "Drapion V",
+    "number": "GG49",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG49"
+    }
+  },
+  {
+    "id": "swsh12.5-GG50",
+    "name": "Darkrai V ASTRO",
+    "number": "GG50",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG50"
+    }
+  },
+  {
+    "id": "swsh12.5-GG51",
+    "name": "Samurott di Hisui V",
+    "number": "GG51",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG51"
+    }
+  },
+  {
+    "id": "swsh12.5-GG52",
+    "name": "Samurott di Hisui V ASTRO",
+    "number": "GG52",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG52"
+    }
+  },
+  {
+    "id": "swsh12.5-GG53",
+    "name": "Hoopa V",
+    "number": "GG53",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG53"
+    }
+  },
+  {
+    "id": "swsh12.5-GG54",
+    "name": "Zamazenta V",
+    "number": "GG54",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG54"
+    }
+  },
+  {
+    "id": "swsh12.5-GG55",
+    "name": "Regigigas V ASTRO",
+    "number": "GG55",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG55"
+    }
+  },
+  {
+    "id": "swsh12.5-GG56",
+    "name": "Zoroark di Hisui V ASTRO",
+    "number": "GG56",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG56"
+    }
+  },
+  {
+    "id": "swsh12.5-GG57",
+    "name": "Damon",
+    "number": "GG57",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG57"
+    }
+  },
+  {
+    "id": "swsh12.5-GG58",
+    "name": "Premura di Komor",
+    "number": "GG58",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG58"
+    }
+  },
+  {
+    "id": "swsh12.5-GG59",
+    "name": "Esperimento di Acromio",
+    "number": "GG59",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG59"
+    }
+  },
+  {
+    "id": "swsh12.5-GG60",
+    "name": "Ambizione di Camilla",
+    "number": "GG60",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG60"
+    }
+  },
+  {
+    "id": "swsh12.5-GG61",
+    "name": "Vigore di Gardenia",
+    "number": "GG61",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG61"
+    }
+  },
+  {
+    "id": "swsh12.5-GG62",
+    "name": "Lino",
+    "number": "GG62",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG62"
+    }
+  },
+  {
+    "id": "swsh12.5-GG63",
+    "name": "Perula",
+    "number": "GG63",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG63"
+    }
+  },
+  {
+    "id": "swsh12.5-GG64",
+    "name": "Melania",
+    "number": "GG64",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG64"
+    }
+  },
+  {
+    "id": "swsh12.5-GG65",
+    "name": "Laburno",
+    "number": "GG65",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG65"
+    }
+  },
+  {
+    "id": "swsh12.5-GG66",
+    "name": "Petra",
+    "number": "GG66",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG66"
+    }
+  },
+  {
+    "id": "swsh12.5-GG67",
+    "name": "Palkia Originale V ASTRO",
+    "number": "GG67",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG67"
+    }
+  },
+  {
+    "id": "swsh12.5-GG68",
+    "name": "Dialga Originale V ASTRO",
+    "number": "GG68",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG68"
+    }
+  },
+  {
+    "id": "swsh12.5-GG69",
+    "name": "Giratina V ASTRO",
+    "number": "GG69",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG69"
+    }
+  },
+  {
+    "id": "swsh12.5-GG70",
+    "name": "Arceus V ASTRO",
+    "number": "GG70",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/swsh/swsh12.5/GG70"
+    }
+  }
+]

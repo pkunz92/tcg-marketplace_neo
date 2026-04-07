@@ -1,0 +1,92 @@
+[
+  {
+    "id": "tk-ex-latio-1",
+    "name": "Electrike",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-latio-2",
+    "name": "Latios",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-latio-3",
+    "name": "Linoone",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-latio-4",
+    "name": "Magnemite",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-latio-5",
+    "name": "Magneton",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-latio-6",
+    "name": "Pikachu",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-latio-7",
+    "name": "Zigzagoon",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-latio-8",
+    "name": "Potion",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-latio-9",
+    "name": "Energy Search",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-latio-10",
+    "name": "Lightning Energy",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

@@ -1,0 +1,1172 @@
+[
+  {
+    "id": "dp1-1",
+    "name": "Dialga",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-2",
+    "name": "Zwirrfinst",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-3",
+    "name": "Elevoltek",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-4",
+    "name": "Impoleon",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-5",
+    "name": "Panferno",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-6",
+    "name": "Lucario",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-7",
+    "name": "Luxtra",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-8",
+    "name": "Magnezone",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-9",
+    "name": "Manaphy",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-10",
+    "name": "Traunmagil",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-11",
+    "name": "Palkia",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-12",
+    "name": "Rihornior",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-13",
+    "name": "Roserade",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-14",
+    "name": "Tengulist",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-15",
+    "name": "Skuntank",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-16",
+    "name": "Staraptor",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-17",
+    "name": "Chelterrar",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-18",
+    "name": "Azumarill",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-19",
+    "name": "Papinella",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-20",
+    "name": "Bidifas",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-21",
+    "name": "Venuflibis",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-22",
+    "name": "Pixi",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-23",
+    "name": "Piondragi",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-24",
+    "name": "Drifzepeli",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-25",
+    "name": "Pudox",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-26",
+    "name": "Bojelin",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-27",
+    "name": "Gengar",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-28",
+    "name": "Skaraborn",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-29",
+    "name": "Hippoterus",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-30",
+    "name": "Schlapor",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-31",
+    "name": "Machomei",
+    "number": "31",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-32",
+    "name": "Meditalis",
+    "number": "32",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-33",
+    "name": "Mampfaxo",
+    "number": "33",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-34",
+    "name": "Noctuh",
+    "number": "34",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-35",
+    "name": "Pachirisu",
+    "number": "35",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-36",
+    "name": "Shnurgarst",
+    "number": "36",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-37",
+    "name": "Relaxo",
+    "number": "37",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-38",
+    "name": "Stahlos",
+    "number": "38",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-39",
+    "name": "Honweisel",
+    "number": "39",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-40",
+    "name": "Snibunna",
+    "number": "40",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-41",
+    "name": "Woingenau",
+    "number": "41",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-42",
+    "name": "Isso",
+    "number": "42",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-43",
+    "name": "Knospi",
+    "number": "43",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-44",
+    "name": "Panekon",
+    "number": "44",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-45",
+    "name": "Kinoso",
+    "number": "45",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-46",
+    "name": "Driftlon",
+    "number": "46",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-47",
+    "name": "Zwirrklop",
+    "number": "47",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-48",
+    "name": "Elekid",
+    "number": "48",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-49",
+    "name": "Chelcarain",
+    "number": "49",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-50",
+    "name": "Alpollo",
+    "number": "50",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-51",
+    "name": "Hippopotas",
+    "number": "51",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-52",
+    "name": "Luxio",
+    "number": "52",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-53",
+    "name": "Maschock",
+    "number": "53",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-54",
+    "name": "Magneton",
+    "number": "54",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-55",
+    "name": "Mantirps",
+    "number": "55",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-56",
+    "name": "Panpyro",
+    "number": "56",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-57",
+    "name": "Blanas",
+    "number": "57",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-58",
+    "name": "Pliprin",
+    "number": "58",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-59",
+    "name": "Gallopa",
+    "number": "59",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-60",
+    "name": "Rizeros",
+    "number": "60",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-61",
+    "name": "Riolu",
+    "number": "61",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-62",
+    "name": "Golking",
+    "number": "62",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-63",
+    "name": "Schaloko",
+    "number": "63",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-64",
+    "name": "Staravia",
+    "number": "64",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-65",
+    "name": "Icognito A",
+    "number": "65",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-66",
+    "name": "Icognito B",
+    "number": "66",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-67",
+    "name": "Icognito C",
+    "number": "67",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-68",
+    "name": "Icognito D",
+    "number": "68",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-69",
+    "name": "Azurill",
+    "number": "69",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-70",
+    "name": "Bidiza",
+    "number": "70",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-71",
+    "name": "Mobai",
+    "number": "71",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-72",
+    "name": "Bamelin",
+    "number": "72",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-73",
+    "name": "Haspiror",
+    "number": "73",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-74",
+    "name": "Plaudagei",
+    "number": "74",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-75",
+    "name": "Kikugi",
+    "number": "75",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-76",
+    "name": "Panflam",
+    "number": "76",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-77",
+    "name": "Piepi",
+    "number": "77",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-78",
+    "name": "Pii",
+    "number": "78",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-79",
+    "name": "Wadribie",
+    "number": "79",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-80",
+    "name": "Zwirrlicht",
+    "number": "80",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-81",
+    "name": "Elektek",
+    "number": "81",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-82",
+    "name": "Nebulak",
+    "number": "82",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-83",
+    "name": "Charmian",
+    "number": "83",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-84",
+    "name": "Goldini",
+    "number": "84",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-85",
+    "name": "Hoothoot",
+    "number": "85",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-86",
+    "name": "Machollo",
+    "number": "86",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-87",
+    "name": "Magnetilo",
+    "number": "87",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-88",
+    "name": "Marill",
+    "number": "88",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-89",
+    "name": "Meditie",
+    "number": "89",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-90",
+    "name": "Pantimimi",
+    "number": "90",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-91",
+    "name": "Traunfugil",
+    "number": "91",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-92",
+    "name": "Onix",
+    "number": "92",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-93",
+    "name": "Plinfa",
+    "number": "93",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-94",
+    "name": "Ponita",
+    "number": "94",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-95",
+    "name": "Rihorn",
+    "number": "95",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-96",
+    "name": "Roselia",
+    "number": "96",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-97",
+    "name": "Samurzel",
+    "number": "97",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-98",
+    "name": "Sheinux",
+    "number": "98",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-99",
+    "name": "Pionskora",
+    "number": "99",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-100",
+    "name": "Sniebel",
+    "number": "100",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-101",
+    "name": "Staralili",
+    "number": "101",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-102",
+    "name": "Skunkapuh",
+    "number": "102",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-103",
+    "name": "Chelast",
+    "number": "103",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-104",
+    "name": "Waumpel",
+    "number": "104",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-105",
+    "name": "Doppel Hyperheiler",
+    "number": "105",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-106",
+    "name": "Energiewiederherstellung",
+    "number": "106",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-107",
+    "name": "Energie-Umschalter",
+    "number": "107",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-108",
+    "name": "Pokémon-Nachtcenter",
+    "number": "108",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-109",
+    "name": "PlusPower",
+    "number": "109",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-110",
+    "name": "Pokéball",
+    "number": "110",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-111",
+    "name": "Pokédex HANDY910is",
+    "number": "111",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-112",
+    "name": "Professor Eibe",
+    "number": "112",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-113",
+    "name": "Rivale",
+    "number": "113",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-114",
+    "name": "Tempodrom",
+    "number": "114",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-115",
+    "name": "Super-Anziehungskraft",
+    "number": "115",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-116",
+    "name": "Wurmloch",
+    "number": "116",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-117",
+    "name": "Energiesuche",
+    "number": "117",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-118",
+    "name": "Trank",
+    "number": "118",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-119",
+    "name": "Tausch",
+    "number": "119",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-120",
+    "name": "Impoleon",
+    "number": "120",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-121",
+    "name": "Panferno",
+    "number": "121",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-122",
+    "name": "Chelterrar",
+    "number": "122",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-123",
+    "name": "Pflanzenenergie",
+    "number": "123",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-124",
+    "name": "Feuerenergie",
+    "number": "124",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-125",
+    "name": "Wasserenergie",
+    "number": "125",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-126",
+    "name": "Elektroenergie",
+    "number": "126",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-127",
+    "name": "Psychoenergie",
+    "number": "127",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-128",
+    "name": "Kampfenergie",
+    "number": "128",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-129",
+    "name": "Finsternis-Energie",
+    "number": "129",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "dp1-130",
+    "name": "Metall-Energie",
+    "number": "130",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

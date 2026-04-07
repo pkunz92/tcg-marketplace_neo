@@ -1,0 +1,92 @@
+[
+  {
+    "id": "mep-001",
+    "name": "Meganie",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-002",
+    "name": "Intelleon",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-003",
+    "name": "Simsala",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-004",
+    "name": "Lunastein",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-005",
+    "name": "Driftlon",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-006",
+    "name": "Drifzepeli",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-007",
+    "name": "Enton",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-008",
+    "name": "Entoron",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-009",
+    "name": "Simsala",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-010",
+    "name": "Riolu",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

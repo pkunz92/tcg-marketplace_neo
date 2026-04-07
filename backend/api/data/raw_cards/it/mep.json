@@ -1,0 +1,92 @@
+[
+  {
+    "id": "mep-001",
+    "name": "Meganium",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-002",
+    "name": "Inteleon",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-003",
+    "name": "Alakazam",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-004",
+    "name": "Lunatone",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-005",
+    "name": "Drifloon",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-006",
+    "name": "Drifblim",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-007",
+    "name": "Psyduck",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-008",
+    "name": "Golduck",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-009",
+    "name": "Alakazam",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "mep-010",
+    "name": "Riolu",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

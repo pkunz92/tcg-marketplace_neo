@@ -1,0 +1,614 @@
+[
+  {
+    "id": "PCG9-001",
+    "name": "Snorlax（デルタ種）",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-002",
+    "name": "ドラチーニ（デルタ種）",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-003",
+    "name": "ドラゴンエア（デルタ種）",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-004",
+    "name": "ドラゴナイトex（デルタ種）",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-005",
+    "name": "ウーパー（デルタ種）",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-006",
+    "name": "quagsire（デルタ種）",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-007",
+    "name": "エカン（デルタ種）",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-008",
+    "name": "アーボック（デルタ種）",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-009",
+    "name": "ヘラクロス（デルタ種）",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-010",
+    "name": "テイロウ（デルタ種）",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-011",
+    "name": "スウェロー（デルタ種）",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-012",
+    "name": "フィーバス（デルタ種）",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-013",
+    "name": "ミロティック（デルタ種）",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-014",
+    "name": "Latias ex（デルタ種）",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-015",
+    "name": "ミュースター（デルタ種）",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-016",
+    "name": "Togepi（デルタ種）",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-017",
+    "name": "togetic（デルタ種）",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-018",
+    "name": "スワブー（デルタ種）",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-019",
+    "name": "altaria ex（デルタ種）",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-020",
+    "name": "バゴン（デルタ種）",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-021",
+    "name": "シェルゴン（デルタ種）",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-022",
+    "name": "Salamence ex（デルタ種）",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-023",
+    "name": "Latios Ex（デルタ種）",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-024",
+    "name": "totodile（デルタ種）",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-025",
+    "name": "クロコノー（デルタ種）",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-026",
+    "name": "feraligatr（デルタ種）",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-027",
+    "name": "マンティン（デルタ種）",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-028",
+    "name": "Rayquaza Ex（デルタ種）",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-029",
+    "name": "Vulpix（デルタ種）",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-030",
+    "name": "ニネタール（デルタ種）",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-031",
+    "name": "Lickitung（デルタ種）",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-032",
+    "name": "シンダキル（デルタ種）",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-033",
+    "name": "キラバ（デルタ種）",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-034",
+    "name": "Typhlosion（デルタ種）",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-035",
+    "name": "トラピンチ（デルタ種）",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-036",
+    "name": "ビブラバ（デルタ種）",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-037",
+    "name": "Flygon Ex（デルタ種）",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-038",
+    "name": "シェルダー（デルタ種）",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-039",
+    "name": "クロイスター（デルタ種）",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-040",
+    "name": "ホース（デルタ種）",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-041",
+    "name": "シードラ（デルタ種）",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-042",
+    "name": "ピンシル（デルタ種）",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-043",
+    "name": "チコリータ（デルタ種）",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-044",
+    "name": "Bayleef（デルタ種）",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-045",
+    "name": "メガニウム（デルタ種）",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-046",
+    "name": "Kingdra Ex（デルタ種）",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-047",
+    "name": "SEEL（デルタ種）",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-048",
+    "name": "デューゴン（デルタ種）",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-049",
+    "name": "Mareep（デルタ種）",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-050",
+    "name": "フラフィ（デルタ種）",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-051",
+    "name": "アンファロス（デルタ種）",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-052",
+    "name": "カリザードスター（デルタ種）",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-053",
+    "name": "ニドラン（デルタ種）",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-054",
+    "name": "ニドリーノ（デルタ種）",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-055",
+    "name": "ニドギング（デルタ種）",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-056",
+    "name": "NATU（デルタ種）",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-057",
+    "name": "Xatu（デルタ種）",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-058",
+    "name": "ニドラン（デルタ種）",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-059",
+    "name": "ニドリーナ（デルタ種）",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-060",
+    "name": "nidoqueen（デルタ種）",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-061",
+    "name": "レディバ（デルタ種）",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-062",
+    "name": "Ledian（デルタ種）",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-063",
+    "name": "トロピウス（デルタ種）",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-064",
+    "name": "古い棒",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-065",
+    "name": "島の隠者",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-066",
+    "name": "強さの魅力",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-067",
+    "name": "ホロンの遺産",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PCG9-068",
+    "name": "スクランブルエネルギー",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

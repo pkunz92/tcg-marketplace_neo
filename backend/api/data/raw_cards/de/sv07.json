@@ -1,0 +1,1577 @@
+[
+  {
+    "id": "sv07-001",
+    "name": "Bisaflor-ex",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/001"
+    }
+  },
+  {
+    "id": "sv07-002",
+    "name": "Ledyba",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/002"
+    }
+  },
+  {
+    "id": "sv07-003",
+    "name": "Ledian",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/003"
+    }
+  },
+  {
+    "id": "sv07-004",
+    "name": "Celebi",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/004"
+    }
+  },
+  {
+    "id": "sv07-005",
+    "name": "Liliep",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/005"
+    }
+  },
+  {
+    "id": "sv07-006",
+    "name": "Wielie",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/006"
+    }
+  },
+  {
+    "id": "sv07-007",
+    "name": "Venuflibis",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/007"
+    }
+  },
+  {
+    "id": "sv07-008",
+    "name": "Schneid-Rotom",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/008"
+    }
+  },
+  {
+    "id": "sv07-009",
+    "name": "Mabula",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/009"
+    }
+  },
+  {
+    "id": "sv07-010",
+    "name": "Cottini",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/010"
+    }
+  },
+  {
+    "id": "sv07-011",
+    "name": "Cottomi",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/011"
+    }
+  },
+  {
+    "id": "sv07-012",
+    "name": "Knapfel",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/012"
+    }
+  },
+  {
+    "id": "sv07-013",
+    "name": "Sirapfel",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/013"
+    }
+  },
+  {
+    "id": "sv07-014",
+    "name": "Hydrapfel-ex",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/014"
+    }
+  },
+  {
+    "id": "sv07-015",
+    "name": "Micrick",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/015"
+    }
+  },
+  {
+    "id": "sv07-016",
+    "name": "Lextremo",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/016"
+    }
+  },
+  {
+    "id": "sv07-017",
+    "name": "Tentagra",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/017"
+    }
+  },
+  {
+    "id": "sv07-018",
+    "name": "Tenterra",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/018"
+    }
+  },
+  {
+    "id": "sv07-019",
+    "name": "Ponita",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/019"
+    }
+  },
+  {
+    "id": "sv07-020",
+    "name": "Gallopa",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/020"
+    }
+  },
+  {
+    "id": "sv07-021",
+    "name": "Grillmak",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/021"
+    }
+  },
+  {
+    "id": "sv07-022",
+    "name": "Reshiram",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/022"
+    }
+  },
+  {
+    "id": "sv07-023",
+    "name": "Molunk",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/023"
+    }
+  },
+  {
+    "id": "sv07-024",
+    "name": "Amfira",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/024"
+    }
+  },
+  {
+    "id": "sv07-025",
+    "name": "Tortunator",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/025"
+    }
+  },
+  {
+    "id": "sv07-026",
+    "name": "Hopplo",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/026"
+    }
+  },
+  {
+    "id": "sv07-027",
+    "name": "Kickerlo",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/027"
+    }
+  },
+  {
+    "id": "sv07-028",
+    "name": "Liberlo-ex",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/028"
+    }
+  },
+  {
+    "id": "sv07-029",
+    "name": "Knarbon",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/029"
+    }
+  },
+  {
+    "id": "sv07-030",
+    "name": "Turtok-ex",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/030"
+    }
+  },
+  {
+    "id": "sv07-031",
+    "name": "Lapras",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/031"
+    }
+  },
+  {
+    "id": "sv07-032",
+    "name": "Lapras-ex",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/032"
+    }
+  },
+  {
+    "id": "sv07-033",
+    "name": "Marill",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/033"
+    }
+  },
+  {
+    "id": "sv07-034",
+    "name": "Azumarill",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/034"
+    }
+  },
+  {
+    "id": "sv07-035",
+    "name": "Finneon",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/035"
+    }
+  },
+  {
+    "id": "sv07-036",
+    "name": "Lumineon",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/036"
+    }
+  },
+  {
+    "id": "sv07-037",
+    "name": "Galapaflos",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/037"
+    }
+  },
+  {
+    "id": "sv07-038",
+    "name": "Karippas",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/038"
+    }
+  },
+  {
+    "id": "sv07-039",
+    "name": "Froxy",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/039"
+    }
+  },
+  {
+    "id": "sv07-040",
+    "name": "Amphizel",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/040"
+    }
+  },
+  {
+    "id": "sv07-041",
+    "name": "Quajutsu-ex",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/041"
+    }
+  },
+  {
+    "id": "sv07-042",
+    "name": "Krawell",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/042"
+    }
+  },
+  {
+    "id": "sv07-043",
+    "name": "Kamehaps",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/043"
+    }
+  },
+  {
+    "id": "sv07-044",
+    "name": "Kamalm",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/044"
+    }
+  },
+  {
+    "id": "sv07-045",
+    "name": "Agiluza",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/045"
+    }
+  },
+  {
+    "id": "sv07-046",
+    "name": "Elektek",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/046"
+    }
+  },
+  {
+    "id": "sv07-047",
+    "name": "Elevoltek",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/047"
+    }
+  },
+  {
+    "id": "sv07-048",
+    "name": "Lampi",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/048"
+    }
+  },
+  {
+    "id": "sv07-049",
+    "name": "Lanturn",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/049"
+    }
+  },
+  {
+    "id": "sv07-050",
+    "name": "Wattzapf",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/050"
+    }
+  },
+  {
+    "id": "sv07-051",
+    "name": "Voltula-ex",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/051"
+    }
+  },
+  {
+    "id": "sv07-052",
+    "name": "Akkup",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/052"
+    }
+  },
+  {
+    "id": "sv07-053",
+    "name": "Donarion",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/053"
+    }
+  },
+  {
+    "id": "sv07-054",
+    "name": "Togedemaru",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/054"
+    }
+  },
+  {
+    "id": "sv07-055",
+    "name": "Zeraora",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/055"
+    }
+  },
+  {
+    "id": "sv07-056",
+    "name": "Pamo",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/056"
+    }
+  },
+  {
+    "id": "sv07-057",
+    "name": "Flegmon",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/057"
+    }
+  },
+  {
+    "id": "sv07-058",
+    "name": "Laschoking",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/058"
+    }
+  },
+  {
+    "id": "sv07-059",
+    "name": "Mewtu",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/059"
+    }
+  },
+  {
+    "id": "sv07-060",
+    "name": "Driftlon",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/060"
+    }
+  },
+  {
+    "id": "sv07-061",
+    "name": "Drifzepeli",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/061"
+    }
+  },
+  {
+    "id": "sv07-062",
+    "name": "Makabaja",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/062"
+    }
+  },
+  {
+    "id": "sv07-063",
+    "name": "Curelei",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/063"
+    }
+  },
+  {
+    "id": "sv07-064",
+    "name": "Hokumil",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/064"
+    }
+  },
+  {
+    "id": "sv07-065",
+    "name": "Pokusan",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/065"
+    }
+  },
+  {
+    "id": "sv07-066",
+    "name": "Hefel",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/066"
+    }
+  },
+  {
+    "id": "sv07-067",
+    "name": "Backel-ex",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/067"
+    }
+  },
+  {
+    "id": "sv07-068",
+    "name": "Flattutu",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/068"
+    }
+  },
+  {
+    "id": "sv07-069",
+    "name": "Psiopatra",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/069"
+    }
+  },
+  {
+    "id": "sv07-070",
+    "name": "Gruff",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/070"
+    }
+  },
+  {
+    "id": "sv07-071",
+    "name": "Eisenfels",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/071"
+    }
+  },
+  {
+    "id": "sv07-072",
+    "name": "Tragosso",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/072"
+    }
+  },
+  {
+    "id": "sv07-073",
+    "name": "Knogga",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/073"
+    }
+  },
+  {
+    "id": "sv07-074",
+    "name": "Rihorn",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/074"
+    }
+  },
+  {
+    "id": "sv07-075",
+    "name": "Rizeros",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/075"
+    }
+  },
+  {
+    "id": "sv07-076",
+    "name": "Rihornior",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/076"
+    }
+  },
+  {
+    "id": "sv07-077",
+    "name": "Meditie",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/077"
+    }
+  },
+  {
+    "id": "sv07-078",
+    "name": "Meditie",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/078"
+    }
+  },
+  {
+    "id": "sv07-079",
+    "name": "Meditalis",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/079"
+    }
+  },
+  {
+    "id": "sv07-080",
+    "name": "Meditalis-ex",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/080"
+    }
+  },
+  {
+    "id": "sv07-081",
+    "name": "Riolu",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/081"
+    }
+  },
+  {
+    "id": "sv07-082",
+    "name": "Lucario-ex",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/082"
+    }
+  },
+  {
+    "id": "sv07-083",
+    "name": "Lin-Fu",
+    "number": "083",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/083"
+    }
+  },
+  {
+    "id": "sv07-084",
+    "name": "Wie-Shu",
+    "number": "084",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/084"
+    }
+  },
+  {
+    "id": "sv07-085",
+    "name": "Pam-Pam",
+    "number": "085",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/085"
+    }
+  },
+  {
+    "id": "sv07-086",
+    "name": "Diancie",
+    "number": "086",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/086"
+    }
+  },
+  {
+    "id": "sv07-087",
+    "name": "Krabbox",
+    "number": "087",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/087"
+    }
+  },
+  {
+    "id": "sv07-088",
+    "name": "Legios",
+    "number": "088",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/088"
+    }
+  },
+  {
+    "id": "sv07-089",
+    "name": "Saltigant-ex",
+    "number": "089",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/089"
+    }
+  },
+  {
+    "id": "sv07-090",
+    "name": "Koraidon",
+    "number": "090",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/090"
+    }
+  },
+  {
+    "id": "sv07-091",
+    "name": "Schluppuck",
+    "number": "091",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/091"
+    }
+  },
+  {
+    "id": "sv07-092",
+    "name": "Schlukwech",
+    "number": "092",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/092"
+    }
+  },
+  {
+    "id": "sv07-093",
+    "name": "Pandagro",
+    "number": "093",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/093"
+    }
+  },
+  {
+    "id": "sv07-094",
+    "name": "Bähmon",
+    "number": "094",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/094"
+    }
+  },
+  {
+    "id": "sv07-095",
+    "name": "Pelzebub",
+    "number": "095",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/095"
+    }
+  },
+  {
+    "id": "sv07-096",
+    "name": "Olangaar",
+    "number": "096",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/096"
+    }
+  },
+  {
+    "id": "sv07-097",
+    "name": "Adebom",
+    "number": "097",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/097"
+    }
+  },
+  {
+    "id": "sv07-098",
+    "name": "Jirachi",
+    "number": "098",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/098"
+    }
+  },
+  {
+    "id": "sv07-099",
+    "name": "Klikk",
+    "number": "099",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/099"
+    }
+  },
+  {
+    "id": "sv07-100",
+    "name": "Kliklak",
+    "number": "100",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/100"
+    }
+  },
+  {
+    "id": "sv07-101",
+    "name": "Klikdiklak",
+    "number": "101",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/101"
+    }
+  },
+  {
+    "id": "sv07-102",
+    "name": "Meltan",
+    "number": "102",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/102"
+    }
+  },
+  {
+    "id": "sv07-103",
+    "name": "Meltan",
+    "number": "103",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/103"
+    }
+  },
+  {
+    "id": "sv07-104",
+    "name": "Melmetal",
+    "number": "104",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/104"
+    }
+  },
+  {
+    "id": "sv07-105",
+    "name": "Melmetal-ex",
+    "number": "105",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/105"
+    }
+  },
+  {
+    "id": "sv07-106",
+    "name": "Duraludon",
+    "number": "106",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/106"
+    }
+  },
+  {
+    "id": "sv07-107",
+    "name": "Briduradon",
+    "number": "107",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/107"
+    }
+  },
+  {
+    "id": "sv07-108",
+    "name": "Knattox",
+    "number": "108",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/108"
+    }
+  },
+  {
+    "id": "sv07-109",
+    "name": "Knattatox",
+    "number": "109",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/109"
+    }
+  },
+  {
+    "id": "sv07-110",
+    "name": "Schlurm-ex",
+    "number": "110",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/110"
+    }
+  },
+  {
+    "id": "sv07-111",
+    "name": "Furienblitz",
+    "number": "111",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/111"
+    }
+  },
+  {
+    "id": "sv07-112",
+    "name": "Tauros",
+    "number": "112",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/112"
+    }
+  },
+  {
+    "id": "sv07-113",
+    "name": "Evoli",
+    "number": "113",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/113"
+    }
+  },
+  {
+    "id": "sv07-114",
+    "name": "Hoothoot",
+    "number": "114",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/114"
+    }
+  },
+  {
+    "id": "sv07-115",
+    "name": "Noctuh",
+    "number": "115",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/115"
+    }
+  },
+  {
+    "id": "sv07-116",
+    "name": "Charmian",
+    "number": "116",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/116"
+    }
+  },
+  {
+    "id": "sv07-117",
+    "name": "Shnurgarst",
+    "number": "117",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/117"
+    }
+  },
+  {
+    "id": "sv07-118",
+    "name": "Wirbel-Rotom",
+    "number": "118",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/118"
+    }
+  },
+  {
+    "id": "sv07-119",
+    "name": "Bisofank",
+    "number": "119",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/119"
+    }
+  },
+  {
+    "id": "sv07-120",
+    "name": "Boreos",
+    "number": "120",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/120"
+    }
+  },
+  {
+    "id": "sv07-121",
+    "name": "Dartiri",
+    "number": "121",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/121"
+    }
+  },
+  {
+    "id": "sv07-122",
+    "name": "Dartignis",
+    "number": "122",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/122"
+    }
+  },
+  {
+    "id": "sv07-123",
+    "name": "Fiaro",
+    "number": "123",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/123"
+    }
+  },
+  {
+    "id": "sv07-124",
+    "name": "Wolly",
+    "number": "124",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/124"
+    }
+  },
+  {
+    "id": "sv07-125",
+    "name": "Zwollock",
+    "number": "125",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/125"
+    }
+  },
+  {
+    "id": "sv07-126",
+    "name": "Ferkuli",
+    "number": "126",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/126"
+    }
+  },
+  {
+    "id": "sv07-127",
+    "name": "Mopex",
+    "number": "127",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/127"
+    }
+  },
+  {
+    "id": "sv07-128",
+    "name": "Terapagos-ex",
+    "number": "128",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/128"
+    }
+  },
+  {
+    "id": "sv07-129",
+    "name": "Antikes Schildfossil",
+    "number": "129",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/129"
+    }
+  },
+  {
+    "id": "sv07-130",
+    "name": "Antikes Wurzelfossil",
+    "number": "130",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/130"
+    }
+  },
+  {
+    "id": "sv07-131",
+    "name": "Höhlensystem Null",
+    "number": "131",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/131"
+    }
+  },
+  {
+    "id": "sv07-132",
+    "name": "Brianna",
+    "number": "132",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/132"
+    }
+  },
+  {
+    "id": "sv07-133",
+    "name": "Matt",
+    "number": "133",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/133"
+    }
+  },
+  {
+    "id": "sv07-134",
+    "name": "Luxusbombe",
+    "number": "134",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/134"
+    }
+  },
+  {
+    "id": "sv07-135",
+    "name": "Glastrompete",
+    "number": "135",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/135"
+    }
+  },
+  {
+    "id": "sv07-136",
+    "name": "Prachtbaum",
+    "number": "136",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/136"
+    }
+  },
+  {
+    "id": "sv07-137",
+    "name": "Erdanziehungsedelstein",
+    "number": "137",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/137"
+    }
+  },
+  {
+    "id": "sv07-138",
+    "name": "Kombu",
+    "number": "138",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/138"
+    }
+  },
+  {
+    "id": "sv07-139",
+    "name": "Tara",
+    "number": "139",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/139"
+    }
+  },
+  {
+    "id": "sv07-140",
+    "name": "Koakobeere",
+    "number": "140",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/140"
+    }
+  },
+  {
+    "id": "sv07-141",
+    "name": "Pyapabeere",
+    "number": "141",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/141"
+    }
+  },
+  {
+    "id": "sv07-142",
+    "name": "Funkelnder Kristall",
+    "number": "142",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/142"
+    }
+  },
+  {
+    "id": "sv07-143",
+    "name": "Bisasam",
+    "number": "143",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/143"
+    }
+  },
+  {
+    "id": "sv07-144",
+    "name": "Ledian",
+    "number": "144",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/144"
+    }
+  },
+  {
+    "id": "sv07-145",
+    "name": "Liliep",
+    "number": "145",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/145"
+    }
+  },
+  {
+    "id": "sv07-146",
+    "name": "Tortunator",
+    "number": "146",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/146"
+    }
+  },
+  {
+    "id": "sv07-147",
+    "name": "Kickerlo",
+    "number": "147",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/147"
+    }
+  },
+  {
+    "id": "sv07-148",
+    "name": "Schiggy",
+    "number": "148",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/148"
+    }
+  },
+  {
+    "id": "sv07-149",
+    "name": "Krawell",
+    "number": "149",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/149"
+    }
+  },
+  {
+    "id": "sv07-150",
+    "name": "Wattzapf",
+    "number": "150",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/150"
+    }
+  },
+  {
+    "id": "sv07-151",
+    "name": "Zeraora",
+    "number": "151",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/151"
+    }
+  },
+  {
+    "id": "sv07-152",
+    "name": "Hokumil",
+    "number": "152",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/152"
+    }
+  },
+  {
+    "id": "sv07-153",
+    "name": "Meditie",
+    "number": "153",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/153"
+    }
+  },
+  {
+    "id": "sv07-154",
+    "name": "Schluppuck",
+    "number": "154",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/154"
+    }
+  },
+  {
+    "id": "sv07-155",
+    "name": "Briduradon",
+    "number": "155",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/155"
+    }
+  },
+  {
+    "id": "sv07-156",
+    "name": "Hydrapfel-ex",
+    "number": "156",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/156"
+    }
+  },
+  {
+    "id": "sv07-157",
+    "name": "Liberlo-ex",
+    "number": "157",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/157"
+    }
+  },
+  {
+    "id": "sv07-158",
+    "name": "Lapras-ex",
+    "number": "158",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/158"
+    }
+  },
+  {
+    "id": "sv07-159",
+    "name": "Voltula-ex",
+    "number": "159",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/159"
+    }
+  },
+  {
+    "id": "sv07-160",
+    "name": "Backel-ex",
+    "number": "160",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/160"
+    }
+  },
+  {
+    "id": "sv07-161",
+    "name": "Meditalis-ex",
+    "number": "161",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/161"
+    }
+  },
+  {
+    "id": "sv07-162",
+    "name": "Schlurm-ex",
+    "number": "162",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/162"
+    }
+  },
+  {
+    "id": "sv07-163",
+    "name": "Brianna",
+    "number": "163",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/163"
+    }
+  },
+  {
+    "id": "sv07-164",
+    "name": "Matt",
+    "number": "164",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/164"
+    }
+  },
+  {
+    "id": "sv07-165",
+    "name": "Kombu",
+    "number": "165",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/165"
+    }
+  },
+  {
+    "id": "sv07-166",
+    "name": "Tara",
+    "number": "166",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/166"
+    }
+  },
+  {
+    "id": "sv07-167",
+    "name": "Hydrapfel-ex",
+    "number": "167",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/167"
+    }
+  },
+  {
+    "id": "sv07-168",
+    "name": "Voltula-ex",
+    "number": "168",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/168"
+    }
+  },
+  {
+    "id": "sv07-169",
+    "name": "Backel-ex",
+    "number": "169",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/169"
+    }
+  },
+  {
+    "id": "sv07-170",
+    "name": "Terapagos-ex",
+    "number": "170",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/170"
+    }
+  },
+  {
+    "id": "sv07-171",
+    "name": "Brianna",
+    "number": "171",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/171"
+    }
+  },
+  {
+    "id": "sv07-172",
+    "name": "Tara",
+    "number": "172",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/172"
+    }
+  },
+  {
+    "id": "sv07-173",
+    "name": "Terapagos-ex",
+    "number": "173",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/173"
+    }
+  },
+  {
+    "id": "sv07-174",
+    "name": "Höhlensystem Null",
+    "number": "174",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/174"
+    }
+  },
+  {
+    "id": "sv07-175",
+    "name": "Amulett der Tapferkeit",
+    "number": "175",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/sv/sv07/175"
+    }
+  }
+]

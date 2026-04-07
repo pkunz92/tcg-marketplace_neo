@@ -1,0 +1,866 @@
+[
+  {
+    "id": "neo1-001",
+    "name": "奇妙な",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-002",
+    "name": "チコリータ",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-003",
+    "name": "レディバ",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-004",
+    "name": "スパラク",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-005",
+    "name": "ホッピップ",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-006",
+    "name": "サンカーン",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-007",
+    "name": "シャックル",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-008",
+    "name": "暗闇",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-009",
+    "name": "Bayleef",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-010",
+    "name": "レディアン",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-011",
+    "name": "アリアドス",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-012",
+    "name": "スキプルーム",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-013",
+    "name": "サンフロラ",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-014",
+    "name": "ミーガニウム",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-015",
+    "name": "Bellossom",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-016",
+    "name": "ジャンプラフ",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-017",
+    "name": "ヘラクロス",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-018",
+    "name": "シンダキル",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-019",
+    "name": "マグマー",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-020",
+    "name": "キラバ",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-021",
+    "name": "染色",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-022",
+    "name": "マグビー",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-023",
+    "name": "馬",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-024",
+    "name": "totodile",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-025",
+    "name": "マリル",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-026",
+    "name": "ウーパー",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-027",
+    "name": "swinub",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-028",
+    "name": "マンティン",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-029",
+    "name": "シードラ",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-030",
+    "name": "クロコノー",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-031",
+    "name": "quagsire",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-032",
+    "name": "ピロスワイン",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-033",
+    "name": "feraligatr",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-034",
+    "name": "アズマリル",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-035",
+    "name": "キングドラ",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-036",
+    "name": "ピカチュウ",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-037",
+    "name": "チンチョウ",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-038",
+    "name": "Mareep",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-039",
+    "name": "Electabuzz",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-040",
+    "name": "ラントン",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-041",
+    "name": "フラフィー",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-042",
+    "name": "ピチュ",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-043",
+    "name": "アンファロス",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-044",
+    "name": "Elekid",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-045",
+    "name": "slowpoke",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-046",
+    "name": "natu",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-047",
+    "name": "Girafarig",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-048",
+    "name": "xatu",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-049",
+    "name": "スローキング",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-050",
+    "name": "onix",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-051",
+    "name": "sudowoodo",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-052",
+    "name": "グリガー",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-053",
+    "name": "ファンピー",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-054",
+    "name": "ドンファン",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-055",
+    "name": "マークロウ",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-056",
+    "name": "スニーエル",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-057",
+    "name": "Steelix",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-058",
+    "name": "スカルモリー",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-059",
+    "name": "セントレット",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-060",
+    "name": "hoothoot",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-061",
+    "name": "Snubbull",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-062",
+    "name": "スタントラー",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-063",
+    "name": "クリーフ",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-064",
+    "name": "Furret",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-065",
+    "name": "ノクトウル",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-066",
+    "name": "togepi",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-067",
+    "name": "aipom",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-068",
+    "name": "グランブル",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-069",
+    "name": "ミルタンク",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-070",
+    "name": "クレファ",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-071",
+    "name": "togetic",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-072",
+    "name": "ルギア",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-073",
+    "name": "ベリー",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-074",
+    "name": "スーパーロッド",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-075",
+    "name": "二重突風",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-076",
+    "name": "ポケモンマーチ",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-077",
+    "name": "Moomooミルク",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-078",
+    "name": "エルム教授",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-079",
+    "name": "ゴールドベリー",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-080",
+    "name": "カードフリップゲーム",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-081",
+    "name": "ミラクルベリー",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-082",
+    "name": "新しいpokedex",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-083",
+    "name": "スーパースクープアップ",
+    "number": "083",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-084",
+    "name": "ビルのテレポーター",
+    "number": "084",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-085",
+    "name": "スプラウトタワー",
+    "number": "085",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-086",
+    "name": "ecogym",
+    "number": "086",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-087",
+    "name": "エネルギー電荷",
+    "number": "087",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-088",
+    "name": "フォーカスバンド",
+    "number": "088",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-089",
+    "name": "メアリー",
+    "number": "089",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-090",
+    "name": "アーケードゲーム",
+    "number": "090",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-091",
+    "name": "タイムカプセル",
+    "number": "091",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-092",
+    "name": "スーパーエネルギー検索",
+    "number": "092",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-093",
+    "name": "ポクギア",
+    "number": "093",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-094",
+    "name": "闇のエネルギー",
+    "number": "094",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-095",
+    "name": "金属エネルギー",
+    "number": "095",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "neo1-096",
+    "name": "エネルギーをリサイクルします",
+    "number": "096",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

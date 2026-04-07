@@ -1,0 +1,83 @@
+[
+  {
+    "id": "bog-1",
+    "name": "Electabuzz",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "bog-2",
+    "name": "Hitmonchan",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "bog-3",
+    "name": "Professor Elm",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "bog-4",
+    "name": "Rocket’s Scizor",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "bog-5",
+    "name": "Rocket’s Sneasel",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "bog-6",
+    "name": "Dark Ivysaur",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "bog-7",
+    "name": "Dark Venusaur",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "bog-8",
+    "name": "Rocket’s Mewtwo",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "bog-9",
+    "name": "Rocket’s Hitmonchan",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

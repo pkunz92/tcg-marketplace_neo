@@ -1,0 +1,866 @@
+[
+  {
+    "id": "PMCG5-001",
+    "name": "ブロックのズバット",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-002",
+    "name": "エリカの奇妙な（lv.15）",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-003",
+    "name": "エリカの奇妙な（LV.10）",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-004",
+    "name": "エリカのパラ",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-005",
+    "name": "エリカのベルスプラウト（lv.15）",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-006",
+    "name": "エリカのタンゲラ",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-007",
+    "name": "エリカのブルバサウルス",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-008",
+    "name": "ブロックのゴルバット",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-009",
+    "name": "エリカの暗闇",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-010",
+    "name": "エリカのベルスプラウト（lv.13）",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-011",
+    "name": "エリカのweepinbell",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-012",
+    "name": "エリカのexeggcute",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-013",
+    "name": "エリカのexeggutor",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-014",
+    "name": "エリカのvileplume",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-015",
+    "name": "エリカのヴィックツリーベル",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-016",
+    "name": "ロケットのスキタイヤー",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-017",
+    "name": "Brock's Vulpix（LV.16）",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-018",
+    "name": "Brock's Vulpix（LV.10）",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-019",
+    "name": "ブロックのニネタール",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-020",
+    "name": "ロケットのモルト",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-021",
+    "name": "MistyのPsyduck",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-022",
+    "name": "ミスティのポリワグ",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-023",
+    "name": "ミスティのシール",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-024",
+    "name": "Misty's Horsea（LV.16）",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-025",
+    "name": "Misty's Horsea（LV.10）",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-026",
+    "name": "ミスティのゴールデン",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-027",
+    "name": "ミスティのstaryu",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-028",
+    "name": "ミスティのマジカルプ",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-029",
+    "name": "MistyのPoliWhirl",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-030",
+    "name": "ミスティの触手",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-031",
+    "name": "ミスティのデューゴン",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-032",
+    "name": "ミスティのゴルダック",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-033",
+    "name": "ミスティのテンタクルエル",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-034",
+    "name": "ミスティのシードラ",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-035",
+    "name": "ミスティのギャラドス",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-036",
+    "name": "Surge's Pikachu中t",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-037",
+    "name": "Surgeのマグネミテ（LV.12）",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-038",
+    "name": "Surge's Voltorb中t",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-039",
+    "name": "Surgeのマグネマイト中,、 Lv.10）",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-040",
+    "name": "Surge's Magneton中t",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-041",
+    "name": "SurgeのElectabuzz",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-042",
+    "name": "Surge's Jolteon中t",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-043",
+    "name": "ブロックのサンドリュー",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-044",
+    "name": "ブロックのディグレット",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-045",
+    "name": "ブロックのマンキー",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-046",
+    "name": "ブロックのジオドード（LV.15）",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-047",
+    "name": "ブロックのジオドード（LV.13）",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-048",
+    "name": "ブロックのオニックス",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-049",
+    "name": "ブロックの韻",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-050",
+    "name": "ブロックのサンドスラッシュ",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-051",
+    "name": "ブロックの入門",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-052",
+    "name": "ブロックの砂利",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-053",
+    "name": "ブロックのゴーレム",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-054",
+    "name": "ロケットのヒットモンチャン",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-055",
+    "name": "ブロックのライドン",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-056",
+    "name": "Surge's Rattata中t",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-057",
+    "name": "Surgeの槍中",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-058",
+    "name": "エリカのジグリプフ",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-059",
+    "name": "サージ中t",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-060",
+    "name": "エリカのクリーフ",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-061",
+    "name": "ブロックのリキトゥン",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-062",
+    "name": "Surge's Eevee中t",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-063",
+    "name": "エリカのドラチーニ",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-064",
+    "name": "Surgeの恐怖中",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-065",
+    "name": "エリカのクレファー",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-066",
+    "name": "エリカのドラゴンエア",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-067",
+    "name": "エネルギーの流れ",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-068",
+    "name": "ミスティの決闘",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-069",
+    "name": "ミスティの涙",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-070",
+    "name": "狭いジム",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-071",
+    "name": "想起",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-072",
+    "name": "エリカのメイド",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-073",
+    "name": "エリカの香水",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-074",
+    "name": "慈善",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-075",
+    "name": "ミスティの怒り",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-076",
+    "name": "バーミリオンシティジム",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-077",
+    "name": "ブロックのトレーニング方法",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-078",
+    "name": "セラドンシティジム",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-079",
+    "name": "ピューターシティジム",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-080",
+    "name": "セルリアンシティジム",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-081",
+    "name": "Surgeの条約",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-082",
+    "name": "良いマナー",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-083",
+    "name": "エリカ",
+    "number": "083",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-084",
+    "name": "エリカの優しさ",
+    "number": "084",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-085",
+    "name": "霧",
+    "number": "085",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-086",
+    "name": "ミスティの願い",
+    "number": "086",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-087",
+    "name": "カオスジム",
+    "number": "087",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-088",
+    "name": "秘密の使命",
+    "number": "088",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-089",
+    "name": "ブロック",
+    "number": "089",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-090",
+    "name": "ブロックの保護",
+    "number": "090",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-091",
+    "name": "レジスタンスジム",
+    "number": "091",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-092",
+    "name": "中佐",
+    "number": "092",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-093",
+    "name": "Surgeの秘密計画中",
+    "number": "093",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-094",
+    "name": "除去ジムはありません",
+    "number": "094",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-095",
+    "name": "ロケットのトレーニングジム",
+    "number": "095",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG5-096",
+    "name": "ロケットのtrap",
+    "number": "096",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

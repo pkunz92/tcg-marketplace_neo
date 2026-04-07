@@ -1,0 +1,1676 @@
+[
+  {
+    "id": "ecard2-1",
+    "name": "Pharamp",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/1"
+    }
+  },
+  {
+    "id": "ecard2-2",
+    "name": "Arcanin",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/2"
+    }
+  },
+  {
+    "id": "ecard2-3",
+    "name": "Migalos",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/3"
+    }
+  },
+  {
+    "id": "ecard2-4",
+    "name": "Azumarill",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/4"
+    }
+  },
+  {
+    "id": "ecard2-5",
+    "name": "Joliflor",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/5"
+    }
+  },
+  {
+    "id": "ecard2-6",
+    "name": "Leuphorie",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/6"
+    }
+  },
+  {
+    "id": "ecard2-7",
+    "name": "Donphan",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/7"
+    }
+  },
+  {
+    "id": "ecard2-8",
+    "name": "Électrode",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/8"
+    }
+  },
+  {
+    "id": "ecard2-9",
+    "name": "Elékid",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/9"
+    }
+  },
+  {
+    "id": "ecard2-10",
+    "name": "Entei",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/10"
+    }
+  },
+  {
+    "id": "ecard2-11",
+    "name": "Mentali",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/11"
+    }
+  },
+  {
+    "id": "ecard2-12",
+    "name": "Noadkoko",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/12"
+    }
+  },
+  {
+    "id": "ecard2-13",
+    "name": "Noadkoko",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/13"
+    }
+  },
+  {
+    "id": "ecard2-14",
+    "name": "Démolosse",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/14"
+    }
+  },
+  {
+    "id": "ecard2-15",
+    "name": "Démolosse",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/15"
+    }
+  },
+  {
+    "id": "ecard2-16",
+    "name": "Hypnomade",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/16"
+    }
+  },
+  {
+    "id": "ecard2-17",
+    "name": "Cotovol",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/17"
+    }
+  },
+  {
+    "id": "ecard2-18",
+    "name": "Lippoutou",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/18"
+    }
+  },
+  {
+    "id": "ecard2-19",
+    "name": "Hyporoi",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/19"
+    }
+  },
+  {
+    "id": "ecard2-20",
+    "name": "Lanturn",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/20"
+    }
+  },
+  {
+    "id": "ecard2-21",
+    "name": "Lanturn",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/21"
+    }
+  },
+  {
+    "id": "ecard2-22",
+    "name": "Magneton",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/22"
+    }
+  },
+  {
+    "id": "ecard2-23",
+    "name": "Grotadmorv",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/23"
+    }
+  },
+  {
+    "id": "ecard2-24",
+    "name": "Nidoking",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/24"
+    }
+  },
+  {
+    "id": "ecard2-25",
+    "name": "Feunard",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/25"
+    }
+  },
+  {
+    "id": "ecard2-26",
+    "name": "Octillery",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/26"
+    }
+  },
+  {
+    "id": "ecard2-27",
+    "name": "Parasect",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/27"
+    }
+  },
+  {
+    "id": "ecard2-28",
+    "name": "Porygon2",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/28"
+    }
+  },
+  {
+    "id": "ecard2-29",
+    "name": "Colossinge",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/29"
+    }
+  },
+  {
+    "id": "ecard2-30",
+    "name": "Maraiste",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/30"
+    }
+  },
+  {
+    "id": "ecard2-31",
+    "name": "Galopa",
+    "number": "31",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/31"
+    }
+  },
+  {
+    "id": "ecard2-32",
+    "name": "Cizayox",
+    "number": "32",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/32"
+    }
+  },
+  {
+    "id": "ecard2-33",
+    "name": "Flagadoss",
+    "number": "33",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/33"
+    }
+  },
+  {
+    "id": "ecard2-34",
+    "name": "Roigada",
+    "number": "34",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/34"
+    }
+  },
+  {
+    "id": "ecard2-35",
+    "name": "Steelix",
+    "number": "35",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/35"
+    }
+  },
+  {
+    "id": "ecard2-36",
+    "name": "Simularbre",
+    "number": "36",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/36"
+    }
+  },
+  {
+    "id": "ecard2-37",
+    "name": "Suicune",
+    "number": "37",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/37"
+    }
+  },
+  {
+    "id": "ecard2-38",
+    "name": "Tentacruel",
+    "number": "38",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/38"
+    }
+  },
+  {
+    "id": "ecard2-39",
+    "name": "Togetic",
+    "number": "39",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/39"
+    }
+  },
+  {
+    "id": "ecard2-40",
+    "name": "Tyranocif",
+    "number": "40",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/40"
+    }
+  },
+  {
+    "id": "ecard2-41",
+    "name": "Noctali",
+    "number": "41",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/41"
+    }
+  },
+  {
+    "id": "ecard2-42",
+    "name": "Empiflor",
+    "number": "42",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/42"
+    }
+  },
+  {
+    "id": "ecard2-43",
+    "name": "Rafflesia",
+    "number": "43",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/43"
+    }
+  },
+  {
+    "id": "ecard2-44",
+    "name": "Electhor",
+    "number": "44",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/44"
+    }
+  },
+  {
+    "id": "ecard2-45",
+    "name": "Chétiflor",
+    "number": "45",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/45"
+    }
+  },
+  {
+    "id": "ecard2-46",
+    "name": "Dodrio",
+    "number": "46",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/46"
+    }
+  },
+  {
+    "id": "ecard2-47",
+    "name": "Lainergie",
+    "number": "47",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/47"
+    }
+  },
+  {
+    "id": "ecard2-48",
+    "name": "Fouinar",
+    "number": "48",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/48"
+    }
+  },
+  {
+    "id": "ecard2-49",
+    "name": "Ortide",
+    "number": "49",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/49"
+    }
+  },
+  {
+    "id": "ecard2-50a",
+    "name": "Akwakwak",
+    "number": "50a",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/50a"
+    }
+  },
+  {
+    "id": "ecard2-50b",
+    "name": "Akwakwak",
+    "number": "50b",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/50b"
+    }
+  },
+  {
+    "id": "ecard2-51",
+    "name": "Caninos",
+    "number": "51",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/51"
+    }
+  },
+  {
+    "id": "ecard2-52",
+    "name": "Magneti",
+    "number": "52",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/52"
+    }
+  },
+  {
+    "id": "ecard2-53",
+    "name": "Marill",
+    "number": "53",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/53"
+    }
+  },
+  {
+    "id": "ecard2-54",
+    "name": "Ossatueur",
+    "number": "54",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/54"
+    }
+  },
+  {
+    "id": "ecard2-55",
+    "name": "Nidorino",
+    "number": "55",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/55"
+    }
+  },
+  {
+    "id": "ecard2-56",
+    "name": "Ymphect",
+    "number": "56",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/56"
+    }
+  },
+  {
+    "id": "ecard2-57",
+    "name": "Insécateur",
+    "number": "57",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/57"
+    }
+  },
+  {
+    "id": "ecard2-58",
+    "name": "Hypocéan",
+    "number": "58",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/58"
+    }
+  },
+  {
+    "id": "ecard2-59",
+    "name": "Poissoroy",
+    "number": "59",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/59"
+    }
+  },
+  {
+    "id": "ecard2-60",
+    "name": "Floravol",
+    "number": "60",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/60"
+    }
+  },
+  {
+    "id": "ecard2-61",
+    "name": "Lippouti",
+    "number": "61",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/61"
+    }
+  },
+  {
+    "id": "ecard2-62",
+    "name": "Mimigal",
+    "number": "62",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/62"
+    }
+  },
+  {
+    "id": "ecard2-63",
+    "name": "Débugant",
+    "number": "63",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/63"
+    }
+  },
+  {
+    "id": "ecard2-64",
+    "name": "Voltorbe",
+    "number": "64",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/64"
+    }
+  },
+  {
+    "id": "ecard2-65",
+    "name": "Boustiflor",
+    "number": "65",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/65"
+    }
+  },
+  {
+    "id": "ecard2-66",
+    "name": "Axoloto",
+    "number": "66",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/66"
+    }
+  },
+  {
+    "id": "ecard2-67",
+    "name": "Capumain",
+    "number": "67",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/67"
+    }
+  },
+  {
+    "id": "ecard2-68",
+    "name": "Chétiflor",
+    "number": "68",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/68"
+    }
+  },
+  {
+    "id": "ecard2-69",
+    "name": "Leveinard",
+    "number": "69",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/69"
+    }
+  },
+  {
+    "id": "ecard2-70",
+    "name": "Loupio",
+    "number": "70",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/70"
+    }
+  },
+  {
+    "id": "ecard2-71",
+    "name": "Loupio",
+    "number": "71",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/71"
+    }
+  },
+  {
+    "id": "ecard2-72",
+    "name": "Osselait",
+    "number": "72",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/72"
+    }
+  },
+  {
+    "id": "ecard2-73",
+    "name": "Doduo",
+    "number": "73",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/73"
+    }
+  },
+  {
+    "id": "ecard2-74a",
+    "name": "Soporifik",
+    "number": "74a",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/74a"
+    }
+  },
+  {
+    "id": "ecard2-74b",
+    "name": "Soporifik",
+    "number": "74b",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/74b"
+    }
+  },
+  {
+    "id": "ecard2-75",
+    "name": "Évoli",
+    "number": "75",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/75"
+    }
+  },
+  {
+    "id": "ecard2-76",
+    "name": "Nœufnœuf",
+    "number": "76",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/76"
+    }
+  },
+  {
+    "id": "ecard2-77",
+    "name": "Nœufnœuf",
+    "number": "77",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/77"
+    }
+  },
+  {
+    "id": "ecard2-78",
+    "name": "Poissirène",
+    "number": "78",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/78"
+    }
+  },
+  {
+    "id": "ecard2-79",
+    "name": "Tadmorv",
+    "number": "79",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/79"
+    }
+  },
+  {
+    "id": "ecard2-80",
+    "name": "Caninos",
+    "number": "80",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/80"
+    }
+  },
+  {
+    "id": "ecard2-81",
+    "name": "Tygnon",
+    "number": "81",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/81"
+    }
+  },
+  {
+    "id": "ecard2-82",
+    "name": "Kapoera",
+    "number": "82",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/82"
+    }
+  },
+  {
+    "id": "ecard2-83",
+    "name": "Granivol",
+    "number": "83",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/83"
+    }
+  },
+  {
+    "id": "ecard2-84",
+    "name": "Hypotrempe",
+    "number": "84",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/84"
+    }
+  },
+  {
+    "id": "ecard2-85",
+    "name": "Hypotrempe",
+    "number": "85",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/85"
+    }
+  },
+  {
+    "id": "ecard2-86",
+    "name": "Malosse",
+    "number": "86",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/86"
+    }
+  },
+  {
+    "id": "ecard2-87",
+    "name": "Malosse",
+    "number": "87",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/87"
+    }
+  },
+  {
+    "id": "ecard2-88",
+    "name": "Kangourex",
+    "number": "88",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/88"
+    }
+  },
+  {
+    "id": "ecard2-89",
+    "name": "Embrylex",
+    "number": "89",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/89"
+    }
+  },
+  {
+    "id": "ecard2-90",
+    "name": "Excelangue",
+    "number": "90",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/90"
+    }
+  },
+  {
+    "id": "ecard2-91",
+    "name": "Magneti",
+    "number": "91",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/91"
+    }
+  },
+  {
+    "id": "ecard2-92",
+    "name": "Férosinge",
+    "number": "92",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/92"
+    }
+  },
+  {
+    "id": "ecard2-93",
+    "name": "Wattouat",
+    "number": "93",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/93"
+    }
+  },
+  {
+    "id": "ecard2-94",
+    "name": "Écrémeuh",
+    "number": "94",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/94"
+    }
+  },
+  {
+    "id": "ecard2-95a",
+    "name": "M.Mime",
+    "number": "95a",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/95a"
+    }
+  },
+  {
+    "id": "ecard2-95b",
+    "name": "M.Mime",
+    "number": "95b",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/95b"
+    }
+  },
+  {
+    "id": "ecard2-96",
+    "name": "Nidoran ♂",
+    "number": "96",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/96"
+    }
+  },
+  {
+    "id": "ecard2-97",
+    "name": "Mystherbe",
+    "number": "97",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/97"
+    }
+  },
+  {
+    "id": "ecard2-98",
+    "name": "Onix",
+    "number": "98",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/98"
+    }
+  },
+  {
+    "id": "ecard2-99",
+    "name": "Paras",
+    "number": "99",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/99"
+    }
+  },
+  {
+    "id": "ecard2-100",
+    "name": "Phanpy",
+    "number": "100",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/100"
+    }
+  },
+  {
+    "id": "ecard2-101",
+    "name": "Scarabrute",
+    "number": "101",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/101"
+    }
+  },
+  {
+    "id": "ecard2-102",
+    "name": "Ponyta",
+    "number": "102",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/102"
+    }
+  },
+  {
+    "id": "ecard2-103b",
+    "name": "Porygon",
+    "number": "103b",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/103b"
+    }
+  },
+  {
+    "id": "ecard2-103a",
+    "name": "Porygon",
+    "number": "103a",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/103a"
+    }
+  },
+  {
+    "id": "ecard2-104",
+    "name": "Psykokwak",
+    "number": "104",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/104"
+    }
+  },
+  {
+    "id": "ecard2-105",
+    "name": "Rémoraid",
+    "number": "105",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/105"
+    }
+  },
+  {
+    "id": "ecard2-106",
+    "name": "Insécateur",
+    "number": "106",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/106"
+    }
+  },
+  {
+    "id": "ecard2-107",
+    "name": "Fouinette",
+    "number": "107",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/107"
+    }
+  },
+  {
+    "id": "ecard2-108",
+    "name": "Ramoloss",
+    "number": "108",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/108"
+    }
+  },
+  {
+    "id": "ecard2-109",
+    "name": "Queulorior",
+    "number": "109",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/109"
+    }
+  },
+  {
+    "id": "ecard2-110",
+    "name": "Farfuret",
+    "number": "110",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/110"
+    }
+  },
+  {
+    "id": "ecard2-111",
+    "name": "Mimigal",
+    "number": "111",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/111"
+    }
+  },
+  {
+    "id": "ecard2-112",
+    "name": "Saquedeneu",
+    "number": "112",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/112"
+    }
+  },
+  {
+    "id": "ecard2-113",
+    "name": "Tentacool",
+    "number": "113",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/113"
+    }
+  },
+  {
+    "id": "ecard2-114",
+    "name": "Togepi",
+    "number": "114",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/114"
+    }
+  },
+  {
+    "id": "ecard2-115",
+    "name": "Voltorbe",
+    "number": "115",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/115"
+    }
+  },
+  {
+    "id": "ecard2-116",
+    "name": "Goupix",
+    "number": "116",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/116"
+    }
+  },
+  {
+    "id": "ecard2-117",
+    "name": "Axoloto",
+    "number": "117",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/117"
+    }
+  },
+  {
+    "id": "ecard2-118",
+    "name": "Forêt de noigrumes",
+    "number": "118",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/118"
+    }
+  },
+  {
+    "id": "ecard2-119",
+    "name": "Cube d'obscurité 01",
+    "number": "119",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/119"
+    }
+  },
+  {
+    "id": "ecard2-120",
+    "name": "Échange d'énergie",
+    "number": "120",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/120"
+    }
+  },
+  {
+    "id": "ecard2-121",
+    "name": "Cube de combat 01",
+    "number": "121",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/121"
+    }
+  },
+  {
+    "id": "ecard2-122",
+    "name": "Cube de feu 01",
+    "number": "122",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/122"
+    }
+  },
+  {
+    "id": "ecard2-123",
+    "name": "Gardien de la forêt",
+    "number": "123",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/123"
+    }
+  },
+  {
+    "id": "ecard2-124",
+    "name": "Cube de plante 01",
+    "number": "124",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/124"
+    }
+  },
+  {
+    "id": "ecard2-125",
+    "name": "Baie de soin",
+    "number": "125",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/125"
+    }
+  },
+  {
+    "id": "ecard2-126",
+    "name": "Jongleur",
+    "number": "126",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/126"
+    }
+  },
+  {
+    "id": "ecard2-127",
+    "name": "Cube électrik 01",
+    "number": "127",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/127"
+    }
+  },
+  {
+    "id": "ecard2-128",
+    "name": "Baie de mémoire",
+    "number": "128",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/128"
+    }
+  },
+  {
+    "id": "ecard2-129",
+    "name": "Cube de métal 01",
+    "number": "129",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/129"
+    }
+  },
+  {
+    "id": "ecard2-130",
+    "name": "Fan Club Pokémon",
+    "number": "130",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/130"
+    }
+  },
+  {
+    "id": "ecard2-131",
+    "name": "Parc Pokémon",
+    "number": "131",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/131"
+    }
+  },
+  {
+    "id": "ecard2-132",
+    "name": "Cube psy 01",
+    "number": "132",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/132"
+    }
+  },
+  {
+    "id": "ecard2-133",
+    "name": "Superviseur",
+    "number": "133",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/133"
+    }
+  },
+  {
+    "id": "ecard2-134",
+    "name": "Super suppression d'énergie 2",
+    "number": "134",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/134"
+    }
+  },
+  {
+    "id": "ecard2-135",
+    "name": "Écharde temporelle",
+    "number": "135",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/135"
+    }
+  },
+  {
+    "id": "ecard2-136",
+    "name": "Volontaires de la ville",
+    "number": "136",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/136"
+    }
+  },
+  {
+    "id": "ecard2-137",
+    "name": "Représentant de commerce",
+    "number": "137",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/137"
+    }
+  },
+  {
+    "id": "ecard2-138",
+    "name": "Ruines sous marines",
+    "number": "138",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/138"
+    }
+  },
+  {
+    "id": "ecard2-139",
+    "name": "Centrale d'énergie",
+    "number": "139",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/139"
+    }
+  },
+  {
+    "id": "ecard2-140",
+    "name": "Cube d'eau 01",
+    "number": "140",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/140"
+    }
+  },
+  {
+    "id": "ecard2-141",
+    "name": "Garde faiblesse",
+    "number": "141",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/141"
+    }
+  },
+  {
+    "id": "ecard2-142",
+    "name": "Énergie obscurité",
+    "number": "142",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/142"
+    }
+  },
+  {
+    "id": "ecard2-143",
+    "name": "Énergie Métal",
+    "number": "143",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/143"
+    }
+  },
+  {
+    "id": "ecard2-144",
+    "name": "Énergie multicolore",
+    "number": "144",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/144"
+    }
+  },
+  {
+    "id": "ecard2-145",
+    "name": "Énergie super",
+    "number": "145",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/145"
+    }
+  },
+  {
+    "id": "ecard2-146",
+    "name": "Énergie cristal",
+    "number": "146",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/146"
+    }
+  },
+  {
+    "id": "ecard2-147",
+    "name": "Énergie de distorsion",
+    "number": "147",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/147"
+    }
+  },
+  {
+    "id": "ecard2-148",
+    "name": "Hyporoi",
+    "number": "148",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/148"
+    }
+  },
+  {
+    "id": "ecard2-149",
+    "name": "Lugia",
+    "number": "149",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/149"
+    }
+  },
+  {
+    "id": "ecard2-150",
+    "name": "Nidoking",
+    "number": "150",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/150"
+    }
+  },
+  {
+    "id": "ecard2-H01",
+    "name": "Pharamp",
+    "number": "H01",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ecard2-H02",
+    "name": "Arcanin",
+    "number": "H02",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ecard2-H03",
+    "name": "Migalos",
+    "number": "H03",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ecard2-H04",
+    "name": "Azumarill",
+    "number": "H04",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ecard2-H05",
+    "name": "Joliflor",
+    "number": "H05",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ecard2-H06",
+    "name": "Leuphorie",
+    "number": "H06",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ecard2-H07",
+    "name": "Électrode",
+    "number": "H07",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ecard2-H08",
+    "name": "Entei",
+    "number": "H08",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ecard2-H09",
+    "name": "Mentali",
+    "number": "H09",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ecard2-H10",
+    "name": "Noadkoko",
+    "number": "H10",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H10"
+    }
+  },
+  {
+    "id": "ecard2-H11",
+    "name": "Démolosse",
+    "number": "H11",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H11"
+    }
+  },
+  {
+    "id": "ecard2-H12",
+    "name": "Hypnomade",
+    "number": "H12",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H12"
+    }
+  },
+  {
+    "id": "ecard2-H13",
+    "name": "Cotovol",
+    "number": "H13",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H13"
+    }
+  },
+  {
+    "id": "ecard2-H14",
+    "name": "Hyporoi",
+    "number": "H14",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ecard2-H15",
+    "name": "Lanturn",
+    "number": "H15",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H15"
+    }
+  },
+  {
+    "id": "ecard2-H16",
+    "name": "Magneton",
+    "number": "H16",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ecard2-H17",
+    "name": "Grotadmorv",
+    "number": "H17",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ecard2-H18",
+    "name": "Nidoking",
+    "number": "H18",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H18"
+    }
+  },
+  {
+    "id": "ecard2-H19",
+    "name": "Feunard",
+    "number": "H19",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H19"
+    }
+  },
+  {
+    "id": "ecard2-H20",
+    "name": "Octillery",
+    "number": "H20",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H20"
+    }
+  },
+  {
+    "id": "ecard2-H21",
+    "name": "Cizayox",
+    "number": "H21",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H21"
+    }
+  },
+  {
+    "id": "ecard2-H22",
+    "name": "Roigada",
+    "number": "H22",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H22"
+    }
+  },
+  {
+    "id": "ecard2-H23",
+    "name": "Steelix",
+    "number": "H23",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H23"
+    }
+  },
+  {
+    "id": "ecard2-H24",
+    "name": "Simularbre",
+    "number": "H24",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "ecard2-H25",
+    "name": "Suicune",
+    "number": "H25",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H25"
+    }
+  },
+  {
+    "id": "ecard2-H26",
+    "name": "Tentacruel",
+    "number": "H26",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H26"
+    }
+  },
+  {
+    "id": "ecard2-H27",
+    "name": "Togetic",
+    "number": "H27",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H27"
+    }
+  },
+  {
+    "id": "ecard2-H28",
+    "name": "Tyranocif",
+    "number": "H28",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H28"
+    }
+  },
+  {
+    "id": "ecard2-H29",
+    "name": "Noctali",
+    "number": "H29",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H29"
+    }
+  },
+  {
+    "id": "ecard2-H30",
+    "name": "Empiflor",
+    "number": "H30",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H30"
+    }
+  },
+  {
+    "id": "ecard2-H31",
+    "name": "Rafflesia",
+    "number": "H31",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ecard/ecard2/H31"
+    }
+  },
+  {
+    "id": "ecard2-H32",
+    "name": "Electhor",
+    "number": "H32",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

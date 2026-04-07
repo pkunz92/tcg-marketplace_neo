@@ -1,0 +1,821 @@
+[
+  {
+    "id": "hgss3-1",
+    "name": "Blubella",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/1"
+    }
+  },
+  {
+    "id": "hgss3-2",
+    "name": "Psiana",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/2"
+    }
+  },
+  {
+    "id": "hgss3-3",
+    "name": "Forstellka",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/3"
+    }
+  },
+  {
+    "id": "hgss3-4",
+    "name": "Skorgro",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/4"
+    }
+  },
+  {
+    "id": "hgss3-5",
+    "name": "Hundemon",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/5"
+    }
+  },
+  {
+    "id": "hgss3-6",
+    "name": "Magcargo",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/6"
+    }
+  },
+  {
+    "id": "hgss3-7",
+    "name": "Scherox",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/7"
+    }
+  },
+  {
+    "id": "hgss3-8",
+    "name": "Farbeagle",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/8"
+    }
+  },
+  {
+    "id": "hgss3-9",
+    "name": "Togekiss",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/9"
+    }
+  },
+  {
+    "id": "hgss3-10",
+    "name": "Nachtara",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/10"
+    }
+  },
+  {
+    "id": "hgss3-11",
+    "name": "Dodri",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/11"
+    }
+  },
+  {
+    "id": "hgss3-12",
+    "name": "Drifzepeli",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/12"
+    }
+  },
+  {
+    "id": "hgss3-13",
+    "name": "Forstellka",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/13"
+    }
+  },
+  {
+    "id": "hgss3-14",
+    "name": "Hariyama",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/14"
+    }
+  },
+  {
+    "id": "hgss3-15",
+    "name": "Kramshef",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/15"
+    }
+  },
+  {
+    "id": "hgss3-16",
+    "name": "Kramshef",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/16"
+    }
+  },
+  {
+    "id": "hgss3-17",
+    "name": "Folipurba",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/17"
+    }
+  },
+  {
+    "id": "hgss3-18",
+    "name": "Metagross",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/18"
+    }
+  },
+  {
+    "id": "hgss3-19",
+    "name": "Traunmagil",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/19"
+    }
+  },
+  {
+    "id": "hgss3-20",
+    "name": "Rotom",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/20"
+    }
+  },
+  {
+    "id": "hgss3-21",
+    "name": "Panzaeron",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/21"
+    }
+  },
+  {
+    "id": "hgss3-22",
+    "name": "Tropius",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/22"
+    }
+  },
+  {
+    "id": "hgss3-23",
+    "name": "Honweisel",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/23"
+    }
+  },
+  {
+    "id": "hgss3-24",
+    "name": "Giflor",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/24"
+    }
+  },
+  {
+    "id": "hgss3-25",
+    "name": "Snibunna",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/25"
+    }
+  },
+  {
+    "id": "hgss3-26",
+    "name": "Flamara",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/26"
+    }
+  },
+  {
+    "id": "hgss3-27",
+    "name": "Duflor",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/27"
+    }
+  },
+  {
+    "id": "hgss3-28",
+    "name": "Blitza",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/28"
+    }
+  },
+  {
+    "id": "hgss3-29",
+    "name": "Stollrak",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/29"
+    }
+  },
+  {
+    "id": "hgss3-30",
+    "name": "Metang",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/30"
+    }
+  },
+  {
+    "id": "hgss3-31",
+    "name": "Sleimok",
+    "number": "31",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/31"
+    }
+  },
+  {
+    "id": "hgss3-32",
+    "name": "Pinsir",
+    "number": "32",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/32"
+    }
+  },
+  {
+    "id": "hgss3-33",
+    "name": "Raichu",
+    "number": "33",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/33"
+    }
+  },
+  {
+    "id": "hgss3-34",
+    "name": "Rattikarl",
+    "number": "34",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/34"
+    }
+  },
+  {
+    "id": "hgss3-35",
+    "name": "Zobiris",
+    "number": "35",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/35"
+    }
+  },
+  {
+    "id": "hgss3-36",
+    "name": "Sichlor",
+    "number": "36",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/36"
+    }
+  },
+  {
+    "id": "hgss3-37",
+    "name": "Skunktank",
+    "number": "37",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/37"
+    }
+  },
+  {
+    "id": "hgss3-38",
+    "name": "Lahmus",
+    "number": "38",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/38"
+    }
+  },
+  {
+    "id": "hgss3-39",
+    "name": "Togetic",
+    "number": "39",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/39"
+    }
+  },
+  {
+    "id": "hgss3-40",
+    "name": "Icognito",
+    "number": "40",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/40"
+    }
+  },
+  {
+    "id": "hgss3-41",
+    "name": "Aquana",
+    "number": "41",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/41"
+    }
+  },
+  {
+    "id": "hgss3-42",
+    "name": "Stollunior",
+    "number": "42",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/42"
+    }
+  },
+  {
+    "id": "hgss3-43",
+    "name": "Tanhel",
+    "number": "43",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/43"
+    }
+  },
+  {
+    "id": "hgss3-44",
+    "name": "Wadribie",
+    "number": "44",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/44"
+    }
+  },
+  {
+    "id": "hgss3-45",
+    "name": "Dodu",
+    "number": "45",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/45"
+    }
+  },
+  {
+    "id": "hgss3-46",
+    "name": "Driftlon",
+    "number": "46",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/46"
+    }
+  },
+  {
+    "id": "hgss3-47",
+    "name": "Evoli",
+    "number": "47",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/47"
+    }
+  },
+  {
+    "id": "hgss3-48",
+    "name": "Evoli",
+    "number": "48",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/48"
+    }
+  },
+  {
+    "id": "hgss3-49",
+    "name": "Skorgla",
+    "number": "49",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/49"
+    }
+  },
+  {
+    "id": "hgss3-50",
+    "name": "Sleima",
+    "number": "50",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/50"
+    }
+  },
+  {
+    "id": "hgss3-51",
+    "name": "Nockchan",
+    "number": "51",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/51"
+    }
+  },
+  {
+    "id": "hgss3-52",
+    "name": "Kicklee",
+    "number": "52",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/52"
+    }
+  },
+  {
+    "id": "hgss3-53",
+    "name": "Hunduster",
+    "number": "53",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/53"
+    }
+  },
+  {
+    "id": "hgss3-54",
+    "name": "Hunduster",
+    "number": "54",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/54"
+    }
+  },
+  {
+    "id": "hgss3-55",
+    "name": "Makuhita",
+    "number": "55",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/55"
+    }
+  },
+  {
+    "id": "hgss3-56",
+    "name": "Flunkifer",
+    "number": "56",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/56"
+    }
+  },
+  {
+    "id": "hgss3-57",
+    "name": "Traunfugil",
+    "number": "57",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/57"
+    }
+  },
+  {
+    "id": "hgss3-58",
+    "name": "Kramurx",
+    "number": "58",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/58"
+    }
+  },
+  {
+    "id": "hgss3-59",
+    "name": "Kramurx",
+    "number": "59",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/59"
+    }
+  },
+  {
+    "id": "hgss3-60",
+    "name": "Myrapla",
+    "number": "60",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/60"
+    }
+  },
+  {
+    "id": "hgss3-61",
+    "name": "Pikachu",
+    "number": "61",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/61"
+    }
+  },
+  {
+    "id": "hgss3-62",
+    "name": "Tannza",
+    "number": "62",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/62"
+    }
+  },
+  {
+    "id": "hgss3-63",
+    "name": "Tannza",
+    "number": "63",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/63"
+    }
+  },
+  {
+    "id": "hgss3-64",
+    "name": "Rattfratz",
+    "number": "64",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/64"
+    }
+  },
+  {
+    "id": "hgss3-65",
+    "name": "Sichlor",
+    "number": "65",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/65"
+    }
+  },
+  {
+    "id": "hgss3-66",
+    "name": "Flegmon",
+    "number": "66",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/66"
+    }
+  },
+  {
+    "id": "hgss3-67",
+    "name": "Schneckmag",
+    "number": "67",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/67"
+    }
+  },
+  {
+    "id": "hgss3-68",
+    "name": "Sniebel",
+    "number": "68",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/68"
+    }
+  },
+  {
+    "id": "hgss3-69",
+    "name": "Skunkapuh",
+    "number": "69",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/69"
+    }
+  },
+  {
+    "id": "hgss3-70",
+    "name": "Togepi",
+    "number": "70",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/70"
+    }
+  },
+  {
+    "id": "hgss3-71",
+    "name": "Turmruine",
+    "number": "71",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/71"
+    }
+  },
+  {
+    "id": "hgss3-72",
+    "name": "Defender",
+    "number": "72",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/72"
+    }
+  },
+  {
+    "id": "hgss3-73",
+    "name": "Energieaustausch",
+    "number": "73",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/73"
+    }
+  },
+  {
+    "id": "hgss3-74",
+    "name": "Blumenfrau",
+    "number": "74",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/74"
+    }
+  },
+  {
+    "id": "hgss3-75",
+    "name": "Legendenkiste",
+    "number": "75",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/75"
+    }
+  },
+  {
+    "id": "hgss3-76",
+    "name": "Alph-Ruinen",
+    "number": "76",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/76"
+    }
+  },
+  {
+    "id": "hgss3-77",
+    "name": "Training des Weisen",
+    "number": "77",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/77"
+    }
+  },
+  {
+    "id": "hgss3-78",
+    "name": "Team Rockets Trickserei",
+    "number": "78",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/78"
+    }
+  },
+  {
+    "id": "hgss3-79",
+    "name": "Finsternis-Energie",
+    "number": "79",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/79"
+    }
+  },
+  {
+    "id": "hgss3-80",
+    "name": "Metall-Energie",
+    "number": "80",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/80"
+    }
+  },
+  {
+    "id": "hgss3-81",
+    "name": "Psiana",
+    "number": "81",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/81"
+    }
+  },
+  {
+    "id": "hgss3-82",
+    "name": "Hundemon",
+    "number": "82",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/82"
+    }
+  },
+  {
+    "id": "hgss3-83",
+    "name": "Raichu",
+    "number": "83",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/83"
+    }
+  },
+  {
+    "id": "hgss3-84",
+    "name": "Scherox",
+    "number": "84",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/84"
+    }
+  },
+  {
+    "id": "hgss3-85",
+    "name": "Laschoking",
+    "number": "85",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/85"
+    }
+  },
+  {
+    "id": "hgss3-86",
+    "name": "Nachtara",
+    "number": "86",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/86"
+    }
+  },
+  {
+    "id": "hgss3-87",
+    "name": "Kyogre & Groudon LEGENDE",
+    "number": "87",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/87"
+    }
+  },
+  {
+    "id": "hgss3-88",
+    "name": "Kyogre & Groudon LEGENDE",
+    "number": "88",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/88"
+    }
+  },
+  {
+    "id": "hgss3-89",
+    "name": "Rayquaza & Deoxys LEGENDE",
+    "number": "89",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/89"
+    }
+  },
+  {
+    "id": "hgss3-90",
+    "name": "Rayquaza & Deoxys LEGENDE",
+    "number": "90",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/hgss/hgss3/90"
+    }
+  },
+  {
+    "id": "hgss3-THREE",
+    "name": "Alph Lithograph",
+    "number": "THREE",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

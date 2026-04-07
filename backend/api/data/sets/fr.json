@@ -1,0 +1,1458 @@
+[
+  {
+    "id": "base1",
+    "name": "Set de Base",
+    "series": "",
+    "total": 102,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "base2",
+    "name": "Jungle",
+    "series": "",
+    "total": 64,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "basep",
+    "name": "Wizards Black Star Promos",
+    "series": "",
+    "total": 53,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "wp",
+    "name": "W Promotional",
+    "series": "",
+    "total": 7,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "base3",
+    "name": "Fossile",
+    "series": "",
+    "total": 62,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "jumbo",
+    "name": "Cartes Jumbo",
+    "series": "",
+    "total": 160,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "base5",
+    "name": "Team Rocket",
+    "series": "",
+    "total": 83,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "neo1",
+    "name": "Neo Genesis",
+    "series": "",
+    "total": 111,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "neo2",
+    "name": "Neo Discovery",
+    "series": "",
+    "total": 75,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "neo3",
+    "name": "Neo Revelation",
+    "series": "",
+    "total": 66,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "neo4",
+    "name": "Neo Destiny",
+    "series": "",
+    "total": 113,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ecard1",
+    "name": "Expedition",
+    "series": "",
+    "total": 165,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ecard2",
+    "name": "Aquapolis",
+    "series": "",
+    "total": 186,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex1",
+    "name": "EX Rubis & Saphir",
+    "series": "",
+    "total": 109,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex2",
+    "name": "EX Tempête de sable",
+    "series": "",
+    "total": 100,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "np",
+    "name": "Promo Nintendo",
+    "series": "",
+    "total": 40,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex3",
+    "name": "EX Dragon",
+    "series": "",
+    "total": 100,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex4",
+    "name": "EX Team Magma vs Team Aqua",
+    "series": "",
+    "total": 97,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex5",
+    "name": "EX Légendes Oubliées",
+    "series": "",
+    "total": 102,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-ex-latio",
+    "name": "EX Kit dresseur (Latios)",
+    "series": "",
+    "total": 10,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-ex-latia",
+    "name": "EX Kit dresseur (Latias)",
+    "series": "",
+    "total": 10,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex6",
+    "name": "EX Rouge Feu & Vert Feuille",
+    "series": "",
+    "total": 116,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "pop1",
+    "name": "POP Série 1",
+    "series": "",
+    "total": 17,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex8",
+    "name": "EX Deoxys",
+    "series": "",
+    "total": 108,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex9",
+    "name": "EX Émeraude",
+    "series": "",
+    "total": 107,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "pop2",
+    "name": "POP Série 2",
+    "series": "",
+    "total": 17,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "exu",
+    "name": "EX Forces Cachées Collection Zarbi",
+    "series": "",
+    "total": 28,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex10",
+    "name": "EX Forces Cachées",
+    "series": "",
+    "total": 117,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex11",
+    "name": "EX Espèces Delta",
+    "series": "",
+    "total": 114,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex12",
+    "name": "EX Créateurs de légendes",
+    "series": "",
+    "total": 93,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-ex-p",
+    "name": "EX Kit dresseur (Positi)",
+    "series": "",
+    "total": 12,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-ex-m",
+    "name": "EX Kit dresseur (Négapi)",
+    "series": "",
+    "total": 12,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "pop3",
+    "name": "POP Série 3",
+    "series": "",
+    "total": 17,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex13",
+    "name": "EX Fantômes Holon",
+    "series": "",
+    "total": 111,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "pop4",
+    "name": "POP Série 4",
+    "series": "",
+    "total": 17,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex14",
+    "name": "EX Gardiens de Cristal",
+    "series": "",
+    "total": 100,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex15",
+    "name": "EX Île des Dragons",
+    "series": "",
+    "total": 101,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex16",
+    "name": "EX Gardiens du Pouvoir",
+    "series": "",
+    "total": 108,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dp1",
+    "name": "Diamant & Perle",
+    "series": "",
+    "total": 130,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dpp",
+    "name": "Promo DP",
+    "series": "",
+    "total": 56,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dp2",
+    "name": "Trésors Mystérieux",
+    "series": "",
+    "total": 124,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-dp-l",
+    "name": "DP Kit dresseur (Lucario)",
+    "series": "",
+    "total": 11,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-dp-m",
+    "name": "DP Kit dresseur (Manaphy)",
+    "series": "",
+    "total": 12,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dp3",
+    "name": "Merveilles Secrètes",
+    "series": "",
+    "total": 132,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dp4",
+    "name": "Duels au Sommets",
+    "series": "",
+    "total": 106,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "pop7",
+    "name": "POP Série 7",
+    "series": "",
+    "total": 17,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dp5",
+    "name": "Aube Majestueuse",
+    "series": "",
+    "total": 100,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dp6",
+    "name": "Éveil des Légendes",
+    "series": "",
+    "total": 146,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dp7",
+    "name": "Tempête",
+    "series": "",
+    "total": 106,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "pl1",
+    "name": "Platine",
+    "series": "",
+    "total": 133,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "pop9",
+    "name": "POP Série 9",
+    "series": "",
+    "total": 17,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "pl2",
+    "name": "Rivaux Émergeants",
+    "series": "",
+    "total": 120,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "pl3",
+    "name": "Vainqueurs Suprêmes",
+    "series": "",
+    "total": 153,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "hgss1",
+    "name": "HeartGold SoulSilver",
+    "series": "",
+    "total": 124,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "hgssp",
+    "name": "Promo HGSS",
+    "series": "",
+    "total": 25,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-hs-g",
+    "name": "HS Kit du dresseur (Léviator)",
+    "series": "",
+    "total": 30,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-hs-r",
+    "name": "HS Kit du dresseur (Raichu)",
+    "series": "",
+    "total": 30,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "hgss2",
+    "name": "Déchaînement",
+    "series": "",
+    "total": 96,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "hgss3",
+    "name": "Indomptable",
+    "series": "",
+    "total": 91,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "hgss4",
+    "name": "Triomphant",
+    "series": "",
+    "total": 103,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "col1",
+    "name": "L'appel des Légendes",
+    "series": "",
+    "total": 106,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw1",
+    "name": "Noir & Blanc",
+    "series": "",
+    "total": 115,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bwp",
+    "name": "Promo BW",
+    "series": "",
+    "total": 101,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "2011bw",
+    "name": "Promo McDonald's 2012",
+    "series": "",
+    "total": 12,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw2",
+    "name": "Pouvoirs Émergents",
+    "series": "",
+    "total": 98,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-bw-z",
+    "name": "BW Kit du dresseur (Zoroark)",
+    "series": "",
+    "total": 30,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-bw-e",
+    "name": "BW Kit du dresseur (Minitaupe)",
+    "series": "",
+    "total": 30,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw3",
+    "name": "Nobles Victoires",
+    "series": "",
+    "total": 102,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw4",
+    "name": "Destinées Futures",
+    "series": "",
+    "total": 103,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw5",
+    "name": "Explorateurs Obscurs",
+    "series": "",
+    "total": 111,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw6",
+    "name": "Dragons Éxaltés",
+    "series": "",
+    "total": 128,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dv1",
+    "name": "Coffre des Dragons",
+    "series": "",
+    "total": 21,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw7",
+    "name": "Frontières Franchies",
+    "series": "",
+    "total": 153,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw8",
+    "name": "Tempète Plasma",
+    "series": "",
+    "total": 138,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw9",
+    "name": "Glaciation Plasma",
+    "series": "",
+    "total": 122,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw10",
+    "name": "Explosion Plasma",
+    "series": "",
+    "total": 105,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xyp",
+    "name": "Promo XY",
+    "series": "",
+    "total": 216,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "2013bw",
+    "name": "Promo McDonald's 2013",
+    "series": "",
+    "total": 12,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "rc",
+    "name": "Radiant Collection",
+    "series": "",
+    "total": 25,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy0",
+    "name": "Bienvenue à Kalos",
+    "series": "",
+    "total": 39,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy1",
+    "name": "XY",
+    "series": "",
+    "total": 146,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xya",
+    "name": "carte alternative A Jaune",
+    "series": "",
+    "total": 6,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-xy-sy",
+    "name": "XY Kit du dresseur (Nymphali)",
+    "series": "",
+    "total": 30,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-xy-n",
+    "name": "XY Kit du dresseur (Bruyverne)",
+    "series": "",
+    "total": 30,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy2",
+    "name": "Étincelles",
+    "series": "",
+    "total": 110,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "2014xy",
+    "name": "Promo McDonald's 2014",
+    "series": "",
+    "total": 12,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy3",
+    "name": "Poings Furieux",
+    "series": "",
+    "total": 114,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-xy-b",
+    "name": "XY Kit du dresseur (Scalproie)",
+    "series": "",
+    "total": 30,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-xy-w",
+    "name": "XY Kit du dresseur (Grodoudou)",
+    "series": "",
+    "total": 30,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy4",
+    "name": "Vigueur Spectrale",
+    "series": "",
+    "total": 124,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy5",
+    "name": "Primo-Choc",
+    "series": "",
+    "total": 164,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dc1",
+    "name": "Double Danger",
+    "series": "",
+    "total": 34,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-xy-latia",
+    "name": "XY Kit du dresseur (Latias)",
+    "series": "",
+    "total": 30,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-xy-latio",
+    "name": "XY Kit du dresseur (Latios)",
+    "series": "",
+    "total": 30,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy6",
+    "name": "Ciel Rugissant",
+    "series": "",
+    "total": 112,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy7",
+    "name": "Origines Antiques",
+    "series": "",
+    "total": 101,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy8",
+    "name": "Impulsion Turbo",
+    "series": "",
+    "total": 165,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "2015xy",
+    "name": "Promo McDonald's 2015",
+    "series": "",
+    "total": 12,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy9",
+    "name": "Rupture Turbo",
+    "series": "",
+    "total": 126,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "g1",
+    "name": "Générations",
+    "series": "",
+    "total": 117,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-xy-p",
+    "name": "XY Kit du dresseur (Pikachu Libre)",
+    "series": "",
+    "total": 30,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-xy-su",
+    "name": "XY Kit du dresseur (Suicune)",
+    "series": "",
+    "total": 30,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy10",
+    "name": "Impact des Destins",
+    "series": "",
+    "total": 129,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy11",
+    "name": "Offensive Vapeur",
+    "series": "",
+    "total": 116,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "2016xy",
+    "name": "Promo McDonald's 2016",
+    "series": "",
+    "total": 12,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy12",
+    "name": "Évolutions",
+    "series": "",
+    "total": 113,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm1",
+    "name": "Soleil et Lune",
+    "series": "",
+    "total": 163,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "smp",
+    "name": "Promo SM",
+    "series": "",
+    "total": 244,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-sm-l",
+    "name": "SM Kit du dresseur (Lougarox)",
+    "series": "",
+    "total": 30,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "tk-sm-r",
+    "name": "SM Kit du dresseur (Raichu d'Alola)",
+    "series": "",
+    "total": 30,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm2",
+    "name": "Gardiens Ascendants",
+    "series": "",
+    "total": 169,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "2017sm",
+    "name": "Promo McDonald's 2017",
+    "series": "",
+    "total": 12,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm3",
+    "name": "Ombres Ardentes",
+    "series": "",
+    "total": 169,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm3.5",
+    "name": "Légendes Brillantes",
+    "series": "",
+    "total": 78,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm4",
+    "name": "Invasion Carmin",
+    "series": "",
+    "total": 125,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm5",
+    "name": "Ultra-Prisme",
+    "series": "",
+    "total": 173,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm6",
+    "name": "Lumière Interdite",
+    "series": "",
+    "total": 146,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "2018sm-fr",
+    "name": "Promo McDonald's 2018",
+    "series": "",
+    "total": 40,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm7",
+    "name": "Tempête Céleste",
+    "series": "",
+    "total": 183,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm7.5",
+    "name": "Majesté Des Dragons",
+    "series": "",
+    "total": 78,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm8",
+    "name": "Tonnerre Perdu",
+    "series": "",
+    "total": 236,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm9",
+    "name": "Duo de Choc",
+    "series": "",
+    "total": 196,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "det1",
+    "name": "Détective Pikachu",
+    "series": "",
+    "total": 18,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm10",
+    "name": "Alliance Infaillible",
+    "series": "",
+    "total": 234,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm11",
+    "name": "Harmonie des Esprits",
+    "series": "",
+    "total": 258,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm115",
+    "name": "Destinées Occultes",
+    "series": "",
+    "total": 69,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sma",
+    "name": "Carte Alternative A Jaune",
+    "series": "",
+    "total": 94,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "2019sm-fr",
+    "name": "Promo McDonald's 2019",
+    "series": "",
+    "total": 40,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm12",
+    "name": "Éclipse Cosmique",
+    "series": "",
+    "total": 271,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swshp",
+    "name": "Promo SWSH",
+    "series": "",
+    "total": 285,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh1",
+    "name": "Épée et Bouclier",
+    "series": "",
+    "total": 216,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh2",
+    "name": "Clash des Rebelles",
+    "series": "",
+    "total": 209,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh3",
+    "name": "Ténèbres Embrasées",
+    "series": "",
+    "total": 201,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh3.5",
+    "name": "La Voie du Maître",
+    "series": "",
+    "total": 80,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh4",
+    "name": "Voltage Éclatant",
+    "series": "",
+    "total": 203,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "2021swsh",
+    "name": "Promo McDonald's 2021",
+    "series": "",
+    "total": 25,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh4.5",
+    "name": "Destinées Radieuses",
+    "series": "",
+    "total": 195,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh5",
+    "name": "Styles de combat",
+    "series": "",
+    "total": 183,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh6",
+    "name": "Règne de Glace",
+    "series": "",
+    "total": 233,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh7",
+    "name": "Évolution Céleste",
+    "series": "",
+    "total": 237,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "cel25",
+    "name": "Célébrations",
+    "series": "",
+    "total": 39,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh8",
+    "name": "Poing de Fusion",
+    "series": "",
+    "total": 284,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh9",
+    "name": "Stars Étincelantes",
+    "series": "",
+    "total": 216,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh10",
+    "name": "Astres Radieux",
+    "series": "",
+    "total": 246,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh10.5",
+    "name": "Pokémon GO",
+    "series": "",
+    "total": 88,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh11",
+    "name": "Origine Perdue",
+    "series": "",
+    "total": 247,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh12",
+    "name": "Tempête Argentée",
+    "series": "",
+    "total": 245,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh12.5",
+    "name": "Zénith Suprême",
+    "series": "",
+    "total": 230,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "svp",
+    "name": "SVP Black Star Promos",
+    "series": "",
+    "total": 213,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv01",
+    "name": "Écarlate et Violet",
+    "series": "",
+    "total": 258,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv02",
+    "name": "Évolutions à Paldea",
+    "series": "",
+    "total": 279,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv03",
+    "name": "Flammes Obsidiennes",
+    "series": "",
+    "total": 230,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv03.5",
+    "name": "151",
+    "series": "",
+    "total": 207,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv04",
+    "name": "Faille Paradoxe",
+    "series": "",
+    "total": 266,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv04.5",
+    "name": "Destinées de Paldea",
+    "series": "",
+    "total": 245,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv05",
+    "name": "Forces Temporelles",
+    "series": "",
+    "total": 218,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv06",
+    "name": "Mascarade Crépusculaire",
+    "series": "",
+    "total": 226,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv06.5",
+    "name": "Fable Nébuleuse",
+    "series": "",
+    "total": 99,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv07",
+    "name": "Couronne Stellaire",
+    "series": "",
+    "total": 175,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "A1",
+    "name": "Puissance Génétique",
+    "series": "",
+    "total": 286,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "P-A",
+    "name": "Promo-A",
+    "series": "",
+    "total": 73,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv08",
+    "name": "Étincelles Déferlantes",
+    "series": "",
+    "total": 252,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "A1a",
+    "name": "L’Île Fabuleuse",
+    "series": "",
+    "total": 86,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv08.5",
+    "name": "Évolutions Prismatiques",
+    "series": "",
+    "total": 180,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "A2",
+    "name": "Choc Spatio-Temporel",
+    "series": "",
+    "total": 207,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "A2a",
+    "name": "Lumière Triomphale",
+    "series": "",
+    "total": 96,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "A2b",
+    "name": "Réjouissances Rayonnantes",
+    "series": "",
+    "total": 111,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv09",
+    "name": "Aventures Ensemble",
+    "series": "",
+    "total": 190,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "A3",
+    "name": "Gardiens Astraux",
+    "series": "",
+    "total": 239,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "A3a",
+    "name": "Crise Interdimensionnelle",
+    "series": "",
+    "total": 103,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv10",
+    "name": "Rivalités Destinées",
+    "series": "",
+    "total": 244,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "A3b",
+    "name": "La Clairière d'Évoli",
+    "series": "",
+    "total": 107,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv10.5b",
+    "name": "Foudre Noire",
+    "series": "",
+    "total": 172,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv10.5w",
+    "name": "Flamme Blanche",
+    "series": "",
+    "total": 173,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "A4",
+    "name": "Sagesse Entre Ciel et Mer",
+    "series": "",
+    "total": 241,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "A4a",
+    "name": "Source Secrète",
+    "series": "",
+    "total": 105,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "me01",
+    "name": "Méga-Évolution",
+    "series": "",
+    "total": 188,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "mep",
+    "name": "MEP Black Star Promos",
+    "series": "",
+    "total": 10,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "me02",
+    "name": "Flammes Fantasmagoriques",
+    "series": "",
+    "total": 130,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "B1a",
+    "name": "Embrasement Écarlate",
+    "series": "",
+    "total": 69,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "B2",
+    "name": "Parade Onirique",
+    "series": "",
+    "total": 155,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "me02.5",
+    "name": "Héros Transcendants",
+    "series": "",
+    "total": 295,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  }
+]

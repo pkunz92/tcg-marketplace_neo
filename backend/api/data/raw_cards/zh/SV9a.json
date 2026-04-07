@@ -1,0 +1,830 @@
+[
+  {
+    "id": "SV9a-001",
+    "name": "<阿響的>凱羅斯",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-002",
+    "name": "蜻蜻蜓",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-003",
+    "name": "遠古巨蜓ex",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-004",
+    "name": "<竹蘭的>毒薔薇",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-005",
+    "name": "<竹蘭的>羅絲雷朵",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-006",
+    "name": "謝米",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-007",
+    "name": "石居蟹",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-008",
+    "name": "岩殿居蟹",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-009",
+    "name": "啃果蟲",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-010",
+    "name": "裹蜜蟲",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-011",
+    "name": "蜜集大蛇",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-012",
+    "name": "厄鬼椪 碧草面具",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-013",
+    "name": "小火馬",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-014",
+    "name": "烈焰馬",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-015",
+    "name": "<阿響的>火球鼠",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-016",
+    "name": "<阿響的>火岩鼠",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-017",
+    "name": "<阿響的>火爆獸",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-018",
+    "name": "<阿響的>熔岩蟲",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-019",
+    "name": "<阿響的>熔岩蝸牛",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-020",
+    "name": "<阿響的>鳳王ex",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-021",
+    "name": "厄鬼椪 火灶面具",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-022",
+    "name": "<小霞的>可達鴨",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-023",
+    "name": "<小霞的>海星星",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-024",
+    "name": "<小霞的>寶石海星",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-025",
+    "name": "<小霞的>鯉魚王",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-026",
+    "name": "<小霞的>暴鯉龍",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-027",
+    "name": "<小霞的>拉普拉斯",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-028",
+    "name": "<竹蘭的>醜醜魚",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-029",
+    "name": "<竹蘭的>美納斯",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-030",
+    "name": "泳圈鼬",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-031",
+    "name": "浮潛鼬",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-032",
+    "name": "吃吼霸ex",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-033",
+    "name": "厄鬼椪 水井面具",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-034",
+    "name": "電擊獸",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-035",
+    "name": "電擊魔獸ex",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-036",
+    "name": "<阿響的>皮丘",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-037",
+    "name": "落雷獸",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-038",
+    "name": "雷電獸",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-039",
+    "name": "洛托姆",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-040",
+    "name": "捷拉奧拉",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-041",
+    "name": "<阿響的>樹才怪",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-042",
+    "name": "<竹蘭的>圓陸鯊",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-043",
+    "name": "<竹蘭的>尖牙陸鯊",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-044",
+    "name": "<竹蘭的>烈咬陸鯊ex",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-045",
+    "name": "泥驢仔",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-046",
+    "name": "重泥挽馬",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-047",
+    "name": "<派帕的>原野水母",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-048",
+    "name": "<派帕的>陸地水母",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-049",
+    "name": "厄鬼椪 礎石面具",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-050",
+    "name": "<竹蘭的>花岩怪",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-051",
+    "name": "<派帕的>偶叫獒",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-052",
+    "name": "<派帕的>獒教父ex",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-053",
+    "name": "肯泰羅",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-054",
+    "name": "<派帕的>貪心栗鼠",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-055",
+    "name": "<派帕的>藏飽栗鼠",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-056",
+    "name": "聖灰",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-057",
+    "name": "派帕的三明治",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-058",
+    "name": "寶可夢交替",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-059",
+    "name": "寶可夢捕捉器",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-060",
+    "name": "竹蘭的力量負重",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-061",
+    "name": "主持人的帶動",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-062",
+    "name": "裁判",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-063",
+    "name": "阿響的冒險",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-064",
+    "name": "蜻蜻蜓",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-065",
+    "name": "<竹蘭的>羅絲雷朵",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-066",
+    "name": "謝米",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-067",
+    "name": "岩殿居蟹",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-068",
+    "name": "蜜集大蛇",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-069",
+    "name": "烈焰馬",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-070",
+    "name": "<阿響的>火爆獸",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-071",
+    "name": "<小霞的>可達鴨",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-072",
+    "name": "<小霞的>拉普拉斯",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-073",
+    "name": "落雷獸",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-074",
+    "name": "洛托姆",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-075",
+    "name": "<派帕的>藏飽栗鼠",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-076",
+    "name": "遠古巨蜓ex",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-077",
+    "name": "<阿響的>鳳王ex",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-078",
+    "name": "吃吼霸ex",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-079",
+    "name": "電擊魔獸ex",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-080",
+    "name": "<竹蘭的>烈咬陸鯊ex",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-081",
+    "name": "<派帕的>獒教父ex",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-082",
+    "name": "主持人的帶動",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-083",
+    "name": "裁判",
+    "number": "083",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-084",
+    "name": "阿響的冒險",
+    "number": "084",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-085",
+    "name": "遠古巨蜓ex",
+    "number": "085",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-086",
+    "name": "<阿響的>鳳王ex",
+    "number": "086",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-087",
+    "name": "<竹蘭的>烈咬陸鯊ex",
+    "number": "087",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-088",
+    "name": "<派帕的>獒教父ex",
+    "number": "088",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-089",
+    "name": "阿響的冒險",
+    "number": "089",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-090",
+    "name": "<阿響的>鳳王ex",
+    "number": "090",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-091",
+    "name": "<竹蘭的>烈咬陸鯊ex",
+    "number": "091",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV9a-092",
+    "name": "釀光市",
+    "number": "092",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

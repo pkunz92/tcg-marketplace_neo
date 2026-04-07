@@ -1,0 +1,884 @@
+[
+  {
+    "id": "PMCG6-001",
+    "name": "コガの雑草",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-002",
+    "name": "コガのエカン",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-003",
+    "name": "ジョバンニのニドランf",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-004",
+    "name": "ジョバンニのニドランm",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-005",
+    "name": "コガのズバット",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-006",
+    "name": "サブリナのヴェノナト",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-007",
+    "name": "コガのグリマー",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-008",
+    "name": "コガのコフィン（c）",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-009",
+    "name": "コガのタンゲラ",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-010",
+    "name": "エリカのイビサウルス",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-011",
+    "name": "コガのカクナ",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-012",
+    "name": "ジョバンニのニドリーナ",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-013",
+    "name": "ジョバンニのニドリーノ",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-014",
+    "name": "コガのゴルバット",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-015",
+    "name": "Koga's Koffing（u）",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-016",
+    "name": "コガのおしっこ",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-017",
+    "name": "エリカの金星",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-018",
+    "name": "コガのビードリル",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-019",
+    "name": "コガのアーボック",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-020",
+    "name": "ジョバンニのニドキーン",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-021",
+    "name": "ジョヴァンニのニドキング",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-022",
+    "name": "サブリナの毒液",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-023",
+    "name": "コガのムック",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-024",
+    "name": "ジョバンニのピンシル",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-025",
+    "name": "ブレインのチャーチャンダー",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-026",
+    "name": "BlaineのVulpix",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-027",
+    "name": "ブレインのうなり声",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-028",
+    "name": "ブレインのポニータ",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-029",
+    "name": "ブレインのチャームレオン",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-030",
+    "name": "ブレインのラピダッシュ",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-031",
+    "name": "ブレインのマグマー",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-032",
+    "name": "ブレインのカリザード",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-033",
+    "name": "ブレインのニネタール",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-034",
+    "name": "ブレインのアルカニン",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-035",
+    "name": "ブレインのモルトレス",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-036",
+    "name": "SabrinaのPsyduck",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-037",
+    "name": "ジョバンニのマジカルプ",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-038",
+    "name": "サブリナのゴルダック",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-039",
+    "name": "ミスティのポリワラス",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-040",
+    "name": "ジョバンニのジャラドス",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-041",
+    "name": "Surge's Raichu中t",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-042",
+    "name": "ロケットのザプドス",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-043",
+    "name": "サブリナのアブラ",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-044",
+    "name": "サブリナのスローポーク",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-045",
+    "name": "サブリナのドロージー",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-046",
+    "name": "サブリナのマイムさん",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-047",
+    "name": "サブリナのカダブラ",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-048",
+    "name": "サブリナのスローブロ",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-049",
+    "name": "サブリナの激しく",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-050",
+    "name": "Sabrina's Haunter",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-051",
+    "name": "サブリナの催眠",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-052",
+    "name": "サブリナのジンクス",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-053",
+    "name": "サブリナのアラカザム",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-054",
+    "name": "サブリナのジェンガー",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-055",
+    "name": "ロケットのミュウツー",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-056",
+    "name": "ブレインのマンキー",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-057",
+    "name": "ジョヴァンニのマチュップ",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-058",
+    "name": "ブレインの韻",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-059",
+    "name": "ジョバンニのマチョーク",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-060",
+    "name": "ブロックのdugtrio",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-061",
+    "name": "ジョバンニのマチャンプ",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-062",
+    "name": "コガのピッジー（c）",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-063",
+    "name": "ジョバンニの首尾（c）",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-064",
+    "name": "ブレインのドドゥオ",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-065",
+    "name": "ブレインのタウロス",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-066",
+    "name": "サブリナのポリゴン",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-067",
+    "name": "コガのピッジー（u）",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-068",
+    "name": "giovanniのmeowth（u）",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-069",
+    "name": "ブレインのカンガスハン",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-070",
+    "name": "コガのピッジット",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-071",
+    "name": "ジョバンニのペルシャ語",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-072",
+    "name": "コガの同上",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-073",
+    "name": "ロケットのスノーラックス",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-074",
+    "name": "Imakuni？ 's doduo",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-075",
+    "name": "_____のチャンシー",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-076",
+    "name": "ブレインのギャンブル",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-077",
+    "name": "ゴミ交換",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-078",
+    "name": "サブリナの視線",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-079",
+    "name": "透明な壁",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-080",
+    "name": "ワープポイント",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-081",
+    "name": "ブレインの最後の手段",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-082",
+    "name": "ブレインのクイズ3",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-083",
+    "name": "コガの忍者のトリック",
+    "number": "083",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-084",
+    "name": "くすぐるマシン",
+    "number": "084",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-085",
+    "name": "Cinnabar City Gym",
+    "number": "085",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-086",
+    "name": "フクシアシティジム",
+    "number": "086",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-087",
+    "name": "Sabrina's esp",
+    "number": "087",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-088",
+    "name": "サブリナのサイキックコントロール",
+    "number": "088",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-089",
+    "name": "チームロケットのミニオン",
+    "number": "089",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-090",
+    "name": "サフランシティジム",
+    "number": "090",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-091",
+    "name": "ロケットの秘密の実験",
+    "number": "091",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-092",
+    "name": "ロケットの地雷原ジム",
+    "number": "092",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-093",
+    "name": "ブレイン",
+    "number": "093",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-094",
+    "name": "コガ",
+    "number": "094",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-095",
+    "name": "ジョバンニ",
+    "number": "095",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-096",
+    "name": "ジョバンニの最後の手段",
+    "number": "096",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-097",
+    "name": "ビリディアンシティジム",
+    "number": "097",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "PMCG6-098",
+    "name": "サブリナ",
+    "number": "098",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

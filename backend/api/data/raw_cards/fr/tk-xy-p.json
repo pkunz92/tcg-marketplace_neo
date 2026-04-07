@@ -1,0 +1,272 @@
+[
+  {
+    "id": "tk-xy-p-1",
+    "name": "Chaglam",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-2",
+    "name": "Énergie Électrique",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-3",
+    "name": "Énergie Électrique",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-4",
+    "name": "Élekable",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-5",
+    "name": "Énergie Électrique",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-6",
+    "name": "Énergie Électrique",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-7",
+    "name": "Nirondelle",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-8",
+    "name": "Énergie Électrique",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-9",
+    "name": "Énergie Électrique",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-10",
+    "name": "Énergie Électrique",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-11",
+    "name": "Dynavolt",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-12",
+    "name": "Zébibron",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-13",
+    "name": "Élecsprint",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-14",
+    "name": "Pikachu Catcheur",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-15",
+    "name": "Élektek",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-16",
+    "name": "Passerouge",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-17",
+    "name": "Énergie Électrique",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-18",
+    "name": "Énergie Électrique",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-19",
+    "name": "Chaffreux",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-20",
+    "name": "Tierno",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-21",
+    "name": "Potion",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-22",
+    "name": "Élecsprint",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-23",
+    "name": "Élektek",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-24",
+    "name": "Chaffreux",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-25",
+    "name": "Élekable",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-26",
+    "name": "Zébibron",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-27",
+    "name": "Chaglam",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-28",
+    "name": "Dynavolt",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-29",
+    "name": "Énergie Électrique",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-p-30",
+    "name": "Pikachu Catcheur",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

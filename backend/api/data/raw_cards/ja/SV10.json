@@ -1,0 +1,884 @@
+[
+  {
+    "id": "SV10-001",
+    "name": "クヌギダマ",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/001"
+    }
+  },
+  {
+    "id": "SV10-002",
+    "name": "キノココ",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/002"
+    }
+  },
+  {
+    "id": "SV10-003",
+    "name": "キノガッサ",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/003"
+    }
+  },
+  {
+    "id": "SV10-004",
+    "name": "カットロトム",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/004"
+    }
+  },
+  {
+    "id": "SV10-005",
+    "name": "カリキリ",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/005"
+    }
+  },
+  {
+    "id": "SV10-006",
+    "name": "ラランテス",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/006"
+    }
+  },
+  {
+    "id": "SV10-007",
+    "name": "ロケット団のサッチムシ",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/007"
+    }
+  },
+  {
+    "id": "SV10-008",
+    "name": "ロケット団のタマンチュラ",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/008"
+    }
+  },
+  {
+    "id": "SV10-009",
+    "name": "ロケット団のワナイダー",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/009"
+    }
+  },
+  {
+    "id": "SV10-010",
+    "name": "ミニーブ",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/010"
+    }
+  },
+  {
+    "id": "SV10-011",
+    "name": "オリーニョ",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/011"
+    }
+  },
+  {
+    "id": "SV10-012",
+    "name": "オリーヴァex",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/012"
+    }
+  },
+  {
+    "id": "SV10-013",
+    "name": "ガーディ",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/013"
+    }
+  },
+  {
+    "id": "SV10-014",
+    "name": "ウインディ",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/014"
+    }
+  },
+  {
+    "id": "SV10-015",
+    "name": "ロケット団のファイヤーex",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/015"
+    }
+  },
+  {
+    "id": "SV10-016",
+    "name": "ロケット団のデルビル",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/016"
+    }
+  },
+  {
+    "id": "SV10-017",
+    "name": "ロケット団のヘルガー",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/017"
+    }
+  },
+  {
+    "id": "SV10-018",
+    "name": "アチャモ",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/018"
+    }
+  },
+  {
+    "id": "SV10-019",
+    "name": "ワカシャモ",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/019"
+    }
+  },
+  {
+    "id": "SV10-020",
+    "name": "バシャーモ",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/020"
+    }
+  },
+  {
+    "id": "SV10-021",
+    "name": "ヒートロトム",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/021"
+    }
+  },
+  {
+    "id": "SV10-022",
+    "name": "ロケット団のフリーザー",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/022"
+    }
+  },
+  {
+    "id": "SV10-023",
+    "name": "パールル",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/023"
+    }
+  },
+  {
+    "id": "SV10-024",
+    "name": "ハンテール",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/024"
+    }
+  },
+  {
+    "id": "SV10-025",
+    "name": "サクラビス",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/025"
+    }
+  },
+  {
+    "id": "SV10-026",
+    "name": "ユキカブリ",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/026"
+    }
+  },
+  {
+    "id": "SV10-027",
+    "name": "ユキノオー",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/027"
+    }
+  },
+  {
+    "id": "SV10-028",
+    "name": "ウォッシュロトム",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/028"
+    }
+  },
+  {
+    "id": "SV10-029",
+    "name": "サシカマス",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/029"
+    }
+  },
+  {
+    "id": "SV10-030",
+    "name": "カマスジョー",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/030"
+    }
+  },
+  {
+    "id": "SV10-031",
+    "name": "アルクジラ",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/031"
+    }
+  },
+  {
+    "id": "SV10-032",
+    "name": "ハルクジラex",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/032"
+    }
+  },
+  {
+    "id": "SV10-033",
+    "name": "ロケット団のサンダー",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/033"
+    }
+  },
+  {
+    "id": "SV10-034",
+    "name": "ロケット団のメリープ",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/034"
+    }
+  },
+  {
+    "id": "SV10-035",
+    "name": "ロケット団のモココ",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/035"
+    }
+  },
+  {
+    "id": "SV10-036",
+    "name": "ロケット団のデンリュウ",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/036"
+    }
+  },
+  {
+    "id": "SV10-037",
+    "name": "ロケット団のスリープ",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/037"
+    }
+  },
+  {
+    "id": "SV10-038",
+    "name": "ロケット団のスリーパー",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/038"
+    }
+  },
+  {
+    "id": "SV10-039",
+    "name": "ロケット団のミュウツーex",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/039"
+    }
+  },
+  {
+    "id": "SV10-040",
+    "name": "ロケット団のソーナンス",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/040"
+    }
+  },
+  {
+    "id": "SV10-041",
+    "name": "ロケット団のリーシャン",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/041"
+    }
+  },
+  {
+    "id": "SV10-042",
+    "name": "ロケット団のミミッキュ",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/042"
+    }
+  },
+  {
+    "id": "SV10-043",
+    "name": "ロケット団のレドームシ",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/043"
+    }
+  },
+  {
+    "id": "SV10-044",
+    "name": "ロケット団のイオルブ",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/044"
+    }
+  },
+  {
+    "id": "SV10-045",
+    "name": "マンキー",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/045"
+    }
+  },
+  {
+    "id": "SV10-046",
+    "name": "オコリザル",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/046"
+    }
+  },
+  {
+    "id": "SV10-047",
+    "name": "コノヨザル",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/047"
+    }
+  },
+  {
+    "id": "SV10-048",
+    "name": "ロケット団のヨーギラス",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/048"
+    }
+  },
+  {
+    "id": "SV10-049",
+    "name": "ロケット団のサナギラス",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/049"
+    }
+  },
+  {
+    "id": "SV10-050",
+    "name": "ロケット団のバンギラス",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/050"
+    }
+  },
+  {
+    "id": "SV10-051",
+    "name": "ノズパス",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/051"
+    }
+  },
+  {
+    "id": "SV10-052",
+    "name": "ダイノーズ",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/052"
+    }
+  },
+  {
+    "id": "SV10-053",
+    "name": "アサナン",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/053"
+    }
+  },
+  {
+    "id": "SV10-054",
+    "name": "チャーレム",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/054"
+    }
+  },
+  {
+    "id": "SV10-055",
+    "name": "レジロックex",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/055"
+    }
+  },
+  {
+    "id": "SV10-056",
+    "name": "ロケット団のアーボ",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/056"
+    }
+  },
+  {
+    "id": "SV10-057",
+    "name": "ロケット団のアーボック",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/057"
+    }
+  },
+  {
+    "id": "SV10-058",
+    "name": "ロケット団のニドラン♀",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/058"
+    }
+  },
+  {
+    "id": "SV10-059",
+    "name": "ロケット団のニドリーナ",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/059"
+    }
+  },
+  {
+    "id": "SV10-060",
+    "name": "ロケット団のニドクイン",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/060"
+    }
+  },
+  {
+    "id": "SV10-061",
+    "name": "ロケット団のニドラン♂",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/061"
+    }
+  },
+  {
+    "id": "SV10-062",
+    "name": "ロケット団のニドリーノ",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/062"
+    }
+  },
+  {
+    "id": "SV10-063",
+    "name": "ロケット団のニドキングex",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/063"
+    }
+  },
+  {
+    "id": "SV10-064",
+    "name": "ロケット団のズバット",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/064"
+    }
+  },
+  {
+    "id": "SV10-065",
+    "name": "ロケット団のゴルバット",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/065"
+    }
+  },
+  {
+    "id": "SV10-066",
+    "name": "ロケット団のクロバットex",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/066"
+    }
+  },
+  {
+    "id": "SV10-067",
+    "name": "ロケット団のベトベター",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/067"
+    }
+  },
+  {
+    "id": "SV10-068",
+    "name": "ロケット団のベトベトン",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/068"
+    }
+  },
+  {
+    "id": "SV10-069",
+    "name": "ロケット団のドガース",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/069"
+    }
+  },
+  {
+    "id": "SV10-070",
+    "name": "ロケット団のマタドガス",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/070"
+    }
+  },
+  {
+    "id": "SV10-071",
+    "name": "ロケット団のヤミカラス",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/071"
+    }
+  },
+  {
+    "id": "SV10-072",
+    "name": "ロケット団のニューラ",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/072"
+    }
+  },
+  {
+    "id": "SV10-073",
+    "name": "フォレトス",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/073"
+    }
+  },
+  {
+    "id": "SV10-074",
+    "name": "エアームド",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/074"
+    }
+  },
+  {
+    "id": "SV10-075",
+    "name": "ザマゼンタ",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/075"
+    }
+  },
+  {
+    "id": "SV10-076",
+    "name": "ロケット団のコラッタ",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/076"
+    }
+  },
+  {
+    "id": "SV10-077",
+    "name": "ロケット団のラッタ",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/077"
+    }
+  },
+  {
+    "id": "SV10-078",
+    "name": "ロケット団のニャース",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/078"
+    }
+  },
+  {
+    "id": "SV10-079",
+    "name": "ロケット団のペルシアンex",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/079"
+    }
+  },
+  {
+    "id": "SV10-080",
+    "name": "ガルーラ",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/080"
+    }
+  },
+  {
+    "id": "SV10-081",
+    "name": "ロケット団のポリゴン",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/081"
+    }
+  },
+  {
+    "id": "SV10-082",
+    "name": "ロケット団のポリゴン2",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/082"
+    }
+  },
+  {
+    "id": "SV10-083",
+    "name": "ロケット団のポリゴンZ",
+    "number": "083",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/083"
+    }
+  },
+  {
+    "id": "SV10-084",
+    "name": "スバメ",
+    "number": "084",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/084"
+    }
+  },
+  {
+    "id": "SV10-085",
+    "name": "オオスバメ",
+    "number": "085",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/085"
+    }
+  },
+  {
+    "id": "SV10-086",
+    "name": "イキリンコ",
+    "number": "086",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/086"
+    }
+  },
+  {
+    "id": "SV10-087",
+    "name": "ロケット団のおじゃまロボ",
+    "number": "087",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/087"
+    }
+  },
+  {
+    "id": "SV10-088",
+    "name": "ロケット団のスーパーボール",
+    "number": "088",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/088"
+    }
+  },
+  {
+    "id": "SV10-089",
+    "name": "ロケット団のびっくりボム",
+    "number": "089",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/089"
+    }
+  },
+  {
+    "id": "SV10-090",
+    "name": "ロケット団のレシーバー",
+    "number": "090",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/090"
+    }
+  },
+  {
+    "id": "SV10-091",
+    "name": "ロケット団のアテナ",
+    "number": "091",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/091"
+    }
+  },
+  {
+    "id": "SV10-092",
+    "name": "ロケット団のアポロ",
+    "number": "092",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/092"
+    }
+  },
+  {
+    "id": "SV10-093",
+    "name": "ロケット団のサカキ",
+    "number": "093",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/093"
+    }
+  },
+  {
+    "id": "SV10-094",
+    "name": "ロケット団のラムダ",
+    "number": "094",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/094"
+    }
+  },
+  {
+    "id": "SV10-095",
+    "name": "ロケット団のランス",
+    "number": "095",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/095"
+    }
+  },
+  {
+    "id": "SV10-096",
+    "name": "ロケット団の監視塔",
+    "number": "096",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/096"
+    }
+  },
+  {
+    "id": "SV10-097",
+    "name": "ロケット団のファクトリー",
+    "number": "097",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/097"
+    }
+  },
+  {
+    "id": "SV10-098",
+    "name": "ロケット団エネルギー",
+    "number": "098",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SV10/098"
+    }
+  }
+]

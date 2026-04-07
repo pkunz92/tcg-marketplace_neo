@@ -1,0 +1,58 @@
+[
+  {
+    "id": "SV9a",
+    "name": "熱風競技場",
+    "series": "",
+    "total": 92,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "SV10",
+    "name": "火箭隊的榮耀",
+    "series": "",
+    "total": 98,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "SV9",
+    "name": "對戰搭檔",
+    "series": "",
+    "total": 100,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "SV8",
+    "name": "超電突圍",
+    "series": "",
+    "total": 106,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "SV7a",
+    "name": "樂園騰龍",
+    "series": "",
+    "total": 64,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "SV7",
+    "name": "星晶奇跡",
+    "series": "",
+    "total": 132,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "SV8a",
+    "name": "太晶慶典ex",
+    "series": "",
+    "total": 237,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  }
+]

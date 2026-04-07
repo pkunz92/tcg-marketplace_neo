@@ -1,0 +1,1028 @@
+[
+  {
+    "id": "xy3-1",
+    "name": "Knofensa",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/1"
+    }
+  },
+  {
+    "id": "xy3-2",
+    "name": "Ultrigaria",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/2"
+    }
+  },
+  {
+    "id": "xy3-3",
+    "name": "Sarzenia",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/3"
+    }
+  },
+  {
+    "id": "xy3-4",
+    "name": "Skaraborn EX",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/4"
+    }
+  },
+  {
+    "id": "xy3-5",
+    "name": "M Skaraborn EX",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/5"
+    }
+  },
+  {
+    "id": "xy3-6",
+    "name": "Knilz",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/6"
+    }
+  },
+  {
+    "id": "xy3-7",
+    "name": "Folipurba",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/7"
+    }
+  },
+  {
+    "id": "xy3-8",
+    "name": "Schnuthelm",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/8"
+    }
+  },
+  {
+    "id": "xy3-9",
+    "name": "Hydragil",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/9"
+    }
+  },
+  {
+    "id": "xy3-10",
+    "name": "Magmar",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/10"
+    }
+  },
+  {
+    "id": "xy3-11",
+    "name": "Magbrant",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/11"
+    }
+  },
+  {
+    "id": "xy3-12",
+    "name": "Flemmli",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/12"
+    }
+  },
+  {
+    "id": "xy3-13",
+    "name": "Jungglut",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/13"
+    }
+  },
+  {
+    "id": "xy3-14",
+    "name": "Lohgock",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/14"
+    }
+  },
+  {
+    "id": "xy3-15",
+    "name": "Quapsel",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/15"
+    }
+  },
+  {
+    "id": "xy3-16",
+    "name": "Quaputzi",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/16"
+    }
+  },
+  {
+    "id": "xy3-17",
+    "name": "Quappo",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/17"
+    }
+  },
+  {
+    "id": "xy3-18",
+    "name": "Quaxo",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/18"
+    }
+  },
+  {
+    "id": "xy3-19",
+    "name": "Glaziola",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/19"
+    }
+  },
+  {
+    "id": "xy3-20",
+    "name": "Branawarz EX",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/20"
+    }
+  },
+  {
+    "id": "xy3-21",
+    "name": "Petznief",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/21"
+    }
+  },
+  {
+    "id": "xy3-22",
+    "name": "Siberio",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/22"
+    }
+  },
+  {
+    "id": "xy3-23",
+    "name": "Scampisto",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/23"
+    }
+  },
+  {
+    "id": "xy3-24",
+    "name": "Wummer",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/24"
+    }
+  },
+  {
+    "id": "xy3-25",
+    "name": "Amarino",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/25"
+    }
+  },
+  {
+    "id": "xy3-26",
+    "name": "Amagarga",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/26"
+    }
+  },
+  {
+    "id": "xy3-27",
+    "name": "Pikachu",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/27"
+    }
+  },
+  {
+    "id": "xy3-28",
+    "name": "Raichu",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/28"
+    }
+  },
+  {
+    "id": "xy3-29",
+    "name": "Elektek",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/29"
+    }
+  },
+  {
+    "id": "xy3-30",
+    "name": "Elevoltek",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/30"
+    }
+  },
+  {
+    "id": "xy3-31",
+    "name": "Plusle",
+    "number": "31",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/31"
+    }
+  },
+  {
+    "id": "xy3-32",
+    "name": "Minun",
+    "number": "32",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/32"
+    }
+  },
+  {
+    "id": "xy3-33",
+    "name": "Voltolos",
+    "number": "33",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/33"
+    }
+  },
+  {
+    "id": "xy3-34",
+    "name": "Dedenne",
+    "number": "34",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/34"
+    }
+  },
+  {
+    "id": "xy3-35",
+    "name": "Traumato",
+    "number": "35",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/35"
+    }
+  },
+  {
+    "id": "xy3-36",
+    "name": "Hypno",
+    "number": "36",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/36"
+    }
+  },
+  {
+    "id": "xy3-37",
+    "name": "Rossana",
+    "number": "37",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/37"
+    }
+  },
+  {
+    "id": "xy3-38",
+    "name": "Pionskora",
+    "number": "38",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/38"
+    }
+  },
+  {
+    "id": "xy3-39",
+    "name": "Mollimorba",
+    "number": "39",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/39"
+    }
+  },
+  {
+    "id": "xy3-40",
+    "name": "Hypnomorba",
+    "number": "40",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/40"
+    }
+  },
+  {
+    "id": "xy3-41",
+    "name": "Morbitesse",
+    "number": "41",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/41"
+    }
+  },
+  {
+    "id": "xy3-42",
+    "name": "Golbit",
+    "number": "42",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/42"
+    }
+  },
+  {
+    "id": "xy3-43",
+    "name": "Golgantes",
+    "number": "43",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/43"
+    }
+  },
+  {
+    "id": "xy3-44",
+    "name": "Machollo",
+    "number": "44",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/44"
+    }
+  },
+  {
+    "id": "xy3-45",
+    "name": "Maschock",
+    "number": "45",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/45"
+    }
+  },
+  {
+    "id": "xy3-46",
+    "name": "Machomei",
+    "number": "46",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/46"
+    }
+  },
+  {
+    "id": "xy3-47",
+    "name": "Kicklee",
+    "number": "47",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/47"
+    }
+  },
+  {
+    "id": "xy3-48",
+    "name": "Nockchan",
+    "number": "48",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/48"
+    }
+  },
+  {
+    "id": "xy3-49",
+    "name": "Kapoera",
+    "number": "49",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/49"
+    }
+  },
+  {
+    "id": "xy3-50",
+    "name": "Kapilz",
+    "number": "50",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/50"
+    }
+  },
+  {
+    "id": "xy3-51",
+    "name": "Makuhita",
+    "number": "51",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/51"
+    }
+  },
+  {
+    "id": "xy3-52",
+    "name": "Hariyama",
+    "number": "52",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/52"
+    }
+  },
+  {
+    "id": "xy3-53",
+    "name": "Knacklion",
+    "number": "53",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/53"
+    }
+  },
+  {
+    "id": "xy3-54",
+    "name": "Lucario EX",
+    "number": "54",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/54"
+    }
+  },
+  {
+    "id": "xy3-55a",
+    "name": "M Lucario EX",
+    "number": "55a",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/55a"
+    }
+  },
+  {
+    "id": "xy3-55",
+    "name": "M Lucario EX",
+    "number": "55",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/55"
+    }
+  },
+  {
+    "id": "xy3-56",
+    "name": "Lin-Fu",
+    "number": "56",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/56"
+    }
+  },
+  {
+    "id": "xy3-57",
+    "name": "Wie-Shu",
+    "number": "57",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/57"
+    }
+  },
+  {
+    "id": "xy3-58",
+    "name": "Demeteros",
+    "number": "58",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/58"
+    }
+  },
+  {
+    "id": "xy3-59",
+    "name": "Pam-Pam",
+    "number": "59",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/59"
+    }
+  },
+  {
+    "id": "xy3-60",
+    "name": "Pam-Pam",
+    "number": "60",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/60"
+    }
+  },
+  {
+    "id": "xy3-61",
+    "name": "Balgoras",
+    "number": "61",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/61"
+    }
+  },
+  {
+    "id": "xy3-62",
+    "name": "Monargoras",
+    "number": "62",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/62"
+    }
+  },
+  {
+    "id": "xy3-63",
+    "name": "Resladero",
+    "number": "63",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/63"
+    }
+  },
+  {
+    "id": "xy3-64",
+    "name": "Resladero EX",
+    "number": "64",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/64"
+    }
+  },
+  {
+    "id": "xy3-65",
+    "name": "Piondragi",
+    "number": "65",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/65"
+    }
+  },
+  {
+    "id": "xy3-66",
+    "name": "Zurrokex",
+    "number": "66",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/66"
+    }
+  },
+  {
+    "id": "xy3-67",
+    "name": "Irokex",
+    "number": "67",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/67"
+    }
+  },
+  {
+    "id": "xy3-68",
+    "name": "Pandagro",
+    "number": "68",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/68"
+    }
+  },
+  {
+    "id": "xy3-69",
+    "name": "Piepi",
+    "number": "69",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/69"
+    }
+  },
+  {
+    "id": "xy3-70",
+    "name": "Piepi",
+    "number": "70",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/70"
+    }
+  },
+  {
+    "id": "xy3-71",
+    "name": "Pixi",
+    "number": "71",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/71"
+    }
+  },
+  {
+    "id": "xy3-72",
+    "name": "Feelinara",
+    "number": "72",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/72"
+    }
+  },
+  {
+    "id": "xy3-73",
+    "name": "Clavion",
+    "number": "73",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/73"
+    }
+  },
+  {
+    "id": "xy3-74",
+    "name": "Dragoran EX",
+    "number": "74",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/74"
+    }
+  },
+  {
+    "id": "xy3-75",
+    "name": "Vibrava",
+    "number": "75",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/75"
+    }
+  },
+  {
+    "id": "xy3-76",
+    "name": "Libelldra",
+    "number": "76",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/76"
+    }
+  },
+  {
+    "id": "xy3-77",
+    "name": "UHaFnir",
+    "number": "77",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/77"
+    }
+  },
+  {
+    "id": "xy3-78",
+    "name": "Schlurp",
+    "number": "78",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/78"
+    }
+  },
+  {
+    "id": "xy3-79",
+    "name": "Schlurplek",
+    "number": "79",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/79"
+    }
+  },
+  {
+    "id": "xy3-80",
+    "name": "Evoli",
+    "number": "80",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/80"
+    }
+  },
+  {
+    "id": "xy3-81",
+    "name": "Bummelz",
+    "number": "81",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/81"
+    }
+  },
+  {
+    "id": "xy3-82",
+    "name": "Muntier",
+    "number": "82",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/82"
+    }
+  },
+  {
+    "id": "xy3-83",
+    "name": "Letarking",
+    "number": "83",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/83"
+    }
+  },
+  {
+    "id": "xy3-84",
+    "name": "Nagelotz",
+    "number": "84",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/84"
+    }
+  },
+  {
+    "id": "xy3-85",
+    "name": "Kukmarda",
+    "number": "85",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/85"
+    }
+  },
+  {
+    "id": "xy3-86",
+    "name": "Boreos",
+    "number": "86",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/86"
+    }
+  },
+  {
+    "id": "xy3-87",
+    "name": "eF-eM",
+    "number": "87",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/87"
+    }
+  },
+  {
+    "id": "xy3-88",
+    "name": "Kampfreporter",
+    "number": "88",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/88"
+    }
+  },
+  {
+    "id": "xy3-89",
+    "name": "Energie-Umschalter",
+    "number": "89",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/89"
+    }
+  },
+  {
+    "id": "xy3-90",
+    "name": "Kampfhalle",
+    "number": "90",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/90"
+    }
+  },
+  {
+    "id": "xy3-91",
+    "name": "Fokusgurt",
+    "number": "91",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/91"
+    }
+  },
+  {
+    "id": "xy3-92",
+    "name": "Fossilforscher",
+    "number": "92",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/92"
+    }
+  },
+  {
+    "id": "xy3-93",
+    "name": "Hyperheiler",
+    "number": "93",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/93"
+    }
+  },
+  {
+    "id": "xy3-94",
+    "name": "Kieferfossil",
+    "number": "94",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/94"
+    }
+  },
+  {
+    "id": "xy3-95",
+    "name": "Connie",
+    "number": "95",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/95"
+    }
+  },
+  {
+    "id": "xy3-96",
+    "name": "Wartung",
+    "number": "96",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/96"
+    }
+  },
+  {
+    "id": "xy3-97",
+    "name": "Gebirgsring",
+    "number": "97",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/97"
+    }
+  },
+  {
+    "id": "xy3-98",
+    "name": "Flossenfossil",
+    "number": "98",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/98"
+    }
+  },
+  {
+    "id": "xy3-99",
+    "name": "Glänzender Mantel",
+    "number": "99",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/99"
+    }
+  },
+  {
+    "id": "xy3-100",
+    "name": "Super-Anziehungskraft",
+    "number": "100",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/100"
+    }
+  },
+  {
+    "id": "xy3-101",
+    "name": "Ausrüstungsgreifer",
+    "number": "101",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/101"
+    }
+  },
+  {
+    "id": "xy3-102",
+    "name": "Trainingscenter",
+    "number": "102",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/102"
+    }
+  },
+  {
+    "id": "xy3-103",
+    "name": "Kräuter-Energie",
+    "number": "103",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/103"
+    }
+  },
+  {
+    "id": "xy3-104",
+    "name": "Stärke-Energie",
+    "number": "104",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/104"
+    }
+  },
+  {
+    "id": "xy3-105",
+    "name": "Skaraborn EX",
+    "number": "105",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/105"
+    }
+  },
+  {
+    "id": "xy3-106",
+    "name": "Branawarz EX",
+    "number": "106",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/106"
+    }
+  },
+  {
+    "id": "xy3-107",
+    "name": "Lucario EX",
+    "number": "107",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/107"
+    }
+  },
+  {
+    "id": "xy3-108",
+    "name": "Dragoran EX",
+    "number": "108",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/108"
+    }
+  },
+  {
+    "id": "xy3-109",
+    "name": "Kampfreporter",
+    "number": "109",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/109"
+    }
+  },
+  {
+    "id": "xy3-110",
+    "name": "Fossilforscher",
+    "number": "110",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/110"
+    }
+  },
+  {
+    "id": "xy3-111",
+    "name": "Connie",
+    "number": "111",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/111"
+    }
+  },
+  {
+    "id": "xy3-112",
+    "name": "M Skaraborn EX",
+    "number": "112",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/112"
+    }
+  },
+  {
+    "id": "xy3-113",
+    "name": "M Lucario EX",
+    "number": "113",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/de/xy/xy3/113"
+    }
+  }
+]

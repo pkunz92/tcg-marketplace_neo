@@ -1,0 +1,200 @@
+[
+  {
+    "id": "SVLN-001",
+    "name": "マンタイン",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/001"
+    }
+  },
+  {
+    "id": "SVLN-002",
+    "name": "サンダー",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/002"
+    }
+  },
+  {
+    "id": "SVLN-003",
+    "name": "マリル",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/003"
+    }
+  },
+  {
+    "id": "SVLN-004",
+    "name": "マリルリ",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/004"
+    }
+  },
+  {
+    "id": "SVLN-005",
+    "name": "ニンフィアex",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/005"
+    }
+  },
+  {
+    "id": "SVLN-006",
+    "name": "ゼルネアス",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/006"
+    }
+  },
+  {
+    "id": "SVLN-007",
+    "name": "オドリドリ",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/007"
+    }
+  },
+  {
+    "id": "SVLN-008",
+    "name": "ミミッキュ",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/008"
+    }
+  },
+  {
+    "id": "SVLN-009",
+    "name": "イーブイ",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/009"
+    }
+  },
+  {
+    "id": "SVLN-010",
+    "name": "カビゴン",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/010"
+    }
+  },
+  {
+    "id": "SVLN-011",
+    "name": "すごいつりざお",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/011"
+    }
+  },
+  {
+    "id": "SVLN-012",
+    "name": "テラスタルオーブ",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/012"
+    }
+  },
+  {
+    "id": "SVLN-013",
+    "name": "ネストボール",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/013"
+    }
+  },
+  {
+    "id": "SVLN-014",
+    "name": "ハイパーボール",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/014"
+    }
+  },
+  {
+    "id": "SVLN-015",
+    "name": "プレシャスキャリー",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/015"
+    }
+  },
+  {
+    "id": "SVLN-016",
+    "name": "ポケギア3.0",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/016"
+    }
+  },
+  {
+    "id": "SVLN-017",
+    "name": "ポケモンいれかえ",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/017"
+    }
+  },
+  {
+    "id": "SVLN-018",
+    "name": "アカマツ",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/018"
+    }
+  },
+  {
+    "id": "SVLN-019",
+    "name": "ナンジャモ",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/019"
+    }
+  },
+  {
+    "id": "SVLN-020",
+    "name": "ネモ",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/020"
+    }
+  },
+  {
+    "id": "SVLN-021",
+    "name": "博士の研究",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/021"
+    }
+  },
+  {
+    "id": "SVLN-022",
+    "name": "ボスの指令",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLN/022"
+    }
+  }
+]

@@ -1,0 +1,929 @@
+[
+  {
+    "id": "B1a-001",
+    "name": "Bulbasaur",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/001"
+    }
+  },
+  {
+    "id": "B1a-002",
+    "name": "Ivysaur",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/002"
+    }
+  },
+  {
+    "id": "B1a-003",
+    "name": "Venusaur",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/003"
+    }
+  },
+  {
+    "id": "B1a-004",
+    "name": "Mega Venusaur ex",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/004"
+    }
+  },
+  {
+    "id": "B1a-005",
+    "name": "Spinarak",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/005"
+    }
+  },
+  {
+    "id": "B1a-006",
+    "name": "Ariados",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/006"
+    }
+  },
+  {
+    "id": "B1a-007",
+    "name": "Sunkern",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/007"
+    }
+  },
+  {
+    "id": "B1a-008",
+    "name": "Sunflora",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/008"
+    }
+  },
+  {
+    "id": "B1a-009",
+    "name": "Burmy",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/009"
+    }
+  },
+  {
+    "id": "B1a-010",
+    "name": "Mothim",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/010"
+    }
+  },
+  {
+    "id": "B1a-011",
+    "name": "Charmander",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/011"
+    }
+  },
+  {
+    "id": "B1a-012",
+    "name": "Charmeleon",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/012"
+    }
+  },
+  {
+    "id": "B1a-013",
+    "name": "Charizard",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/013"
+    }
+  },
+  {
+    "id": "B1a-014",
+    "name": "Mega Charizard Y ex",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/014"
+    }
+  },
+  {
+    "id": "B1a-015",
+    "name": "Houndour",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/015"
+    }
+  },
+  {
+    "id": "B1a-016",
+    "name": "Houndoom",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/016"
+    }
+  },
+  {
+    "id": "B1a-017",
+    "name": "Squirtle",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/017"
+    }
+  },
+  {
+    "id": "B1a-018",
+    "name": "Wartortle",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/018"
+    }
+  },
+  {
+    "id": "B1a-019",
+    "name": "Blastoise",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/019"
+    }
+  },
+  {
+    "id": "B1a-020",
+    "name": "Mega Blastoise ex",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/020"
+    }
+  },
+  {
+    "id": "B1a-021",
+    "name": "Basculin",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/021"
+    }
+  },
+  {
+    "id": "B1a-022",
+    "name": "Clauncher",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/022"
+    }
+  },
+  {
+    "id": "B1a-023",
+    "name": "Clawitzer",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/023"
+    }
+  },
+  {
+    "id": "B1a-024",
+    "name": "Magnemite",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/024"
+    }
+  },
+  {
+    "id": "B1a-025",
+    "name": "Magneton",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/025"
+    }
+  },
+  {
+    "id": "B1a-026",
+    "name": "Magnezone",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/026"
+    }
+  },
+  {
+    "id": "B1a-027",
+    "name": "Emolga",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/027"
+    }
+  },
+  {
+    "id": "B1a-028",
+    "name": "Helioptile",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/028"
+    }
+  },
+  {
+    "id": "B1a-029",
+    "name": "Heliolisk",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/029"
+    }
+  },
+  {
+    "id": "B1a-030",
+    "name": "Misdreavus",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/030"
+    }
+  },
+  {
+    "id": "B1a-031",
+    "name": "Mismagius",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/031"
+    }
+  },
+  {
+    "id": "B1a-032",
+    "name": "Solosis",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/032"
+    }
+  },
+  {
+    "id": "B1a-033",
+    "name": "Duosion",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/033"
+    }
+  },
+  {
+    "id": "B1a-034",
+    "name": "Reuniclus",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/034"
+    }
+  },
+  {
+    "id": "B1a-035",
+    "name": "Spritzee",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/035"
+    }
+  },
+  {
+    "id": "B1a-036",
+    "name": "Aromatisse",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/036"
+    }
+  },
+  {
+    "id": "B1a-037",
+    "name": "Xerneas",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/037"
+    }
+  },
+  {
+    "id": "B1a-038",
+    "name": "Onix",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/038"
+    }
+  },
+  {
+    "id": "B1a-039",
+    "name": "Makuhita",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/039"
+    }
+  },
+  {
+    "id": "B1a-040",
+    "name": "Hariyama",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/040"
+    }
+  },
+  {
+    "id": "B1a-041",
+    "name": "Nosepass",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/041"
+    }
+  },
+  {
+    "id": "B1a-042",
+    "name": "Mega Lopunny ex",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/042"
+    }
+  },
+  {
+    "id": "B1a-043",
+    "name": "Mienfoo",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/043"
+    }
+  },
+  {
+    "id": "B1a-044",
+    "name": "Mienshao",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/044"
+    }
+  },
+  {
+    "id": "B1a-045",
+    "name": "Grimer",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/045"
+    }
+  },
+  {
+    "id": "B1a-046",
+    "name": "Muk",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/046"
+    }
+  },
+  {
+    "id": "B1a-047",
+    "name": "Purrloin",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/047"
+    }
+  },
+  {
+    "id": "B1a-048",
+    "name": "Liepard",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/048"
+    }
+  },
+  {
+    "id": "B1a-049",
+    "name": "Trubbish",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/049"
+    }
+  },
+  {
+    "id": "B1a-050",
+    "name": "Garbodor",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/050"
+    }
+  },
+  {
+    "id": "B1a-051",
+    "name": "Steelix",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/051"
+    }
+  },
+  {
+    "id": "B1a-052",
+    "name": "Mega Steelix ex",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/052"
+    }
+  },
+  {
+    "id": "B1a-053",
+    "name": "Probopass",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/053"
+    }
+  },
+  {
+    "id": "B1a-054",
+    "name": "Genesect",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/054"
+    }
+  },
+  {
+    "id": "B1a-055",
+    "name": "Ditto",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/055"
+    }
+  },
+  {
+    "id": "B1a-056",
+    "name": "Porygon",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/056"
+    }
+  },
+  {
+    "id": "B1a-057",
+    "name": "Porygon2",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/057"
+    }
+  },
+  {
+    "id": "B1a-058",
+    "name": "Porygon-Z",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/058"
+    }
+  },
+  {
+    "id": "B1a-059",
+    "name": "Starly",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/059"
+    }
+  },
+  {
+    "id": "B1a-060",
+    "name": "Staravia",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/060"
+    }
+  },
+  {
+    "id": "B1a-061",
+    "name": "Staraptor",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/061"
+    }
+  },
+  {
+    "id": "B1a-062",
+    "name": "Buneary",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/062"
+    }
+  },
+  {
+    "id": "B1a-063",
+    "name": "Lopunny",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/063"
+    }
+  },
+  {
+    "id": "B1a-064",
+    "name": "Bouffalant",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/064"
+    }
+  },
+  {
+    "id": "B1a-065",
+    "name": "Furfrou",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/065"
+    }
+  },
+  {
+    "id": "B1a-066",
+    "name": "Clemont's Backpack",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/066"
+    }
+  },
+  {
+    "id": "B1a-067",
+    "name": "Quick-Grow Extract",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/067"
+    }
+  },
+  {
+    "id": "B1a-068",
+    "name": "Clemont",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/068"
+    }
+  },
+  {
+    "id": "B1a-069",
+    "name": "Serena",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/069"
+    }
+  },
+  {
+    "id": "B1a-070",
+    "name": "Ariados",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/070"
+    }
+  },
+  {
+    "id": "B1a-071",
+    "name": "Sunflora",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/071"
+    }
+  },
+  {
+    "id": "B1a-072",
+    "name": "Reuniclus",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/072"
+    }
+  },
+  {
+    "id": "B1a-073",
+    "name": "Xerneas",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/073"
+    }
+  },
+  {
+    "id": "B1a-074",
+    "name": "Trubbish",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/074"
+    }
+  },
+  {
+    "id": "B1a-075",
+    "name": "Buneary",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/075"
+    }
+  },
+  {
+    "id": "B1a-076",
+    "name": "Mega Venusaur ex",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/076"
+    }
+  },
+  {
+    "id": "B1a-077",
+    "name": "Mega Charizard Y ex",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/077"
+    }
+  },
+  {
+    "id": "B1a-078",
+    "name": "Mega Blastoise ex",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/078"
+    }
+  },
+  {
+    "id": "B1a-079",
+    "name": "Mega Lopunny ex",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/079"
+    }
+  },
+  {
+    "id": "B1a-080",
+    "name": "Mega Steelix ex",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/080"
+    }
+  },
+  {
+    "id": "B1a-081",
+    "name": "Clemont",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/081"
+    }
+  },
+  {
+    "id": "B1a-082",
+    "name": "Serena",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/082"
+    }
+  },
+  {
+    "id": "B1a-083",
+    "name": "Mega Venusaur ex",
+    "number": "083",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/083"
+    }
+  },
+  {
+    "id": "B1a-084",
+    "name": "Mega Blastoise ex",
+    "number": "084",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/084"
+    }
+  },
+  {
+    "id": "B1a-085",
+    "name": "Mega Lopunny ex",
+    "number": "085",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/085"
+    }
+  },
+  {
+    "id": "B1a-086",
+    "name": "Mega Steelix ex",
+    "number": "086",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/086"
+    }
+  },
+  {
+    "id": "B1a-087",
+    "name": "Mega Charizard Y ex",
+    "number": "087",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/087"
+    }
+  },
+  {
+    "id": "B1a-088",
+    "name": "Oddish",
+    "number": "088",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "B1a-089",
+    "name": "Gloom",
+    "number": "089",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/089"
+    }
+  },
+  {
+    "id": "B1a-090",
+    "name": "Vileplume",
+    "number": "090",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/090"
+    }
+  },
+  {
+    "id": "B1a-091",
+    "name": "Charizard",
+    "number": "091",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/091"
+    }
+  },
+  {
+    "id": "B1a-092",
+    "name": "Shellder",
+    "number": "092",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/092"
+    }
+  },
+  {
+    "id": "B1a-093",
+    "name": "Cloyster",
+    "number": "093",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/093"
+    }
+  },
+  {
+    "id": "B1a-094",
+    "name": "Sandshrew",
+    "number": "094",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/094"
+    }
+  },
+  {
+    "id": "B1a-095",
+    "name": "Sandslash",
+    "number": "095",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/095"
+    }
+  },
+  {
+    "id": "B1a-096",
+    "name": "Type: Null",
+    "number": "096",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/096"
+    }
+  },
+  {
+    "id": "B1a-097",
+    "name": "Silvally",
+    "number": "097",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/097"
+    }
+  },
+  {
+    "id": "B1a-098",
+    "name": "Buzzwole ex",
+    "number": "098",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/098"
+    }
+  },
+  {
+    "id": "B1a-099",
+    "name": "Lunala ex",
+    "number": "099",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/099"
+    }
+  },
+  {
+    "id": "B1a-100",
+    "name": "Guzzlord ex",
+    "number": "100",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/100"
+    }
+  },
+  {
+    "id": "B1a-101",
+    "name": "Solgaleo ex",
+    "number": "101",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/101"
+    }
+  },
+  {
+    "id": "B1a-102",
+    "name": "Aegislash",
+    "number": "102",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/102"
+    }
+  },
+  {
+    "id": "B1a-103",
+    "name": "Quick-Grow Extract",
+    "number": "103",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/en/tcgp/B1a/103"
+    }
+  }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "id": "tk-xy-b-1",
+    "name": "Passerouge",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-2",
+    "name": "Énergie Métal",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-3",
+    "name": "Énergie Métal",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-4",
+    "name": "Vigoroth",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-5",
+    "name": "Énergie Métal",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-6",
+    "name": "Énergie Métal",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-7",
+    "name": "Énergie Métal",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-8",
+    "name": "Énergie Métal",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-9",
+    "name": "Énergie Métal",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-10",
+    "name": "Énergie Métal",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-11",
+    "name": "Monorpale",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-12",
+    "name": "Keunotor",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-13",
+    "name": "Scalpion",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-14",
+    "name": "Dimoclès",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-15",
+    "name": "Parecool",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-16",
+    "name": "Scalproie",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-17",
+    "name": "Ratentif",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-18",
+    "name": "Énergie Métal",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-19",
+    "name": "Tierno",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-20",
+    "name": "Trovato",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-21",
+    "name": "Scalpion",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-22",
+    "name": "Énergie Métal",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-23",
+    "name": "Dimoclès",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-24",
+    "name": "Énergie Métal",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-25",
+    "name": "Potion",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-26",
+    "name": "Parecool",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-27",
+    "name": "Monorpale",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-28",
+    "name": "Vigoroth",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-29",
+    "name": "Potion",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-xy-b-30",
+    "name": "Scalproie",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

@@ -1,0 +1,884 @@
+[
+  {
+    "id": "SV10-001",
+    "name": "榛果球",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-002",
+    "name": "蘑蘑菇",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-003",
+    "name": "斗笠菇",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-004",
+    "name": "切割洛托姆",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-005",
+    "name": "偽螳草",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-006",
+    "name": "蘭螳花",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-007",
+    "name": "<火箭隊的>索偵蟲",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-008",
+    "name": "<火箭隊的>團珠蛛",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-009",
+    "name": "<火箭隊的>操陷蛛",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-010",
+    "name": "迷你芙",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-011",
+    "name": "奧利紐",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-012",
+    "name": "奧利瓦ex",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-013",
+    "name": "卡蒂狗",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-014",
+    "name": "風速狗",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-015",
+    "name": "<火箭隊的>火焰鳥ex",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-016",
+    "name": "<火箭隊的>戴魯比",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-017",
+    "name": "<火箭隊的>黑魯加",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-018",
+    "name": "火稚雞",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-019",
+    "name": "力壯雞",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-020",
+    "name": "火焰雞",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-021",
+    "name": "加熱洛托姆",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-022",
+    "name": "<火箭隊的>急凍鳥",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-023",
+    "name": "珍珠貝",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-024",
+    "name": "獵斑魚",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-025",
+    "name": "櫻花魚",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-026",
+    "name": "雪笠怪",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-027",
+    "name": "暴雪王",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-028",
+    "name": "清洗洛托姆",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-029",
+    "name": "刺梭魚",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-030",
+    "name": "戽斗尖梭",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-031",
+    "name": "走鯨",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-032",
+    "name": "浩大鯨ex",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-033",
+    "name": "<火箭隊的>閃電鳥",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-034",
+    "name": "<火箭隊的>咩利羊",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-035",
+    "name": "<火箭隊的>茸茸羊",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-036",
+    "name": "<火箭隊的>電龍",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-037",
+    "name": "<火箭隊的>催眠貘",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-038",
+    "name": "<火箭隊的>引夢貘人",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-039",
+    "name": "<火箭隊的>超夢ex",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-040",
+    "name": "<火箭隊的>果然翁",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-041",
+    "name": "<火箭隊的>鈴鐺響",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-042",
+    "name": "<火箭隊的>謎擬Ｑ",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-043",
+    "name": "<火箭隊的>天罩蟲",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-044",
+    "name": "<火箭隊的>以歐路普",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-045",
+    "name": "猴怪",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-046",
+    "name": "火爆猴",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-047",
+    "name": "棄世猴",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-048",
+    "name": "<火箭隊的>幼基拉斯",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-049",
+    "name": "<火箭隊的>沙基拉斯",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-050",
+    "name": "<火箭隊的>班基拉斯",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-051",
+    "name": "朝北鼻",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-052",
+    "name": "大朝北鼻",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-053",
+    "name": "瑪沙那",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-054",
+    "name": "恰雷姆",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-055",
+    "name": "雷吉洛克ex",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-056",
+    "name": "<火箭隊的>阿柏蛇",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-057",
+    "name": "<火箭隊的>阿柏怪",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-058",
+    "name": "<火箭隊的>尼多蘭",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-059",
+    "name": "<火箭隊的>尼多娜",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-060",
+    "name": "<火箭隊的>尼多后",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-061",
+    "name": "<火箭隊的>尼多朗",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-062",
+    "name": "<火箭隊的>尼多力諾",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-063",
+    "name": "<火箭隊的>尼多王ex",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-064",
+    "name": "<火箭隊的>超音蝠",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-065",
+    "name": "<火箭隊的>大嘴蝠",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-066",
+    "name": "<火箭隊的>叉字蝠ex",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-067",
+    "name": "<火箭隊的>臭泥",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-068",
+    "name": "<火箭隊的>臭臭泥",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-069",
+    "name": "<火箭隊的>瓦斯彈",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-070",
+    "name": "<火箭隊的>雙彈瓦斯",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-071",
+    "name": "<火箭隊的>黑暗鴉",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-072",
+    "name": "<火箭隊的>狃拉",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-073",
+    "name": "佛烈托斯",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-074",
+    "name": "盔甲鳥",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-075",
+    "name": "藏瑪然特",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-076",
+    "name": "<火箭隊的>小拉達",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-077",
+    "name": "<火箭隊的>拉達",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-078",
+    "name": "<火箭隊的>喵喵",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-079",
+    "name": "<火箭隊的>貓老大ex",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-080",
+    "name": "袋獸",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-081",
+    "name": "<火箭隊的>多邊獸",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-082",
+    "name": "<火箭隊的>多邊獸Ⅱ",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-083",
+    "name": "<火箭隊的>多邊獸Ｚ",
+    "number": "083",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-084",
+    "name": "傲骨燕",
+    "number": "084",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-085",
+    "name": "大王燕",
+    "number": "085",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-086",
+    "name": "怒鸚哥",
+    "number": "086",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-087",
+    "name": "火箭隊的妨礙機器人",
+    "number": "087",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-088",
+    "name": "火箭隊的超級球",
+    "number": "088",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-089",
+    "name": "火箭隊的驚嚇炸彈",
+    "number": "089",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-090",
+    "name": "火箭隊的接收器",
+    "number": "090",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-091",
+    "name": "火箭隊的雅典娜",
+    "number": "091",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-092",
+    "name": "火箭隊的阿波羅",
+    "number": "092",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-093",
+    "name": "火箭隊的坂木",
+    "number": "093",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-094",
+    "name": "火箭隊的拉姆達",
+    "number": "094",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-095",
+    "name": "火箭隊的蘭斯",
+    "number": "095",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-096",
+    "name": "火箭隊的監視塔",
+    "number": "096",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-097",
+    "name": "火箭隊的工廠",
+    "number": "097",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "SV10-098",
+    "name": "火箭隊能量",
+    "number": "098",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

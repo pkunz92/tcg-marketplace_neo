@@ -1,0 +1,839 @@
+[
+  {
+    "id": "S9a-001",
+    "name": "ナゾノクサ",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/001"
+    }
+  },
+  {
+    "id": "S9a-002",
+    "name": "クサイハナ",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/002"
+    }
+  },
+  {
+    "id": "S9a-003",
+    "name": "ラフレシア",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/003"
+    }
+  },
+  {
+    "id": "S9a-004",
+    "name": "ストライク",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/004"
+    }
+  },
+  {
+    "id": "S9a-005",
+    "name": "ヘラクロス",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/005"
+    }
+  },
+  {
+    "id": "S9a-006",
+    "name": "ロゼリア",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/006"
+    }
+  },
+  {
+    "id": "S9a-007",
+    "name": "ロズレイド",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/007"
+    }
+  },
+  {
+    "id": "S9a-008",
+    "name": "ミツハニー",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/008"
+    }
+  },
+  {
+    "id": "S9a-009",
+    "name": "ビークイン",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/009"
+    }
+  },
+  {
+    "id": "S9a-010",
+    "name": "ビリジオンV",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/010"
+    }
+  },
+  {
+    "id": "S9a-011",
+    "name": "かがやくヒードラン",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/011"
+    }
+  },
+  {
+    "id": "S9a-012",
+    "name": "ヒトモシ",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/012"
+    }
+  },
+  {
+    "id": "S9a-013",
+    "name": "ランプラー",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/013"
+    }
+  },
+  {
+    "id": "S9a-014",
+    "name": "シャンデラ",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/014"
+    }
+  },
+  {
+    "id": "S9a-015",
+    "name": "シシコ",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/015"
+    }
+  },
+  {
+    "id": "S9a-016",
+    "name": "カエンジシ",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/016"
+    }
+  },
+  {
+    "id": "S9a-017",
+    "name": "スターミーV",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/017"
+    }
+  },
+  {
+    "id": "S9a-018",
+    "name": "ウリムー",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/018"
+    }
+  },
+  {
+    "id": "S9a-019",
+    "name": "イノムー",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/019"
+    }
+  },
+  {
+    "id": "S9a-020",
+    "name": "マンムー",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/020"
+    }
+  },
+  {
+    "id": "S9a-021",
+    "name": "ドジョッチ",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/021"
+    }
+  },
+  {
+    "id": "S9a-022",
+    "name": "ナマズン",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/022"
+    }
+  },
+  {
+    "id": "S9a-023",
+    "name": "ヒスイ バスラオ",
+    "number": "023",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/023"
+    }
+  },
+  {
+    "id": "S9a-024",
+    "name": "ヒスイ イダイトウ",
+    "number": "024",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/024"
+    }
+  },
+  {
+    "id": "S9a-025",
+    "name": "ケルディオ",
+    "number": "025",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/025"
+    }
+  },
+  {
+    "id": "S9a-026",
+    "name": "かがやくゲッコウガ",
+    "number": "026",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/026"
+    }
+  },
+  {
+    "id": "S9a-027",
+    "name": "ルージュラ",
+    "number": "027",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/027"
+    }
+  },
+  {
+    "id": "S9a-028",
+    "name": "ヒスイ バクフーンV",
+    "number": "028",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/028"
+    }
+  },
+  {
+    "id": "S9a-029",
+    "name": "ヒスイ バクフーンVSTAR",
+    "number": "029",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/029"
+    }
+  },
+  {
+    "id": "S9a-030",
+    "name": "ムウマ",
+    "number": "030",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/030"
+    }
+  },
+  {
+    "id": "S9a-031",
+    "name": "ムウマージ",
+    "number": "031",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/031"
+    }
+  },
+  {
+    "id": "S9a-032",
+    "name": "ラルトス",
+    "number": "032",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/032"
+    }
+  },
+  {
+    "id": "S9a-033",
+    "name": "キルリア",
+    "number": "033",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/033"
+    }
+  },
+  {
+    "id": "S9a-034",
+    "name": "エルレイド",
+    "number": "034",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/034"
+    }
+  },
+  {
+    "id": "S9a-035",
+    "name": "ディアンシー",
+    "number": "035",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/035"
+    }
+  },
+  {
+    "id": "S9a-036",
+    "name": "アヤシシ",
+    "number": "036",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/036"
+    }
+  },
+  {
+    "id": "S9a-037",
+    "name": "サイホーン",
+    "number": "037",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/037"
+    }
+  },
+  {
+    "id": "S9a-038",
+    "name": "サイドン",
+    "number": "038",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/038"
+    }
+  },
+  {
+    "id": "S9a-039",
+    "name": "ドサイドン",
+    "number": "039",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/039"
+    }
+  },
+  {
+    "id": "S9a-040",
+    "name": "ジーランス",
+    "number": "040",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/040"
+    }
+  },
+  {
+    "id": "S9a-041",
+    "name": "ヒポポタス",
+    "number": "041",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/041"
+    }
+  },
+  {
+    "id": "S9a-042",
+    "name": "カバルドン",
+    "number": "042",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/042"
+    }
+  },
+  {
+    "id": "S9a-043",
+    "name": "かがやくルチャブル",
+    "number": "043",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/043"
+    }
+  },
+  {
+    "id": "S9a-044",
+    "name": "ヒスイ ジュナイパーV",
+    "number": "044",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/044"
+    }
+  },
+  {
+    "id": "S9a-045",
+    "name": "ヒスイ ジュナイパーVSTAR",
+    "number": "045",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/045"
+    }
+  },
+  {
+    "id": "S9a-046",
+    "name": "バサギリ",
+    "number": "046",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/046"
+    }
+  },
+  {
+    "id": "S9a-047",
+    "name": "ヒスイ ハリーセン",
+    "number": "047",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/047"
+    }
+  },
+  {
+    "id": "S9a-048",
+    "name": "ヒスイ ハリーマン",
+    "number": "048",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/048"
+    }
+  },
+  {
+    "id": "S9a-049",
+    "name": "ポチエナ",
+    "number": "049",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/049"
+    }
+  },
+  {
+    "id": "S9a-050",
+    "name": "グラエナ",
+    "number": "050",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/050"
+    }
+  },
+  {
+    "id": "S9a-051",
+    "name": "アブソル",
+    "number": "051",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/051"
+    }
+  },
+  {
+    "id": "S9a-052",
+    "name": "ヒスイ ダイケンキV",
+    "number": "052",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/052"
+    }
+  },
+  {
+    "id": "S9a-053",
+    "name": "ヒスイ ダイケンキVSTAR",
+    "number": "053",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/053"
+    }
+  },
+  {
+    "id": "S9a-054",
+    "name": "ガブリアスV",
+    "number": "054",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/054"
+    }
+  },
+  {
+    "id": "S9a-055",
+    "name": "ホーホー",
+    "number": "055",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/055"
+    }
+  },
+  {
+    "id": "S9a-056",
+    "name": "ヨルノズク",
+    "number": "056",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/056"
+    }
+  },
+  {
+    "id": "S9a-057",
+    "name": "オドシシ",
+    "number": "057",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/057"
+    }
+  },
+  {
+    "id": "S9a-058",
+    "name": "ミルタンク",
+    "number": "058",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/058"
+    }
+  },
+  {
+    "id": "S9a-059",
+    "name": "ニャルマー",
+    "number": "059",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/059"
+    }
+  },
+  {
+    "id": "S9a-060",
+    "name": "ブニャット",
+    "number": "060",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/060"
+    }
+  },
+  {
+    "id": "S9a-061",
+    "name": "あとだしターボ",
+    "number": "061",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/061"
+    }
+  },
+  {
+    "id": "S9a-062",
+    "name": "あまいミツ",
+    "number": "062",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/062"
+    }
+  },
+  {
+    "id": "S9a-063",
+    "name": "キャンセルコロン",
+    "number": "063",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/063"
+    }
+  },
+  {
+    "id": "S9a-064",
+    "name": "シマボシ",
+    "number": "064",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/064"
+    }
+  },
+  {
+    "id": "S9a-065",
+    "name": "ツツジ",
+    "number": "065",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/065"
+    }
+  },
+  {
+    "id": "S9a-066",
+    "name": "デンボク",
+    "number": "066",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/066"
+    }
+  },
+  {
+    "id": "S9a-067",
+    "name": "コトブキムラ",
+    "number": "067",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/067"
+    }
+  },
+  {
+    "id": "S9a-068",
+    "name": "ロズレイド",
+    "number": "068",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/068"
+    }
+  },
+  {
+    "id": "S9a-069",
+    "name": "シャンデラ",
+    "number": "069",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/069"
+    }
+  },
+  {
+    "id": "S9a-070",
+    "name": "アヤシシ",
+    "number": "070",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/070"
+    }
+  },
+  {
+    "id": "S9a-071",
+    "name": "バサギリ",
+    "number": "071",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/071"
+    }
+  },
+  {
+    "id": "S9a-072",
+    "name": "グラエナ",
+    "number": "072",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/072"
+    }
+  },
+  {
+    "id": "S9a-073",
+    "name": "ホーホー",
+    "number": "073",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/073"
+    }
+  },
+  {
+    "id": "S9a-074",
+    "name": "ビリジオンV",
+    "number": "074",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/074"
+    }
+  },
+  {
+    "id": "S9a-075",
+    "name": "スターミーV",
+    "number": "075",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/075"
+    }
+  },
+  {
+    "id": "S9a-076",
+    "name": "ヒスイ バクフーンV",
+    "number": "076",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/076"
+    }
+  },
+  {
+    "id": "S9a-077",
+    "name": "ヒスイ ジュナイパーV",
+    "number": "077",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/077"
+    }
+  },
+  {
+    "id": "S9a-078",
+    "name": "ヒスイ ダイケンキV",
+    "number": "078",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/078"
+    }
+  },
+  {
+    "id": "S9a-079",
+    "name": "ガブリアスV",
+    "number": "079",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/079"
+    }
+  },
+  {
+    "id": "S9a-080",
+    "name": "シマボシ",
+    "number": "080",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/080"
+    }
+  },
+  {
+    "id": "S9a-081",
+    "name": "ツツジ",
+    "number": "081",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/081"
+    }
+  },
+  {
+    "id": "S9a-082",
+    "name": "デンボク",
+    "number": "082",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/082"
+    }
+  },
+  {
+    "id": "S9a-083",
+    "name": "スターミーV",
+    "number": "083",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/083"
+    }
+  },
+  {
+    "id": "S9a-084",
+    "name": "ガブリアスV",
+    "number": "084",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/084"
+    }
+  },
+  {
+    "id": "S9a-085",
+    "name": "ヒスイ バクフーンVSTAR",
+    "number": "085",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/085"
+    }
+  },
+  {
+    "id": "S9a-086",
+    "name": "ヒスイ ジュナイパーVSTAR",
+    "number": "086",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/086"
+    }
+  },
+  {
+    "id": "S9a-087",
+    "name": "ヒスイ ダイケンキVSTAR",
+    "number": "087",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/087"
+    }
+  },
+  {
+    "id": "S9a-088",
+    "name": "シマボシ",
+    "number": "088",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/088"
+    }
+  },
+  {
+    "id": "S9a-089",
+    "name": "ツツジ",
+    "number": "089",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/089"
+    }
+  },
+  {
+    "id": "S9a-090",
+    "name": "デンボク",
+    "number": "090",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/090"
+    }
+  },
+  {
+    "id": "S9a-091",
+    "name": "ヒスイ ダイケンキVSTAR",
+    "number": "091",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/091"
+    }
+  },
+  {
+    "id": "S9a-092",
+    "name": "こだわりベルト",
+    "number": "092",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/092"
+    }
+  },
+  {
+    "id": "S9a-093",
+    "name": "コトブキムラ",
+    "number": "093",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/S/S9a/093"
+    }
+  }
+]

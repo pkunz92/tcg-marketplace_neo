@@ -1,0 +1,272 @@
+[
+  {
+    "id": "tk-xy-n-1",
+    "name": "Spoink",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/1"
+    }
+  },
+  {
+    "id": "tk-xy-n-2",
+    "name": "Gourgeist",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/2"
+    }
+  },
+  {
+    "id": "tk-xy-n-3",
+    "name": "Arbok",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/3"
+    }
+  },
+  {
+    "id": "tk-xy-n-4",
+    "name": "Bunnelby",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/4"
+    }
+  },
+  {
+    "id": "tk-xy-n-5",
+    "name": "Energia Psico",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/5"
+    }
+  },
+  {
+    "id": "tk-xy-n-6",
+    "name": "Energia Psico",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/6"
+    }
+  },
+  {
+    "id": "tk-xy-n-7",
+    "name": "Energia Psico",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/7"
+    }
+  },
+  {
+    "id": "tk-xy-n-8",
+    "name": "Energia Psico",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/8"
+    }
+  },
+  {
+    "id": "tk-xy-n-9",
+    "name": "Energia Psico",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/9"
+    }
+  },
+  {
+    "id": "tk-xy-n-10",
+    "name": "Energia Psico",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/10"
+    }
+  },
+  {
+    "id": "tk-xy-n-11",
+    "name": "Pumpkaboo",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/11"
+    }
+  },
+  {
+    "id": "tk-xy-n-12",
+    "name": "Noibat",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/12"
+    }
+  },
+  {
+    "id": "tk-xy-n-13",
+    "name": "Noivern",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/13"
+    }
+  },
+  {
+    "id": "tk-xy-n-14",
+    "name": "Acchiappa-Pokémon",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/14"
+    }
+  },
+  {
+    "id": "tk-xy-n-15",
+    "name": "Pozione",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/15"
+    }
+  },
+  {
+    "id": "tk-xy-n-16",
+    "name": "Ekans",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/16"
+    }
+  },
+  {
+    "id": "tk-xy-n-17",
+    "name": "Energia Psico",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/17"
+    }
+  },
+  {
+    "id": "tk-xy-n-18",
+    "name": "Pumpkaboo",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/18"
+    }
+  },
+  {
+    "id": "tk-xy-n-19",
+    "name": "Energia Oscurità",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/19"
+    }
+  },
+  {
+    "id": "tk-xy-n-20",
+    "name": "Furfrou",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/20"
+    }
+  },
+  {
+    "id": "tk-xy-n-21",
+    "name": "Poké Ball",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/21"
+    }
+  },
+  {
+    "id": "tk-xy-n-22",
+    "name": "Energia Oscurità",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/22"
+    }
+  },
+  {
+    "id": "tk-xy-n-23",
+    "name": "Noibat",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/23"
+    }
+  },
+  {
+    "id": "tk-xy-n-24",
+    "name": "Lettera del Prof",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/24"
+    }
+  },
+  {
+    "id": "tk-xy-n-25",
+    "name": "Energia Psico",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/25"
+    }
+  },
+  {
+    "id": "tk-xy-n-26",
+    "name": "Energia Oscurità",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/26"
+    }
+  },
+  {
+    "id": "tk-xy-n-27",
+    "name": "Pozione",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/27"
+    }
+  },
+  {
+    "id": "tk-xy-n-28",
+    "name": "Energia Oscurità",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/28"
+    }
+  },
+  {
+    "id": "tk-xy-n-29",
+    "name": "Scambio",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/29"
+    }
+  },
+  {
+    "id": "tk-xy-n-30",
+    "name": "Noivern",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-n/30"
+    }
+  }
+]

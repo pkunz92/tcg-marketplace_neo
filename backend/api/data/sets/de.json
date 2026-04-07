@@ -1,0 +1,1122 @@
+[
+  {
+    "id": "base1",
+    "name": "Grundset",
+    "series": "",
+    "total": 102,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "base2",
+    "name": "Dschungel",
+    "series": "",
+    "total": 64,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "basep",
+    "name": "Wizards Black Star Promos",
+    "series": "",
+    "total": 53,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "base3",
+    "name": "Fossil",
+    "series": "",
+    "total": 62,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "base5",
+    "name": "Team Rocket",
+    "series": "",
+    "total": 83,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "neo1",
+    "name": "Neo Genesis",
+    "series": "",
+    "total": 111,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "neo2",
+    "name": "Neo Entdeckung",
+    "series": "",
+    "total": 75,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "neo3",
+    "name": "Neo Revelation",
+    "series": "",
+    "total": 66,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "neo4",
+    "name": "Neo Destiny",
+    "series": "",
+    "total": 113,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ecard1",
+    "name": "Expedition",
+    "series": "",
+    "total": 165,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ecard2",
+    "name": "Aquapolis",
+    "series": "",
+    "total": 186,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ecard3",
+    "name": "Skyridge",
+    "series": "",
+    "total": 182,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex1",
+    "name": "EX Rubin & Saphir",
+    "series": "",
+    "total": 109,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex2",
+    "name": "EX Sandsturm",
+    "series": "",
+    "total": 100,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex3",
+    "name": "EX Drache",
+    "series": "",
+    "total": 100,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex4",
+    "name": "EX Team Magma vs Team Aqua",
+    "series": "",
+    "total": 97,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex6",
+    "name": "EX Feuerrot & Blattgrün",
+    "series": "",
+    "total": 116,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex8",
+    "name": "EX Deoxys",
+    "series": "",
+    "total": 108,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex9",
+    "name": "EX Smaragd",
+    "series": "",
+    "total": 107,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "exu",
+    "name": "EX Verborgene Mächte Icognito",
+    "series": "",
+    "total": 28,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex10",
+    "name": "EX Verborgene Mächte",
+    "series": "",
+    "total": 117,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex11",
+    "name": "EX Delta Species",
+    "series": "",
+    "total": 114,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex12",
+    "name": "EX Legend Maker",
+    "series": "",
+    "total": 93,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex13",
+    "name": "EX Holon Phantoms",
+    "series": "",
+    "total": 111,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex14",
+    "name": "EX Crystal Guardians",
+    "series": "",
+    "total": 100,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex15",
+    "name": "EX Dragon Frontiers",
+    "series": "",
+    "total": 101,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "ex16",
+    "name": "EX Power Keepers",
+    "series": "",
+    "total": 108,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dp1",
+    "name": "Diamant & Perl",
+    "series": "",
+    "total": 130,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dpp",
+    "name": "Promo DP",
+    "series": "",
+    "total": 56,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dp2",
+    "name": "Geheimnisvolle Schätze",
+    "series": "",
+    "total": 124,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dp3",
+    "name": "Rätselhafte Wunder",
+    "series": "",
+    "total": 132,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dp4",
+    "name": "Epische Begegnungen",
+    "series": "",
+    "total": 106,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dp5",
+    "name": "Majestätischer Morgen",
+    "series": "",
+    "total": 100,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dp6",
+    "name": "Erwachte Legenden",
+    "series": "",
+    "total": 146,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dp7",
+    "name": "Sturmtief",
+    "series": "",
+    "total": 106,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "pl1",
+    "name": "Platin",
+    "series": "",
+    "total": 133,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "pl2",
+    "name": "Aufstieg der Rivalen",
+    "series": "",
+    "total": 120,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "pl3",
+    "name": "Ultimative Sieger",
+    "series": "",
+    "total": 153,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "pl4",
+    "name": "Arceus",
+    "series": "",
+    "total": 111,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "hgss1",
+    "name": "HeartGold SoulSilver",
+    "series": "",
+    "total": 124,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "hgssp",
+    "name": "Promo HGSS",
+    "series": "",
+    "total": 25,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "hgss2",
+    "name": "Entfesselt",
+    "series": "",
+    "total": 96,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "hgss3",
+    "name": "Unerschrocken",
+    "series": "",
+    "total": 91,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "hgss4",
+    "name": "Triumph",
+    "series": "",
+    "total": 103,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "col1",
+    "name": "Ruf der Legenden",
+    "series": "",
+    "total": 106,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw1",
+    "name": "Schwarz & Weiß",
+    "series": "",
+    "total": 115,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bwp",
+    "name": "SW Promokarten",
+    "series": "",
+    "total": 101,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw2",
+    "name": "Aufstreben der Mächtigen",
+    "series": "",
+    "total": 98,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw3",
+    "name": "Königliche Siege",
+    "series": "",
+    "total": 102,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw4",
+    "name": "Kommende Schicksale",
+    "series": "",
+    "total": 103,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw5",
+    "name": "Erfoscher der Finsternis",
+    "series": "",
+    "total": 111,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw6",
+    "name": "Hoheit der Drachen",
+    "series": "",
+    "total": 128,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "dv1",
+    "name": "Drachengruft",
+    "series": "",
+    "total": 20,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw7",
+    "name": "Überschrittene Schwellen",
+    "series": "",
+    "total": 153,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw8",
+    "name": "Plasma-Sturm",
+    "series": "",
+    "total": 138,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw9",
+    "name": "Plasma-Frost",
+    "series": "",
+    "total": 122,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "bw10",
+    "name": "Plasma-Blaster",
+    "series": "",
+    "total": 105,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xyp",
+    "name": "XY Promokarten",
+    "series": "",
+    "total": 211,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy0",
+    "name": "Willkommen in Kalos",
+    "series": "",
+    "total": 39,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy1",
+    "name": "XY",
+    "series": "",
+    "total": 146,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xya",
+    "name": "Gelbes-A-Alternativkarten",
+    "series": "",
+    "total": 6,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy2",
+    "name": "Flammenmeer",
+    "series": "",
+    "total": 110,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy3",
+    "name": "Fliegende Fäuste",
+    "series": "",
+    "total": 114,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy4",
+    "name": "Phantomkräfte",
+    "series": "",
+    "total": 124,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy5",
+    "name": "Protoshock",
+    "series": "",
+    "total": 164,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy6",
+    "name": "Drachenleuchten",
+    "series": "",
+    "total": 112,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy7",
+    "name": "Ewiger Anfang",
+    "series": "",
+    "total": 101,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy8",
+    "name": "TURBOstart",
+    "series": "",
+    "total": 165,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy9",
+    "name": "TURBOfieber",
+    "series": "",
+    "total": 126,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "g1",
+    "name": "Generationen",
+    "series": "",
+    "total": 83,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy10",
+    "name": "Schicksalsschmiede",
+    "series": "",
+    "total": 129,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy11",
+    "name": "Dampfkessel",
+    "series": "",
+    "total": 116,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "xy12",
+    "name": "Evolution",
+    "series": "",
+    "total": 113,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm1",
+    "name": "Sonne & Mond",
+    "series": "",
+    "total": 163,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "smp",
+    "name": "SM Promokarten",
+    "series": "",
+    "total": 236,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm2",
+    "name": "Stunde der Wächter",
+    "series": "",
+    "total": 169,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm3",
+    "name": "Nacht in Flammen",
+    "series": "",
+    "total": 169,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm3.5",
+    "name": "Schimmernde Legenden",
+    "series": "",
+    "total": 78,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm4",
+    "name": "Aufziehen der Sturmröte",
+    "series": "",
+    "total": 124,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm5",
+    "name": "Ultra-Prisma",
+    "series": "",
+    "total": 173,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm6",
+    "name": "Grauen Der Lichtfinsternis",
+    "series": "",
+    "total": 146,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm7",
+    "name": "Sturm Am Firmament",
+    "series": "",
+    "total": 183,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm7.5",
+    "name": "Majestät Der Drachen",
+    "series": "",
+    "total": 78,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm8",
+    "name": "Echo des Donners",
+    "series": "",
+    "total": 236,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm9",
+    "name": "Teams Sind Trumpf",
+    "series": "",
+    "total": 196,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "det1",
+    "name": "Meisterdetektiv Pikachu",
+    "series": "",
+    "total": 18,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm10",
+    "name": "Kräfte im Einklang",
+    "series": "",
+    "total": 234,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm11",
+    "name": "Bund der Gleichgesinnten",
+    "series": "",
+    "total": 258,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm115",
+    "name": "Verborgenes Schicksal",
+    "series": "",
+    "total": 68,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sma",
+    "name": "Gelbes A-Alternativkarte",
+    "series": "",
+    "total": 94,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sm12",
+    "name": "Welten im Wandel",
+    "series": "",
+    "total": 271,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swshp",
+    "name": "SCSC Promokarten",
+    "series": "",
+    "total": 285,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh1",
+    "name": "Schwert & Schild",
+    "series": "",
+    "total": 216,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh2",
+    "name": "Clash der Rebellen",
+    "series": "",
+    "total": 209,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh3",
+    "name": "Flammende Finsternis",
+    "series": "",
+    "total": 201,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh3.5",
+    "name": "Weg des Champs",
+    "series": "",
+    "total": 80,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh4",
+    "name": "Farbenschock",
+    "series": "",
+    "total": 203,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh4.5",
+    "name": "Glänzendes Schicksal",
+    "series": "",
+    "total": 195,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh5",
+    "name": "Kampfstile",
+    "series": "",
+    "total": 183,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh6",
+    "name": "Schaurige Herrschaft",
+    "series": "",
+    "total": 233,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh7",
+    "name": "Drachenwandel",
+    "series": "",
+    "total": 237,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "cel25",
+    "name": "Celebrations",
+    "series": "",
+    "total": 25,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh8",
+    "name": "Fusions Angriff",
+    "series": "",
+    "total": 284,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh9",
+    "name": "Strahlende Sterne",
+    "series": "",
+    "total": 216,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh10",
+    "name": "Astralglanz",
+    "series": "",
+    "total": 246,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh10.5",
+    "name": "Pokémon GO",
+    "series": "",
+    "total": 88,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh11",
+    "name": "Verlorener Ursprung",
+    "series": "",
+    "total": 247,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh12",
+    "name": "Silberne Sturmwinde",
+    "series": "",
+    "total": 245,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "swsh12.5",
+    "name": "Zenit der Könige",
+    "series": "",
+    "total": 230,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "svp",
+    "name": "SVP Black Star Promos",
+    "series": "",
+    "total": 192,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv01",
+    "name": "Karmesin & Purpur",
+    "series": "",
+    "total": 258,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv02",
+    "name": "Entwicklungen in Paldea",
+    "series": "",
+    "total": 279,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv03",
+    "name": "Obsidian Flammen",
+    "series": "",
+    "total": 230,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv03.5",
+    "name": "151",
+    "series": "",
+    "total": 207,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv04",
+    "name": "Paradoxrift",
+    "series": "",
+    "total": 266,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv04.5",
+    "name": "Paldeas Schicksale",
+    "series": "",
+    "total": 245,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv05",
+    "name": "Gewalten der Zeit",
+    "series": "",
+    "total": 218,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv06",
+    "name": "Maskerade im Zwielicht",
+    "series": "",
+    "total": 226,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv06.5",
+    "name": "Nebel der Sagen",
+    "series": "",
+    "total": 99,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv07",
+    "name": "Stellarkrone",
+    "series": "",
+    "total": 175,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "A1",
+    "name": "Unschlagbare Gene",
+    "series": "",
+    "total": 286,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "P-A",
+    "name": "PROMO-A",
+    "series": "",
+    "total": 73,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv08",
+    "name": "Stürmische Funken",
+    "series": "",
+    "total": 252,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "A1a",
+    "name": "Mysteriöse Insel",
+    "series": "",
+    "total": 86,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv08.5",
+    "name": "Prismatische Entwicklungen",
+    "series": "",
+    "total": 180,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "A2",
+    "name": "Kollision von Raum und Zeit",
+    "series": "",
+    "total": 207,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "A2a",
+    "name": "Licht des Triumphs",
+    "series": "",
+    "total": 96,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "A2b",
+    "name": "Glänzendes Festival",
+    "series": "",
+    "total": 111,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv09",
+    "name": "Reisegefährten",
+    "series": "",
+    "total": 190,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "A3",
+    "name": "Hüter des Firmaments",
+    "series": "",
+    "total": 239,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv10",
+    "name": "Ewige Rivalen",
+    "series": "",
+    "total": 244,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv10.5b",
+    "name": "Schwarze Blitze",
+    "series": "",
+    "total": 172,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "sv10.5w",
+    "name": "Weiße Flammen",
+    "series": "",
+    "total": 173,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "A4a",
+    "name": "Verborgene Quelle",
+    "series": "",
+    "total": 71,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "me01",
+    "name": "Mega-Entwicklung",
+    "series": "",
+    "total": 188,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "mep",
+    "name": "MEP Black Star Promos",
+    "series": "",
+    "total": 10,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "me02",
+    "name": "Fatale Flammen",
+    "series": "",
+    "total": 130,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "B1a",
+    "name": "Feuerrote Flammen",
+    "series": "",
+    "total": 69,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "B2",
+    "name": "Traumhafte Parade",
+    "series": "",
+    "total": 155,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  },
+  {
+    "id": "me02.5",
+    "name": "Erhabene Helden",
+    "series": "",
+    "total": 295,
+    "releaseDate": null,
+    "ptcgoCode": ""
+  }
+]

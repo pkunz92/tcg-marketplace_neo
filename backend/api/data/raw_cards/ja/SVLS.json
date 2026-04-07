@@ -1,0 +1,200 @@
+[
+  {
+    "id": "SVLS-001",
+    "name": "ロコン",
+    "number": "001",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/001"
+    }
+  },
+  {
+    "id": "SVLS-002",
+    "name": "キュウコン",
+    "number": "002",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/002"
+    }
+  },
+  {
+    "id": "SVLS-003",
+    "name": "ホウオウ",
+    "number": "003",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/003"
+    }
+  },
+  {
+    "id": "SVLS-004",
+    "name": "オドリドリ",
+    "number": "004",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/004"
+    }
+  },
+  {
+    "id": "SVLS-005",
+    "name": "カルボウ",
+    "number": "005",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/005"
+    }
+  },
+  {
+    "id": "SVLS-006",
+    "name": "ソウブレイズex",
+    "number": "006",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/006"
+    }
+  },
+  {
+    "id": "SVLS-007",
+    "name": "シンボラー",
+    "number": "007",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/007"
+    }
+  },
+  {
+    "id": "SVLS-008",
+    "name": "レジスチル",
+    "number": "008",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/008"
+    }
+  },
+  {
+    "id": "SVLS-009",
+    "name": "ホーホー",
+    "number": "009",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/009"
+    }
+  },
+  {
+    "id": "SVLS-010",
+    "name": "ヨルノズク",
+    "number": "010",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/010"
+    }
+  },
+  {
+    "id": "SVLS-011",
+    "name": "すごいつりざお",
+    "number": "011",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/011"
+    }
+  },
+  {
+    "id": "SVLS-012",
+    "name": "テラスタルオーブ",
+    "number": "012",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/012"
+    }
+  },
+  {
+    "id": "SVLS-013",
+    "name": "ネストボール",
+    "number": "013",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/013"
+    }
+  },
+  {
+    "id": "SVLS-014",
+    "name": "パーフェクトミキサー",
+    "number": "014",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/014"
+    }
+  },
+  {
+    "id": "SVLS-015",
+    "name": "ハイパーボール",
+    "number": "015",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/015"
+    }
+  },
+  {
+    "id": "SVLS-016",
+    "name": "ポケギア3.0",
+    "number": "016",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/016"
+    }
+  },
+  {
+    "id": "SVLS-017",
+    "name": "ポケモンいれかえ",
+    "number": "017",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/017"
+    }
+  },
+  {
+    "id": "SVLS-018",
+    "name": "アカマツ",
+    "number": "018",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/018"
+    }
+  },
+  {
+    "id": "SVLS-019",
+    "name": "ナンジャモ",
+    "number": "019",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/019"
+    }
+  },
+  {
+    "id": "SVLS-020",
+    "name": "ネモ",
+    "number": "020",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/020"
+    }
+  },
+  {
+    "id": "SVLS-021",
+    "name": "博士の研究",
+    "number": "021",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/021"
+    }
+  },
+  {
+    "id": "SVLS-022",
+    "name": "ボスの指令",
+    "number": "022",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/ja/SV/SVLS/022"
+    }
+  }
+]

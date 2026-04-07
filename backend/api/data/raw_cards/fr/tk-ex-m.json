@@ -1,0 +1,110 @@
+[
+  {
+    "id": "tk-ex-m-1",
+    "name": "Arcanin",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-m-2",
+    "name": "Salamèche",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-m-3",
+    "name": "Reptincel",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-m-4",
+    "name": "Caninos",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-m-5",
+    "name": "Wattouat",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-m-6",
+    "name": "Negapi",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-m-7",
+    "name": "Goupix",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-m-8",
+    "name": "Le réseau de Cileo",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-m-9",
+    "name": "Recherche d'énergie",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-m-10",
+    "name": "Potion",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-m-11",
+    "name": "Énergie Feu",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-ex-m-12",
+    "name": "Énergie Électrique",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

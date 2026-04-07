@@ -1,0 +1,101 @@
+[
+  {
+    "id": "tk-dp-l-1",
+    "name": "Geodude",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-2",
+    "name": "Graveler",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-3",
+    "name": "Lucario",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-4",
+    "name": "Machoke",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-5",
+    "name": "Machop",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-6",
+    "name": "Riolu",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-7",
+    "name": "Starly",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-8",
+    "name": "Energy Search",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-9",
+    "name": "Potion",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-10",
+    "name": "Quick Ball",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  },
+  {
+    "id": "tk-dp-l-11",
+    "name": "Fighting Energy",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": null
+    }
+  }
+]

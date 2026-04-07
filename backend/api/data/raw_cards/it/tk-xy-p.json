@@ -1,0 +1,272 @@
+[
+  {
+    "id": "tk-xy-p-1",
+    "name": "Glameow",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/1"
+    }
+  },
+  {
+    "id": "tk-xy-p-2",
+    "name": "Energia Lampo",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/2"
+    }
+  },
+  {
+    "id": "tk-xy-p-3",
+    "name": "Energia Lampo",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/3"
+    }
+  },
+  {
+    "id": "tk-xy-p-4",
+    "name": "Electivire",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/4"
+    }
+  },
+  {
+    "id": "tk-xy-p-5",
+    "name": "Energia Lampo",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/5"
+    }
+  },
+  {
+    "id": "tk-xy-p-6",
+    "name": "Energia Lampo",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/6"
+    }
+  },
+  {
+    "id": "tk-xy-p-7",
+    "name": "Taillow",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/7"
+    }
+  },
+  {
+    "id": "tk-xy-p-8",
+    "name": "Energia Lampo",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/8"
+    }
+  },
+  {
+    "id": "tk-xy-p-9",
+    "name": "Energia Lampo",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/9"
+    }
+  },
+  {
+    "id": "tk-xy-p-10",
+    "name": "Energia Lampo",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/10"
+    }
+  },
+  {
+    "id": "tk-xy-p-11",
+    "name": "Electrike",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/11"
+    }
+  },
+  {
+    "id": "tk-xy-p-12",
+    "name": "Blitzle",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/12"
+    }
+  },
+  {
+    "id": "tk-xy-p-13",
+    "name": "Manectric",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/13"
+    }
+  },
+  {
+    "id": "tk-xy-p-14",
+    "name": "Pikachu wrestler",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/14"
+    }
+  },
+  {
+    "id": "tk-xy-p-15",
+    "name": "Electabuzz",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/15"
+    }
+  },
+  {
+    "id": "tk-xy-p-16",
+    "name": "Fletchling",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/16"
+    }
+  },
+  {
+    "id": "tk-xy-p-17",
+    "name": "Energia Lampo",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/17"
+    }
+  },
+  {
+    "id": "tk-xy-p-18",
+    "name": "Energia Lampo",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/18"
+    }
+  },
+  {
+    "id": "tk-xy-p-19",
+    "name": "Purugly",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/19"
+    }
+  },
+  {
+    "id": "tk-xy-p-20",
+    "name": "Tierno",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/20"
+    }
+  },
+  {
+    "id": "tk-xy-p-21",
+    "name": "Pozione",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/21"
+    }
+  },
+  {
+    "id": "tk-xy-p-22",
+    "name": "Manectric",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/22"
+    }
+  },
+  {
+    "id": "tk-xy-p-23",
+    "name": "Electabuzz",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/23"
+    }
+  },
+  {
+    "id": "tk-xy-p-24",
+    "name": "Purugly",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/24"
+    }
+  },
+  {
+    "id": "tk-xy-p-25",
+    "name": "Electivire",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/25"
+    }
+  },
+  {
+    "id": "tk-xy-p-26",
+    "name": "Blitzle",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/26"
+    }
+  },
+  {
+    "id": "tk-xy-p-27",
+    "name": "Glameow",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/27"
+    }
+  },
+  {
+    "id": "tk-xy-p-28",
+    "name": "Electrike",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/28"
+    }
+  },
+  {
+    "id": "tk-xy-p-29",
+    "name": "Energia Lampo",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/29"
+    }
+  },
+  {
+    "id": "tk-xy-p-30",
+    "name": "Pikachu wrestler",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/it/tk/tk-xy-p/30"
+    }
+  }
+]

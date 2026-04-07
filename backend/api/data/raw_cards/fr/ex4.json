@@ -1,0 +1,875 @@
+[
+  {
+    "id": "ex4-1",
+    "name": "Cacturne de Team Aqua",
+    "number": "1",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/1"
+    }
+  },
+  {
+    "id": "ex4-2",
+    "name": "Colhomard de Team Aqua",
+    "number": "2",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/2"
+    }
+  },
+  {
+    "id": "ex4-3",
+    "name": "Kyogre de Team Aqua",
+    "number": "3",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/3"
+    }
+  },
+  {
+    "id": "ex4-4",
+    "name": "Elecsprint de Team Aqua",
+    "number": "4",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/4"
+    }
+  },
+  {
+    "id": "ex4-5",
+    "name": "Sharpedo de Team Aqua",
+    "number": "5",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/5"
+    }
+  },
+  {
+    "id": "ex4-6",
+    "name": "Kaimorse de Team Aqua",
+    "number": "6",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/6"
+    }
+  },
+  {
+    "id": "ex4-7",
+    "name": "Galeking de Team Magma",
+    "number": "7",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/7"
+    }
+  },
+  {
+    "id": "ex4-8",
+    "name": "Kaorine de Team Magma",
+    "number": "8",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/8"
+    }
+  },
+  {
+    "id": "ex4-9",
+    "name": "Groudon de Team Magma",
+    "number": "9",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/9"
+    }
+  },
+  {
+    "id": "ex4-10",
+    "name": "Démolosse de Team Magma",
+    "number": "10",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/10"
+    }
+  },
+  {
+    "id": "ex4-11",
+    "name": "Rhinoféros de Team Magma",
+    "number": "11",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/11"
+    }
+  },
+  {
+    "id": "ex4-12",
+    "name": "Chartor de Team Magma",
+    "number": "12",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/12"
+    }
+  },
+  {
+    "id": "ex4-13",
+    "name": "Raichu",
+    "number": "13",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/13"
+    }
+  },
+  {
+    "id": "ex4-14",
+    "name": "Colhomard de Team Aqua",
+    "number": "14",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/14"
+    }
+  },
+  {
+    "id": "ex4-15",
+    "name": "Grahyena de Team Aqua",
+    "number": "15",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/15"
+    }
+  },
+  {
+    "id": "ex4-16",
+    "name": "Phogleur de Team Aqua",
+    "number": "16",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/16"
+    }
+  },
+  {
+    "id": "ex4-17",
+    "name": "Seviper de Team Aqua",
+    "number": "17",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/17"
+    }
+  },
+  {
+    "id": "ex4-18",
+    "name": "Sharpedo de Team Aqua",
+    "number": "18",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/18"
+    }
+  },
+  {
+    "id": "ex4-19",
+    "name": "Camerupt de Team Magma",
+    "number": "19",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/19"
+    }
+  },
+  {
+    "id": "ex4-20",
+    "name": "Galegon de Team Magma",
+    "number": "20",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/20"
+    }
+  },
+  {
+    "id": "ex4-21",
+    "name": "Grahyena de Team Magma",
+    "number": "21",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/21"
+    }
+  },
+  {
+    "id": "ex4-22",
+    "name": "Rhinoféros de Team Magma",
+    "number": "22",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/22"
+    }
+  },
+  {
+    "id": "ex4-23",
+    "name": "Mangriff de Team Magma",
+    "number": "23",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/23"
+    }
+  },
+  {
+    "id": "ex4-24",
+    "name": "Cacnea de Team Aqua",
+    "number": "24",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/24"
+    }
+  },
+  {
+    "id": "ex4-25",
+    "name": "Carvanha de Team Aqua",
+    "number": "25",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/25"
+    }
+  },
+  {
+    "id": "ex4-26",
+    "name": "Écrapince de Team Aqua",
+    "number": "26",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/26"
+    }
+  },
+  {
+    "id": "ex4-27",
+    "name": "Dynavolt de Team Aqua",
+    "number": "27",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/27"
+    }
+  },
+  {
+    "id": "ex4-28",
+    "name": "Lanturn de Team Aqua",
+    "number": "28",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/28"
+    }
+  },
+  {
+    "id": "ex4-29",
+    "name": "Elecsprint de Team Aqua",
+    "number": "29",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/29"
+    }
+  },
+  {
+    "id": "ex4-30",
+    "name": "Grahyena de Team Aqua",
+    "number": "30",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/30"
+    }
+  },
+  {
+    "id": "ex4-31",
+    "name": "Phogleur de Team Aqua",
+    "number": "31",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/31"
+    }
+  },
+  {
+    "id": "ex4-32",
+    "name": "Balbuto de Team Magma",
+    "number": "32",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/32"
+    }
+  },
+  {
+    "id": "ex4-33",
+    "name": "Kaorine de Team Magma",
+    "number": "33",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/33"
+    }
+  },
+  {
+    "id": "ex4-34",
+    "name": "Démolosse de Team Magma",
+    "number": "34",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/34"
+    }
+  },
+  {
+    "id": "ex4-35",
+    "name": "Malosse de Team Magma",
+    "number": "35",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/35"
+    }
+  },
+  {
+    "id": "ex4-36",
+    "name": "Galegon de Team Magma",
+    "number": "36",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/36"
+    }
+  },
+  {
+    "id": "ex4-37",
+    "name": "Grahyena de Team Magma",
+    "number": "37",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/37"
+    }
+  },
+  {
+    "id": "ex4-38",
+    "name": "Rhinocorne de Team Magma",
+    "number": "38",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/38"
+    }
+  },
+  {
+    "id": "ex4-39",
+    "name": "Bulbizarre",
+    "number": "39",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/39"
+    }
+  },
+  {
+    "id": "ex4-40",
+    "name": "Osselait",
+    "number": "40",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/40"
+    }
+  },
+  {
+    "id": "ex4-41",
+    "name": "Rondoudou",
+    "number": "41",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/41"
+    }
+  },
+  {
+    "id": "ex4-42",
+    "name": "Miaouss",
+    "number": "42",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/42"
+    }
+  },
+  {
+    "id": "ex4-43",
+    "name": "Pikachu",
+    "number": "43",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/43"
+    }
+  },
+  {
+    "id": "ex4-44",
+    "name": "Psykokwak",
+    "number": "44",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/44"
+    }
+  },
+  {
+    "id": "ex4-45",
+    "name": "Ramoloss",
+    "number": "45",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/45"
+    }
+  },
+  {
+    "id": "ex4-46",
+    "name": "Carapuce",
+    "number": "46",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/46"
+    }
+  },
+  {
+    "id": "ex4-47",
+    "name": "Carvanha de Team Aqua",
+    "number": "47",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/47"
+    }
+  },
+  {
+    "id": "ex4-48",
+    "name": "Carvanha de Team Aqua",
+    "number": "48",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/48"
+    }
+  },
+  {
+    "id": "ex4-49",
+    "name": "Loupio de Team Aqua",
+    "number": "49",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/49"
+    }
+  },
+  {
+    "id": "ex4-50",
+    "name": "Écrapince de Team Aqua",
+    "number": "50",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/50"
+    }
+  },
+  {
+    "id": "ex4-51",
+    "name": "Écrapince de Team Aqua",
+    "number": "51",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/51"
+    }
+  },
+  {
+    "id": "ex4-52",
+    "name": "Dynavolt de Team Aqua",
+    "number": "52",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/52"
+    }
+  },
+  {
+    "id": "ex4-53",
+    "name": "Dynavolt de Team Aqua",
+    "number": "53",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/53"
+    }
+  },
+  {
+    "id": "ex4-54",
+    "name": "Medhyena de Team Aqua",
+    "number": "54",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/54"
+    }
+  },
+  {
+    "id": "ex4-55",
+    "name": "Medhyena de Team Aqua",
+    "number": "55",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/55"
+    }
+  },
+  {
+    "id": "ex4-56",
+    "name": "Obalie de Team Aqua",
+    "number": "56",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/56"
+    }
+  },
+  {
+    "id": "ex4-57",
+    "name": "Obalie de Team Aqua",
+    "number": "57",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/57"
+    }
+  },
+  {
+    "id": "ex4-58",
+    "name": "Galekid de Team Magma",
+    "number": "58",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/58"
+    }
+  },
+  {
+    "id": "ex4-59",
+    "name": "Galekid de Team Magma",
+    "number": "59",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/59"
+    }
+  },
+  {
+    "id": "ex4-60",
+    "name": "Balbuto de Team Magma",
+    "number": "60",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/60"
+    }
+  },
+  {
+    "id": "ex4-61",
+    "name": "Balbuto de Team Magma",
+    "number": "61",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/61"
+    }
+  },
+  {
+    "id": "ex4-62",
+    "name": "Malosse de Team Magma",
+    "number": "62",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/62"
+    }
+  },
+  {
+    "id": "ex4-63",
+    "name": "Malosse de Team Magma",
+    "number": "63",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/63"
+    }
+  },
+  {
+    "id": "ex4-64",
+    "name": "Chamallot de Team Magma",
+    "number": "64",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/64"
+    }
+  },
+  {
+    "id": "ex4-65",
+    "name": "Medhyena de Team Magma",
+    "number": "65",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/65"
+    }
+  },
+  {
+    "id": "ex4-66",
+    "name": "Medhyena de Team Magma",
+    "number": "66",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/66"
+    }
+  },
+  {
+    "id": "ex4-67",
+    "name": "Rhinocorne de Team Magma",
+    "number": "67",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/67"
+    }
+  },
+  {
+    "id": "ex4-68",
+    "name": "Rhinocorne de Team Magma",
+    "number": "68",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/68"
+    }
+  },
+  {
+    "id": "ex4-69",
+    "name": "Manipulateur de Team Aqua",
+    "number": "69",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/69"
+    }
+  },
+  {
+    "id": "ex4-70",
+    "name": "Manipulateur de Team Magma",
+    "number": "70",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/70"
+    }
+  },
+  {
+    "id": "ex4-71",
+    "name": "Arthur",
+    "number": "71",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/71"
+    }
+  },
+  {
+    "id": "ex4-72",
+    "name": "Double boule",
+    "number": "72",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/72"
+    }
+  },
+  {
+    "id": "ex4-73",
+    "name": "Max",
+    "number": "73",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/73"
+    }
+  },
+  {
+    "id": "ex4-74",
+    "name": "Sort de force",
+    "number": "74",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/74"
+    }
+  },
+  {
+    "id": "ex4-75",
+    "name": "Boule de Team Aqua",
+    "number": "75",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/75"
+    }
+  },
+  {
+    "id": "ex4-76",
+    "name": "Raclée de Team Aqua",
+    "number": "76",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/76"
+    }
+  },
+  {
+    "id": "ex4-77",
+    "name": "Conspirateur de Team Aqua",
+    "number": "77",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/77"
+    }
+  },
+  {
+    "id": "ex4-78",
+    "name": "Cachette de Team Aqua",
+    "number": "78",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/78"
+    }
+  },
+  {
+    "id": "ex4-79",
+    "name": "Machine Technique 01 de Team Aqua",
+    "number": "79",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/79"
+    }
+  },
+  {
+    "id": "ex4-80",
+    "name": "Boule de Team Magma",
+    "number": "80",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/80"
+    }
+  },
+  {
+    "id": "ex4-81",
+    "name": "Raclée de Team Magma",
+    "number": "81",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/81"
+    }
+  },
+  {
+    "id": "ex4-82",
+    "name": "Conspirateur de Team Magma",
+    "number": "82",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/82"
+    }
+  },
+  {
+    "id": "ex4-83",
+    "name": "Cachette de Team Magma",
+    "number": "83",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/83"
+    }
+  },
+  {
+    "id": "ex4-84",
+    "name": "Machine Technique 01 de Team Magma",
+    "number": "84",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/84"
+    }
+  },
+  {
+    "id": "ex4-85",
+    "name": "Point d'échange",
+    "number": "85",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/85"
+    }
+  },
+  {
+    "id": "ex4-86",
+    "name": "Énergie Magma",
+    "number": "86",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/86"
+    }
+  },
+  {
+    "id": "ex4-87",
+    "name": "Énergie Magma",
+    "number": "87",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/87"
+    }
+  },
+  {
+    "id": "ex4-88",
+    "name": "Double Énergie Multicolore",
+    "number": "88",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/88"
+    }
+  },
+  {
+    "id": "ex4-89",
+    "name": "Brasegali ex",
+    "number": "89",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/89"
+    }
+  },
+  {
+    "id": "ex4-90",
+    "name": "Vacilys ex",
+    "number": "90",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/90"
+    }
+  },
+  {
+    "id": "ex4-91",
+    "name": "Entei ex",
+    "number": "91",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/91"
+    }
+  },
+  {
+    "id": "ex4-92",
+    "name": "Raikou ex",
+    "number": "92",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/92"
+    }
+  },
+  {
+    "id": "ex4-93",
+    "name": "Jungko ex",
+    "number": "93",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/93"
+    }
+  },
+  {
+    "id": "ex4-94",
+    "name": "Suicune ex",
+    "number": "94",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/94"
+    }
+  },
+  {
+    "id": "ex4-95",
+    "name": "Laggron ex",
+    "number": "95",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/95"
+    }
+  },
+  {
+    "id": "ex4-96",
+    "name": "Absol",
+    "number": "96",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/96"
+    }
+  },
+  {
+    "id": "ex4-97",
+    "name": "Jirachi",
+    "number": "97",
+    "rarity": "",
+    "images": {
+      "large": "https://assets.tcgdex.net/fr/ex/ex4/97"
+    }
+  }
+]
