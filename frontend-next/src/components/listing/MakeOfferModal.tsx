@@ -125,7 +125,7 @@ export default function MakeOfferModal({ listingId, listingPrice, existingOffer,
                   Accept
                 </Button>
                 <Button
-                  variant="danger"
+                  variant="destructive"
                   onClick={() => handleCounterResponse(false)}
                   loading={submitting}
                   className="flex-1"
