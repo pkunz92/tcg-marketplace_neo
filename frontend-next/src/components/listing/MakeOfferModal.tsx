@@ -32,8 +32,9 @@ interface Props {
 
 export default function MakeOfferModal({ listingId, listingPrice, existingOffer, onClose, onSuccess }: Props) {
   const [price, setPrice] = useState(
-    existingOffer ? existingOffer.price_chf : String(Math.floor(listingPrice * 0.9))
+    existingOffer ? existingOffer.offer_price_chf : String(Math.floor(listingPrice * 0.9))
   )
+  const [message, setMessage] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
@@ -51,7 +52,7 @@ export default function MakeOfferModal({ listingId, listingPrice, existingOffer,
     }
     setSubmitting(true)
     try {
-      const offer = await api.post<Offer>('/offers/', { listing: listingId, price_chf: numPrice.toFixed(2) })
+      const offer = await api.post<Offer>('/offers/', { listing: listingId, offer_price_chf: numPrice.toFixed(2), message })
       onSuccess(offer)
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Failed to submit offer.')
@@ -154,10 +155,22 @@ export default function MakeOfferModal({ listingId, listingPrice, existingOffer,
                     onChange={e => setPrice(e.target.value)}
                     className="w-full bg-elevated border border-border rounded-lg pl-12 pr-3 py-2 text-sm font-mono text-slate-200 focus:outline-none focus:border-accent-500 focus:ring-1 focus:ring-accent-500/30"
                     placeholder="0.00"
+                    data-testid="offer-price"
                     required
                   />
                 </div>
                 <p className="text-[11px] text-slate-600 mt-1">Offer expires in 48 hours if not responded to.</p>
+              </div>
+              <div>
+                <label className="block text-xs text-slate-400 mb-1.5">Message (optional)</label>
+                <textarea
+                  value={message}
+                  onChange={e => setMessage(e.target.value)}
+                  data-testid="offer-message"
+                  rows={2}
+                  className="w-full bg-elevated border border-border rounded-lg px-3 py-2 text-sm text-slate-200 focus:outline-none focus:border-accent-500 focus:ring-1 focus:ring-accent-500/30 resize-none"
+                  placeholder="Add a note to the seller…"
+                />
               </div>
 
               {error && (
@@ -166,7 +179,7 @@ export default function MakeOfferModal({ listingId, listingPrice, existingOffer,
                 </p>
               )}
 
-              <Button type="submit" loading={submitting} className="w-full">
+              <Button type="submit" loading={submitting} className="w-full" data-testid="offer-submit">
                 Send Offer
               </Button>
             </form>
@@ -175,7 +188,7 @@ export default function MakeOfferModal({ listingId, listingPrice, existingOffer,
           {/* Pending — waiting */}
           {existingOffer?.status === 'PENDING' && (
             <p className="text-xs text-slate-500 text-center">
-              Your offer of <span className="font-mono text-slate-300">{formatCHF(parseFloat(existingOffer.price_chf))}</span> is waiting for a response.
+              Your offer of <span className="font-mono text-slate-300">{formatCHF(parseFloat(existingOffer.offer_price_chf))}</span> is waiting for a response.
             </p>
           )}
         </div>

@@ -53,7 +53,7 @@ function InventoryTab() {
         <h2 className="text-lg font-semibold text-slate-200">Active Listings</h2>
         <div className="flex gap-2">
           <Link href="/market/new">
-            <Button size="sm">
+            <Button size="sm" data-testid="new-listing-btn">
               <Plus size={14} /> New Listing
             </Button>
           </Link>
@@ -72,6 +72,7 @@ function InventoryTab() {
           {listings.map((l) => (
             <div
               key={l.id}
+              data-testid="listing-row"
               className="flex items-center gap-3 bg-surface border border-border rounded-xl px-4 py-3"
             >
               <div className="relative w-10 h-[56px] shrink-0">

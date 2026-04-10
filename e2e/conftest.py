@@ -97,8 +97,7 @@ def _create_listing(token, card_api_id, price=45.0, condition="NM", quantity=3):
         "price_chf": price,
         "condition": condition,
         "quantity": quantity,
-        "is_graded": False,
-        "grading_company": "RAW",
+        "is_graded": "RAW",
     }
     r = _api("/listings/", "POST", json=payload, headers=headers)
     if r.status_code not in (200, 201):
@@ -166,7 +165,8 @@ def login_as(page: Page, username: str, password: str):
     page.locator('[data-testid="login-username"]').fill(username)
     page.locator('[data-testid="login-password"]').fill(password)
     page.locator('[data-testid="login-submit"]').click()
-    page.wait_for_url(f"{BASE_URL}/dashboard", timeout=10_000)
+    # Wait for any /dashboard* URL (login redirects to /dashboard which may forward to /dashboard/seller)
+    page.wait_for_url(lambda url: "/dashboard" in url, timeout=10_000)
 
 
 @pytest.fixture

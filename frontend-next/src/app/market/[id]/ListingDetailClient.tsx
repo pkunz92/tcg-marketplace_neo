@@ -57,6 +57,7 @@ export default function ListingDetailPage() {
   const [buying, setBuying] = useState(false)
   const [watchlisting, setWatchlisting] = useState(false)
   const [showOfferModal, setShowOfferModal] = useState(false)
+  const [showBuyModal, setShowBuyModal] = useState(false)
   const [activeOffer, setActiveOffer] = useState<Offer | null>(null)
 
   const { data: listing, isLoading, error } = useSWR<Listing>(
@@ -77,14 +78,24 @@ export default function ListingDetailPage() {
     }
   }
 
-  async function buyNow() {
+  function buyNow() {
     if (!user) {
       toast('Please log in to purchase', 'error')
       return
     }
+    setShowBuyModal(true)
+  }
+
+  async function confirmBuy() {
     setBuying(true)
     try {
-      router.push(`/checkout/${id}`)
+      await api.post(`/listings/${id}/buy/`, {})
+      toast('Order placed!', 'success')
+      setShowBuyModal(false)
+      router.push('/dashboard/orders')
+    } catch (err: unknown) {
+      const msg = err instanceof Error ? err.message : 'Purchase failed'
+      toast(msg, 'error')
     } finally {
       setBuying(false)
     }
@@ -122,7 +133,7 @@ export default function ListingDetailPage() {
   const conditionClass = CONDITION_COLORS[listing.condition] ?? 'text-slate-400 bg-slate-400/10 border-slate-400/25'
 
   return (
-    <div className="max-w-5xl mx-auto">
+    <div data-testid="listing-detail" className="max-w-5xl mx-auto">
       {/* Back nav */}
       <div className="flex items-center justify-between mb-8">
         <Link
@@ -267,13 +278,28 @@ export default function ListingDetailPage() {
           </div>
 
           {/* CTA */}
-          {!isSeller && (
+          {!user && (
             <div className="flex gap-3 pt-2">
-              <Button onClick={buyNow} loading={buying} className="flex-1 shadow-glow-sm hover:shadow-glow-accent">
+              <Link href={`/login?next=/market/${listing.id}`} className="flex-1">
+                <Button className="w-full">
+                  Sign in to buy
+                </Button>
+              </Link>
+            </div>
+          )}
+
+          {user && !isSeller && (
+            <div className="flex gap-3 pt-2">
+              <Button
+                data-testid="buy-now-btn"
+                onClick={buyNow}
+                loading={buying}
+                className="flex-1 shadow-glow-sm hover:shadow-glow-accent"
+              >
                 <ShoppingCart size={15} />
                 Buy Now · {formatCHF(listing.price_chf)}
               </Button>
-              <Button variant="secondary" onClick={() => setShowOfferModal(true)}>
+              <Button data-testid="make-offer-btn" variant="secondary" onClick={() => setShowOfferModal(true)}>
                 <Tag size={15} />
                 Offer
               </Button>
@@ -311,6 +337,36 @@ export default function ListingDetailPage() {
             }
           }}
         />
+      )}
+
+      {showBuyModal && listing && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
+          onClick={() => setShowBuyModal(false)}
+        >
+          <div
+            className="w-full max-w-sm bg-surface border border-border rounded-2xl shadow-2xl p-6 space-y-4"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="text-lg font-semibold text-slate-100">Confirm Purchase</h2>
+            <p className="text-sm text-slate-400">
+              Buy <span className="text-slate-200 font-medium">{listing.card_name}</span> for{' '}
+              <span className="font-mono text-accent-400">{formatCHF(listing.price_chf)}</span>?
+            </p>
+            <div className="flex gap-3 justify-end pt-2">
+              <Button variant="secondary" onClick={() => setShowBuyModal(false)} disabled={buying}>
+                Cancel
+              </Button>
+              <Button
+                data-testid="buy-confirm-btn"
+                onClick={confirmBuy}
+                loading={buying}
+              >
+                Confirm
+              </Button>
+            </div>
+          </div>
+        </div>
       )}
     </div>
   )

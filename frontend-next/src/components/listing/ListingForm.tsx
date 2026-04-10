@@ -187,6 +187,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
             }}
             onFocus={() => cardOptions.length > 0 && setShowDropdown(true)}
             placeholder="Search card name…"
+            data-testid="card-search"
           />
           {suggestionsApplied && (
             <p className="text-xs text-accent-400 mt-1 flex items-center gap-1">
@@ -196,10 +197,11 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
           )}
           {showDropdown && cardOptions.length > 0 && (
             <div className="absolute z-20 w-full mt-1 bg-elevated border border-border rounded-xl shadow-xl overflow-hidden">
-              {cardOptions.map((c) => (
+              {cardOptions.map((c, idx) => (
                 <button
                   key={c.id}
                   type="button"
+                  data-testid={`card-suggestion-${idx}`}
                   onClick={() => {
                     setSelectedCard(c)
                     setCardQuery(c.card_name)
@@ -278,6 +280,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
             value={price}
             onChange={(e) => setPrice(e.target.value)}
             placeholder="0.00"
+            data-testid="listing-price"
           />
           <Input
             label="Quantity"
@@ -287,6 +290,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
             value={quantity}
             onChange={(e) => setQuantity(e.target.value)}
             placeholder="1"
+            data-testid="listing-quantity"
           />
         </div>
 
@@ -311,6 +315,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
           loading={submitting}
           disabled={!canPublish || submitting}
           className="w-full"
+          data-testid="listing-submit"
         >
           {mode === 'create' ? 'Publish Listing' : 'Save Changes'}
         </Button>

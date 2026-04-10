@@ -10,7 +10,7 @@ import Input from '@/components/ui/input'
 function LoginForm() {
   const router = useRouter()
   const searchParams = useSearchParams()
-  const next = searchParams.get('next') ?? '/'
+  const next = searchParams.get('next') ?? '/dashboard'
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -56,6 +56,7 @@ function LoginForm() {
             autoComplete="username"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            data-testid="login-username"
             required
           />
           <Input
@@ -64,6 +65,7 @@ function LoginForm() {
             autoComplete="current-password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            data-testid="login-password"
             required
           />
 
@@ -73,7 +75,7 @@ function LoginForm() {
             </p>
           )}
 
-          <Button type="submit" loading={loading} className="w-full" size="md">
+          <Button type="submit" loading={loading} className="w-full" size="md" data-testid="login-submit">
             Sign in
           </Button>
         </form>
