@@ -116,7 +116,7 @@ jobs:
         run: |
           python -m pytest \
             --browser chromium \
-            --screenshot on-failure \
+            --screenshot only-on-failure \
             --video retain-on-failure \
             --output e2e-results \
             -v \
