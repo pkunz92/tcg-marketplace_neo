@@ -248,7 +248,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
             <label className="block text-sm font-medium text-slate-200 mb-1.5">Grading</label>
             <select
               value={grading}
-              onChange={(e) => setGrading(e.target.value)}
+              onChange={(e) => setGrading(e.target.value as typeof GRADING_OPTIONS[number]['value'])}
               className="w-full bg-surface border border-border rounded-xl px-3 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-accent-500 appearance-none"
             >
               {GRADING_OPTIONS.map((g) => (
