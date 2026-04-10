@@ -208,8 +208,8 @@ export default function MarketAnalyticsPage() {
                     <YAxis tick={{ fontSize: 11, fill: '#64748b' }} tickFormatter={(v) => `CHF ${v}`} />
                     <Tooltip
                       contentStyle={{ background: '#1a1f2e', border: '1px solid #2d3448', borderRadius: 8, fontSize: 11 }}
-                      formatter={(value: number, _name: string, props: { payload?: { count: number } }) => [
-                        `${formatCHF(value)} (${props.payload?.count ?? 0} sales)`,
+                      formatter={(value, _name, props) => [
+                        `${formatCHF(Number(value ?? 0))} (${(props.payload as { count?: number })?.count ?? 0} sales)`,
                         'Avg Price',
                       ]}
                     />
@@ -235,7 +235,7 @@ export default function MarketAnalyticsPage() {
                     <YAxis tick={{ fontSize: 11, fill: '#64748b' }} />
                     <Tooltip
                       contentStyle={{ background: '#1a1f2e', border: '1px solid #2d3448', borderRadius: 8, fontSize: 11 }}
-                      formatter={(value: number) => [value, 'Sales']}
+                      formatter={(value) => [value, 'Sales']}
                     />
                     <Bar dataKey="count" radius={[4, 4, 0, 0]}>
                       {volumeChartData.map((entry, index) => (
