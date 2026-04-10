@@ -27,7 +27,7 @@ const GRADING_OPTIONS = [
   { value: 'CGC', label: 'CGC Graded' },
   { value: 'TAG', label: 'TAG Graded' },
   { value: 'ACE', label: 'ACE Graded' },
-]
+] as const
 
 interface CardMasterOption {
   id: string
