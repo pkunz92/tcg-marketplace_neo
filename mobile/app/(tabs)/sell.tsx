@@ -83,7 +83,7 @@ export default function SellScreen() {
           <CardThumbnail
             key={card.id}
             card={card}
-            onPress={() => {/* tap to edit in review */}}
+            onPress={() => router.push('/bulk-review')}
             onRemove={() => removeCard(card.id)}
           />
         ))}
