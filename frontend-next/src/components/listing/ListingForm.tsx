@@ -27,7 +27,7 @@ const GRADING_OPTIONS = [
   { value: 'CGC', label: 'CGC Graded' },
   { value: 'TAG', label: 'TAG Graded' },
   { value: 'ACE', label: 'ACE Graded' },
-]
+] as const
 
 interface CardMasterOption {
   id: string
@@ -187,6 +187,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
             }}
             onFocus={() => cardOptions.length > 0 && setShowDropdown(true)}
             placeholder="Search card name…"
+            data-testid="card-search"
           />
           {suggestionsApplied && (
             <p className="text-xs text-accent-400 mt-1 flex items-center gap-1">
@@ -196,10 +197,11 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
           )}
           {showDropdown && cardOptions.length > 0 && (
             <div className="absolute z-20 w-full mt-1 bg-elevated border border-border rounded-xl shadow-xl overflow-hidden">
-              {cardOptions.map((c) => (
+              {cardOptions.map((c, idx) => (
                 <button
                   key={c.id}
                   type="button"
+                  data-testid={`card-suggestion-${idx}`}
                   onClick={() => {
                     setSelectedCard(c)
                     setCardQuery(c.card_name)
@@ -248,7 +250,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
             <label className="block text-sm font-medium text-slate-200 mb-1.5">Grading</label>
             <select
               value={grading}
-              onChange={(e) => setGrading(e.target.value)}
+              onChange={(e) => setGrading(e.target.value as typeof GRADING_OPTIONS[number]['value'])}
               className="w-full bg-surface border border-border rounded-xl px-3 py-2.5 text-sm text-slate-200 focus:outline-none focus:border-accent-500 appearance-none"
             >
               {GRADING_OPTIONS.map((g) => (
@@ -278,6 +280,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
             value={price}
             onChange={(e) => setPrice(e.target.value)}
             placeholder="0.00"
+            data-testid="listing-price"
           />
           <Input
             label="Quantity"
@@ -287,6 +290,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
             value={quantity}
             onChange={(e) => setQuantity(e.target.value)}
             placeholder="1"
+            data-testid="listing-quantity"
           />
         </div>
 
@@ -311,6 +315,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
           loading={submitting}
           disabled={!canPublish || submitting}
           className="w-full"
+          data-testid="listing-submit"
         >
           {mode === 'create' ? 'Publish Listing' : 'Save Changes'}
         </Button>

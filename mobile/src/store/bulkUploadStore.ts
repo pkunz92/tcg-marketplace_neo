@@ -1,4 +1,6 @@
 import { create } from 'zustand';
+import { persist, createJSONStorage } from 'zustand/middleware';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { GradeResult } from '../api/photos';
 
 export type UploadStatus = 'pending' | 'uploading' | 'grading' | 'ready' | 'error';
@@ -28,24 +30,36 @@ interface BulkUploadState {
 
 let _idCounter = 0;
 
-export const useBulkUploadStore = create<BulkUploadState>((set) => ({
-  cards: [],
+export const useBulkUploadStore = create<BulkUploadState>()(
+  persist(
+    (set) => ({
+      cards: [],
 
-  addCard: (localUri) => {
-    const id = `card-${Date.now()}-${_idCounter++}`;
-    set((s) => ({
-      cards: [...s.cards, { id, localUri, status: 'pending' }],
-    }));
-    return id;
-  },
+      addCard: (localUri) => {
+        const id = `card-${Date.now()}-${_idCounter++}`;
+        set((s) => ({
+          cards: [...s.cards, { id, localUri, status: 'pending' }],
+        }));
+        return id;
+      },
 
-  updateCard: (id, patch) =>
-    set((s) => ({
-      cards: s.cards.map((c) => (c.id === id ? { ...c, ...patch } : c)),
-    })),
+      updateCard: (id, patch) =>
+        set((s) => ({
+          cards: s.cards.map((c) => (c.id === id ? { ...c, ...patch } : c)),
+        })),
 
-  removeCard: (id) =>
-    set((s) => ({ cards: s.cards.filter((c) => c.id !== id) })),
+      removeCard: (id) =>
+        set((s) => ({ cards: s.cards.filter((c) => c.id !== id) })),
 
-  clearAll: () => set({ cards: [] }),
-}));
+      clearAll: () => set({ cards: [] }),
+    }),
+    {
+      name: 'bulk-upload-queue',
+      storage: createJSONStorage(() => AsyncStorage),
+      // Don't persist localUri — it's ephemeral on device
+      partialize: (state) => ({
+        cards: state.cards.map(c => ({ ...c, localUri: '' })),
+      }),
+    }
+  )
+);

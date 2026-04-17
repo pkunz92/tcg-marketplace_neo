@@ -80,7 +80,7 @@ export default function SoldPriceSparkline({ cardApiId, days = 30 }: Props) {
               borderRadius: 8,
               fontSize: 11,
             }}
-            formatter={(value: number) => [formatCHF(value), 'Sold']}
+            formatter={(value) => [formatCHF(Number(value ?? 0)), 'Sold']}
             labelStyle={{ color: '#94a3b8', marginBottom: 2 }}
           />
           <Line

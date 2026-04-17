@@ -87,6 +87,7 @@ export default function RegisterPage() {
             autoComplete="username"
             value={form.username}
             onChange={set('username')}
+            data-testid="register-username"
             required
           />
           <Input
@@ -95,6 +96,7 @@ export default function RegisterPage() {
             autoComplete="email"
             value={form.email}
             onChange={set('email')}
+            data-testid="register-email"
             required
           />
           <Input
@@ -103,6 +105,7 @@ export default function RegisterPage() {
             autoComplete="new-password"
             value={form.password1}
             onChange={set('password1')}
+            data-testid="register-password1"
             required
           />
           <Input
@@ -111,6 +114,7 @@ export default function RegisterPage() {
             autoComplete="new-password"
             value={form.password2}
             onChange={set('password2')}
+            data-testid="register-password2"
             required
           />
 
@@ -123,6 +127,7 @@ export default function RegisterPage() {
             autoComplete="name"
             value={form.shipping_name}
             onChange={set('shipping_name')}
+            data-testid="register-shipping-name"
             required
           />
           <Input
@@ -131,6 +136,7 @@ export default function RegisterPage() {
             autoComplete="street-address"
             value={form.shipping_address_line1}
             onChange={set('shipping_address_line1')}
+            data-testid="register-shipping-address"
             required
           />
           <div className="grid grid-cols-2 gap-3">
@@ -140,6 +146,7 @@ export default function RegisterPage() {
               autoComplete="address-level2"
               value={form.shipping_city}
               onChange={set('shipping_city')}
+              data-testid="register-shipping-city"
               required
             />
             <Input
@@ -148,6 +155,7 @@ export default function RegisterPage() {
               autoComplete="postal-code"
               value={form.shipping_postal_code}
               onChange={set('shipping_postal_code')}
+              data-testid="register-shipping-postal-code"
               required
             />
           </div>
@@ -157,6 +165,7 @@ export default function RegisterPage() {
             autoComplete="country-name"
             value={form.shipping_country}
             onChange={set('shipping_country')}
+            data-testid="register-shipping-country"
             required
           />
 
@@ -166,7 +175,7 @@ export default function RegisterPage() {
             </p>
           )}
 
-          <Button type="submit" loading={loading} className="w-full" size="md">
+          <Button type="submit" loading={loading} className="w-full" size="md" data-testid="register-submit">
             Create account
           </Button>
         </form>

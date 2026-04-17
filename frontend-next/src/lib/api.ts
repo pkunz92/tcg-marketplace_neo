@@ -273,7 +273,7 @@ export interface Offer {
   listing: number
   buyer: number
   buyer_username: string
-  price_chf: string
+  offer_price_chf: string
   counter_price_chf: string | null
   status: OfferStatus
   expires_at: string

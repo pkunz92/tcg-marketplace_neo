@@ -49,8 +49,8 @@ jobs:
         working-directory: backend
         run: |
           python manage.py migrate --run-syncdb
-          # Import a small card sample so tests have catalog data
-          python manage.py import_master_cards --limit 20 || true
+          # Seed a small inline catalogue so tests have catalog data (no network needed)
+          python manage.py seed_e2e_data
 
       # -----------------------------------------------------------------------
       # 3. Node / frontend setup
@@ -116,7 +116,7 @@ jobs:
         run: |
           python -m pytest \
             --browser chromium \
-            --screenshot on-failure \
+            --screenshot only-on-failure \
             --video retain-on-failure \
             --output e2e-results \
             -v \

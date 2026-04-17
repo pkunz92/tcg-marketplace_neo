@@ -30,6 +30,7 @@ export default function ListingCard({ listing }: { listing: Listing }) {
   return (
     <Link
       href={`/market/${listing.id}`}
+      data-testid="listing-card"
       className="group relative bg-surface border border-border rounded-2xl overflow-hidden card-hover flex flex-col focus-visible:ring-2 focus-visible:ring-accent-500"
     >
       {/* Card image */}

@@ -32,13 +32,13 @@ def _go_to_listing(page: Page, listing_id):
 def _go_to_received_offers(page: Page):
     page.goto(f"{BASE_URL}/dashboard/offers")
     # Received tab is the default
-    page.wait_for_timeout(1_000)
+    page.wait_for_load_state('domcontentloaded')
 
 
 def _go_to_sent_offers(page: Page):
     page.goto(f"{BASE_URL}/dashboard/offers")
     page.get_by_text("Sent").first.click()
-    page.wait_for_timeout(1_000)
+    expect(page.locator('[data-testid="offer-row"]').first).to_be_visible(timeout=8_000)
 
 
 # ---------------------------------------------------------------------------
@@ -62,7 +62,7 @@ def test_buyer_makes_offer_via_ui(buyer_page: Page, seller_listing):
     page.locator('[data-testid="offer-submit"]').click()
 
     # Toast confirmation (modal closes)
-    page.wait_for_timeout(2_000)
+    page.wait_for_load_state('networkidle')
 
     # Verify offer appears in sent offers
     _go_to_sent_offers(page)
@@ -86,7 +86,7 @@ def test_seller_counters_offer(seller_page: Page, buyer_user, seller_listing):
 
     _go_to_received_offers(page)
     page.reload()
-    page.wait_for_timeout(2_000)
+    page.wait_for_load_state('domcontentloaded')
 
     # First received offer row should show action buttons
     expect(page.locator('[data-testid="offer-counter-btn"]').first).to_be_visible(timeout=8_000)
@@ -98,11 +98,11 @@ def test_seller_counters_offer(seller_page: Page, buyer_user, seller_listing):
     page.locator('[data-testid="counter-price"]').fill("42.00")
     page.locator('[data-testid="counter-submit"]').click()
 
-    page.wait_for_timeout(2_000)
+    page.wait_for_load_state('networkidle')
 
     # Verify offer now shows COUNTERED status
     page.reload()
-    page.wait_for_timeout(2_000)
+    page.wait_for_load_state('domcontentloaded')
 
     # Verify via API
     headers = {"Authorization": f"Bearer {seller_page.context.storage_state().get('cookies', [])}"}
@@ -128,17 +128,17 @@ def test_seller_accepts_offer(seller_page: Page, buyer_user, seller_user, seller
     page = seller_page
     _go_to_received_offers(page)
     page.reload()
-    page.wait_for_timeout(2_000)
+    page.wait_for_load_state('domcontentloaded')
 
     expect(page.locator('[data-testid="offer-accept-btn"]').first).to_be_visible(timeout=8_000)
     page.locator('[data-testid="offer-accept-btn"]').first.click()
 
     # Toast "Offer accepted!" should appear
-    page.wait_for_timeout(2_000)
+    page.wait_for_load_state('networkidle')
 
     # Verify the offer row status changed (page may reload)
     page.reload()
-    page.wait_for_timeout(2_000)
+    page.wait_for_load_state('domcontentloaded')
 
     # Look for ACCEPTED text in any offer row
     offer_rows_text = page.locator('[data-testid="offer-row"]').all_inner_texts()
@@ -164,16 +164,16 @@ def test_seller_declines_offer(seller_page: Page, buyer_user, seller_user, selle
     page = seller_page
     _go_to_received_offers(page)
     page.reload()
-    page.wait_for_timeout(2_000)
+    page.wait_for_load_state('domcontentloaded')
 
     expect(page.locator('[data-testid="offer-decline-btn"]').first).to_be_visible(timeout=8_000)
     page.locator('[data-testid="offer-decline-btn"]').first.click()
 
-    page.wait_for_timeout(2_000)
+    page.wait_for_load_state('networkidle')
 
     # Offer should now show Declined status in the list
     page.reload()
-    page.wait_for_timeout(2_000)
+    page.wait_for_load_state('domcontentloaded')
 
     # Soft check: page rendered without crash
     assert page.locator('[data-testid="offer-row"]').count() >= 0
