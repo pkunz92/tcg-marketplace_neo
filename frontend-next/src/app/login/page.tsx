@@ -68,6 +68,11 @@ function LoginForm() {
             data-testid="login-password"
             required
           />
+          <div className="text-right">
+            <Link href="/forgot-password" className="text-sm text-accent-400 hover:text-accent-300">
+              Forgot password?
+            </Link>
+          </div>
 
           {error && (
             <p className="text-sm text-red-400 bg-red-900/20 border border-red-800 rounded-lg px-3 py-2">
