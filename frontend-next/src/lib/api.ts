@@ -7,10 +7,31 @@ export class ApiError extends Error {
   constructor(
     public status: number,
     public detail: string,
+    public fieldErrors: Record<string, string[]> = {},
   ) {
     super(detail)
     this.name = 'ApiError'
   }
+}
+
+function parseApiError(status: number, body: Record<string, unknown>): ApiError {
+  // DRF field errors: { "field": ["msg", ...], ... }
+  const fieldErrors: Record<string, string[]> = {}
+  let detail = `HTTP ${status}`
+  for (const [key, val] of Object.entries(body)) {
+    if (key === 'detail' || key === 'error') {
+      detail = String(val)
+    } else if (key === 'non_field_errors' && Array.isArray(val)) {
+      detail = val.join(' ')
+    } else if (Array.isArray(val)) {
+      fieldErrors[key] = val.map(String)
+    }
+  }
+  if (!detail || detail === `HTTP ${status}`) {
+    const nonField = (body.detail ?? body.error) as string | undefined
+    detail = nonField ?? JSON.stringify(body)
+  }
+  return new ApiError(status, detail, fieldErrors)
 }
 
 async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
@@ -24,14 +45,13 @@ async function request<T>(path: string, init: RequestInit = {}): Promise<T> {
   })
 
   if (!res.ok) {
-    let detail = `HTTP ${res.status}`
     try {
       const body = await res.json()
-      detail = body.detail ?? body.error ?? JSON.stringify(body)
-    } catch {
-      /* ignore */
+      throw parseApiError(res.status, body)
+    } catch (e) {
+      if (e instanceof ApiError) throw e
     }
-    throw new ApiError(res.status, detail)
+    throw new ApiError(res.status, `HTTP ${res.status}`)
   }
 
   if (res.status === 204) return undefined as T
@@ -47,14 +67,13 @@ async function requestForm<T>(path: string, formData: FormData, method = 'POST')
   })
 
   if (!res.ok) {
-    let detail = `HTTP ${res.status}`
     try {
       const body = await res.json()
-      detail = body.detail ?? body.error ?? JSON.stringify(body)
-    } catch {
-      /* ignore */
+      throw parseApiError(res.status, body)
+    } catch (e) {
+      if (e instanceof ApiError) throw e
     }
-    throw new ApiError(res.status, detail)
+    throw new ApiError(res.status, `HTTP ${res.status}`)
   }
 
   if (res.status === 204) return undefined as T

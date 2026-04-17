@@ -34,6 +34,7 @@ export default function RegisterPage() {
     shipping_country: '',
   })
   const [error, setError] = useState('')
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
   const [loading, setLoading] = useState(false)
 
   function set(field: keyof RegisterPayload) {
@@ -44,8 +45,9 @@ export default function RegisterPage() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setError('')
+    setFieldErrors({})
     if (form.password1 !== form.password2) {
-      setError('Passwords do not match.')
+      setFieldErrors({ password2: 'Passwords do not match.' })
       return
     }
     setLoading(true)
@@ -56,6 +58,11 @@ export default function RegisterPage() {
     } catch (err) {
       if (err instanceof ApiError) {
         setError(err.detail)
+        const fe: Record<string, string> = {}
+        for (const [k, msgs] of Object.entries(err.fieldErrors)) {
+          fe[k] = msgs[0]
+        }
+        setFieldErrors(fe)
       } else {
         setError('Registration failed. Please try again.')
       }
@@ -87,6 +94,7 @@ export default function RegisterPage() {
             autoComplete="username"
             value={form.username}
             onChange={set('username')}
+            error={fieldErrors.username}
             data-testid="register-username"
             required
           />
@@ -96,6 +104,7 @@ export default function RegisterPage() {
             autoComplete="email"
             value={form.email}
             onChange={set('email')}
+            error={fieldErrors.email}
             data-testid="register-email"
             required
           />
@@ -105,6 +114,7 @@ export default function RegisterPage() {
             autoComplete="new-password"
             value={form.password1}
             onChange={set('password1')}
+            error={fieldErrors.password1}
             data-testid="register-password1"
             required
           />
@@ -114,6 +124,7 @@ export default function RegisterPage() {
             autoComplete="new-password"
             value={form.password2}
             onChange={set('password2')}
+            error={fieldErrors.password2}
             data-testid="register-password2"
             required
           />
