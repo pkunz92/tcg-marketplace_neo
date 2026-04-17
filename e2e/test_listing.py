@@ -75,7 +75,7 @@ def test_seller_creates_listing(seller_page: Page, seller_user, card_api_id):
     page.locator('[data-testid="listing-submit"]').click()
 
     # Toast "Listing created!" should appear (or modal closes)
-    page.wait_for_timeout(2_000)
+    expect(page.locator('[data-testid="listing-row"]').first).to_be_visible(timeout=8_000)
 
     # Verify listing row appears in the table
     expect(page.locator('[data-testid="listing-row"]').first).to_be_visible(timeout=8_000)

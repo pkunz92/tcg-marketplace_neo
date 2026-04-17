@@ -45,7 +45,7 @@ def test_buyer_buys_via_modal(buyer_page: Page, seller_listing):
     page.locator('[data-testid="buy-confirm-btn"]').click()
 
     # Wait for toast / modal close
-    page.wait_for_timeout(3_000)
+    page.wait_for_load_state('networkidle')
 
 
 # ---------------------------------------------------------------------------
@@ -72,7 +72,7 @@ def test_order_appears_in_my_orders(buyer_page: Page, seller_user, buyer_user, c
     expect(page.locator('[data-testid="buy-confirm-btn"]')).to_be_visible(timeout=5_000)
     page.locator('[data-testid="buy-confirm-btn"]').click()
 
-    page.wait_for_timeout(3_000)
+    page.wait_for_load_state('networkidle')
 
     # Go to My Orders
     page.goto(f"{BASE_URL}/dashboard/orders")

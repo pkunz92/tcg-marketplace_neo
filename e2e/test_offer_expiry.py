@@ -127,9 +127,9 @@ def test_offer_expires_after_deadline(
     page = buyer_page
     page.goto(f"{BASE_URL}/dashboard/offers")
     page.get_by_text("Sent").first.click()
-    page.wait_for_timeout(2_000)
+    expect(page.locator('[data-testid="offer-row"]').first).to_be_visible(timeout=8_000)
     page.reload()
-    page.wait_for_timeout(2_000)
+    page.wait_for_load_state('domcontentloaded')
 
     # The expired offer should now show 'Expired' badge
     all_offer_text = " ".join(
@@ -180,9 +180,9 @@ def test_seller_has_no_actions_on_expired_offer(
 
     page = seller_page
     page.goto(f"{BASE_URL}/dashboard/offers")
-    page.wait_for_timeout(2_000)
+    page.wait_for_load_state('domcontentloaded')
     page.reload()
-    page.wait_for_timeout(2_000)
+    page.wait_for_load_state('domcontentloaded')
 
     # No accept/counter/decline buttons should be visible for expired offers
     assert not page.locator('[data-testid="offer-accept-btn"]').is_visible()
