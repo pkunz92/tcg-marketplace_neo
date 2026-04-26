@@ -64,6 +64,9 @@ class Command(BaseCommand):
         hashes = []
         metadata = []
         errors = 0
+        img_headers = {
+            "User-Agent": "Mozilla/5.0 (compatible; TCG-Marketplace/1.0; +https://tcg-marketplace.local)",
+        }
 
         for i, card in enumerate(all_cards, start=1):
             card_id = card.get("id", "?")
@@ -72,7 +75,8 @@ class Command(BaseCommand):
                 continue
 
             try:
-                with urllib.request.urlopen(img_url, timeout=10) as resp:
+                img_req = urllib.request.Request(img_url, headers=img_headers)
+                with urllib.request.urlopen(img_req, timeout=10) as resp:
                     arr = np.frombuffer(resp.read(), dtype=np.uint8)
                 img = cv2.imdecode(arr, cv2.IMREAD_COLOR)
                 if img is None:
@@ -124,8 +128,16 @@ class Command(BaseCommand):
     # ── helpers ────────────────────────────────────────────────────────────────
 
     def _fetch_card_list(self, api_key: str, page_size: int, limit, verbosity: int = 1):
+        import urllib.error  # noqa: PLC0415
+
         base_url = "https://api.pokemontcg.io/v2/cards"
-        extra_headers = {"X-Api-Key": api_key} if api_key else {}
+        # Cloudflare blocks default Python-urllib UA — pretend to be a real client.
+        extra_headers = {
+            "User-Agent": "Mozilla/5.0 (compatible; TCG-Marketplace/1.0; +https://tcg-marketplace.local)",
+            "Accept": "application/json",
+        }
+        if api_key:
+            extra_headers["X-Api-Key"] = api_key
         all_cards = []
         page = 1
 
@@ -138,6 +150,15 @@ class Command(BaseCommand):
             try:
                 with urllib.request.urlopen(req, timeout=30) as resp:
                     payload = json.loads(resp.read().decode())
+            except urllib.error.HTTPError as exc:
+                body = exc.read().decode("utf-8", errors="replace")[:500]
+                self.stderr.write(
+                    self.style.ERROR(
+                        f"Failed to fetch page {page}: HTTP {exc.code} {exc.reason}\n"
+                        f"Response body: {body}"
+                    )
+                )
+                break
             except Exception as exc:  # noqa: BLE001
                 self.stderr.write(
                     self.style.ERROR(f"Failed to fetch page {page}: {exc}")
