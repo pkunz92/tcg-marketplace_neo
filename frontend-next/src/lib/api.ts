@@ -182,9 +182,11 @@ export interface Listing {
 }
 
 export interface CardSuggestion {
-  name: string
-  set: string
+  card_name: string | null
+  set_name: string | null
+  card_id: string | null
   confidence: number
+  method: string
 }
 
 export interface AnalyzePhotoResponse {

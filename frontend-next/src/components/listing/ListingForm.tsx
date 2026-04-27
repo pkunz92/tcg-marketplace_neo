@@ -113,11 +113,11 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
   function applyAnalysisSuggestions(result: AnalyzePhotoResponse) {
     setAnalysis(result)
     const top = result.card_suggestions[0]
-    if (top && top.confidence > 0.3) {
+    if (top && top.confidence > 0.3 && top.card_name) {
       // Pre-fill card name if no card selected yet
       if (!selectedCard) {
-        setCardQuery(top.name)
-        searchCards(top.name)
+        setCardQuery(top.card_name)
+        searchCards(top.card_name)
       }
     }
     // Pre-fill condition

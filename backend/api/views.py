@@ -605,16 +605,27 @@ class OfferViewSet(viewsets.ModelViewSet):
     @action(detail=True, methods=['post'])
     def accept(self, request, pk=None):
         """
-        Seller accepts the offer. Creates an Order at the offer price and marks the offer ACCEPTED.
-        Returns the created order.
+        Accepts the offer and creates an Order. Marks the offer ACCEPTED.
+
+        - Seller accepting a PENDING offer creates an order at offer_price_chf.
+        - Buyer accepting a COUNTERED offer creates an order at counter_price_chf.
         """
         offer = self.get_object()
-        if offer.listing.seller != request.user:
-            raise PermissionDenied("Only the listing seller can accept offers.")
-        if offer.status != OfferStatusChoices.PENDING:
-            raise ValidationError("Only pending offers can be accepted.")
 
-        profile = getattr(request.user, 'profile', None)
+        if offer.status == OfferStatusChoices.PENDING:
+            if offer.listing.seller != request.user:
+                raise PermissionDenied("Only the listing seller can accept a pending offer.")
+            order_price = offer.offer_price_chf
+        elif offer.status == OfferStatusChoices.COUNTERED:
+            if offer.buyer != request.user:
+                raise PermissionDenied("Only the buyer can accept a counter-offer.")
+            if offer.counter_price_chf is None:
+                raise ValidationError("Counter offer has no price.")
+            order_price = offer.counter_price_chf
+        else:
+            raise ValidationError("Only pending or countered offers can be accepted.")
+
+        profile = getattr(offer.buyer, 'profile', None)
 
         with transaction.atomic():
             listing = (
@@ -637,7 +648,7 @@ class OfferViewSet(viewsets.ModelViewSet):
                 listing=listing,
                 buyer=offer.buyer,
                 quantity=1,
-                price_chf=offer.offer_price_chf,
+                price_chf=order_price,
                 shipping_name=profile.shipping_name if profile else '',
                 shipping_address_line1=profile.shipping_address_line1 if profile else '',
                 shipping_address_line2=getattr(profile, 'shipping_address_line2', None) if profile else None,
@@ -660,12 +671,21 @@ class OfferViewSet(viewsets.ModelViewSet):
 
     @action(detail=True, methods=['post'])
     def decline(self, request, pk=None):
-        """Seller declines the offer."""
+        """
+        Decline an offer.
+
+        - Seller can decline a PENDING offer.
+        - Buyer can decline a COUNTERED offer.
+        """
         offer = self.get_object()
-        if offer.listing.seller != request.user:
-            raise PermissionDenied("Only the listing seller can decline offers.")
-        if offer.status != OfferStatusChoices.PENDING:
-            raise ValidationError("Only pending offers can be declined.")
+        if offer.status == OfferStatusChoices.PENDING:
+            if offer.listing.seller != request.user:
+                raise PermissionDenied("Only the listing seller can decline a pending offer.")
+        elif offer.status == OfferStatusChoices.COUNTERED:
+            if offer.buyer != request.user:
+                raise PermissionDenied("Only the buyer can decline a counter-offer.")
+        else:
+            raise ValidationError("Only pending or countered offers can be declined.")
 
         offer.status = OfferStatusChoices.DECLINED
         offer.save(update_fields=['status', 'updated_at'])
