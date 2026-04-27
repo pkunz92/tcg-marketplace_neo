@@ -5,7 +5,7 @@ from .models import (
     Card_Master, Card_Listing, Order, OrderStatusChoices,
     Set_Master, UserProfile, CardTranslation, SetTranslation, CardPrice, CardPriceHistory,
     Offer, OfferStatusChoices, Transaction, TransactionStatusChoices, CardGrade, ListingPhoto,
-    Review, PriceSoldSnapshot, Dispute, DisputeStatusChoices, UserFlag,
+    Review, PriceSoldSnapshot, Dispute, DisputeStatusChoices, UserFlag, WatchlistItem,
 )
 
 
@@ -467,3 +467,15 @@ class DisputeResolveSerializer(serializers.Serializer):
     resolution = serializers.CharField(required=True)
     refund = serializers.BooleanField(default=False)
     close = serializers.BooleanField(default=False, help_text="Close without resolving if True")
+
+
+class WatchlistItemSerializer(serializers.ModelSerializer):
+    listing = CardListingSerializer(read_only=True)
+    listing_id = serializers.PrimaryKeyRelatedField(
+        queryset=Card_Listing.objects.all(), write_only=True, source='listing'
+    )
+
+    class Meta:
+        model = WatchlistItem
+        fields = ['id', 'listing', 'listing_id', 'created_at']
+        read_only_fields = ['id', 'created_at']

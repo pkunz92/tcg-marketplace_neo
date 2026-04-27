@@ -628,3 +628,25 @@ class UserFlag(models.Model):
             models.Index(fields=['reviewed', 'created_at']),
         ]
         ordering = ['-created_at']
+
+
+class WatchlistItem(models.Model):
+    """A listing saved to a buyer's watchlist."""
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='watchlist',
+    )
+    listing = models.ForeignKey(
+        Card_Listing,
+        on_delete=models.CASCADE,
+        related_name='watchlisted_by',
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('user', 'listing')
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f"Watchlist item #{self.id} user={self.user_id} listing={self.listing_id}"

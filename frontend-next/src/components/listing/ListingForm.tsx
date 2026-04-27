@@ -91,10 +91,16 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
     }
     setSearchLoading(true)
     try {
-      const data = await api.get<{ results?: CardMasterOption[]; } | CardMasterOption[]>(
-        `/cards/?search=${encodeURIComponent(q)}&limit=8`,
-      )
-      const results = Array.isArray(data) ? data : (data.results ?? [])
+      const data = await api.get<{
+        results?: { api_id: string; card_name: string; card_rarity?: string | null; set?: { set_name: string } | null }[]
+      }>(`/cards/list/?search=${encodeURIComponent(q)}`)
+      const raw = data.results ?? []
+      const results: CardMasterOption[] = raw.slice(0, 8).map((c) => ({
+        id: c.api_id,
+        card_name: c.card_name,
+        set_name: c.set?.set_name ?? '',
+        card_rarity: c.card_rarity ?? '',
+      }))
       setCardOptions(results)
       setShowDropdown(true)
     } catch {

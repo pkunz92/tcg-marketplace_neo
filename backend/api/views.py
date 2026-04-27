@@ -12,6 +12,7 @@ from .models import (
     Card_Master, Card_Listing, Order, OrderStatusChoices, Set_Master, CardPrice, CardPriceHistory,
     Offer, OfferStatusChoices, Transaction, TransactionStatusChoices, CardGrade, ListingPhoto,
     Review, PriceSoldSnapshot, Dispute, DisputeStatusChoices, UserFlag, FlagReasonChoices,
+    WatchlistItem,
 )
 from .serializers import (
     CardMasterSerializer, CardMasterListSerializer, CardListingSerializer,
@@ -19,7 +20,7 @@ from .serializers import (
     CardPriceSerializer, CardPriceHistorySerializer,
     OfferSerializer, TransactionSerializer, CardGradeSerializer, ListingPhotoSerializer,
     ReviewSerializer, ReputationSerializer, PriceSoldSnapshotSerializer,
-    DisputeSerializer, DisputeResolveSerializer,
+    DisputeSerializer, DisputeResolveSerializer, WatchlistItemSerializer,
 )
 from .permissions import IsSellerOrReadOnly
 from .filters import CardListingFilter, CardMasterFilter
@@ -312,7 +313,8 @@ class CardListingViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         queryset = super().get_queryset()
 
-        if self.request.query_params.get('my_listings') == 'true' and self.request.user.is_authenticated:
+        params = self.request.query_params
+        if (params.get('my_listings') == 'true' or params.get('mine') == 'true') and self.request.user.is_authenticated:
             queryset = queryset.filter(seller=self.request.user)
 
         if self.request.query_params.get('include_unavailable') != 'true':
@@ -1850,3 +1852,33 @@ class PushTokenView(generics.GenericAPIView):
         from .models import UserProfile as _UP
         _UP.objects.update_or_create(user=request.user, defaults={'push_token': token})
         return Response({'detail': 'Push token registered.'})
+
+
+class WatchlistViewSet(viewsets.ModelViewSet):
+    """
+    GET  /api/watchlist/        — list authenticated user's watchlist
+    POST /api/watchlist/        — add listing to watchlist { "listing_id": <pk> }
+    DELETE /api/watchlist/<id>/ — remove item from watchlist
+    """
+    serializer_class = WatchlistItemSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    http_method_names = ['get', 'post', 'delete', 'head', 'options']
+
+    def get_queryset(self):
+        return WatchlistItem.objects.filter(user=self.request.user).select_related(
+            'listing', 'listing__card_master', 'listing__card_master__set',
+            'listing__seller',
+        )
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
+    def create(self, request, *args, **kwargs):
+        data = {'listing_id': request.data.get('listing')}
+        serializer = self.get_serializer(data=data)
+        serializer.is_valid(raise_exception=True)
+        try:
+            self.perform_create(serializer)
+        except Exception:
+            return Response({'detail': 'Already in watchlist.'}, status=status.HTTP_409_CONFLICT)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)

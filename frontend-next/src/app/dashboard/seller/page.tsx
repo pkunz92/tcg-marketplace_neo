@@ -31,7 +31,7 @@ type Tab = 'inventory' | 'sales' | 'payouts'
 function InventoryTab() {
   const { toast } = useToast()
   const { data, isLoading, mutate } = useSWR('my-listings', () =>
-    api.get<PaginatedResponse<Listing> | Listing[]>('/listings/?mine=true'),
+    api.get<PaginatedResponse<Listing> | Listing[]>('/listings/?mine=true&include_unavailable=true'),
   )
   const listings: Listing[] = Array.isArray(data) ? data : (data?.results ?? [])
 
