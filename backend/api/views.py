@@ -300,7 +300,7 @@ class CardListingViewSet(viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_class = CardListingFilter
     search_fields = ['card_master__card_name', 'card_master__secondary_id', 'seller__username']
-    ordering_fields = ['price_chf', 'id', 'card_master__card_name']
+    ordering_fields = ['price_chf', 'id', 'card_master__card_name', 'created_at']
     ordering = ['-id']
 
     def get_permissions(self):

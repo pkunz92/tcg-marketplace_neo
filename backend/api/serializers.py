@@ -296,12 +296,18 @@ class OrderSerializer(serializers.ModelSerializer):
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(source='user.id', read_only=True)
+    username = serializers.CharField(source='user.username', read_only=True)
+    email = serializers.EmailField(source='user.email', read_only=True)
+
     class Meta:
         model = UserProfile
         fields = [
+            'id', 'username', 'email',
             'shipping_name', 'shipping_address_line1', 'shipping_address_line2',
             'shipping_city', 'shipping_postal_code', 'shipping_country', 'push_token',
         ]
+        read_only_fields = ['id', 'username', 'email']
 
 
 # ---------------------------------------------------------------------------
