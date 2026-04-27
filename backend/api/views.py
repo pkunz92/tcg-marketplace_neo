@@ -406,9 +406,9 @@ class OrderViewSet(viewsets.ModelViewSet):
         send_order_confirmation(order)
 
     def perform_update(self, serializer):
-        allowed_fields = {'status'}
+        allowed_fields = {'status', 'tracking_number'}
         if set(serializer.validated_data.keys()) - allowed_fields:
-            raise ValidationError('Only status updates are allowed.')
+            raise ValidationError('Only status and tracking_number updates are allowed.')
 
         with transaction.atomic():
             order = (
@@ -424,26 +424,35 @@ class OrderViewSet(viewsets.ModelViewSet):
             )
 
             new_status = serializer.validated_data.get('status', order.status)
-            if new_status == order.status:
-                serializer.instance = order
-                return
+            new_tracking = serializer.validated_data.get('tracking_number', order.tracking_number)
+            update_fields = []
 
-            if order.status != 'PENDING':
-                raise ValidationError('Only pending orders can be updated.')
-
-            if order.listing.seller == self.request.user:
-                if new_status not in ['COMPLETED', 'CANCELLED']:
-                    raise ValidationError('Invalid status transition.')
-            else:
+            if order.listing.seller != self.request.user:
                 raise PermissionDenied('Only the seller can update this order.')
 
-            if new_status == 'CANCELLED':
-                listing.quantity += order.quantity
-                listing.is_available = listing.quantity > 0
-                listing.save(update_fields=['quantity', 'is_available'])
+            if new_tracking != order.tracking_number:
+                order.tracking_number = new_tracking
+                update_fields.append('tracking_number')
 
-            order.status = new_status
-            order.save(update_fields=['status'])
+            if new_status != order.status:
+                valid_transitions = {
+                    'PENDING': {'COMPLETED', 'CANCELLED'},
+                    'COMPLETED': {'SHIPPED', 'CANCELLED'},
+                    'SHIPPED': {'DELIVERED'},
+                }
+                if new_status not in valid_transitions.get(order.status, set()):
+                    raise ValidationError(f'Invalid status transition: {order.status} -> {new_status}.')
+
+                if new_status == 'CANCELLED':
+                    listing.quantity += order.quantity
+                    listing.is_available = listing.quantity > 0
+                    listing.save(update_fields=['quantity', 'is_available'])
+
+                order.status = new_status
+                update_fields.append('status')
+
+            if update_fields:
+                order.save(update_fields=update_fields)
             serializer.instance = order
 
 

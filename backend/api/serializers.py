@@ -183,14 +183,10 @@ class OrderSerializer(serializers.ModelSerializer):
     seller_username = serializers.CharField(source='listing.seller.username', read_only=True)
     buyer_username = serializers.CharField(source='buyer.username', read_only=True)
     total_chf = serializers.SerializerMethodField()
-    tracking_number = serializers.SerializerMethodField()
     review = serializers.SerializerMethodField()
 
     def get_total_chf(self, obj):
         return float(obj.price_chf) * obj.quantity
-
-    def get_tracking_number(self, obj):
-        return None
 
     def get_review(self, obj):
         try:
@@ -252,7 +248,13 @@ class OrderSerializer(serializers.ModelSerializer):
     def validate_status(self, value):
         request = self.context.get('request')
         if request and request.method in ['PUT', 'PATCH']:
-            if value not in [OrderStatusChoices.COMPLETED, OrderStatusChoices.CANCELLED]:
+            allowed = [
+                OrderStatusChoices.COMPLETED,
+                OrderStatusChoices.SHIPPED,
+                OrderStatusChoices.CANCELLED,
+                OrderStatusChoices.DELIVERED,
+            ]
+            if value not in allowed:
                 raise serializers.ValidationError('Invalid status transition.')
         return value
 

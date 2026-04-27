@@ -295,6 +295,7 @@ class ListingPhoto(models.Model):
 class OrderStatusChoices(models.TextChoices):
     PENDING = 'PENDING', 'Pending'
     COMPLETED = 'COMPLETED', 'Completed'
+    SHIPPED = 'SHIPPED', 'Shipped'
     CANCELLED = 'CANCELLED', 'Cancelled'
     DELIVERED = 'DELIVERED', 'Delivered'
 
@@ -318,6 +319,7 @@ class Order(models.Model):
     shipping_city = models.CharField(max_length=100, default='')
     shipping_postal_code = models.CharField(max_length=20, default='')
     shipping_country = models.CharField(max_length=100, default='')
+    tracking_number = models.CharField(max_length=100, blank=True, default='')
     status = models.CharField(
         max_length=10,
         choices=OrderStatusChoices.choices,
