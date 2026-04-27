@@ -178,17 +178,48 @@ class OrderSerializer(serializers.ModelSerializer):
     listing_id = serializers.IntegerField(source='listing.id', read_only=True)
     card_name = serializers.CharField(source='listing.card_master.card_name', read_only=True)
     card_image_url = serializers.URLField(source='listing.card_master.image_url', read_only=True)
+    set_name = serializers.CharField(source='listing.card_master.set.set_name', read_only=True, default='')
+    condition = serializers.CharField(source='listing.condition', read_only=True)
     seller_username = serializers.CharField(source='listing.seller.username', read_only=True)
     buyer_username = serializers.CharField(source='buyer.username', read_only=True)
+    total_chf = serializers.SerializerMethodField()
+    tracking_number = serializers.SerializerMethodField()
+    review = serializers.SerializerMethodField()
+
+    def get_total_chf(self, obj):
+        return float(obj.price_chf) * obj.quantity
+
+    def get_tracking_number(self, obj):
+        return None
+
+    def get_review(self, obj):
+        try:
+            r = obj.review
+        except Exception:
+            return None
+        if r is None:
+            return None
+        return {
+            'id': r.id,
+            'order': r.order_id,
+            'reviewer': r.reviewer_id,
+            'reviewer_username': r.reviewer.username,
+            'seller': r.seller_id,
+            'stars': r.stars,
+            'comment': r.comment,
+            'card_name': r.order.listing.card_master.card_name,
+            'created_at': r.created_at.isoformat(),
+        }
 
     class Meta:
         model = Order
         fields = [
             'id', 'listing', 'listing_id', 'card_name', 'card_image_url',
-            'seller_username', 'buyer_username', 'buyer', 'quantity', 'price_chf',
+            'set_name', 'condition', 'seller_username', 'buyer_username', 'buyer',
+            'quantity', 'price_chf', 'total_chf', 'tracking_number',
             'shipping_name', 'shipping_address_line1', 'shipping_address_line2',
             'shipping_city', 'shipping_postal_code', 'shipping_country',
-            'status', 'created_at',
+            'status', 'review', 'created_at',
         ]
         read_only_fields = ['buyer', 'price_chf', 'created_at']
 

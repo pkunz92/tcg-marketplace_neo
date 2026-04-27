@@ -211,8 +211,9 @@ export interface Order {
   set_name: string
   condition: string
   quantity: number
-  total_price: number
+  price_chf: number
   total_chf: number
+  total_price?: number
   status: 'PENDING' | 'COMPLETED' | 'CANCELLED' | 'SHIPPED' | 'DELIVERED'
   review?: Review | null
   tracking_number: string | null

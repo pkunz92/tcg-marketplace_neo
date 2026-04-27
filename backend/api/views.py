@@ -389,10 +389,12 @@ class OrderViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         queryset = Order.objects.select_related(
-            'listing', 'listing__card_master', 'listing__seller'
-        )
+            'listing', 'listing__card_master', 'listing__card_master__set',
+            'listing__seller', 'buyer',
+        ).prefetch_related('review', 'review__reviewer')
 
-        if self.request.query_params.get('seller') == 'true':
+        params = self.request.query_params
+        if params.get('seller') == 'true' or params.get('role') == 'seller':
             return queryset.filter(listing__seller=self.request.user)
 
         return queryset.filter(buyer=self.request.user)
@@ -639,6 +641,10 @@ class OfferViewSet(viewsets.ModelViewSet):
 
         send_offer_response(offer)
         send_order_confirmation(order)
+        order = Order.objects.select_related(
+            'listing', 'listing__card_master', 'listing__card_master__set',
+            'listing__seller', 'buyer',
+        ).get(pk=order.pk)
         return Response(OrderSerializer(order, context={'request': request}).data, status=status.HTTP_201_CREATED)
 
     @action(detail=True, methods=['post'])
@@ -1789,6 +1795,10 @@ class QuickBuyView(generics.GenericAPIView):
             listing.save(update_fields=['is_available'])
 
         from .serializers import OrderSerializer
+        order = Order.objects.select_related(
+            'listing', 'listing__card_master', 'listing__card_master__set',
+            'listing__seller', 'buyer',
+        ).get(pk=order.pk)
         return Response(OrderSerializer(order).data, status=status.HTTP_201_CREATED)
 
 
