@@ -4,23 +4,22 @@ Management command: build_card_index
 Downloads card images from the PokémonTCG API, computes perceptual hashes,
 and saves the index to backend/api/ml/models/card_hash_index.npz.
 
+Uses the `requests` library which respects system/corporate proxy settings
+(including Windows proxy settings) automatically.
+
 Usage:
     python manage.py build_card_index
     python manage.py build_card_index --limit 500   # quick test
     POKEMON_TCG_API_KEY=your_key python manage.py build_card_index
 """
 
-import json
 import os
-import sys
-import urllib.request
-from pathlib import Path
 
 import cv2
 import numpy as np
 from django.core.management.base import BaseCommand
 
-from api.ml.card_recognizer import HASH_INDEX_PATH, HASH_SIZE, _compute_phash
+from api.ml.card_recognizer import HASH_INDEX_PATH, _compute_phash
 
 
 class Command(BaseCommand):
@@ -43,6 +42,12 @@ class Command(BaseCommand):
         )
 
     def handle(self, *args, **options):
+        try:
+            import requests  # noqa: PLC0415
+        except ImportError:
+            self.stderr.write(self.style.ERROR("pip install requests"))
+            return
+
         limit = options["limit"]
         page_size = min(options["page_size"], 250)
         api_key = os.environ.get("POKEMON_TCG_API_KEY", "")
@@ -51,22 +56,31 @@ class Command(BaseCommand):
             self.stdout.write(
                 self.style.WARNING(
                     "POKEMON_TCG_API_KEY not set — unauthenticated requests are "
-                    "rate-limited to ~1 000 req/day.  Set the env var for full access."
+                    "rate-limited to ~1 000 req/day."
                 )
             )
 
+        session = requests.Session()
+        session.headers.update({
+            "User-Agent": "Mozilla/5.0 (compatible; TCG-Marketplace/1.0)",
+            "Accept": "application/json",
+        })
+        if api_key:
+            session.headers["X-Api-Key"] = api_key
+
         # ── Fetch card list ────────────────────────────────────────────────────
         self.stdout.write("Fetching card list from pokemontcg.io …")
-        all_cards = self._fetch_card_list(api_key, page_size, limit, options["verbosity"])
+        all_cards = self._fetch_card_list(session, page_size, limit)
         self.stdout.write(f"  {len(all_cards)} cards to index.")
+
+        if not all_cards:
+            self.stderr.write(self.style.ERROR("No cards fetched — aborting."))
+            return
 
         # ── Download images and hash ───────────────────────────────────────────
         hashes = []
         metadata = []
         errors = 0
-        img_headers = {
-            "User-Agent": "Mozilla/5.0 (compatible; TCG-Marketplace/1.0; +https://tcg-marketplace.local)",
-        }
 
         for i, card in enumerate(all_cards, start=1):
             card_id = card.get("id", "?")
@@ -75,21 +89,19 @@ class Command(BaseCommand):
                 continue
 
             try:
-                img_req = urllib.request.Request(img_url, headers=img_headers)
-                with urllib.request.urlopen(img_req, timeout=10) as resp:
-                    arr = np.frombuffer(resp.read(), dtype=np.uint8)
+                img_resp = session.get(img_url, timeout=10)
+                img_resp.raise_for_status()
+                arr = np.frombuffer(img_resp.content, dtype=np.uint8)
                 img = cv2.imdecode(arr, cv2.IMREAD_COLOR)
                 if img is None:
                     raise ValueError("imdecode returned None")
 
                 hashes.append(_compute_phash(img))
-                metadata.append(
-                    {
-                        "id": card_id,
-                        "name": card.get("name"),
-                        "set_name": card.get("set", {}).get("name"),
-                    }
-                )
+                metadata.append({
+                    "id": card_id,
+                    "name": card.get("name"),
+                    "set_name": card.get("set", {}).get("name"),
+                })
             except Exception as exc:  # noqa: BLE001
                 errors += 1
                 if options["verbosity"] >= 2:
@@ -108,9 +120,8 @@ class Command(BaseCommand):
 
         if not hashes:
             self.stderr.write(self.style.ERROR("No hashes computed — aborting."))
-            sys.exit(1)
+            return
 
-        # ── Save index ─────────────────────────────────────────────────────────
         HASH_INDEX_PATH.parent.mkdir(parents=True, exist_ok=True)
         np.savez_compressed(
             HASH_INDEX_PATH,
@@ -125,44 +136,22 @@ class Command(BaseCommand):
         if errors:
             self.stdout.write(self.style.WARNING(f"  {errors} cards skipped due to errors."))
 
-    # ── helpers ────────────────────────────────────────────────────────────────
-
-    def _fetch_card_list(self, api_key: str, page_size: int, limit, verbosity: int = 1):
-        import urllib.error  # noqa: PLC0415
-
+    def _fetch_card_list(self, session, page_size: int, limit):
         base_url = "https://api.pokemontcg.io/v2/cards"
-        # Cloudflare blocks default Python-urllib UA — pretend to be a real client.
-        extra_headers = {
-            "User-Agent": "Mozilla/5.0 (compatible; TCG-Marketplace/1.0; +https://tcg-marketplace.local)",
-            "Accept": "application/json",
-        }
-        if api_key:
-            extra_headers["X-Api-Key"] = api_key
         all_cards = []
         page = 1
 
         while True:
-            url = (
-                f"{base_url}?pageSize={page_size}&page={page}"
-                "&select=id,name,set,images"
-            )
-            req = urllib.request.Request(url, headers=extra_headers)
             try:
-                with urllib.request.urlopen(req, timeout=30) as resp:
-                    payload = json.loads(resp.read().decode())
-            except urllib.error.HTTPError as exc:
-                body = exc.read().decode("utf-8", errors="replace")[:500]
-                self.stderr.write(
-                    self.style.ERROR(
-                        f"Failed to fetch page {page}: HTTP {exc.code} {exc.reason}\n"
-                        f"Response body: {body}"
-                    )
+                resp = session.get(
+                    base_url,
+                    params={"pageSize": page_size, "page": page, "select": "id,name,set,images"},
+                    timeout=30,
                 )
-                break
+                resp.raise_for_status()
+                payload = resp.json()
             except Exception as exc:  # noqa: BLE001
-                self.stderr.write(
-                    self.style.ERROR(f"Failed to fetch page {page}: {exc}")
-                )
+                self.stderr.write(self.style.ERROR(f"Failed to fetch page {page}: {exc}"))
                 break
 
             batch = payload.get("data", [])
@@ -179,13 +168,12 @@ class Command(BaseCommand):
 
             if len(all_cards) >= total:
                 break
-
             if limit and len(all_cards) >= limit:
                 break
 
             page += 1
 
-        self.stdout.write("")  # newline
+        self.stdout.write("")
         if limit:
             all_cards = all_cards[:limit]
         return all_cards

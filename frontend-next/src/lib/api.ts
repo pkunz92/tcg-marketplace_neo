@@ -15,7 +15,7 @@ export class ApiError extends Error {
 }
 
 function parseApiError(status: number, body: Record<string, unknown>): ApiError {
-  // DRF field errors: { "field": ["msg", ...], ... }
+  // DRF field errors: { "field": ["msg", ...], non_field_errors: ["msg"], detail: "msg" }
   const fieldErrors: Record<string, string[]> = {}
   let detail = `HTTP ${status}`
   for (const [key, val] of Object.entries(body)) {
@@ -27,9 +27,8 @@ function parseApiError(status: number, body: Record<string, unknown>): ApiError 
       fieldErrors[key] = val.map(String)
     }
   }
-  if (!detail || detail === `HTTP ${status}`) {
-    const nonField = (body.detail ?? body.error) as string | undefined
-    detail = nonField ?? JSON.stringify(body)
+  if (detail === `HTTP ${status}`) {
+    detail = (body.detail ?? body.error) as string ?? JSON.stringify(body)
   }
   return new ApiError(status, detail, fieldErrors)
 }

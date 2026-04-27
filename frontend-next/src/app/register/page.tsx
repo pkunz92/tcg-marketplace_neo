@@ -44,8 +44,7 @@ export default function RegisterPage() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    setError('')
-    setFieldErrors({})
+    setError(''); setFieldErrors({})
     if (form.password1 !== form.password2) {
       setFieldErrors({ password2: 'Passwords do not match.' })
       return
@@ -94,9 +93,9 @@ export default function RegisterPage() {
             autoComplete="username"
             value={form.username}
             onChange={set('username')}
-            error={fieldErrors.username}
             data-testid="register-username"
             required
+            error={fieldErrors.username}
           />
           <Input
             label="Email"
@@ -104,9 +103,9 @@ export default function RegisterPage() {
             autoComplete="email"
             value={form.email}
             onChange={set('email')}
-            error={fieldErrors.email}
             data-testid="register-email"
             required
+            error={fieldErrors.email}
           />
           <Input
             label="Password"
@@ -114,9 +113,9 @@ export default function RegisterPage() {
             autoComplete="new-password"
             value={form.password1}
             onChange={set('password1')}
-            error={fieldErrors.password1}
             data-testid="register-password1"
             required
+            error={fieldErrors.password1}
           />
           <Input
             label="Confirm password"
@@ -124,9 +123,9 @@ export default function RegisterPage() {
             autoComplete="new-password"
             value={form.password2}
             onChange={set('password2')}
-            error={fieldErrors.password2}
             data-testid="register-password2"
             required
+            error={fieldErrors.password2}
           />
 
           <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider pt-2">

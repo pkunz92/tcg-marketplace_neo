@@ -127,6 +127,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    setFieldErrors({})
     if (!selectedCard) {
       toast('Please select a card', 'error')
       return
@@ -292,6 +293,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
             placeholder="0.00"
             error={fieldErrors.price_chf}
             data-testid="listing-price"
+            error={fieldErrors.price_chf}
           />
           <Input
             label="Quantity"
@@ -303,6 +305,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
             placeholder="1"
             error={fieldErrors.quantity}
             data-testid="listing-quantity"
+            error={fieldErrors.quantity}
           />
         </div>
 
