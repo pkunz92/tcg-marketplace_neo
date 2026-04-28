@@ -233,7 +233,7 @@ function PayoutsTab() {
             >
               <div>
                 <p className="text-sm font-medium text-slate-200">
-                  Payout #{p.id.slice(0, 8)}
+                  Payout #{String(p.id).slice(0, 8)}
                 </p>
                 <p className="text-xs text-slate-500 mt-0.5">{formatDate(p.created_at)}</p>
               </div>
