@@ -427,16 +427,26 @@ class OrderViewSet(viewsets.ModelViewSet):
             new_tracking = serializer.validated_data.get('tracking_number', order.tracking_number)
             update_fields = []
 
-            if order.listing.seller != self.request.user:
-                raise PermissionDenied('Only the seller can update this order.')
+            is_seller = order.listing.seller == self.request.user
+            is_buyer = order.buyer == self.request.user
 
-            if new_tracking != order.tracking_number:
-                order.tracking_number = new_tracking
-                update_fields.append('tracking_number')
+            if not is_seller and not is_buyer:
+                raise PermissionDenied('You do not have permission to update this order.')
+
+            if is_buyer and not is_seller:
+                # Buyers may only cancel a PENDING order
+                if new_status != OrderStatusChoices.CANCELLED or order.status != OrderStatusChoices.PENDING:
+                    raise PermissionDenied('Buyers can only cancel pending orders.')
+                if 'tracking_number' in serializer.validated_data:
+                    raise PermissionDenied('Buyers cannot update the tracking number.')
+            else:
+                if new_tracking != order.tracking_number:
+                    order.tracking_number = new_tracking
+                    update_fields.append('tracking_number')
 
             if new_status != order.status:
                 valid_transitions = {
-                    'PENDING': {'COMPLETED', 'CANCELLED'},
+                    'PENDING': {'COMPLETED', 'SHIPPED', 'CANCELLED'},
                     'COMPLETED': {'SHIPPED', 'CANCELLED'},
                     'SHIPPED': {'DELIVERED'},
                 }
@@ -465,9 +475,9 @@ class OrderViewSet(viewsets.ModelViewSet):
         order = self.get_object()
         if order.buyer != request.user:
             raise PermissionDenied("Only the buyer can confirm delivery.")
-        if order.status != OrderStatusChoices.COMPLETED:
+        if order.status not in (OrderStatusChoices.COMPLETED, OrderStatusChoices.SHIPPED):
             return Response(
-                {'detail': 'Only completed (paid) orders can be confirmed as delivered.'},
+                {'detail': 'Only shipped or paid orders can be confirmed as delivered.'},
                 status=status.HTTP_400_BAD_REQUEST,
             )
         order.status = OrderStatusChoices.DELIVERED
@@ -1399,6 +1409,7 @@ class UserReviewsView(generics.ListAPIView):
     """
     serializer_class = ReviewSerializer
     permission_classes = [permissions.AllowAny]
+    pagination_class = None
 
     def get_queryset(self):
         from django.contrib.auth import get_user_model
@@ -1691,9 +1702,9 @@ class OpenDisputeView(generics.CreateAPIView):
         if order.buyer != request.user:
             return Response({'detail': 'Only the buyer may open a dispute.'}, status=status.HTTP_403_FORBIDDEN)
 
-        if order.status not in (OrderStatusChoices.COMPLETED, OrderStatusChoices.DELIVERED):
+        if order.status not in (OrderStatusChoices.COMPLETED, OrderStatusChoices.SHIPPED, OrderStatusChoices.DELIVERED):
             return Response(
-                {'detail': 'Disputes can only be opened on paid or delivered orders.'},
+                {'detail': 'Disputes can only be opened on paid, shipped, or delivered orders.'},
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
@@ -1713,6 +1724,7 @@ class AdminDisputeListView(generics.ListAPIView):
     """
     serializer_class = DisputeSerializer
     permission_classes = [permissions.IsAdminUser]
+    pagination_class = None
 
     def get_queryset(self):
         qs = Dispute.objects.select_related('order', 'opened_by').all()
@@ -1891,6 +1903,7 @@ class WatchlistViewSet(viewsets.ModelViewSet):
     """
     serializer_class = WatchlistItemSerializer
     permission_classes = [permissions.IsAuthenticated]
+    pagination_class = None
     http_method_names = ['get', 'post', 'delete', 'head', 'options']
 
     def get_queryset(self):
