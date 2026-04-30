@@ -19,6 +19,7 @@ const nextConfig: NextConfig = {
       { protocol: 'https', hostname: 'images.pokemontcg.io' },
       { protocol: 'https', hostname: 'assets.tcgdex.net' },
       { protocol: 'https', hostname: '**.onrender.com' },
+      { protocol: 'https', hostname: '**.vercel.app' },
       { protocol: 'http', hostname: 'localhost' },
       { protocol: 'http', hostname: '127.0.0.1' },
     ],

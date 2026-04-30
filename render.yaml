@@ -1,18 +1,15 @@
 # ─────────────────────────────────────────────────────────────────────────────
-# Render Blueprint — TCG Marketplace
+# Render Blueprint — TCG Marketplace (backend only)
 #
-# ONE-CLICK DEPLOY:
-#   https://render.com/deploy?repo=https://github.com/pkunz92/tcg-marketplace_neo
+# Frontend is hosted on Vercel — see frontend-next/ for setup instructions.
 #
-# Or connect the repo in the Render dashboard → "New Blueprint".
+# DEPLOY:
+#   Render dashboard → New → Blueprint → pick this repo.
 #
-# SERVICE NAMES ARE GLOBALLY UNIQUE ON RENDER.
-# If "tcg-marketplace-api" or "tcg-marketplace-web" are already taken, Render
-# will append a random suffix. After deployment, visit both service pages in
-# the Render dashboard to get the actual URLs, then update:
-#   - CORS_ALLOWED_ORIGINS   (on tcg-marketplace-api)
-#   - CSRF_TRUSTED_ORIGINS   (on tcg-marketplace-api)
-#   - BACKEND_URL            (on tcg-marketplace-web)
+# After the first deploy, copy the backend URL from the Render dashboard
+# (looks like https://tcg-marketplace-api.onrender.com) and set it as:
+#   - CORS_ALLOWED_ORIGINS  → your Vercel frontend URL
+#   - CSRF_TRUSTED_ORIGINS  → your Vercel frontend URL
 # ─────────────────────────────────────────────────────────────────────────────
 
 databases:
@@ -35,38 +32,19 @@ services:
       - key: DEBUG
         value: "False"
       - key: ALLOWED_HOSTS
-        # Leading dot matches *.onrender.com (any subdomain)
+        # Leading dot matches *.onrender.com; update to add your Vercel domain too
         value: ".onrender.com,localhost"
       - key: DATABASE_URL
         fromDatabase:
           name: tcg-db
           property: connectionString
+      # Update these to your actual Vercel frontend URL after first deploy
       - key: CORS_ALLOWED_ORIGINS
-        value: "https://tcg-marketplace-web.onrender.com"
+        value: "https://tcg-marketplace.vercel.app"
       - key: CSRF_TRUSTED_ORIGINS
-        value: "https://tcg-marketplace-web.onrender.com"
+        value: "https://tcg-marketplace.vercel.app"
       - key: ACCOUNT_EMAIL_VERIFICATION
         value: "none"
-      # Set this in the Render dashboard after deployment (optional but recommended
-      # for card import / recognition features)
+      # Optional — set in Render dashboard for card import / recognition
       - key: POKEMON_TCG_API_KEY
         sync: false
-
-  # ── Next.js Frontend ─────────────────────────────────────────────────────────
-  - type: web
-    name: tcg-marketplace-web
-    runtime: node
-    rootDir: frontend-next
-    buildCommand: npm ci && npm run build
-    startCommand: npm run start
-    plan: free
-    envVars:
-      # Render resolves this to the actual hostname of the backend service.
-      # next.config.ts adds "https://" when the value has no protocol prefix.
-      - key: BACKEND_URL
-        fromService:
-          type: web
-          name: tcg-marketplace-api
-          property: host
-      - key: NODE_ENV
-        value: production
