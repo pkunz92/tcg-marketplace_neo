@@ -156,28 +156,40 @@ def build_hash_index(limit: Optional[int] = None) -> None:
     Download card images from the PokémonTCG API, compute perceptual hashes,
     and save the index to HASH_INDEX_PATH.
 
-    Calls the REST API directly (avoids pokemontcgsdk/dacite Python 3.12+ bugs).
+    Uses the `requests` library which respects system/corporate proxy settings
+    (including Windows proxy settings) automatically.
 
     Run once:
         python -m api.ml.card_recognizer --build-index [--limit 500]
     """
-    import json
-    import urllib.request  # noqa: PLC0415
+    try:
+        import requests  # noqa: PLC0415
+    except ImportError:
+        raise RuntimeError("pip install requests")
 
     api_key = os.environ.get("POKEMON_TCG_API_KEY", "")
     base_url = "https://api.pokemontcg.io/v2/cards"
     page_size = 250
-    headers = {"X-Api-Key": api_key} if api_key else {}
+    session = requests.Session()
+    session.headers.update({
+        "User-Agent": "Mozilla/5.0 (compatible; TCG-Marketplace/1.0)",
+        "Accept": "application/json",
+    })
+    if api_key:
+        session.headers["X-Api-Key"] = api_key
 
     # ── Fetch all card stubs (id, name, set.name, images.small) ──────────────
     all_cards: List[dict] = []
     page = 1
     while True:
-        url = f"{base_url}?pageSize={page_size}&page={page}&select=id,name,set,images"
-        req = urllib.request.Request(url, headers=headers)
         try:
-            with urllib.request.urlopen(req, timeout=30) as resp:
-                payload = json.loads(resp.read().decode())
+            resp = session.get(
+                base_url,
+                params={"pageSize": page_size, "page": page, "select": "id,name,set,images"},
+                timeout=30,
+            )
+            resp.raise_for_status()
+            payload = resp.json()
         except Exception as exc:  # noqa: BLE001
             logger.error("Failed to fetch card list page %d: %s", page, exc)
             break
@@ -208,8 +220,9 @@ def build_hash_index(limit: Optional[int] = None) -> None:
             img_url = card.get("images", {}).get("small")
             if not img_url:
                 continue
-            with urllib.request.urlopen(img_url, timeout=10) as resp:
-                arr = np.frombuffer(resp.read(), dtype=np.uint8)
+            img_resp = session.get(img_url, timeout=10)
+            img_resp.raise_for_status()
+            arr = np.frombuffer(img_resp.content, dtype=np.uint8)
             img = cv2.imdecode(arr, cv2.IMREAD_COLOR)
             if img is None:
                 continue

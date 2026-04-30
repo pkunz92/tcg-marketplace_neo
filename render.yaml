@@ -1,0 +1,72 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Render Blueprint — TCG Marketplace
+#
+# ONE-CLICK DEPLOY:
+#   https://render.com/deploy?repo=https://github.com/pkunz92/tcg-marketplace_neo
+#
+# Or connect the repo in the Render dashboard → "New Blueprint".
+#
+# SERVICE NAMES ARE GLOBALLY UNIQUE ON RENDER.
+# If "tcg-marketplace-api" or "tcg-marketplace-web" are already taken, Render
+# will append a random suffix. After deployment, visit both service pages in
+# the Render dashboard to get the actual URLs, then update:
+#   - CORS_ALLOWED_ORIGINS   (on tcg-marketplace-api)
+#   - CSRF_TRUSTED_ORIGINS   (on tcg-marketplace-api)
+#   - BACKEND_URL            (on tcg-marketplace-web)
+# ─────────────────────────────────────────────────────────────────────────────
+
+databases:
+  - name: tcg-db
+    plan: free
+
+services:
+  # ── Django REST API ──────────────────────────────────────────────────────────
+  - type: web
+    name: tcg-marketplace-api
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput
+    preDeployCommand: python manage.py migrate --noinput
+    startCommand: gunicorn backend.wsgi:application --bind 0.0.0.0:$PORT --workers 2 --timeout 120
+    plan: free
+    envVars:
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "False"
+      - key: ALLOWED_HOSTS
+        # Leading dot matches *.onrender.com (any subdomain)
+        value: ".onrender.com,localhost"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: tcg-db
+          property: connectionString
+      - key: CORS_ALLOWED_ORIGINS
+        value: "https://tcg-marketplace-web.onrender.com"
+      - key: CSRF_TRUSTED_ORIGINS
+        value: "https://tcg-marketplace-web.onrender.com"
+      - key: ACCOUNT_EMAIL_VERIFICATION
+        value: "none"
+      # Set this in the Render dashboard after deployment (optional but recommended
+      # for card import / recognition features)
+      - key: POKEMON_TCG_API_KEY
+        sync: false
+
+  # ── Next.js Frontend ─────────────────────────────────────────────────────────
+  - type: web
+    name: tcg-marketplace-web
+    runtime: node
+    rootDir: frontend-next
+    buildCommand: npm ci && npm run build
+    startCommand: npm run start
+    plan: free
+    envVars:
+      # Render resolves this to the actual hostname of the backend service.
+      # next.config.ts adds "https://" when the value has no protocol prefix.
+      - key: BACKEND_URL
+        fromService:
+          type: web
+          name: tcg-marketplace-api
+          property: host
+      - key: NODE_ENV
+        value: production

@@ -295,6 +295,7 @@ class ListingPhoto(models.Model):
 class OrderStatusChoices(models.TextChoices):
     PENDING = 'PENDING', 'Pending'
     COMPLETED = 'COMPLETED', 'Completed'
+    SHIPPED = 'SHIPPED', 'Shipped'
     CANCELLED = 'CANCELLED', 'Cancelled'
     DELIVERED = 'DELIVERED', 'Delivered'
 
@@ -318,6 +319,7 @@ class Order(models.Model):
     shipping_city = models.CharField(max_length=100, default='')
     shipping_postal_code = models.CharField(max_length=20, default='')
     shipping_country = models.CharField(max_length=100, default='')
+    tracking_number = models.CharField(max_length=100, blank=True, default='')
     status = models.CharField(
         max_length=10,
         choices=OrderStatusChoices.choices,
@@ -628,3 +630,25 @@ class UserFlag(models.Model):
             models.Index(fields=['reviewed', 'created_at']),
         ]
         ordering = ['-created_at']
+
+
+class WatchlistItem(models.Model):
+    """A listing saved to a buyer's watchlist."""
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='watchlist',
+    )
+    listing = models.ForeignKey(
+        Card_Listing,
+        on_delete=models.CASCADE,
+        related_name='watchlisted_by',
+    )
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('user', 'listing')
+        ordering = ['-created_at']
+
+    def __str__(self):
+        return f"Watchlist item #{self.id} user={self.user_id} listing={self.listing_id}"

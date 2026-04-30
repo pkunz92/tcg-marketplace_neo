@@ -12,6 +12,7 @@ from .models import (
     Card_Master, Card_Listing, Order, OrderStatusChoices, Set_Master, CardPrice, CardPriceHistory,
     Offer, OfferStatusChoices, Transaction, TransactionStatusChoices, CardGrade, ListingPhoto,
     Review, PriceSoldSnapshot, Dispute, DisputeStatusChoices, UserFlag, FlagReasonChoices,
+    WatchlistItem,
 )
 from .serializers import (
     CardMasterSerializer, CardMasterListSerializer, CardListingSerializer,
@@ -19,7 +20,7 @@ from .serializers import (
     CardPriceSerializer, CardPriceHistorySerializer,
     OfferSerializer, TransactionSerializer, CardGradeSerializer, ListingPhotoSerializer,
     ReviewSerializer, ReputationSerializer, PriceSoldSnapshotSerializer,
-    DisputeSerializer, DisputeResolveSerializer,
+    DisputeSerializer, DisputeResolveSerializer, WatchlistItemSerializer,
 )
 from .permissions import IsSellerOrReadOnly
 from .filters import CardListingFilter, CardMasterFilter
@@ -299,7 +300,7 @@ class CardListingViewSet(viewsets.ModelViewSet):
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filterset_class = CardListingFilter
     search_fields = ['card_master__card_name', 'card_master__secondary_id', 'seller__username']
-    ordering_fields = ['price_chf', 'id', 'card_master__card_name']
+    ordering_fields = ['price_chf', 'id', 'card_master__card_name', 'created_at']
     ordering = ['-id']
 
     def get_permissions(self):
@@ -312,7 +313,8 @@ class CardListingViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         queryset = super().get_queryset()
 
-        if self.request.query_params.get('my_listings') == 'true' and self.request.user.is_authenticated:
+        params = self.request.query_params
+        if (params.get('my_listings') == 'true' or params.get('mine') == 'true') and self.request.user.is_authenticated:
             queryset = queryset.filter(seller=self.request.user)
 
         if self.request.query_params.get('include_unavailable') != 'true':
@@ -389,10 +391,12 @@ class OrderViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         queryset = Order.objects.select_related(
-            'listing', 'listing__card_master', 'listing__seller'
-        )
+            'listing', 'listing__card_master', 'listing__card_master__set',
+            'listing__seller', 'buyer',
+        ).prefetch_related('review', 'review__reviewer')
 
-        if self.request.query_params.get('seller') == 'true':
+        params = self.request.query_params
+        if params.get('seller') == 'true' or params.get('role') == 'seller':
             return queryset.filter(listing__seller=self.request.user)
 
         return queryset.filter(buyer=self.request.user)
@@ -402,9 +406,9 @@ class OrderViewSet(viewsets.ModelViewSet):
         send_order_confirmation(order)
 
     def perform_update(self, serializer):
-        allowed_fields = {'status'}
+        allowed_fields = {'status', 'tracking_number'}
         if set(serializer.validated_data.keys()) - allowed_fields:
-            raise ValidationError('Only status updates are allowed.')
+            raise ValidationError('Only status and tracking_number updates are allowed.')
 
         with transaction.atomic():
             order = (
@@ -420,26 +424,45 @@ class OrderViewSet(viewsets.ModelViewSet):
             )
 
             new_status = serializer.validated_data.get('status', order.status)
-            if new_status == order.status:
-                serializer.instance = order
-                return
+            new_tracking = serializer.validated_data.get('tracking_number', order.tracking_number)
+            update_fields = []
 
-            if order.status != 'PENDING':
-                raise ValidationError('Only pending orders can be updated.')
+            is_seller = order.listing.seller == self.request.user
+            is_buyer = order.buyer == self.request.user
 
-            if order.listing.seller == self.request.user:
-                if new_status not in ['COMPLETED', 'CANCELLED']:
-                    raise ValidationError('Invalid status transition.')
+            if not is_seller and not is_buyer:
+                raise PermissionDenied('You do not have permission to update this order.')
+
+            if is_buyer and not is_seller:
+                # Buyers may only cancel a PENDING order
+                if new_status != OrderStatusChoices.CANCELLED or order.status != OrderStatusChoices.PENDING:
+                    raise PermissionDenied('Buyers can only cancel pending orders.')
+                if 'tracking_number' in serializer.validated_data:
+                    raise PermissionDenied('Buyers cannot update the tracking number.')
             else:
-                raise PermissionDenied('Only the seller can update this order.')
+                if new_tracking != order.tracking_number:
+                    order.tracking_number = new_tracking
+                    update_fields.append('tracking_number')
 
-            if new_status == 'CANCELLED':
-                listing.quantity += order.quantity
-                listing.is_available = listing.quantity > 0
-                listing.save(update_fields=['quantity', 'is_available'])
+            if new_status != order.status:
+                valid_transitions = {
+                    'PENDING': {'COMPLETED', 'SHIPPED', 'CANCELLED'},
+                    'COMPLETED': {'SHIPPED', 'CANCELLED'},
+                    'SHIPPED': {'DELIVERED'},
+                }
+                if new_status not in valid_transitions.get(order.status, set()):
+                    raise ValidationError(f'Invalid status transition: {order.status} -> {new_status}.')
 
-            order.status = new_status
-            order.save(update_fields=['status'])
+                if new_status == 'CANCELLED':
+                    listing.quantity += order.quantity
+                    listing.is_available = listing.quantity > 0
+                    listing.save(update_fields=['quantity', 'is_available'])
+
+                order.status = new_status
+                update_fields.append('status')
+
+            if update_fields:
+                order.save(update_fields=update_fields)
             serializer.instance = order
 
 
@@ -452,9 +475,9 @@ class OrderViewSet(viewsets.ModelViewSet):
         order = self.get_object()
         if order.buyer != request.user:
             raise PermissionDenied("Only the buyer can confirm delivery.")
-        if order.status != OrderStatusChoices.COMPLETED:
+        if order.status not in (OrderStatusChoices.COMPLETED, OrderStatusChoices.SHIPPED):
             return Response(
-                {'detail': 'Only completed (paid) orders can be confirmed as delivered.'},
+                {'detail': 'Only shipped or paid orders can be confirmed as delivered.'},
                 status=status.HTTP_400_BAD_REQUEST,
             )
         order.status = OrderStatusChoices.DELIVERED
@@ -592,16 +615,27 @@ class OfferViewSet(viewsets.ModelViewSet):
     @action(detail=True, methods=['post'])
     def accept(self, request, pk=None):
         """
-        Seller accepts the offer. Creates an Order at the offer price and marks the offer ACCEPTED.
-        Returns the created order.
+        Accepts the offer and creates an Order. Marks the offer ACCEPTED.
+
+        - Seller accepting a PENDING offer creates an order at offer_price_chf.
+        - Buyer accepting a COUNTERED offer creates an order at counter_price_chf.
         """
         offer = self.get_object()
-        if offer.listing.seller != request.user:
-            raise PermissionDenied("Only the listing seller can accept offers.")
-        if offer.status != OfferStatusChoices.PENDING:
-            raise ValidationError("Only pending offers can be accepted.")
 
-        profile = getattr(request.user, 'profile', None)
+        if offer.status == OfferStatusChoices.PENDING:
+            if offer.listing.seller != request.user:
+                raise PermissionDenied("Only the listing seller can accept a pending offer.")
+            order_price = offer.offer_price_chf
+        elif offer.status == OfferStatusChoices.COUNTERED:
+            if offer.buyer != request.user:
+                raise PermissionDenied("Only the buyer can accept a counter-offer.")
+            if offer.counter_price_chf is None:
+                raise ValidationError("Counter offer has no price.")
+            order_price = offer.counter_price_chf
+        else:
+            raise ValidationError("Only pending or countered offers can be accepted.")
+
+        profile = getattr(offer.buyer, 'profile', None)
 
         with transaction.atomic():
             listing = (
@@ -624,7 +658,7 @@ class OfferViewSet(viewsets.ModelViewSet):
                 listing=listing,
                 buyer=offer.buyer,
                 quantity=1,
-                price_chf=offer.offer_price_chf,
+                price_chf=order_price,
                 shipping_name=profile.shipping_name if profile else '',
                 shipping_address_line1=profile.shipping_address_line1 if profile else '',
                 shipping_address_line2=getattr(profile, 'shipping_address_line2', None) if profile else None,
@@ -639,16 +673,29 @@ class OfferViewSet(viewsets.ModelViewSet):
 
         send_offer_response(offer)
         send_order_confirmation(order)
+        order = Order.objects.select_related(
+            'listing', 'listing__card_master', 'listing__card_master__set',
+            'listing__seller', 'buyer',
+        ).get(pk=order.pk)
         return Response(OrderSerializer(order, context={'request': request}).data, status=status.HTTP_201_CREATED)
 
     @action(detail=True, methods=['post'])
     def decline(self, request, pk=None):
-        """Seller declines the offer."""
+        """
+        Decline an offer.
+
+        - Seller can decline a PENDING offer.
+        - Buyer can decline a COUNTERED offer.
+        """
         offer = self.get_object()
-        if offer.listing.seller != request.user:
-            raise PermissionDenied("Only the listing seller can decline offers.")
-        if offer.status != OfferStatusChoices.PENDING:
-            raise ValidationError("Only pending offers can be declined.")
+        if offer.status == OfferStatusChoices.PENDING:
+            if offer.listing.seller != request.user:
+                raise PermissionDenied("Only the listing seller can decline a pending offer.")
+        elif offer.status == OfferStatusChoices.COUNTERED:
+            if offer.buyer != request.user:
+                raise PermissionDenied("Only the buyer can decline a counter-offer.")
+        else:
+            raise ValidationError("Only pending or countered offers can be declined.")
 
         offer.status = OfferStatusChoices.DECLINED
         offer.save(update_fields=['status', 'updated_at'])
@@ -1362,6 +1409,7 @@ class UserReviewsView(generics.ListAPIView):
     """
     serializer_class = ReviewSerializer
     permission_classes = [permissions.AllowAny]
+    pagination_class = None
 
     def get_queryset(self):
         from django.contrib.auth import get_user_model
@@ -1654,9 +1702,9 @@ class OpenDisputeView(generics.CreateAPIView):
         if order.buyer != request.user:
             return Response({'detail': 'Only the buyer may open a dispute.'}, status=status.HTTP_403_FORBIDDEN)
 
-        if order.status not in (OrderStatusChoices.COMPLETED, OrderStatusChoices.DELIVERED):
+        if order.status not in (OrderStatusChoices.COMPLETED, OrderStatusChoices.SHIPPED, OrderStatusChoices.DELIVERED):
             return Response(
-                {'detail': 'Disputes can only be opened on paid or delivered orders.'},
+                {'detail': 'Disputes can only be opened on paid, shipped, or delivered orders.'},
                 status=status.HTTP_400_BAD_REQUEST,
             )
 
@@ -1676,6 +1724,7 @@ class AdminDisputeListView(generics.ListAPIView):
     """
     serializer_class = DisputeSerializer
     permission_classes = [permissions.IsAdminUser]
+    pagination_class = None
 
     def get_queryset(self):
         qs = Dispute.objects.select_related('order', 'opened_by').all()
@@ -1789,6 +1838,10 @@ class QuickBuyView(generics.GenericAPIView):
             listing.save(update_fields=['is_available'])
 
         from .serializers import OrderSerializer
+        order = Order.objects.select_related(
+            'listing', 'listing__card_master', 'listing__card_master__set',
+            'listing__seller', 'buyer',
+        ).get(pk=order.pk)
         return Response(OrderSerializer(order).data, status=status.HTTP_201_CREATED)
 
 
@@ -1840,3 +1893,34 @@ class PushTokenView(generics.GenericAPIView):
         from .models import UserProfile as _UP
         _UP.objects.update_or_create(user=request.user, defaults={'push_token': token})
         return Response({'detail': 'Push token registered.'})
+
+
+class WatchlistViewSet(viewsets.ModelViewSet):
+    """
+    GET  /api/watchlist/        — list authenticated user's watchlist
+    POST /api/watchlist/        — add listing to watchlist { "listing_id": <pk> }
+    DELETE /api/watchlist/<id>/ — remove item from watchlist
+    """
+    serializer_class = WatchlistItemSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    pagination_class = None
+    http_method_names = ['get', 'post', 'delete', 'head', 'options']
+
+    def get_queryset(self):
+        return WatchlistItem.objects.filter(user=self.request.user).select_related(
+            'listing', 'listing__card_master', 'listing__card_master__set',
+            'listing__seller',
+        )
+
+    def perform_create(self, serializer):
+        serializer.save(user=self.request.user)
+
+    def create(self, request, *args, **kwargs):
+        data = {'listing_id': request.data.get('listing')}
+        serializer = self.get_serializer(data=data)
+        serializer.is_valid(raise_exception=True)
+        try:
+            self.perform_create(serializer)
+        except Exception:
+            return Response({'detail': 'Already in watchlist.'}, status=status.HTTP_409_CONFLICT)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)

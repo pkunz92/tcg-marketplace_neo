@@ -42,7 +42,7 @@ function CounterModal({ offerId, onClose, onSuccess }: CounterModalProps) {
     if (isNaN(num) || num <= 0) return
     setSubmitting(true)
     try {
-      await api.patch(`/offers/${offerId}/`, { status: 'COUNTERED', counter_price_chf: num.toFixed(2) })
+      await api.post(`/offers/${offerId}/counter/`, { counter_price_chf: num.toFixed(2) })
       toast('Counter-offer sent', 'success')
       onSuccess()
     } catch (err: unknown) {
@@ -108,7 +108,8 @@ function OfferRow({ offer, view, onAction }: OfferRowProps) {
   async function respond(status: 'ACCEPTED' | 'DECLINED') {
     setActing(true)
     try {
-      await api.patch(`/offers/${offer.id}/`, { status })
+      const path = status === 'ACCEPTED' ? `/offers/${offer.id}/accept/` : `/offers/${offer.id}/decline/`
+      await api.post(path, {})
       toast(status === 'ACCEPTED' ? 'Offer accepted' : 'Offer declined', status === 'ACCEPTED' ? 'success' : 'error')
       onAction()
     } catch (err: unknown) {

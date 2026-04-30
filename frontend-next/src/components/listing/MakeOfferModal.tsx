@@ -66,9 +66,10 @@ export default function MakeOfferModal({ listingId, listingPrice, existingOffer,
     setSubmitting(true)
     setError(null)
     try {
-      const updated = await api.patch<Offer>(`/offers/${existingOffer.id}/`, {
-        status: accept ? 'ACCEPTED' : 'DECLINED',
-      })
+      const path = accept
+        ? `/offers/${existingOffer.id}/accept/`
+        : `/offers/${existingOffer.id}/decline/`
+      const updated = await api.post<Offer>(path, {})
       onSuccess(updated)
     } catch (err: unknown) {
       setError(err instanceof Error ? err.message : 'Failed to update offer.')

@@ -10,6 +10,7 @@ router.register(r'orders', views.OrderViewSet, basename='order')
 router.register(r'offers', views.OfferViewSet, basename='offer')
 router.register(r'transactions', views.TransactionViewSet, basename='transaction')
 router.register(r'card-grades', views.CardGradeViewSet, basename='cardgrade')
+router.register(r'watchlist', views.WatchlistViewSet, basename='watchlist')
 
 urlpatterns = [
     path('auth/', include('dj_rest_auth.urls')),

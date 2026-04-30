@@ -34,6 +34,7 @@ export default function RegisterPage() {
     shipping_country: '',
   })
   const [error, setError] = useState('')
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
   const [loading, setLoading] = useState(false)
 
   function set(field: keyof RegisterPayload) {
@@ -43,9 +44,9 @@ export default function RegisterPage() {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
-    setError('')
+    setError(''); setFieldErrors({})
     if (form.password1 !== form.password2) {
-      setError('Passwords do not match.')
+      setFieldErrors({ password2: 'Passwords do not match.' })
       return
     }
     setLoading(true)
@@ -56,6 +57,11 @@ export default function RegisterPage() {
     } catch (err) {
       if (err instanceof ApiError) {
         setError(err.detail)
+        const fe: Record<string, string> = {}
+        for (const [k, msgs] of Object.entries(err.fieldErrors)) {
+          fe[k] = msgs[0]
+        }
+        setFieldErrors(fe)
       } else {
         setError('Registration failed. Please try again.')
       }
@@ -89,6 +95,7 @@ export default function RegisterPage() {
             onChange={set('username')}
             data-testid="register-username"
             required
+            error={fieldErrors.username}
           />
           <Input
             label="Email"
@@ -98,6 +105,7 @@ export default function RegisterPage() {
             onChange={set('email')}
             data-testid="register-email"
             required
+            error={fieldErrors.email}
           />
           <Input
             label="Password"
@@ -107,6 +115,7 @@ export default function RegisterPage() {
             onChange={set('password1')}
             data-testid="register-password1"
             required
+            error={fieldErrors.password1}
           />
           <Input
             label="Confirm password"
@@ -116,6 +125,7 @@ export default function RegisterPage() {
             onChange={set('password2')}
             data-testid="register-password2"
             required
+            error={fieldErrors.password2}
           />
 
           <p className="text-xs font-semibold text-slate-400 uppercase tracking-wider pt-2">

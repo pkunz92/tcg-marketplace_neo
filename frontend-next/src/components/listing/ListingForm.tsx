@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { ArrowLeft, CheckCircle2 } from 'lucide-react'
 import Link from 'next/link'
-import { api, type Listing, type AnalyzePhotoResponse, type ConditionCode } from '@/lib/api'
+import { api, ApiError, type Listing, type AnalyzePhotoResponse, type ConditionCode } from '@/lib/api'
 import { useToast } from '@/components/ui/toast'
 import Button from '@/components/ui/button'
 import Input from '@/components/ui/input'
@@ -82,6 +82,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
   const canPublish = !requiresPhoto || hasPhoto
 
   const [submitting, setSubmitting] = useState(false)
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({})
 
   async function searchCards(q: string) {
     if (q.length < 2) {
@@ -90,10 +91,16 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
     }
     setSearchLoading(true)
     try {
-      const data = await api.get<{ results?: CardMasterOption[]; } | CardMasterOption[]>(
-        `/cards/?search=${encodeURIComponent(q)}&limit=8`,
-      )
-      const results = Array.isArray(data) ? data : (data.results ?? [])
+      const data = await api.get<{
+        results?: { api_id: string; card_name: string; card_rarity?: string | null; set?: { set_name: string } | null }[]
+      }>(`/cards/list/?search=${encodeURIComponent(q)}`)
+      const raw = data.results ?? []
+      const results: CardMasterOption[] = raw.slice(0, 8).map((c) => ({
+        id: c.api_id,
+        card_name: c.card_name,
+        set_name: c.set?.set_name ?? '',
+        card_rarity: c.card_rarity ?? '',
+      }))
       setCardOptions(results)
       setShowDropdown(true)
     } catch {
@@ -106,11 +113,11 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
   function applyAnalysisSuggestions(result: AnalyzePhotoResponse) {
     setAnalysis(result)
     const top = result.card_suggestions[0]
-    if (top && top.confidence > 0.3) {
+    if (top && top.confidence > 0.3 && top.card_name) {
       // Pre-fill card name if no card selected yet
       if (!selectedCard) {
-        setCardQuery(top.name)
-        searchCards(top.name)
+        setCardQuery(top.card_name)
+        searchCards(top.card_name)
       }
     }
     // Pre-fill condition
@@ -126,6 +133,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
+    setFieldErrors({})
     if (!selectedCard) {
       toast('Please select a card', 'error')
       return
@@ -135,6 +143,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
       return
     }
 
+    setFieldErrors({})
     setSubmitting(true)
     try {
       const formData = new FormData()
@@ -156,8 +165,16 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
       }
       router.push('/dashboard/seller')
     } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : 'Failed to save listing'
-      toast(msg, 'error')
+      if (err instanceof ApiError) {
+        toast(err.detail, 'error')
+        const fe: Record<string, string> = {}
+        for (const [k, msgs] of Object.entries(err.fieldErrors)) {
+          fe[k] = msgs[0]
+        }
+        setFieldErrors(fe)
+      } else {
+        toast(err instanceof Error ? err.message : 'Failed to save listing', 'error')
+      }
     } finally {
       setSubmitting(false)
     }
@@ -280,6 +297,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
             value={price}
             onChange={(e) => setPrice(e.target.value)}
             placeholder="0.00"
+            error={fieldErrors.price_chf}
             data-testid="listing-price"
           />
           <Input
@@ -290,6 +308,7 @@ export default function ListingForm({ mode, initialData }: ListingFormProps) {
             value={quantity}
             onChange={(e) => setQuantity(e.target.value)}
             placeholder="1"
+            error={fieldErrors.quantity}
             data-testid="listing-quantity"
           />
         </div>

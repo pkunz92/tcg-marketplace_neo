@@ -20,6 +20,10 @@ django-allauth
 # Environment Management
 python-decouple==3.8
 python-dotenv
+dj-database-url>=2.0
+
+# Static file serving
+whitenoise>=6.7
 
 # Pokemon TCG SDKs
 pokemontcgsdk

@@ -115,7 +115,7 @@ function SellerOrdersContent() {
                   <div>
                     <p className="font-medium text-slate-200">{o.card_name}</p>
                     <p className="text-sm text-slate-400 mt-0.5">
-                      Order #{o.id.slice(0, 8)} · {formatDate(o.created_at)}
+                      Order #{String(o.id).slice(0, 8)} · {formatDate(o.created_at)}
                     </p>
                     <p className="text-xs text-slate-500 mt-0.5">
                       Buyer: {o.buyer_username} · Qty: {o.quantity}

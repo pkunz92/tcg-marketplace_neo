@@ -48,8 +48,8 @@ export default function OrderDetailPage() {
   const isDelivered = order.status === 'DELIVERED'
   const alreadyReviewed = submittedReview !== null || order.review != null
   const canReview = isBuyer && isDelivered && !alreadyReviewed
-  const canDispute = isBuyer && (order.status === 'COMPLETED' || order.status === 'DELIVERED') && !disputeSuccess
-  const canConfirmDelivery = isBuyer && order.status === 'COMPLETED'
+  const canDispute = isBuyer && (order.status === 'COMPLETED' || order.status === 'SHIPPED' || order.status === 'DELIVERED') && !disputeSuccess
+  const canConfirmDelivery = isBuyer && (order.status === 'COMPLETED' || order.status === 'SHIPPED')
 
   function handleReviewSuccess(review: Review) {
     setSubmittedReview(review)
